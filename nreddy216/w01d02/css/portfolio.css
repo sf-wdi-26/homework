@@ -1,0 +1,37 @@
+/*$coral: #ed6a5a; //rgba(237, 106, 90, 100)
+$mintGreen: #f4f1bb; //rgba(244, 241, 187, 100)
+$lightBlue: #9bc1bc; //rgba(155, 193, 188, 100)
+$darkBlue: #5ca4a9; //rgba(92, 164, 169, 100)
+$lightGrey: #e6ebe0; //rgba(230, 235, 224, 100)
+*/
+
+h2{
+	font-size: 20px;
+}
+
+.experience{
+	width: 60%;
+	margin: 0 auto;
+
+}
+
+.education{
+	margin-bottom: 50px;
+}
+
+p{
+	text-align: justify;
+}
+
+.screenshot{
+	/*border: 3px #9bc1bc solid;*/
+	border-radius: 5px;
+
+	margin: 20px;
+	margin-bottom: 40px;
+}
+
+.bold-italic{
+	font-style: italic;
+	font-size: 18px;
+}
