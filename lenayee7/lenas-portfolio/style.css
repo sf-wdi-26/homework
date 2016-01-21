@@ -1,0 +1,192 @@
+body {
+	font-size: 20px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+    background-color: #786C77;
+}
+
+header h1#name {
+	padding: 1.5% 0;
+	font-size: 48px;
+   -webkit-text-fill-color: 171712;
+   -webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: #751C67;
+}
+
+header {
+/*	padding-top: 2%;*/
+	background-image: url("./images/top.jpg");
+	background-size: 100% 100%;
+	height: 250px;
+	text-align: center;
+	font-family: 'Russo One', sans-serif;
+}
+nav ul li {
+	list-style-type: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+	margin:0;
+}
+
+nav ul#top {
+	padding-left: 0;
+}
+
+nav ul li a {
+	text-decoration: none;
+	font-size: 30px;
+	margin: 0;
+	color: #561E56;
+	-webkit-text-fill-color: 561E56;
+   -webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: #751C67;
+	font-family: 'Russo One', sans-serif;
+}
+
+nav ul#top li a:hover {
+	background-color: #A86FA4;	
+}
+
+/*About Me*/
+
+div#content {
+	margin: 3%;
+	border: 3px dotted pink;
+	border-radius: 20px;
+	padding-bottom: 3%;
+	background-image: url("https://s-media-cache-ak0.pinimg.com/236x/d9/f9/f9/d9f9f98f79c5a91ae56a0540e6710564.jpg");
+}
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Russo One', sans-serif;
+}
+
+img#lena{
+	height: 250px;
+	width: 170px;
+	border-radius: 50px;
+	margin-left: 10%;
+	margin-top: 3%;
+}
+
+article {
+	width: 55%;
+	margin-right: 10%;
+	float: right;
+	font-family: 'Fredoka One', cursive;
+	font-size: 16px;
+}
+
+article p {
+	font-size: 24px;
+	text-align: center;
+}
+
+footer nav {
+text-align: center;
+}
+
+footer nav ul#sMedia li {
+	display: inline-block;
+	padding: .5% 2%;
+	margin: 1%;
+	background-color: black;
+	border-radius: 10px;
+}
+
+/*Portfolio*/
+
+.portfolio {
+	margin: 2% 10%
+}
+
+div#content div.portfolio p#experience {
+	text-align:center;
+	margin: 0% 10%;
+	background-color: #9E709B;
+	padding: 3%;
+	border-radius: 10px;
+	opacity: .7;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+h4 {
+	font-weight: bold;
+	font-size: 28px;
+	margin-bottom: 0;
+	font-family: 'Russo One', sans-serif;
+}
+
+span {
+	font-weight: bolder;
+	font-style: italic;
+}
+
+
+
+
+@media only screen and (max-width: 950px) {
+    body {
+        background-color: #786C77;
+    }
+	
+	h1 {
+		font-size: 35px;
+	}
+
+    nav ul li a {
+	    font-size: 20px;
+	}
+
+	img#lena {
+		margin: 0;
+		margin-top: 1.5%;
+		margin-left: 35%;
+		text-align: center;
+	}
+
+	article {
+     width: 100%; 
+     margin-right: 0%; 
+     float: none; 
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+	}
+
+	h3 {
+	font-size: 24px;
+	}
+	
+	article p {
+		font-size: 20px;
+	}
+	
+	header nav ul#top li a.subTitles {
+		font-size: 30px;
+	}
+
+	nav {
+		margin-top: 3%;
+		font-size: 10px;
+	}
+
+	h1#name {
+		font-size: 30px;
+		padding-top: 4%;
+	}
+	
+
+}
+
+
+
+
+
+
+
+
