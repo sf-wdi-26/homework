@@ -38,8 +38,24 @@ li {
 .grey {
 	background: grey;
 	padding: 100px;
+	padding-top: 50px;
 	padding-bottom: 500px;
 	position: relative;
+}
+
+.content {
+
+	padding-right: 250px;
+}
+
+.picture {
+
+	position: absolute; 
+	right: 50px;
+	top: -150px;
+	height: 250px;
+	width: 250px;
+	border: 2px solid white;
 }
 
 
