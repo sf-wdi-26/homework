@@ -1,0 +1,85 @@
+.picture {
+  float: right;
+  margin-left: 60px;
+  margin-right: 50px;
+  margin-top: 50px;
+  position:relative;
+}
+
+.main {
+  float: left;
+  margin-right: 10px;
+  margin-left: 100px;
+  margin-top: 90px;
+  position: relative;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+}
+
+.bottom {
+  clear: both;
+  padding: 50px;
+  text-align: center;
+}
+
+.experience {
+  margin-left: 40px;
+  margin-right: 40px;
+  max-width: 775px;
+  font-size: .9em;
+  font-family: monospace;
+}
+
+.portfolio {
+  margin-left: 40px;
+  margin-right: 40px;
+  max-width: 775px;
+  font-size: .9em;
+  font-family: monospace;
+
+}
+
+body {
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width:1000px;
+  display: inline-block;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 65px;
+}
+
+.bottom ul li {
+  display: inline;
+  list-style-type: none;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+.picture img {
+  border-radius: 50%;
+}
+
+header {
+  text-align: center;
+  background-color: white;
+  background-repeat: repeat-x;
+  color: #778899;
+  width: 100%;
+}
+
+nav {
+  margin-: 20px;
+}
+
+a {
+  color: #696969;
+}
+
+a:hover {
+  color: blue;
+}
+  
+
