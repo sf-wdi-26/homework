@@ -1,0 +1,100 @@
+.nav {
+	background-color: black;
+	text-align: center;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+li {
+	display: inline-block;
+	padding: 5px 10px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+}
+a:hover {
+    color: gray;
+}
+h1 {
+	font-size: 45px;
+}
+
+#about_me_main {
+	position: relative;
+	padding: 40px;
+}
+.oski {
+	float: left;
+}
+.blurb {
+	font-family: 'Open Sans Condensed', sans-serif;
+	position: relative;
+	margin: 0 auto;
+	padding: 10px 0px;
+	text-align: center;
+}
+.checkit {
+	font-size: 20px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-align: center;
+	position: relative;
+}
+
+.resume {
+	font-family: 'Open Sans Condensed', sans-serif;
+	clear: left;
+	position: relative;
+	text-align: center;
+	margin-top: 100px;
+}
+.resume_text {
+	font-size: 20px;
+	position: relative;
+}
+
+#relevant_experience {
+	position: relative;
+}
+
+
+.relaxr {
+	position: relative;
+	margin: 25px;
+	clear: left;
+}
+#relaxr_img {
+	float:right;
+	margin: 25px;
+}
+#relaxr_blurb{
+	padding-top: 100px;
+}
+
+
+.startup {
+	position: relative;
+	margin: 25px;
+	clear: right;
+}
+#startup_img {
+	float: left;
+	margin: 25px;
+}
+#startup_blurb {
+	padding-top: 100px;
+}
+
+
+
+.citipix {
+	position: relative;
+	margin: 25px;
+	clear: left;
+}
+#citipix_img {
+	float: right;
+	margin: 25px;
+}
+#citipix_blurb {
+	padding-top: 70px;
+}
