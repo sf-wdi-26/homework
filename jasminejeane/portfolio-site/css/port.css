@@ -1,0 +1,90 @@
+* {
+
+	margin: 3px;
+}
+
+header {
+
+	background: purple;
+	padding: 100px;
+}
+
+
+.main {
+	text-align: center;
+}
+
+h1 {
+	font-size: 55px;
+}
+
+.email, .git{
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+
+.pic {
+	border: 5px solid black;
+	padding: 7px;
+	text-align: justify;
+	height: 250px;
+	width: 300px;
+	display: inline-block;
+	margin-right: 30px;
+	position: absolute;
+
+
+
+}
+
+
+
+
+.pic2 {
+	right: 200px;
+
+}
+
+.pic3 {
+	top: 700px;
+
+}
+
+.pic4 {
+	right: 200px;
+	top: 700px;
+}
+
+
+.one, h3{
+
+	padding: 30px;
+}
+
+
+
+ul {
+
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	font-size: 20px;
+}
+li {
+	display: inline;
+
+}
+
+.grey {
+	background: grey;
+	padding: 100px;
+	padding-bottom: 500px;
+	position: relative;
+}
+
+
+footer {
+
+	padding-top: 700px;
+}
