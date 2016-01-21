@@ -1,0 +1,48 @@
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 30px;
+  border-bottom: 5px solid #222222;
+  border-top: 5px solid #222222;
+  padding: 50px;
+  background: #F6F6F6;
+}
+
+nav {
+  padding-top: 30px;
+  margin: 0 200px;
+  text-align: center;
+  font-size: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 25px;
+  color: blue;
+}
+
+ul {
+  margin-bottom: 250px;
+}
+
+#mypic{
+  float: right;
+  position: relative;
+  top: -50px;
+}
+
+#info{
+  margin-bottom: 250px;
+}
+
+#relaxr{
+  float: right;
+  position: relative;
+  right: 450px;
+  top: 10px;  
+}
