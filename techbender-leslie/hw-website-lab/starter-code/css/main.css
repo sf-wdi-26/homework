@@ -1,0 +1,137 @@
+body {
+	background-color: whitesmoke;
+}
+
+hr.thick {
+	border-top: 5px solid black;
+	margin-top: 30px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+hr.thin {
+	border-top: 1px solid black;
+	margin-right: 70px;
+	margin-left: 70px;
+}
+
+.intro {
+	margin-top: 53px;
+	text-align: center;
+}
+
+.intro h1 {
+	font-family: Helvetica;
+	font-size: 36px;
+	text-transform: uppercase;
+	margin-top: -10px;
+	margin-bottom: 35px;
+}
+
+.intro p {
+	font-family: Helvetica;
+	font-size: 18px;
+
+}
+
+.intro a {
+	font-weight: bold;
+	color: black;
+}
+
+.content {
+	
+	margin-top: 40px;
+	margin-left: 70px;
+	margin-right: 70px;
+	font-size: 18px;
+	font-family: Georgia;
+	line-height: 150%;
+
+}
+
+li img {
+	border: 1px solid black;
+	margin-bottom: 25px;
+	margin-left: 25px;
+}
+
+img {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.content h3 {
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-family: Helvetica;
+	text-transform: uppercase;
+}
+
+.project-content h2 {
+	margin-bottom: 25px;
+	font-size: 28px;
+	font-family: Helvetica;
+}
+
+.project-content {
+	font-size: 18px;
+	font-family: Georgia;
+	line-height: 150%;
+	margin-top: 40px;
+	margin-left: 70px;
+	margin-right: 70px;
+}
+
+.project-content h3 {
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-family: Helvetica;
+	text-transform: uppercase;
+	margin-top: 40px;
+}
+
+.project-content img {
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.company,
+.deg {
+	font-family: Helvetica;
+}
+
+.job,
+.ed {
+	font-style: italic;
+	font-weight: bold;
+	font-family: Helvetica;
+}
+
+.duration {
+	font-family: Helvetica;
+	font-size: 14px;
+}
+
+
+.footer {
+	text-align: center;
+	clear: both;
+	margin-top: 30px;
+	margin-bottom: 45px;
+}
+
+.footer ul {
+	list-style: none;
+}
+
+.footer ul li {
+	display: inline;
+}
+
+.footer ul li a {
+	color: black;
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 18px;
+}
