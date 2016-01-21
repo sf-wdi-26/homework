@@ -1,0 +1,197 @@
+/*$coral: #ed6a5a; //rgba(237, 106, 90, 100)
+$mintGreen: #f4f1bb; //rgba(244, 241, 187, 100)
+$lightBlue: #9bc1bc; //rgba(155, 193, 188, 100)
+$darkBlue: #5ca4a9; //rgba(92, 164, 169, 100)
+$lightGrey: #e6ebe0; //rgba(230, 235, 224, 100)
+*/
+
+
+body{
+	/*font-family: 'Montserrat', sans-serif;*/
+	font-family: 'Arvo', serif;
+	font-size: 14px;
+	margin: 20px;
+	color: #424242;
+
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9cfcf+0,c9cfcf+68&1+0,0+34,0+68 */
+	/*background: -moz-linear-gradient(top,  rgba(201,207,207,1) 0%, rgba(201,207,207,0) 34%, rgba(201,207,207,0) 68%); /* FF3.6-15 */
+	/*background: -webkit-linear-gradient(top,  rgba(201,207,207,1) 0%,rgba(201,207,207,0) 34%,rgba(201,207,207,0) 68%); /* Chrome10-25,Safari5.1-6 */
+	/*background: linear-gradient(to bottom,  rgba(201,207,207,1) 0%,rgba(201,207,207,0) 34%,rgba(201,207,207,0) 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9cfcf', endColorstr='#00c9cfcf',GradientType=0 ); /* IE6-9 */
+
+	background-repeat: no-repeat;
+}
+
+/*h3{
+	font-family: 'Roboto', sans-serif;
+}
+
+p{
+	font-family: 'Roboto', sans-serif;
+}*/
+
+
+
+h1{
+	font-size: 60px;
+	padding-top: 20px;
+	margin: 0 auto;
+	text-align: center;
+
+	padding-bottom: 50px;
+
+	color: #ed6a5a;
+	
+	clear: both;
+
+}
+
+
+.nav{
+
+	display: inline-block;
+	margin: 0 auto;
+	padding: 10px;
+
+	text-align: center;
+	width: 300px;
+
+	float: right;
+
+
+}
+
+.nav li{
+
+	display: inline;
+	list-style-type: none;
+	padding: 5px 10px 5px 10px;
+
+	/*background: #9bc1bc;*/
+
+	font-size: 16px;
+}
+
+#currentPage{
+	color: black;
+	text-decoration: none;
+	font-style: italic;
+}
+
+#otherPage{
+	color: #5ca4a9;
+}
+
+#otherPage:hover{
+	background-color: #ed6a5a;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	color: white;
+	background-color: #ed6a5a;
+}
+
+.main{
+	width: 800px;
+}
+
+.myface img{
+	float: right;
+	/*margin-right: 50px;*/
+	width: 230px;
+	margin-right: -200px;
+
+}
+
+.about-me{
+	padding-right: 40px;
+	text-align: justify;
+	margin-left: 180px;
+
+	width: 550px;
+
+}
+
+
+
+.social-media{
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 160px;
+}
+
+.social-media li{
+	position: relative;
+	display: inline;
+	
+	padding: 1px;
+	
+}
+
+.social-media img{
+	width: 40px;
+}
+
+.linkedin img{
+	/*width: 40px;*/
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/*BLINKING CURSOR*/
+
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 60px;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
