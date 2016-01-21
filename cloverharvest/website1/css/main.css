@@ -1,0 +1,44 @@
+body {
+  font-family: avenir;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 30px;
+  border-bottom: 5px solid #222222;
+  border-top: 5px solid #222222;
+  padding: 50px;
+  background: #F6F6F6;
+
+}
+
+.links {
+	background-color: #3A47FF;
+}
+
+.joepic {
+	text-align: center;
+}
+
+.peoplerowing {
+	text-align: center;
+}
+
+.students {
+	text-align: center;
+}
+
+.skyline {
+	text-align: center;
+}
+
+.footer {
+	text-align: center;
+	font-style: italic;
+}
+
+h3 {
+	font-style: italic;
+}
+
+h4 {
+	text-decoration: underline;
+}
