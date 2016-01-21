@@ -1,0 +1,49 @@
+#menu li{
+  list-style-type: none;
+}
+.inline {
+    display: inline;
+}
+
+a {
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+body
+{
+background: #E0E0E0; 
+}
+
+header {
+	text-align: center;	
+	color: white;
+	margin: 0 auto;	
+}
+
+h1{
+	font-family: cursive;
+	
+}
+h2	{
+		font-size:30px;
+		color: #ff954a;
+}
+h3 {
+	font-family: sans-serif;
+	text-decoration: overline;
+}
+
+p {
+	font-family: sans-serif;
+}
+
+ul {
+	padding: 15px
+	background: rgba(255,0,0,0.5);
+	background-color: orange;
+}
+li{
+	text-align: center;
+}
