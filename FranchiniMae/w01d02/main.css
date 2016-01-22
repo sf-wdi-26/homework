@@ -1,9 +1,10 @@
 .picture {
-  float: right;
+  /*float: right;*/
   margin-left: 60px;
   margin-right: 50px;
   margin-top: 50px;
-  position:relative;
+  display: inline-block;
+  /*position:relative;*/
 }
 
 .main {
@@ -11,9 +12,10 @@
   margin-right: 10px;
   margin-left: 100px;
   margin-top: 90px;
-  position: relative;
+  /*position: relative;*/
   width: 400px;
   height: 200px;
+  display: inline-block;
   text-align: center;
 }
 
@@ -42,7 +44,7 @@
 
 body {
   font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  max-width:1000px;
+  width:100%;
   display: inline-block;
   background-color: #fff;
 }
@@ -67,11 +69,11 @@ header {
   background-color: white;
   background-repeat: repeat-x;
   color: #778899;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 nav {
-  margin-: 20px;
+  margin: 20px;
 }
 
 a {
