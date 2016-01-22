@@ -56,7 +56,7 @@ var numberOfArguments = function(){
 }; 
 
 // Question 6 - Define a function reverseString that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
-var reverseString = function (myMystring){
+var reverseString = function (myString){
   var myArray = myString.split('');
   var newRevereseArray = [];
   for (var i = myArray.length - 1; i >= 0; i--) {
