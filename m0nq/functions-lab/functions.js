@@ -1,27 +1,51 @@
 // Question 1
-function maxOfTwoNumbers() {
 
+// Number Number -> Number
+// Consumes 2 numbers and returns the larger of them
+function maxOfTwoNumbers(n, m) {
+  return n > m ? n : m;
 }
 
 // Question 2
-function maxOfThree() {
 
+// Number Number Number -> Number
+// returns the larger of three numbers consumed.
+function maxOfThree(x, y, z) {
+  var w = x > y ? x : y;
+  return w > z ? w : z;
 }
 
 // Question 3
-function isCharacterAVowel() {
-
+// String[1] -> Boolean
+// returns true if the character is a vowel.
+function isCharacterAVowel(char) {
+  if (char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u') {
+    return true;
+  }
+  return false;
 }
 
 // Question 4
-function sumArray() {
- 
+// Array -> Number
+// returns the sum of the numbers within a given array.
+function sumArray(array) {
+  var sum = 0;
+  for (var i = 0 ; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum;
 }
 
 
 // Question 4
-function multiplyArray() {
-
+// Array -> Number
+// returns the product of numbers within a consumed array.
+function multiplyArray(array) {
+  var product = 1;
+  for (var i = 0; i < array.length; i++) {
+    product *= array[i];
+  }
+  return product;
 }
 
 
