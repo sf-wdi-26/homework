@@ -30,9 +30,9 @@ function isCharacterAVowel(char) {
 // returns the sum of the numbers within a given array.
 function sumArray(array) {
   var sum = 0;
-  for (var i = 0 ; i < array.length; i++) {
-    sum += array[i];
-  }
+  array.forEach(function(x) {
+    sum += x;
+  });
   return sum;
 }
 
@@ -42,9 +42,9 @@ function sumArray(array) {
 // returns the product of numbers within a consumed array.
 function multiplyArray(array) {
   var product = 1;
-  for (var i = 0; i < array.length; i++) {
-    product *= array[i];
-  }
+  array.forEach(function (x) {
+    product *= x;
+  })
   return product;
 }
 
