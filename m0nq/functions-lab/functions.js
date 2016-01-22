@@ -85,13 +85,28 @@ function findLongestWord (array) {
 
 
 // Question 8
-function filterLongWords () {
-  
+// Array(String) Number -> Array(String)
+// from the array of words consumed, returns an array of words greater than the number provided.
+function filterLongWords (words, i) {
+  var longerWords = [];
+  for (var j = 0; j < words.length; j++) {
+    if (words[j].length > i) {
+      longerWords.push(words[j]);
+    }
+  }
+  return longerWords;
 }
 
 
 // Bonus 1
-//??????
+// Attach reverseString to the String Object as a native function.
+String.prototype.reverseString = function () {
+  var reversed = "";
+  for (var i = this.length - 1; i >= 0; i--) {
+    reversed += this[i];
+  }
+  return reversed;  
+};
 
 
 // Bonus 2
