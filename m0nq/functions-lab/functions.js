@@ -110,7 +110,18 @@ String.prototype.reverseString = function () {
 
 
 // Bonus 2
-function charactersOccurencesCount() {
-  
+// String -> Object
+// return an object where the keys are the character of the consumed string,
+// and the values are the counted occurences of each letter.
+function charactersOccurencesCount(phrase) {
+  var obj = {};
+  var characters = phrase.split("");
+  for (var i = 0; i < characters.length; i++) {
+    if (!obj[characters[i]]) {
+      obj[characters[i]] = 1;
+    } else {
+      obj[characters[i]]++;
+    }
+  }
+  return obj;
 }
-
