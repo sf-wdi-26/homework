@@ -44,7 +44,7 @@ function multiplyArray(array) {
   var product = 1;
   array.forEach(function (x) {
     product *= x;
-  })
+  });
   return product;
 }
 
