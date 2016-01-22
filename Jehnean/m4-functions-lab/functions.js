@@ -48,14 +48,21 @@ function multiplyArray() {
 }
 
 
+
+
 // Question 5 - Write a function that return the number of arguments passed to the function when called.
 var numberOfArguments = function(){
   return arguments.length; 
 }; 
 
 // Question 6 - Define a function reverseString that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
-var reverseString = function (){
-  return this.split('').reverse().join('');
+var reverseString = function (myMystring){
+  var myArray = myString.split('');
+  var newRevereseArray = [];
+  for (var i = myArray.length - 1; i >= 0; i--) {
+    newRevereseArray.push(myArray[i]);
+  }
+  return newRevereseArray.join('');
 };
 
 
