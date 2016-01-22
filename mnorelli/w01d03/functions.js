@@ -73,9 +73,17 @@ var reverseString = function(str) {
 console.log("Q6: Reversing 'jag testar' gives "  + reverseString("jag testar"));
 
 // Question 7
-function findLongestWord () {
-  
-}
+function findLongestWord (arr) {
+	hold = 0;
+	for (x=0;x<arr.length;x++){
+		if (arr[x].length > hold) {
+			hold = arr[x].length;
+		}
+	}
+  	return hold;
+  }
+console.log("Q7: The longest element in ['a','bbb','cc'] is "  
+	+ findLongestWord(['a','bbb','cc']) + " characters long.");
 
 
 // Question 8
