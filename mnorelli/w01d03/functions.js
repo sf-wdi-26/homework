@@ -87,8 +87,11 @@ console.log("Q7: The longest element in ['a','bbb','cc'] is "
 
 
 // Question 8
-function filterLongWords () {
-  
+function filterLongWords (arr,i) {
+  	for (x=0;x<arr.length;x++){
+		if (arr[x].length > i) {
+			hold = arr[x].length;
+		}
 }
 
 
