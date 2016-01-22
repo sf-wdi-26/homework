@@ -71,8 +71,16 @@ var reverseString = function (phrase) {
 
 
 // Question 7
-function findLongestWord () {
-  
+// Array(Strings) -> Number
+// consumes an array of strings and returns the longest string within the array
+function findLongestWord (array) {
+  var longest = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].length > longest) {
+      longest = array[i].length;
+    }
+  }
+  return longest;
 }
 
 
