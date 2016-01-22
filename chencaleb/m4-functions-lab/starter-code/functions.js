@@ -70,14 +70,15 @@ var reverseString = function (string){
 // Question 7
 function findLongestWord (arrayOfWords) {
 	var longest = 0;
-	var word = null;
+	//var word = null;
 	for (var i=0; i<arrayOfWords.length; i++) {
 		if (longest < arrayOfWords[i].length) {
 			longest = arrayOfWords[i].length;
-			word = arrayOfWords[i];
+			//word = arrayOfWords[i];
 		}
 	}
-	return word;
+	//return word;
+	return longest;
 }
 
 
