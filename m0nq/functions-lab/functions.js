@@ -54,13 +54,19 @@ function multiplyArray(array) {
 // return the number of arguments passed to the 'arguments' object
 var numberOfArguments = function() {
   return arguments.length;
-}
+};
 
 
 
 // Question 6
-var reverseString = function (){
-  
+// String -> String
+// consumes a phrase and returns it reversed in place.
+var reverseString = function (phrase) {
+  var reversed = "";
+  for (var i = phrase.length - 1; i >= 0; i--) {
+    reversed += phrase[i];
+  }
+  return reversed;  
 };
 
 
