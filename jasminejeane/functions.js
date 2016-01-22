@@ -167,8 +167,8 @@ return(longest);
 //Write a function filterLongWords that takes an array of words and a number 
 //i and returns the array of words that are longer than i characters long.
 
-var newArray = []; 
 function filterLongWords (words, i) {
+    var newArray = [];
 	for (var x = 0; x < words.length; x++){
 		if(words[x].length >= i){
       newArray.push(words[x]);
@@ -177,7 +177,7 @@ function filterLongWords (words, i) {
   return newArray;
 }
 
-//not quite
+
 
 // Bonus 1
 //Attach the function reverseString (from question 6) to the object String 
