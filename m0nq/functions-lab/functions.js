@@ -50,8 +50,10 @@ function multiplyArray(array) {
 
 
 // Question 5
-var numberOfArguments = function(){
-  
+// Void -> Number
+// return the number of arguments passed to the 'arguments' object
+var numberOfArguments = function() {
+  return arguments.length;
 }
 
 
