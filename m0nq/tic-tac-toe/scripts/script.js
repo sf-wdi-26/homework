@@ -9,7 +9,7 @@ var main = function main() {
   registrar(grid);
 
   // NodeList -> Void
-  // registers the 
+  // registers listeners on each node within a NodeList
   function registrar(grid) {
     for (var i = 0, len = grid.length; i < len; i++) {
       grid.item(i).addEventListener("click", checkPoint);
@@ -23,14 +23,18 @@ var main = function main() {
     if (counter == 6) {
       catsGame();
       // else, if 'X' has a match, 'X' wins
-    } else if (event.target.xMatch()) {
-      xWins();
-      // else, if 'O' has a match, 'O' wins
-    } else if (event.target.oMatch()) {
-      oWins();
-    }
+    } else if (match(event.target)) {
+      winner(event.target);
     // Otherwise set the appropriate mark.
     clicked(e);
+  }
+
+  // 
+  // 
+  function match(element) {
+    for (var i = 0, len = grid.length; i < len; i++) {
+      grid.item(i);
+    };
   }
 
   // Node -> Void
