@@ -74,27 +74,54 @@ function multiply(array) {
 
 // Question 5
 var numberOfArguments = function(){
+	
+
   
 }
 
 
 
 // Question 6
-var reverseString = function (){
+var reverseString = function (string){
+    var newStr = "";
+    for(var i = string.length - 1; i >=0; i--){
+        newStr+= string[i];
+    }
+	
+	return newStr; 
   
 };
 
+reverseString("jag testar");
+
 
 // Question 7
-function findLongestWord () {
-  
+function findLongestWord(array) {
+	var longestWord = array[0];
+	for (var i = 1; i < array.length; i++) {
+		if (longestWord.length < array[i].length) {
+			longestWord = array[i];
+		}
+	}
+	return longestWord.length;
 }
+findLongestWord(["Jack", "Johhny", "djlksaJDalsRkjdlaKSD"]);
 
 
 // Question 8
-function filterLongWords () {
-  
-}
+var filterLongWords = function(array, num){
+  var length = array.length;
+  var longestWords = [];
+  for (i = 0; i < length; i++) {
+    if (array[i].length > num) {
+      longestWords[longestWords.length] = array[i];
+    }
+  }
+  return longestWords;
+};
+
+console.log(filterLongWords(["car","aeroplane","bicycle","house","rain"], 4));
+
 
 
 // Bonus 1
