@@ -13,11 +13,17 @@ body {
 .bigX {
   margin: 0 auto;
   text-align: center;
+  font-size: 6em;
+  font-family: Helvetica, sans-serif;
+  padding-top: 25px;
 }
 
 .bigO {
   margin: 0 auto;
   text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 6em;
+  padding-top: 25px;
 }
 
 #button {
