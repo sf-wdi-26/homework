@@ -10,6 +10,16 @@ body {
   float: left;
 }
 
+.bigX {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bigO {
+  margin: 0 auto;
+  text-align: center;
+}
+
 #button {
   width: 10%;
   padding-left: 5em;
@@ -21,10 +31,6 @@ body {
   z-index: 1;
   width: 960px;
   min-height: 438px;
-  background-image: none;
-  border-style: none;
-  border-color: transparent;
-  background-color: transparent;
   padding-bottom: 62px;
   margin-left: auto;
   margin-right: auto;
@@ -46,7 +52,6 @@ body {
   height: 166px;
   border-style: solid;
   border-color: #000000;
-  background-color: transparent;
   position: relative;
   border-width: 0px 1px 1px 0px;
 }
@@ -58,7 +63,6 @@ body {
   height: 165px;
   border-style: solid;
   border-color: #000000;
-  background-color: transparent;
   position: relative;
   border-width: 1px 1px 1px 0px;
 }
@@ -70,7 +74,6 @@ body {
   height: 166px;
   border-style: solid;
   border-color: #000000;
-  background-color: transparent;
   position: relative;
   border-width: 1px 1px 0px 0px;
 }
@@ -91,7 +94,6 @@ body {
   height: 166px;
   border-style: solid;
   border-color: #000000;
-  background-color: transparent;
   position: relative;
   border-width: 0px 1px 1px;
 }
@@ -104,7 +106,6 @@ body {
   border-width: 1px;
   border-style: solid;
   border-color: #000000;
-  background-color: transparent;
   position: relative;
 }
 
@@ -115,7 +116,6 @@ body {
   height: 166px;
   border-style: solid;
   border-color: #000000;
-  background-color: transparent;
   position: relative;
   border-width: 1px 1px 0px;
 }
@@ -135,7 +135,6 @@ body {
   height: 166px;
   border-style: solid;
   border-color: #000000;
-  background-color: transparent;
   position: relative;
   border-width: 0px 0px 1px 1px;
 }
@@ -147,7 +146,6 @@ body {
   height: 165px;
   border-style: solid;
   border-color: #000000;
-  background-color: transparent;
   position: relative;
   border-width: 1px 0px 1px 1px;
 }
@@ -159,7 +157,6 @@ body {
   height: 166px;
   border-style: solid;
   border-color: #000000;
-  background-color: transparent;
   position: relative;
   border-width: 1px 0px 0px 1px;
 }
