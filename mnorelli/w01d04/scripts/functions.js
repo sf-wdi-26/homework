@@ -3,7 +3,7 @@ console.log("Linked.");
 
 /*
 Setup
- - setup array to hold starting values
+ ✓ setup array to hold starting values
   | a | b | c |
   | d | e | f |
   | g | h | i |
@@ -26,7 +26,8 @@ play
  reset
   - on reset at any time, restart the game
 */
-board = {};
+cells = {};
+spaces = ['a','b','c','d','e','f','g','h','i'];
 setUpBoard();
 
 //setUpResetButton();
@@ -42,8 +43,13 @@ function clearBoard() {
 }
 
 function setUpBoard() {
-  squares = ['a','b','c','d','e','f','g','h','i'];
-  for (var x in squares) {board[squares[x]]='xxx';}
+  for (var x=spaces.length-1;x>=0;x-=1) {cells[spaces[x]]=null;}
+}
+
+function mark(player,space) {
+  cells[space]=player;
+  a=document.getElementById(space);
+  a.innerHTML=player;
 }
 
 var getWinner = function() {
@@ -61,20 +67,20 @@ var winnerIs = function(player) {
 };
 
 var winsRow = function(player) {
-  return allThree(player, cells('a'), cells('b'), cells('c')) ||
-         allThree(player, cells('d'), cells('e'), cells('f')) ||
-         allThree(player, cells('g'), cells('h'), cells('i'));
+  return allThree(player, cells.a, cells.b, cells.c) ||
+         allThree(player, cells.d, cells.e, cells.f) ||
+         allThree(player, cells.g, cells.h, cells.i);
 };
 
 var winsColumn = function(player) {
-  return allThree(player, cells('a'), cells('d'), cells('g')) ||
-         allThree(player, cells('b'), cells('e'), cells('h')) ||
-         allThree(player, cells('c'), cells('f'), cells('i'));
+  return allThree(player, cells.a, cells.d, cells.g) ||
+         allThree(player, cells.b, cells.e, cells.h) ||
+         allThree(player, cells.c, cells.f, cells.i);
 };
 
 var winsDiagonal = function(player) {
-  return allThree(player, cells('a'), cells('e'), cells('i')) ||
-         allThree(player, cells('c'), cells('e'), cells('g'));
+  return allThree(player, cells.a, cells.e, cells.i) ||
+         allThree(player, cells.c, cells.e, cells.g);
 };
 
 var allThree = function(player, cellOne, cellTwo, cellThree) {
