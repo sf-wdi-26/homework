@@ -1,3 +1,9 @@
+// create an array of arrays with all 8 winning node elements by their id names.
+// double loop through each to see if they have matching textConent.
+  // if true, then last player clicked wins
+
+
+
 var main = function main() {
   
   // create a game counter of clicks.
@@ -26,6 +32,7 @@ var main = function main() {
     } else if (match(event.target)) {
       winner(event.target);
     // Otherwise set the appropriate mark.
+    }
     clicked(e);
   }
 
@@ -34,7 +41,7 @@ var main = function main() {
   function match(element) {
     for (var i = 0, len = grid.length; i < len; i++) {
       grid.item(i);
-    };
+    }
   }
 
   // Node -> Void
