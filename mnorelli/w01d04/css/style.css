@@ -1,0 +1,42 @@
+body {
+  background: #202020;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: lightgray;
+  text-align: center;
+}
+.title {
+  font-size: 25pt;
+}
+.message {
+  font-size: 15pt;
+}
+table {
+  margin: auto;
+  border: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.square{
+    width:120px;
+    height:120px;
+}    
+.v{
+    border-left:2px solid #666;
+    border-right:2px solid #666;
+}
+
+.h{
+    border-top:2px solid #666;
+    border-bottom:2px solid #666;
+}
+.button {
+  text-align:center;
+  margin:auto;
+}
+button {
+  font-family: 'Gloria Hallelujah', cursive;
+  border-radius: 3pt;
+  background-color: #666;
+  color: lightgray;
+
+}
