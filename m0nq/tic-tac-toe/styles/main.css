@@ -1,0 +1,166 @@
+body {
+  position: relative;
+  min-width: 960px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.columnGlue {
+  display: inline;
+  float: left;
+}
+
+#button {
+  width: 10%;
+  padding-left: 5em;
+  margin: auto;
+}
+
+#page
+{
+  z-index: 1;
+  width: 960px;
+  min-height: 438px;
+  background-image: none;
+  border-style: none;
+  border-color: transparent;
+  background-color: transparent;
+  padding-bottom: 62px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#leftCol
+{
+  width: 0.01px;
+  padding-bottom: 0px;
+  margin-right: -10000px;
+  margin-top: 61px;
+  margin-left: 220px;
+}
+
+#leftTop
+{
+  z-index: 4;
+  width: 166px;
+  height: 166px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: transparent;
+  position: relative;
+  border-width: 0px 1px 1px 0px;
+}
+
+#leftMiddle
+{
+  z-index: 3;
+  width: 166px;
+  height: 165px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: transparent;
+  position: relative;
+  border-width: 1px 1px 1px 0px;
+}
+
+#leftBot
+{
+  z-index: 2;
+  width: 166px;
+  height: 166px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: transparent;
+  position: relative;
+  border-width: 1px 1px 0px 0px;
+}
+
+#centerCol
+{
+  width: 0.01px;
+  padding-bottom: 0px;
+  margin-right: -10000px;
+  margin-top: 61px;
+  margin-left: 387px;
+}
+
+#centerTop
+{
+  z-index: 7;
+  width: 165px;
+  height: 166px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: transparent;
+  position: relative;
+  border-width: 0px 1px 1px;
+}
+
+#centerMiddle
+{
+  z-index: 6;
+  width: 165px;
+  height: 165px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: transparent;
+  position: relative;
+}
+
+#centerBot
+{
+  z-index: 5;
+  width: 165px;
+  height: 166px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: transparent;
+  position: relative;
+  border-width: 1px 1px 0px;
+}
+
+#rightCol
+{
+  width: 0.01px;
+  margin-right: -10000px;
+  margin-top: 61px;
+  margin-left: 554px;
+}
+
+#rightTop
+{
+  z-index: 10;
+  width: 166px;
+  height: 166px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: transparent;
+  position: relative;
+  border-width: 0px 0px 1px 1px;
+}
+
+#rightMiddle
+{
+  z-index: 9;
+  width: 166px;
+  height: 165px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: transparent;
+  position: relative;
+  border-width: 1px 0px 1px 1px;
+}
+
+#rightBot
+{
+  z-index: 8;
+  width: 166px;
+  height: 166px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: transparent;
+  position: relative;
+  border-width: 1px 0px 0px 1px;
+}
+
