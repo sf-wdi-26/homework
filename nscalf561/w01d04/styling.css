@@ -1,0 +1,102 @@
+body {
+	background-size: fit;
+	background-repeat: no-repeat;
+}
+
+.TICTACTOE {
+	margin: 0 0 0 0;
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 40px;
+	position: relative;
+	text-align: center;
+}
+
+#playStatusBox {
+	width: 100%;
+}
+
+.playStatus {
+	position: relative;
+	text-align: center;
+}
+
+#resetBox {
+	width: 100%;
+}
+
+/*The reset button doesn't want to stay centered as the screen changes, maybe address that at some point?*/
+.resetButton {
+	width: 10em;
+	position: relative;
+	left: 45%;
+}
+
+#boxHolder {
+	width: 100%;
+}
+
+.box {
+	position: relative;
+	display: inline-block;
+	width: 11%;
+	height: 9em;
+	left: 32%;
+	margin: 0 auto;
+	vertical-align: top;
+	text-align:center;
+	line-height: 9em;
+}
+
+#box1 {
+	border-width: 0 5px 5px 0;
+	border-color: black;
+	border-style: solid;
+}
+
+#box2 {
+	border-width: 0 5px 5px 5px;
+	border-color: black;
+	border-style: solid;
+}
+
+#box3 {
+	border-width: 0 0 5px 5px;
+	border-color: black;
+	border-style: solid;
+}
+
+#box4 {
+	border-width: 5px 5px 5px 0;
+	border-color: black;
+	border-style: solid;
+}
+
+#box5 { 
+	border-width: 5px 5px 5px 5px;
+	border-color: black;
+	border-style: solid;
+}
+
+#box6 {
+	border-width: 5px 0 5px 5px;
+	border-color: black;
+	border-style: solid;
+}
+
+#box7 {
+	border-width: 5px 5px 0 0;
+	border-color: black;
+	border-style: solid;
+}
+
+#box8 {
+	border-width: 5px 5px 0 5px;
+	border-color: black;
+	border-style: solid;
+}
+
+#box9 {
+	border-width: 5px 0 0 5px;
+	border-color: black;
+	border-style: solid;
+}
