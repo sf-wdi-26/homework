@@ -1,0 +1,50 @@
+body {
+  text-align: center;
+  font-family: Indie FLower;
+}
+h1, h2 {
+  color: gray;
+  font-size: 30px;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+  75% {
+    font-size: 200%;
+    margin-left: 25%;
+    width: 150%;
+  }
+}
+.box{
+    margin: auto;
+    width: 400px;
+    height: 400px;
+}
+
+canvas {
+  display: inline-block;
+}
+#canvas1, #canvas2, #canvas3, #canvas4, #canvas5, #canvas6 {
+  border-bottom: 2px dashed red;
+}
+#canvas1, #canvas4, #canvas7, #canvas2, #canvas5, #canvas8 {
+  border-right: 2px dashed red;
+}
+
+button {
+  font-size: 20px;
+  border: 1px dotted white;
+  padding: 10px;
+  background: gray;
+  color: white;
+  font-family: Indie FLower;
+}
