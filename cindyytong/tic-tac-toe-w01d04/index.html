@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--CT====This Website is built by Cindy Tong ====CT-->
+
+<html>
+<head>
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+
+<!--CT=== Bootstrap CDN (jQuery + CSS + JS) ===CT-->
+<!--
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+-->
+
+<!--CT============= Stylesheets =============CT-->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+<!--CT============= JS Files =================CT-->
+<script type="text/javascript" src="js/app.js"></script>
+
+
+<!--CT============= Content =================CT-->
+
+  <title>Dog, Cat, Dogcat!</title>
+
+</head>
+
+<body>
+
+
+<!--CT============= Header Begins ===========CT-->
+  <header> 
+        <h1 id="hello">Dog, Cat, Dogcat!</h1>
+        <h3>A pictified version of "Tic, Tac, Toe!" using cute animals. Grab a partner and let's go.</h3>
+  </header>
+
+<!--Start Button Here-->
+    <button type ="button" id="start">Let it rip!</button>
+    <br>
+    <br>
+    <h4>Whose turn is it?: <div id="turn"></div></h4>
+<!--Grid here-->
+    <div class="grid-container outline">
+        <div class="row">
+            <div class="col r1 c1" id="a"><p>Pick me!</p></div>
+            <div class="col r1 c2" id="b"><p>Choose me!</p></div> 
+            <div class="col r1 c3" id="c"><p>Bingo! Wait, wrong game?</p></div> 
+        </div> 
+        <div class="row">
+            <div class="col r2 c1" id="d"><p>C'mon and make a move.</p></div> 
+            <div class="col r2 c2" id="e"><p>Choose me!</p></div> 
+            <div class="col r2 c3" id="f"><p>Three in a row?</p></div> 
+        </div> 
+        <div class="row">
+            <div class="col r3 c1" id="g"><p>I'm your best bet.</p></div> 
+            <div class="col r3 c2" id="h"><p>Click me</p></div> 
+            <div class="col r3 c3" id="i"><p>Let's crush em!</p></div> 
+        </div> 
+    </div>
+    
+    
+<!--CT============= Header Ends ===========CT-->
+  <section>
+  </section>
+
+<!--    scoreboard-->
+  <div class = "scoreboard">
+    <h4>Who's keeping score?</h4>
+      <p>Dog: </p>
+      <p>Cat: </p>
+    </div>
+
+<!--CT============= Header Footer ===========CT-->
+	<footer>
+<!--        clear button -->
+        <button type ="button" class="clear">Refresh, rewind!</button>
+        <br>
+        <br>
+        
+        <p>Special thanks to Blue the dog and Wheezy the cat for their permission in letting me use their photos.</p>
+	</footer>
+
+
+<!--CT============= Javascript Begins ===========CT-->
+<script>
+    
+//player clicks start, player gets alert message
+var startButton = document.getElementById('start');
+startButton.onclick = function(){
+     alert("Let's begin! Dog goes first. Click inside of one of the boxes and make your move, dog.");
+}
+
+//--------------------------------------------------
+
+// players
+    var player;
+//**set player based on count
+    var dogPlayer;
+    var catPlayer;
+
+
+//determine which player goes: for each click the count will increase until someone wins or if the count is 8 and all of the pieces have been selected, alert it's a tie and restart game
+   var count = 0;
+    var counter = function(){
+        if(count>=8){
+            alert("It's a tie! You're both winners. Try again.");}
+        else{
+            count += 1;
+            console.log(count);
+            }
+        }
+    
+    //%2 = 3 we get dog
+    //%1 = 3 we get 
+    
+// alert player turn
+//    var alertPlayerTurn = function(){
+//        if(count>1){
+//            if(player = 'dogPlayer'){
+//                alert("Yo dog, make a move!");
+//            } else if(player = 'catPlayer'){
+//                alert("Cat go on and purr your way.");
+//            }
+//        }
+//    }
+// determine player turn, we start out with dog first and insert message in header on whose turn it is
+    player = 'dogPlayer';
+    var turnPlaceHolder = document.getElementById('turn');
+    var playerTurn = function(){
+        if (count % 2 == 0){
+            player = 'dogPlayer';
+            turnPlaceHolder.textContent="Yo dog, make a move!";
+            } else{
+                player = 'catPlayer';
+                turnPlaceHolder.textContent="Cat go on and purr your way.";
+            }
+        }
+    
+    
+//when piece is clicked on, function is run to add photo
+    
+    var insertImage = function(){
+        if( player === 'dogPlayer'){
+            this.innerHTML = "<img class = 'dog' src = 'dog.jpeg'>";}
+        else if (player === 'catPlayer'){
+           this.innerHTML = "<img class = 'cat' src = 'cat.jpeg'>";
+        }
+    }
+                
+//retrieve each piece, when it is clicked run insertImage and counter
+var pieceA = document.getElementById('a');
+    pieceA.addEventListener('click', insertImage);
+    pieceA.addEventListener('click', counter);
+    pieceA.addEventListener('click', playerTurn);
+    
+var pieceB = document.getElementById('b');
+    pieceB.addEventListener('click', insertImage );
+    pieceB.addEventListener('click', counter);
+    pieceB.addEventListener('click', playerTurn);
+
+var pieceC = document.getElementById('c');
+    pieceC.addEventListener('click', insertImage );
+    pieceC.addEventListener('click', counter);
+    pieceC.addEventListener('click', playerTurn);
+
+var pieceD = document.getElementById('d');
+    pieceD.addEventListener('click', insertImage );
+    pieceD.addEventListener('click', counter);
+    pieceD.addEventListener('click', playerTurn);
+
+var pieceE = document.getElementById('e');
+    pieceE.addEventListener('click', insertImage );
+    pieceE.addEventListener('click', counter);
+    pieceE.addEventListener('click', playerTurn);
+        
+var pieceF = document.getElementById('f');
+    pieceF.addEventListener('click', insertImage );
+    pieceF.addEventListener('click', counter);
+    pieceF.addEventListener('click', playerTurn);
+    
+var pieceG = document.getElementById('g');
+    pieceG.addEventListener('click', insertImage );
+    pieceG.addEventListener('click', counter);
+    pieceG.addEventListener('click', playerTurn);
+    
+var pieceH = document.getElementById('h');
+    pieceH.addEventListener('click', insertImage );
+    pieceH.addEventListener('click', counter);
+    pieceH.addEventListener('click', playerTurn);
+    
+var pieceI = document.getElementById('i');
+    pieceI.addEventListener('click', insertImage );
+    pieceI.addEventListener('click', counter);
+    pieceI.addEventListener('click', playerTurn);
+
+// winning scenarios: 3 in a row, 3 in a column, diagonal
+//if any combinations of these buttons have been clicked by same user, alert winner and ask to retry game, update scoreboard
+    
+    //scan each row, grab elements by class if you have more than three then declare winner
+
+//  for each element in class name row/one get element by class name cat/dog, if the result is greater than three then winner 
+
+//    Check Rows 
+    var rowOneDog = document.querySelectorAll('.r1, .dog');
+    var rowOneCat = document.querySelectorAll('.r1, .cat');
+    
+    var rowOneDog = document.querySelectorAll('.r2, .dog');
+    var rowOneCat = document.querySelectorAll('.r2, .cat');
+    
+    var rowOneDog = document.querySelectorAll('.r3, .dog');
+    var rowOneCat = document.querySelectorAll('.r3, .cat');
+    
+
+    var rows = [rowOne, rowTwo, rowThree];
+    
+    var arr = [];
+    var i;
+    var x;
+
+    
+    function checkThree(arr){
+        for(i = 0; j = arr.length; i<j; i++){
+//            for(x = 0; y =arr[i].length; x<y; x++){
+//                if(arr[i].length>=3){
+                    alert("We have a winner!");
+                } 
+            }
+            
+        }
+    }
+    checkThree(rows);
+    
+//    console.log(rowOne.length);
+//    
+//        <div class="grid-container outline">
+//        <div class="row">
+//            <div class="col r1 c1" id="a"><p>Pick me!</p></div>
+//                replace a with 
+//                <div class = 'cat'><img src = 'cat.jpeg'></div>
+    
+//    var dogClassAdded = document.getElementById('dog');
+//    var catClassAdded = document.getElementById('cat');
+//    var checkWinner = function(){
+//        if(rowOne.dogClassAdded.length>= 3){
+//            alert('winner')
+//        } else if(rowOne.catClassAdded.length>= 3){
+//            alert('winner');
+//        } else(console.log("No winner"))
+//    }    
+    
+    
+    
+    
+// disable box once it is clicked on once
+    
+//alert winner
+
+
+//clear board
+// function to clearboard 
+//function clearBoard(){
+//    for (a=0; a<checkerboard.length; a++) {
+//        for(b=0; b< checkerboard[a].length; b++){
+//            checkerboard[a][b] = null;  
+//        }
+//    }
+//}
+    
+    
+//    try to incorporate
+//    var test = document.getElementById("test");
+//var testClass = test.className;
+//switch(testClass){
+//    case "class1": test.innerHTML = "I have class1"; break;
+//    case "class2": test.innerHTML = "I have class2"; break;
+//    case "class3": test.innerHTML = "I have class3"; break;
+//    case "class4": test.innerHTML = "I have class4"; break;
+//    default: test.innerHTML = "";
+//}
+
+</script>
+
+</body>
+</html>
