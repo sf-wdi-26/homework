@@ -28,19 +28,11 @@ play
 */
 cells = {};
 spaces = ['a','b','c','d','e','f','g','h','i'];
+markColor='red';
 
-setUpBoard();
+clearBoard();
 setUpBoardClicks();
 setUpResetButton();
-player='o';
-
-report("Ready to play?  Click a space. 'X' starts the game!");
-
-// while (!getWinner){
-
-
-// }
-
 
 
 function report(status) {
@@ -60,10 +52,14 @@ function clearBoard() {
     a.innerHTML='';
     a.style.pointerEvents = 'auto';
   }
+  setUpBoard();
 }
 
 function setUpBoard() {
   for (var x=spaces.length-1;x>=0;x-=1) {cells[spaces[x]]=null;}
+  report("Ready to play?  Click a space. 'X' starts the game!");
+  player='x';
+  markColor='red';
 }
 
 
@@ -86,13 +82,35 @@ function setUpBoardClicks() {
   }
 }
 
+
+function alternatePlayer() {
+  if (player==='x') {
+    player='o';
+    markColor='darkcyan';
+  }
+  else {
+    player='x';
+    markColor='red'
+  }
+}
+
 function mark(player,space) {
   cells[space]=player;
   a=document.getElementById(space);
   a.innerHTML=player;
+  a.style.color=markColor;
   a.style.pointerEvents = 'none';
+  alternatePlayer();
+  if (getWinner()!==null) {endGame();}
 }
 
+function endGame() {
+    for (var x=spaces.length-1;x>=0;x-=1) {
+      a=document.getElementById(spaces[x]);
+      a.style.pointerEvents = 'none';
+    }
+    report("Player "+getWinner().toUpperCase()+" WINS!!");
+}
 /***** scoring logic ***********/
 var getWinner = function() {
   if (winnerIs('x')) {
