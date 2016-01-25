@@ -1,0 +1,17 @@
+.box{
+    margin: auto;
+    text-align: left;
+    width: 400px;
+    height: 400px;
+}
+
+canvas {
+  border: 1px solid red;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  display: inline-block;
+}
+#btn {
+  text-align: center;
+  font-size: 30px;
+}
