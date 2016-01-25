@@ -130,6 +130,15 @@ function findLongestWord (words) {
 var words = ['refrigerator', 'candy', 'car'];
 console.log(findLongestWord(words));
 
+// OR
+var reverseMe = function(input) {
+  var reversedString =  "";
+  for (var i = 1; i < input.length + 1; i++) {
+    var lastLetter = input[input.length - i];
+    reversedString += lastLetter;
+  }
+  return reversedString;
+}
 
 // // Question 8
 //Write a function filterLongWords that takes an array of words and a number i and returns the array of words that are longer than i characters long.
@@ -167,3 +176,13 @@ console.log(filterLongWords(['Cindy', 'Cathy', 'Thomas', 'Crystal'], 5));
 	  return characters;
 	}
 
+//
+function charactersOccurencesCount(string) {
+   var stringObject = {};
+   var characters = string.toLowerCase().replace(/\s+/g, '').split('');
+
+       characters.forEach(function(i) {
+         stringObject[i] = ( stringObject[i] || 0 ) +1;
+       });
+     return stringObject;
+}
