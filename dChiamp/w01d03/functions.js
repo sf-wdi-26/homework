@@ -28,7 +28,7 @@ maxOfThree(9,5,7);
 
 // Question 3
 function isCharacterAVowel(vowel) {
-	if ( vowel == 'a' ||
+	if (vowel == 'a' ||
 		vowel == 'e' ||
 		vowel == 'i' ||
 		vowel == 'o' ||
