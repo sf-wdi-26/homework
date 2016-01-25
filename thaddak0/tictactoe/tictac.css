@@ -1,0 +1,63 @@
+html {
+	background-image: url("https://f1.bcbits.com/img/a3964831203_10.jpg");
+	background-size: cover;
+}
+body {
+	height: 100%;
+	width: 100%;
+	margin: 20px 0 0 0;
+	position: relative;
+
+}
+h1 {
+	font-family: 'Roboto', sans-serif;
+	color: #88E3DA;
+	width: 600px;
+	margin: auto;
+	text-align: center;
+	font-size: 40px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.row {
+	text-align: center;
+	margin: auto;
+}
+.square {
+	height: 100px;
+	width: 100px;
+	line-height: 100px;
+	display:inline-block;
+	margin: 10px;
+	border: 3px solid white;
+	padding: 10px 10px 10px 10px;
+	font-size: 100px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	
+}
+.button {
+	width: 100%;
+	position: relative;
+	margin: auto;
+	text-align: center;
+}
+.myButton {
+	color: #88E3DA;
+	border: 3px solid white;
+	display:inline-block;
+	font-family: 'Roboto', sans-serif;
+	font-size:17px;
+	padding:10px 15px;
+	text-align: center;
+	margin-top: 10px
+}
+/*p {
+	font-size: 100px;
+	text-align: center;
+	position:relative;
+	margin: auto;
+	padding: 20px 0 20px 0;
+	font-family: 'Roboto', sans-serif;
+}*/
+
