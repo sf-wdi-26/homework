@@ -6,10 +6,10 @@ var board;
 var c;
 var cxt;
 var squares = 0;
-var w;
 var y;
-var X = 0;
-var O = 0;
+var x = 0;
+var o = 0;
+var winner = document.getElementById('winner');
 
 
 window.onload = function() {
@@ -28,21 +28,26 @@ function canvasClicked(canvasNumber) {
     theCanvas = 'canvas' + canvasNumber;
     c = document.getElementById(theCanvas);
     cxt = c.getContext('2d');
+    cxt.lineWidth = 10;
+    cxt.strokeStyle = 'gray';
+    cxt.fillStyle = 'red';
     if(painted[canvasNumber-1] === false) {
       if (turn % 2 === 0) {
         cxt.beginPath();
-        cxt.moveTo(10, 10);
-        cxt.lineTo(90, 90);
-        cxt.moveTo(90, 10);
-        cxt.lineTo(10, 90);
+        cxt.moveTo(20, 20);
+        cxt.lineTo(80, 80);
+        cxt.moveTo(80, 20);
+        cxt.lineTo(20, 80);
         cxt.stroke();
         cxt.closePath();
         content[canvasNumber-1] = 'X';
       }
       else {
         cxt.beginPath();
-        cxt.arc(50, 50, 45, 0, Math.PI*2, true);
+        cxt.arc(50, 50, 35, 0, Math.PI*2, true);
         cxt.stroke();
+        cxt.fill();
+        cxt.fillText('GA', 50, 50 );
         cxt.closePath();
         content[canvasNumber-1] = 'O';
       }
@@ -52,7 +57,7 @@ function canvasClicked(canvasNumber) {
       checkForWinners(content[canvasNumber-1]);
 
       if(squares === 9) {
-        alert("GAME OVER");
+        winner.textContent = "GAME OVER";
         location.reload(true);
       }
       // else {
@@ -63,7 +68,13 @@ function canvasClicked(canvasNumber) {
     function checkForWinners(symbol) {
       for (var a = 0; a < winningCombinations.length; a++) {
         if(content[winningCombinations[a][0]] === symbol && content[winningCombinations[a][1]] === symbol && content[winningCombinations[a][2]] === symbol) {
-          alert(symbol+ " WON!");
+          winner.textContent = symbol.toUpperCase() + " WINS!";
+          if (winner.textContent === "X WINS!") {
+            var counter = 0;
+
+          } else if(winner.textContent === "O WINS") {
+
+          }
           playAgain();
         }
 

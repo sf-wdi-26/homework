@@ -1,17 +1,32 @@
+body {
+  text-align: center;
+  font-family: Indie FLower;
+}
+h1, h2 {
+  color: gray;
+  font-size: 30px;
+}
 .box{
     margin: auto;
-    text-align: left;
     width: 400px;
     height: 400px;
 }
 
 canvas {
-  border: 1px solid red;
-  animation-fill-mode: forwards;
-  animation-delay: 5s;
   display: inline-block;
 }
-#btn {
-  text-align: center;
-  font-size: 30px;
+#canvas1, #canvas2, #canvas3, #canvas4, #canvas5, #canvas6 {
+  border-bottom: 2px dashed red;
+}
+#canvas1, #canvas4, #canvas7, #canvas2, #canvas5, #canvas8 {
+  border-right: 2px dashed red;
+}
+
+button {
+  font-size: 20px;
+  border: 1px dotted white;
+  padding: 10px;
+  background: gray;
+  color: white;
+  font-family: Indie FLower;
 }
