@@ -1,0 +1,68 @@
+body {
+  background-image: url("http://images4.alphacoders.com/148/148386.jpg")
+}
+
+h1{
+  color:white;
+}
+
+td {
+  height:200px;
+  width: 200px;
+  border: 5px solid black;
+  background: rgba(255,255,255,.75);
+}
+
+table{
+  margin: 0 auto;
+}
+
+button{
+  background-color: orange;
+}
+
+div{
+  position: relative;
+  color: white;
+  right: -510px;
+  top: -25px;
+  font-size: 30px;
+}
+
+.playerTurn {
+  text-align: center;
+  margin-top: -75px;
+}
+
+.O{
+  background: rgba(255,165,0, 0.8);
+  text-align: center;
+  font-size: 100px;
+}
+
+.X{
+  background: blue;
+  text-align: center;
+  font-size: 100px;
+}
+
+.Z {
+  background: rgba(255,255,255,.75);
+}
+
+#reset {
+  height: 50px;
+  width: 500px;
+  display: block;
+  margin: 20px auto;
+  font-size: 25px
+}
+
+#logo {
+  position: absolute;
+  height:20%;
+  width:60%;
+  left: 20px;
+  top: 160px;
+  z-index: -1;
+}
