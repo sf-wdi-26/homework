@@ -28,21 +28,38 @@ play
 */
 cells = {};
 spaces = ['a','b','c','d','e','f','g','h','i'];
+
 setUpBoard();
 setUpBoardClicks();
+setUpResetButton();
 player='o';
 
+report("Ready to play?  Click a space. 'X' starts the game!");
 
-// setUpResetButton();
+// while (!getWinner){
 
-// function setUpResetButton() {
-//   var b = document.getElementById('reset');
-//   b.addEventListener("click", clearBoard(), false);
+
 // }
 
+
+
+function report(status) {
+  var a=document.getElementsByClassName("message");
+  a[0].textContent=status;
+}
+
+
+function setUpResetButton() {
+  var b = document.getElementById('reset');
+  b.addEventListener("click", clearBoard, false);
+}
+
 function clearBoard() {
-  var sq = document.getElementsByClassName("square");
-  for (var x in sq) {sq[x].innerHTML = '';}
+  for (var x=spaces.length-1;x>=0;x-=1) {
+    a=document.getElementById(spaces[x]);
+    a.innerHTML='';
+    a.style.pointerEvents = 'auto';
+  }
 }
 
 function setUpBoard() {
@@ -73,8 +90,10 @@ function mark(player,space) {
   cells[space]=player;
   a=document.getElementById(space);
   a.innerHTML=player;
+  a.style.pointerEvents = 'none';
 }
 
+/***** scoring logic ***********/
 var getWinner = function() {
   if (winnerIs('x')) {
     return 'x';
