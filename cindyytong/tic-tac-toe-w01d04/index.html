@@ -6,20 +6,8 @@
 <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 
 
-<!--CT=== Bootstrap CDN (jQuery + CSS + JS) ===CT-->
-<!--
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
--->
-
 <!--CT============= Stylesheets =============CT-->
 <link rel="stylesheet" type="text/css" href="css/style.css">
-
-
-<!--CT============= JS Files =================CT-->
-<script type="text/javascript" src="js/app.js"></script>
-
 
 <!--CT============= Content =================CT-->
 
@@ -37,26 +25,26 @@
   </header>
 
 <!--Start Button Here-->
-    <button type ="button" id="start">Let it rip!</button>
+    <button type ="button" id="start"><p>Click to start!</p></button>
     <br>
     <br>
     <h4>Whose turn is it?: <div id="turn"></div></h4>
 <!--Grid here-->
     <div class="grid-container outline">
         <div class="row">
-            <div class="col r1 c1" id="a"><p>Pick me!</p></div>
+            <div class="col r1 c1 diag1" id="a"><p>Pick me!</p></div>
             <div class="col r1 c2" id="b"><p>Choose me!</p></div> 
-            <div class="col r1 c3" id="c"><p>Bingo! Wait, wrong game?</p></div> 
+            <div class="col r1 c3 diag2" id="c"><p>Bingo! Wait, wrong game?</p></div> 
         </div> 
         <div class="row">
             <div class="col r2 c1" id="d"><p>C'mon and make a move.</p></div> 
-            <div class="col r2 c2" id="e"><p>Choose me!</p></div> 
+            <div class="col r2 c2 diag1 diag2" id="e"><p>Choose me!</p></div> 
             <div class="col r2 c3" id="f"><p>Three in a row?</p></div> 
         </div> 
         <div class="row">
-            <div class="col r3 c1" id="g"><p>I'm your best bet.</p></div> 
+            <div class="col r3 c1 diag2" id="g"><p>I'm your best bet.</p></div> 
             <div class="col r3 c2" id="h"><p>Click me</p></div> 
-            <div class="col r3 c3" id="i"><p>Let's crush em!</p></div> 
+            <div class="col r3 c3 diag1" id="i"><p>Let's crush em!</p></div> 
         </div> 
     </div>
     
@@ -64,13 +52,10 @@
 <!--CT============= Header Ends ===========CT-->
   <section>
   </section>
+    
+    <br>
+    <br>
 
-<!--    scoreboard-->
-  <div class = "scoreboard">
-    <h4>Who's keeping score?</h4>
-      <p>Dog: </p>
-      <p>Cat: </p>
-    </div>
 
 <!--CT============= Header Footer ===========CT-->
 	<footer>
@@ -79,7 +64,7 @@
         <br>
         <br>
         
-        <p>Special thanks to Blue the dog and Wheezy the cat for their permission in letting me use their photos.</p>
+        <p>Special thanks to Blue, the dog, and Wheezy, the cat, for their permission in letting me use their photos.</p>
 	</footer>
 
 
@@ -106,25 +91,13 @@ startButton.onclick = function(){
     var counter = function(){
         if(count>=8){
             alert("It's a tie! You're both winners. Try again.");}
+        //need to edit this code to account for winning on last piece
         else{
             count += 1;
             console.log(count);
             }
         }
     
-    //%2 = 3 we get dog
-    //%1 = 3 we get 
-    
-// alert player turn
-//    var alertPlayerTurn = function(){
-//        if(count>1){
-//            if(player = 'dogPlayer'){
-//                alert("Yo dog, make a move!");
-//            } else if(player = 'catPlayer'){
-//                alert("Cat go on and purr your way.");
-//            }
-//        }
-//    }
 // determine player turn, we start out with dog first and insert message in header on whose turn it is
     player = 'dogPlayer';
     var turnPlaceHolder = document.getElementById('turn');
@@ -138,147 +111,206 @@ startButton.onclick = function(){
             }
         }
     
-    
 //when piece is clicked on, function is run to add photo
     
     var insertImage = function(){
         if( player === 'dogPlayer'){
-            this.innerHTML = "<img class = 'dog' src = 'dog.jpeg'>";}
+            this.innerHTML = "<img src = 'dog.jpeg'>";
+            this.classList.add("dog");
+        }
+
         else if (player === 'catPlayer'){
-           this.innerHTML = "<img class = 'cat' src = 'cat.jpeg'>";
+           this.innerHTML = "<img src = 'cat.jpeg'>";
+            this.classList.add("cat");
         }
     }
-                
-//retrieve each piece, when it is clicked run insertImage and counter
+
+//disable box when clicked
+    var disableBox = function(){
+        this.style.pointerEvents = 'none';
+    }
+    
+//retrieve each piece, and run various functions 
 var pieceA = document.getElementById('a');
     pieceA.addEventListener('click', insertImage);
     pieceA.addEventListener('click', counter);
     pieceA.addEventListener('click', playerTurn);
+    pieceA.addEventListener('click', disableBox);
     
 var pieceB = document.getElementById('b');
     pieceB.addEventListener('click', insertImage );
     pieceB.addEventListener('click', counter);
     pieceB.addEventListener('click', playerTurn);
+    pieceB.addEventListener('click', disableBox);
 
 var pieceC = document.getElementById('c');
     pieceC.addEventListener('click', insertImage );
     pieceC.addEventListener('click', counter);
     pieceC.addEventListener('click', playerTurn);
+    pieceC.addEventListener('click', disableBox);
 
 var pieceD = document.getElementById('d');
-    pieceD.addEventListener('click', insertImage );
+    pieceD.addEventListener('click', insertImage);
     pieceD.addEventListener('click', counter);
     pieceD.addEventListener('click', playerTurn);
+    pieceD.addEventListener('click', disableBox);
 
 var pieceE = document.getElementById('e');
-    pieceE.addEventListener('click', insertImage );
+    pieceE.addEventListener('click', insertImage);
     pieceE.addEventListener('click', counter);
     pieceE.addEventListener('click', playerTurn);
-        
+    pieceE.addEventListener('click', disableBox);
+
 var pieceF = document.getElementById('f');
-    pieceF.addEventListener('click', insertImage );
+    pieceF.addEventListener('click', insertImage);
     pieceF.addEventListener('click', counter);
     pieceF.addEventListener('click', playerTurn);
-    
+    pieceF.addEventListener('click', disableBox);
+
 var pieceG = document.getElementById('g');
-    pieceG.addEventListener('click', insertImage );
+    pieceG.addEventListener('click', insertImage);
     pieceG.addEventListener('click', counter);
     pieceG.addEventListener('click', playerTurn);
-    
+    pieceG.addEventListener('click', disableBox);
+
 var pieceH = document.getElementById('h');
-    pieceH.addEventListener('click', insertImage );
+    pieceH.addEventListener('click', insertImage);
     pieceH.addEventListener('click', counter);
     pieceH.addEventListener('click', playerTurn);
+    pieceH.addEventListener('click', disableBox);
     
 var pieceI = document.getElementById('i');
-    pieceI.addEventListener('click', insertImage );
+    pieceI.addEventListener('click', insertImage);
     pieceI.addEventListener('click', counter);
     pieceI.addEventListener('click', playerTurn);
-
+    pieceI.addEventListener('click', disableBox);
+    
 // winning scenarios: 3 in a row, 3 in a column, diagonal
 //if any combinations of these buttons have been clicked by same user, alert winner and ask to retry game, update scoreboard
-    
-    //scan each row, grab elements by class if you have more than three then declare winner
+//scan each row, grab elements by class if you have more than three then declare winner
 
 //  for each element in class name row/one get element by class name cat/dog, if the result is greater than three then winner 
 
-//    Check Rows 
-    var rowOneDog = document.querySelectorAll('.r1, .dog');
-    var rowOneCat = document.querySelectorAll('.r1, .cat');
+//  Check Rows 
+    var rowOneDog = document.getElementsByClassName('r1 dog');
     
-    var rowOneDog = document.querySelectorAll('.r2, .dog');
-    var rowOneCat = document.querySelectorAll('.r2, .cat');
+    var rowOneCat = document.getElementsByClassName('r1 cat');
     
-    var rowOneDog = document.querySelectorAll('.r3, .dog');
-    var rowOneCat = document.querySelectorAll('.r3, .cat');
+    var rowTwoDog = document.getElementsByClassName('r2 dog');
+    var rowTwoCat = document.getElementsByClassName('r2 cat');
     
-
-    var rows = [rowOne, rowTwo, rowThree];
+    var rowThreeDog = document.getElementsByClassName('r3 dog');
+    var rowThreeCat = document.getElementsByClassName('r3 cat');
     
-    var arr = [];
-    var i;
-    var x;
-
+// Check Columns
+    var colOneDog = document.getElementsByClassName('c1 dog');
+    var colOneCat = document.getElementsByClassName('c1 cat');
     
-    function checkThree(arr){
-        for(i = 0; j = arr.length; i<j; i++){
-//            for(x = 0; y =arr[i].length; x<y; x++){
-//                if(arr[i].length>=3){
-                    alert("We have a winner!");
-                } 
-            }
-            
+    var colTwoDog = document.getElementsByClassName('c2 dog');
+    var colTwoCat = document.getElementsByClassName('c2 cat');
+    
+    var colThreeDog = document.getElementsByClassName('c3 dog');
+    var colThreeCat = document.getElementsByClassName('c3 cat');
+    
+// Check Diagonals 
+    var diagOneDog = document.getElementsByClassName('diag1 dog');
+    var diagOneCat = document.getElementsByClassName('diag1 cat');
+    
+    var diagTwoDog = document.getElementsByClassName('diag2 dog');
+    var diagTwoCat = document.getElementsByClassName('diag2 cat');
+    
+//combine winning combinations for dogs and cats    
+    
+    var dogCombos = ['placeholder', rowOneDog, rowTwoDog, rowThreeDog, colOneDog, colTwoDog, colThreeDog, diagOneDog, diagTwoDog ];
+    
+    var catCombos = ['placeholder', rowOneCat, rowTwoCat, rowThreeCat, colOneCat, colTwoCat, colThreeCat, diagOneCat, diagTwoCat ];
+   
+//***********QUESTION, when i had the code as for (var i=0; j=arr.length; i<j; i++), it would not run, why is this?
+    
+    var checkWinnerDog = function(){
+        for(var i=0; i<dogCombos.length; i++){
+            if(dogCombos[i].length==3){
+                    alert("Dog triumps over cat!");
         }
-    }
-    checkThree(rows);
+    }}
     
-//    console.log(rowOne.length);
-//    
-//        <div class="grid-container outline">
-//        <div class="row">
-//            <div class="col r1 c1" id="a"><p>Pick me!</p></div>
-//                replace a with 
-//                <div class = 'cat'><img src = 'cat.jpeg'></div>
+       document.addEventListener('click', checkWinnerDog);
+ 
     
-//    var dogClassAdded = document.getElementById('dog');
-//    var catClassAdded = document.getElementById('cat');
-//    var checkWinner = function(){
-//        if(rowOne.dogClassAdded.length>= 3){
-//            alert('winner')
-//        } else if(rowOne.catClassAdded.length>= 3){
-//            alert('winner');
-//        } else(console.log("No winner"))
-//    }    
+     var checkWinnerCat = function(){
+        for(var i=0; i<catCombos.length; i++){
+            if(catCombos[i].length==3){
+                    alert("Cat wins.");
+        }
+    }}
     
-    
-    
-    
-// disable box once it is clicked on once
-    
-//alert winner
-
+       document.addEventListener('click', checkWinnerCat);
+ 
 
 //clear board
-// function to clearboard 
-//function clearBoard(){
-//    for (a=0; a<checkerboard.length; a++) {
-//        for(b=0; b< checkerboard[a].length; b++){
-//            checkerboard[a][b] = null;  
-//        }
+// function to clearboard, not working  
+
+var clearButton = document.getElementById('clear');
+    clearButton.onclick = function(){
+        count = 0; 
+        pieceA.removeEventListener ('click', insertImage, false);
+        pieceA.removeEventListener('click', counter, false);
+        pieceA.removeEventListener('click', playerTurn, false);
+        pieceA.removeEventListener('click', disableBox, false);
+        
+        pieceB.removeEventListener ('click', insertImage, false);
+        pieceB.removeEventListener('click', playerTurn, false);
+        pieceB.removeEventListener('click', disableBox, false);
+        
+        pieceC.removeEventListener ('click', insertImage, false);
+        pieceC.removeEventListener('click', playerTurn, false);
+        pieceC.removeEventListener('click', disableBox, false);
+        
+        pieceD.removeEventListener ('click', insertImage, false);
+        pieceD.removeEventListener('click', playerTurn, false);
+        pieceD.removeEventListener('click', disableBox, false);
+        
+        pieceE.removeEventListener ('click', insertImage, false);
+        pieceE.removeEventListener('click', playerTurn, false);
+        pieceE.removeEventListener('click', disableBox, false);
+        
+        pieceH.removeEventListener ('click', insertImage, false);
+        pieceH.removeEventListener('click', playerTurn, false);
+        pieceH.removeEventListener('click', disableBox, false);
+        
+        pieceI.removeEventListener ('click', insertImage, false);
+        pieceI.removeEventListener('click', playerTurn, false);
+        pieceI.removeEventListener('click', disableBox, false);
+    
+    }
+    
+//**QUESTION: I tried this method to clear the button but it did not work:
+    
+//    var clearButton = document.getElementById('clear');
+//    
+//    var newPieceA; newPieceB; newPieceC; newPieceD; newPieceE; newPieceF; newPieceG; newPieceH; newPieceI;
+//    
+//    clearButton.onclick = function(){
+//        newPieceA = pieceA.cloneNode(true);
+//    pieceA.parentNode.replaceChild(newPieceA, pieceA);
+//        newPieceB = pieceB.cloneNode(true);
+//    pieceB.parentNode.replaceChild(newPieceB, pieceB);
+//        newPieceC = pieceC.cloneNode(true);
+//    pieceC.parentNode.replaceChild(newPieceC, pieceC);
+//        newPieceD = pieceD.cloneNode(true);
+//    pieceD.parentNode.replaceChild(newPieceD, pieceD);
+//        newPieceE = pieceE.cloneNode(true);
+//    pieceE.parentNode.replaceChild(newPieceE, pieceE);
+//        newPieceF = pieceF.cloneNode(true);
+//    pieceF.parentNode.replaceChild(newPieceF, pieceF);
+//        newPieceG = pieceG.cloneNode(true);
+//    pieceG.parentNode.replaceChild(newPieceG, pieceG);
+//        newPieceH = pieceH.cloneNode(true);
+//    pieceH.parentNode.replaceChild(newPieceH, pieceH);
+//        newPieceI = pieceI.cloneNode(true);
+//    pieceI.parentNode.replaceChild(newPieceI, pieceI);
 //    }
-//}
-    
-    
-//    try to incorporate
-//    var test = document.getElementById("test");
-//var testClass = test.className;
-//switch(testClass){
-//    case "class1": test.innerHTML = "I have class1"; break;
-//    case "class2": test.innerHTML = "I have class2"; break;
-//    case "class3": test.innerHTML = "I have class3"; break;
-//    case "class4": test.innerHTML = "I have class4"; break;
-//    default: test.innerHTML = "";
-//}
+//
 
 </script>
 
