@@ -29,8 +29,11 @@ play
 cells = {};
 spaces = ['a','b','c','d','e','f','g','h','i'];
 setUpBoard();
+setUpBoardClicks();
+player='o';
 
-//setUpResetButton();
+
+// setUpResetButton();
 
 // function setUpResetButton() {
 //   var b = document.getElementById('reset');
@@ -44,6 +47,26 @@ function clearBoard() {
 
 function setUpBoard() {
   for (var x=spaces.length-1;x>=0;x-=1) {cells[spaces[x]]=null;}
+}
+
+
+/***** put a click listener on each square ***********/
+function setUpBoardClicks() {
+  var ids = [];
+  for (var x=spaces.length-1;x>=0;x-=1) {
+      ids.unshift(document.getElementById(spaces[x]));
+  }
+
+  function makeClickHandler(i) {
+      "use strict";
+      return function () {
+          mark(player,spaces[i]);
+      };
+  }
+
+  for (var y=spaces.length-1;y>=0;y-=1) {
+      ids[y].addEventListener("click", makeClickHandler(y));
+  }
 }
 
 function mark(player,space) {
