@@ -6,7 +6,7 @@ var board;
 var c;
 var cxt;
 var squares = 0;
-var y;
+var reset;
 var x = 0;
 var o = 0;
 var winner = document.getElementById('winner');
@@ -82,8 +82,8 @@ function canvasClicked(canvasNumber) {
       }
 
     function playAgain() {
-      y = confirm('Play Again?');
-      if (y === true) {
+      reset = confirm('Play Again?');
+      if (reset === true) {
         alert('Good Luck!');
         location.reload(true);
       }
