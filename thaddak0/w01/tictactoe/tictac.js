@@ -5,16 +5,21 @@ var squares = document.querySelectorAll(".square");
 var totalMoves = 1;
 var squareslength = squares.length;
 
+var Omoves = [];
+var Xmoves = [];
+
 function clickEvent(player) {
-	window.alert("You're love is bright as ever, Let's play TIC TAC TOE!");
 	for (var i = 0; i < squareslength; i ++) {
 		squares[i].addEventListener("click", addText);
 	}
 }
 
 function addText(event) {
-	if (totalMoves >= 9) {
-		window.alert("TIE GAME!!");
+	if (totalMoves === 9) {
+		var h2 = document.querySelector("h2");
+		event.target.innerHTML = "X";
+		h2.innerHTML = "TIE GAME!!";
+
 	}
 	else if (totalMoves % 2 === 0) {
 		event.target.innerHTML = "O";

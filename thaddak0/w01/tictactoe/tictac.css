@@ -18,6 +18,16 @@ h1 {
 	font-size: 40px;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
+h2 {
+	font-family: 'Roboto', sans-serif;
+	color: #88E3DA;
+	width: 600px;
+	margin: auto;
+	text-align: center;
+	font-size: 20px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+}
 .row {
 	text-align: center;
 	margin: auto;
