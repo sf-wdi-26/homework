@@ -6,7 +6,7 @@ body {
 .TICTACTOE {
 	margin: 0 0 0 0;
 	font-family: Impact, Charcoal, sans-serif;
-	font-size: 40px;
+	font-size: 40px; 
 	position: relative;
 	text-align: center;
 }
@@ -43,8 +43,10 @@ body {
 	left: 32%;
 	margin: 0 auto;
 	vertical-align: top;
+	font-size: 70px;
+	max-height: 149px;
 	text-align:center;
-	line-height: 9em;
+	line-height: 2em;
 }
 
 #box1 {
