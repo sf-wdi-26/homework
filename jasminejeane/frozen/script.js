@@ -1,7 +1,25 @@
 
 
 // document.querySelectorAll("input"); 
+	// var one =	document.getElementById('btn1').value;
+	// var two =		document.getElementById('btn2').value; 
+	// var three =		document.getElementById('btn3').value; 
+	// var four =		document.getElementById('btn4').value; 
+	// var five =		document.getElementById('btn5').value; 
+	// var six =		document.getElementById('btn6').value;
+	// var seven =		document.getElementById('btn7').value;
+	// var eight =		document.getElementById('btn8').value;
+	// var nine =		document.getElementById('btn9').value; 
 
+	// one.value = ""; 
+	// 		two.value = "";
+	// 		three.value = "";
+	// 		four.value = ""; 
+	// 		five.value = "";
+	// 		six.value = "";
+	// 		seven.value = ""; 
+	// 		eight.value = "";
+	// 		nine.value = "";
 
 
 
