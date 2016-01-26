@@ -1,7 +1,55 @@
 
+//MAIN THING THAT EXECUTES
+$ (document).ready(function(){
+    console.log("Linked.");
+
+    playGame();
+
+    $(".reset").click(function(){
+      reset();
+    });
+
+});
+
+
+
 //global variables for players
 var x = 'X';
 var o = 'O';
+
+//Object key/value for the TTT board
+var Board = {
+    a: null,
+    b: null,
+    c: null,
+    d: null,
+    e: null,
+    f: null,
+    g: null,
+    h: null,
+    i: null
+};
+
+//returns the value of each box
+var cells = function(key){
+  return Board[key];
+};
+
+//checks for row, column, and diagonal
+var winnerIs = function(player) {
+  return winsRow(player) || winsColumn(player) || winsDiagonal(player);
+};
+
+//MAIN FUNCTION that determines winner
+var getWinner = function() {
+  if (winnerIs(x)) {
+    return x;
+  }
+  if (winnerIs(o)) {
+    return o;
+  }
+  return null;
+};
 
 
 //is the basis for checking 3 cells
@@ -30,41 +78,6 @@ var winsDiagonal = function(player) {
 };
 
 
-var Board = {
-    a: null,
-    b: null,
-    c: null,
-    d: null,
-    e: null,
-    f: null,
-    g: null,
-    h: null,
-    i: null
-};
-
-var cells = function(key){
-  // this.boxID = boxID;
-  // this.turn = turn;
-
-  return Board[key];
-};
-
-
-//checks for row, column, and diagonal
-var winnerIs = function(player) {
-  return winsRow(player) || winsColumn(player) || winsDiagonal(player);
-};
-
-//MAIN FUNCTION that determines winner
-var getWinner = function() {
-  if (winnerIs(x)) {
-    return x;
-  }
-  if (winnerIs(o)) {
-    return o;
-  }
-  return null;
-};
 
 //random 
 var whoseTurn = function(){
@@ -91,22 +104,35 @@ var alternateTurn = function(turn){
     turn = x;
   }
 
+  return turn;
+
 };
 
 
-//front end
-//X turn / O turn - randomize - whoseTurn()
-//Tell user whose turn it is
-//click a box 
-//X or O appears (x, o alternate)
+var turnCount = function(){
+  var counter = 0;
 
-//backend
-//board is created
-//board stores data of x and o's
+  for(var key in Board){
+    if(Board[key]!==null){
+      counter+=1;
+    }
+  }
+  return counter;
+};
 
-//keep checking for 3 in a row until it's found (maybe once 3 are clicked)
-//
+var clickBox = function(id, turn){
+  
+  //box id is the 'a', 'b', 'c',....etc.
+  var boxID = $(id).attr("id");
 
+  //changes the text in the box to the X or O text
+  $(id).html(turn);
+  
+  //x or o is what will be inputted into the Board
+  Board[boxID] = turn;
+  //doesn't allow the value to change after it's been inputted
+  $(id).unbind();
+};
 
 
 
@@ -114,77 +140,63 @@ var playGame = function() {
 
   //randomly assign whose turn it is initially
   var turn = whoseTurn();
-  
 
 
   //changes text at the top to say whose turn it is
   $("#player").html(turn);
 
-  if(getWinner!=x && getWinner!=o){
-    //everytime a box is clicked
-    $("td").click(function(){
-        $("#catsgame").empty();
-      
-        //box id is the 'a', 'b', 'c',....etc.
-        var boxID = $(this).attr("id");
+  
+  //everytime a box is clicked
+  $("td").click(function(){
+      //empties out the "don't make this a cat's game" text
+      $("#catsgame").empty();
 
-        //changes the text in the box to the X or O text
-        $(this).html(turn);
-        //changes BG color of box
-        //$(this).css("background-color", "#f83");
+      //function for actions that take place immediately after a box click
+      clickBox(this, turn);
+    
 
-        Board[boxID] = turn;
-
-        if(getWinner()===x || getWinner()===o){
-          $(".result").html(getWinner() + " wins!");
-        }
-
+      //If there is a winner, the game stops and the result is put up
+      if(getWinner()===x || getWinner()===o){
+        $(".result").html("<p>" + getWinner() + " wins! </p>");
+        //disables clicking after there is a winner
+        $("td").unbind();
+      } //if all boxes have been clicked
+      else if(turnCount()===9){
+        $(".result").html("<p>It's a cat's game! Nobody wins.</p>");
+        //no one can click
+        $("td").unbind();
+      }
+      else{
         //alternates the players
-        if(turn===o){
-          turn = x;
-        }
-        else if(turn===x){
-          turn = o;
-        }
+        turn = alternateTurn(turn);
 
-        //with each click, it changes the text at the top 
-        //telling the player about her turn
+        //tells user whose turn it is after
         $("#player").html(turn);
-      });
 
-  }
-  else{
-    $(".result").html("<p>"+ getWinner() +" wins!!</p><br/>");
-  }
+      }
+      
+    });
 
 };
+
 
 var reset = function(){
+  //empties all boxes of text
   $("td").empty();
 
+  $(".result").html("<p>It's <span id='player'>someone</span>'s turn! <span id='catsgame'>Let's not make this a cat's game.</span></p>");
+
   //loops through Board object and resets the board
-  for(var i=97; i<=106; i++){
-    Board[String.fromCharCode(i)] = null;
+  for(var key in Board){
+    Board[key] = null;
   }
 
+  //just to be sure it clears the board
   console.log(Board);
-};
-
-
-//MAIN 
-$ (document).ready(function(){
-  console.log("Linked.");
-
 
   playGame();
+};
 
-  $(".reset").click(function(){
-    reset();
-    clickCounter = 0;
-    playGame();
-  });
-
-});
 
 
 
