@@ -30,32 +30,6 @@ var winsDiagonal = function(player) {
 };
 
 
-
-//Creates tic-tac-toe board
-// var cellValue = function(key) {
-//   switch(key) {
-//     case 'a': return null;
-//     case 'b': return null;
-//     case 'c': return null;
-//     case 'd': return null;
-//     case 'e': return null;
-//     case 'f': return null;
-//     case 'g': return null;
-//     case 'h': return null;
-//     case 'i': return null;
-//     default : return null;
-//   }
-// };
-
-// var createBoard = function(){
-//   var cells = {};
-
-//   for(var i=97; i<=106; i++){
-//     cells[String.fromCharCode(i)] = null;
-//   }
-//   return cells;
-// };
-
 var Board = {
     a: null,
     b: null,
@@ -132,6 +106,10 @@ var alternateTurn = function(turn){
 
 //keep checking for 3 in a row until it's found (maybe once 3 are clicked)
 //
+
+
+
+
 var playGame = function() {
 
   //randomly assign whose turn it is initially
@@ -152,6 +130,8 @@ var playGame = function() {
 
         //changes the text in the box to the X or O text
         $(this).html(turn);
+        //changes BG color of box
+        //$(this).css("background-color", "#f83");
 
         Board[boxID] = turn;
 
@@ -191,6 +171,7 @@ var reset = function(){
 };
 
 
+//MAIN 
 $ (document).ready(function(){
   console.log("Linked.");
 
