@@ -8,24 +8,32 @@
 	
 		<script>
 
+		//This will start the game, clear boxes in all squares, both X and O gets an equal chance to start thegame, winner is at null, and a message will flash to state such
+
 		function startGame() {
 
 			for (var i = 1; i <= 9; i++) {
 				clearBox(i);
 			}	
 		  	
-		  document.turn = "X";
-		  if (Math.random() < 0.5) {
+		  	document.turn = "X";
+		  	
+		  	if (Math.random() < 0.5) {
 		  	document.turn = "O";
-		  }
-		  document.winner = null;
-		  setMessage(document.turn + " gets to start.");
-		}
+		  	}
+		  	
+		  	document.winner = null;
+		  	
+		  	setMessage(document.turn + " gets to start.");
+			}
+
+		//Sets message in gameboard
 
 		function setMessage(msg) {
-		  document.getElementById("message").innerText = msg;
+		  	document.getElementById("message").innerText = msg;
 		}
 
+		// Gives three options in the next move: if there is  a winner, a message that that player has already won the game will be given; if not game goes on and goes to switch turn; otherwise, player will not be allowed to continue clicking on preferred square that is already used, the same message appears
 		function nextMove(square) {
 			if (document.winner != null) {
 				setMessage(document.winner + " already won the game.");
@@ -39,6 +47,7 @@
 			}
 		}
 
+		//Gives three options while games is still on going: Winner is declared and message is printed on game board; IF NOT it's X's tunr; otherwise it's O's turn
 		function switchTurn() {
 
 			if (checkForWinner(document.turn)) {
@@ -52,6 +61,8 @@
 				setMessage("It's " + document.turn + "'s turn!");		
 			}
 		}	
+
+		//This checks all possible winning combinations, checks it using checkRow function
 
 		function checkForWinner(move) {
 			var result = false;
@@ -70,6 +81,8 @@
 			return result;
 
 		}
+		
+		//This checks if the player has made a winninc combination, thta is three in a row
 		function checkRow(a, b, c, move) {
 			var result = false;
 			if (getBox(a) == move && getBox(b) == move && getBox(c) == move){
@@ -79,10 +92,12 @@
 
 		}
 
+		//Gets box 
 		function getBox(number) {
 			return document.getElementById("square" + number).innerText;
 		}
 
+		//Clears box
 		function clearBox(number) {
 			document.getElementById("square" + number).innerText = "";
 		}
