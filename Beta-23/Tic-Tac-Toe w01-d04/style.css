@@ -1,0 +1,74 @@
+table {
+  margin: 0 auto;
+  border-radius:10px;
+  
+}
+td {
+  border: 10px solid black;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  font-size: 10em;
+  box-sizing:border-box;
+  background-color: #ffcc7e;
+}
+
+td:hover{
+  cursor:pointer;
+}
+
+td:first-child{
+  border-left: none;
+}
+td:last-child{
+  border-right: none;
+}
+
+thead tr td{
+  border-top:none;
+  border-bottom: none;
+}
+
+tfoot tr td{
+  border-top:none;
+  border-bottom: none;
+}
+
+.container, .playerTurn {
+  text-align: center;
+
+}
+
+.X, .O {
+  border-radius: 20px;
+  color: white;
+}
+.X {
+  background: indigo;
+}
+.O {
+  background: yellow;
+}
+
+.clear {
+  background: white;
+}
+
+#reset {
+  padding: 10px;
+  width: 400px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: Helvetica;
+}
+
+#reset:hover{
+  background: #ef1c67;
+  border-color: white;
+}
+
+h2 {
+font-family: Helvetica;
+
+}
