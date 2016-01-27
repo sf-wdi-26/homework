@@ -37,7 +37,7 @@ input[type="text"] {
   height: 30%;
 }
 
-button {
+#button {
   background: rgba(104, 104, 104, .95);
   border-style: solid;
   border: 0;
@@ -46,7 +46,7 @@ button {
   font-size: 1.5em;
 }
 
-button:hover {
+#button:hover {
   background: white;
   color: black;
   border-style: solid;
@@ -56,7 +56,7 @@ button:hover {
   font-size: 1.5em;
 }
 
-button:active {
+#button:active {
   background: rgba(104, 104, 104, .95);
   border-style: solid;
   border: 1px;
