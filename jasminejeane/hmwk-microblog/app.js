@@ -1,6 +1,6 @@
 
 
-window.onload = function() {
+
 
 //Sudo Code
 
@@ -17,22 +17,32 @@ window.onload = function() {
 
 // Your JS will hold an array of posts 
 var posts =[];
-var theform = document.getElementbyId("newPost");
-var submit = document.getElementsById("submit");
-var list = document.createElement("li");
+var theform = document.getElementById("newPost");
+var submit = document.getElementById("submit");
+
+// var list = document.createElement("li");
 
 //function to append a new list item
-document.ul.appendChild(list);
+// document.ul.appendChild(list);
 
 
 //that it appends to the HTML list.
-function appendPosts (){
+function appendPosts(){
+
+var list = document.createElement("li");
+var text = 
+document.getElementById("appendMe").appendChild(list);
 
 
-console.log("function on");
+//remember to add preventDefault
+}
+
+function checker(){
+	console.log("was clicked");
 
 }
 
+// submit.addEventListener("clicked", checker);
 
 
 
@@ -45,7 +55,8 @@ console.log("function on");
 
 
 
-
+//problems
+//having trouble with event listener
 
 
 
@@ -56,5 +67,5 @@ console.log("function on");
 
 
 	// body...
-};
+
 //windows closing tag

@@ -1,7 +1,6 @@
 <html>
 	<head>
-		<script src="app.js"></script>
-<!-- <link rel="stylsesheet" href="style/style.css"> -->	
+<!-- <link rel="stylsesheet" href="style/style.css">	 -->
 
  <!-- <link rel="stylesheet" href="style/style.css"> -->
 		<title></title>
@@ -10,14 +9,15 @@
 		<!-- The homepage of your microblog app should be a list of these micro-posts with a form to add a new one. -->
 		<form id ="newPost" action="">
 			<input id="blog" type="text" name="page_name" placeholder ="Can't what to see what amazing words you put together!"/>
-  			<input id = "submit" type="submit" value="Create" />
+  			<input id = "submit" type="submit" value="Create" onclick="appendPosts()" />
 		</form>
 
 		<!-- Your HTML page should have a list in it that will display the posts. It can be empty, with JS adding posts, or have some dummy posts in it to start. -->
-		<ul>
+		<ul id="appendMe">
 			<li>Let's get somethings posted!!</li>
 
 		</ul>
+		<script src="app.js"></script>
 
 	</body>
 
