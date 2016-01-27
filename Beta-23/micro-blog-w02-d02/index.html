@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Micro-Blog</title>
 	<script type="text/javascript" src="app.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
-
-
 </head>
 
 <header>
@@ -14,9 +13,11 @@
        <form id="search-form" name="search" action="/products" method="get">
         <input id="search-input" name="search" type="text">
         <input type="submit" class="button-search" value="search" />
+
       </form>
     </li>
    </div>
+
 </header>
 
 
@@ -28,7 +29,7 @@
 	
 </div>
 
-<ul>
+<ul id="Post-ul">
   <li id="Post-list">
  <li>
 
@@ -42,9 +43,12 @@
   <li> 
 	<p>My fake plants died because I did not pretend to water them. -Mitch Hedberg</p>
 </li>
-  <textarea>Post a Comment!</textarea>
-  <br><input type="submit" id="comment">
-  <button type="submit" id="invia"></button>
+  
+  <form method="POST">
+  	
+  <textarea type="text" id="comment">Post a Comment!</textarea><br>
+  <button type="submit" id="invia">Submit</button>
+  </form>
   <br>
 </ul>
 
