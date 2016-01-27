@@ -1,0 +1,37 @@
+body {
+  background-color: grey;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 0;
+}
+
+li {
+  padding: 20px;
+  text-align: center;
+  margin-right: 40px;
+}
+
+input{
+   text-align: center;
+   font-size: 20px;
+}
+
+#comment {
+  display: block;
+  margin: 20px auto;
+  width : 400px;
+  height: 40px;
+}
+
+#post {
+  display: block;
+  margin: 20px auto;
+  width : 100px;
+  background-color: lightgreen;
+}
