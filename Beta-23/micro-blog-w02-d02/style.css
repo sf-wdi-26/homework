@@ -15,14 +15,14 @@ width: 300px;
     margin: auto;
 
 }
-
+article { 
+    display: block;
+}
 body {
   font-family: sans-serif;
   font-size: 20px;
   line-height: 1.5;
   margin: 100px;
-  border-bottom: 5px solid #222222;
-  border-top: 5px solid #222222;
   padding: 50px;
   background: #F6F6F6;
   list-style-type: none;
