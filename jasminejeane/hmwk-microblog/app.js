@@ -28,7 +28,8 @@ var info = document.getElementById("blog");
 
 
 //that it appends to the HTML list.
-function appendPosts(){
+function appendPosts(event){
+event.preventDefault();
 var info = document.getElementById("blog").value;
 var text = document.createTextNode(info);
 var list = document.createElement("li");
@@ -42,12 +43,12 @@ reset();
 submit.onclick = appendPosts;
 
 
+
 function reset(){
 	 document.getElementById("blog").value = "";
 
 
 }
-
 
 //wrote this just to see if my event listener was working
 function checker(){
