@@ -1,8 +1,8 @@
 window.onload = function() {
+// addButtonsToExamplePost();
 var doNotSubmit = document.querySelector("#form");
 doNotSubmit.addEventListener("submit", clickSubmit);
-addButtonsToExamplePost();
-ourTest();
+// ourTest();
 };
 
 function clickSubmit(event) {
@@ -15,40 +15,27 @@ function clickSubmit(event) {
 	newPost.innerHTML = document.querySelector("#blurb").value;
 	blogList.appendChild(newPost);
 	document.querySelector("#blurb").value = "";
-//add delete button for new blurbs and click to delete
+// add delete button for new blurbs and click to delete
 	button.setAttribute("class", "buttonclass");
 	button.innerHTML = "X";
-	button.setAttribute("id", "toDelete");
 	newPost.appendChild(button);
-	button.addEventListener("click", ourTest);
+//activate a click event on these new buttons that allows them to be deleted
+	markToDelete();
 }
 
-function addButtonsToExamplePost(){
-	posts = document.querySelectorAll("li");
-	for (i = 0; i < posts.length; i ++) {
-		var button = document.createElement("button");
-		button.setAttribute("class", "buttonclass");
-		button.innerHTML = "X";
-		posts[i].appendChild(button);
-	}
-}
+//function that adds a click event to every button
+ function markToDelete() {
+ 	var button = document.querySelectorAll("button");
+ 	for (var i = 0; i < button.length; i++) {
+    	button[i].addEventListener('click', deleteIt, false);
+ 	}
+ }
 
+//function that deletes a button's post!
+ function deleteIt() {
+ 		this.parentNode.setAttribute("id","toDelete");
+ 		var post = document.querySelector("#toDelete");
+		post.parentNode.removeChild(post);
+ }
 
-//yes, i put a click event listener in an iterator but i don't know 
-//how else to make this work when i already have existing sample blog posts!
-//it's still not working properly, either.
-//it takes two clicks then deletes the first post in the list, then the rest
-//disappear when you click any of the buttons.
-
-function ourTest() {
-	var blogList = document.querySelectorAll("li");
-	var button = document.querySelectorAll("button");
-	for (i = 0; i < blogList.length; i ++){
-		blogList[i].setAttribute("id","toDelete");
-		button[i].addEventListener("click", function(e) {
-			var post = document.querySelector("#toDelete");
-			post.parentNode.removeChild(post);
-		});
-	}
-}
 
