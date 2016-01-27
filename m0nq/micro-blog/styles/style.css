@@ -7,7 +7,7 @@ body {
   color: white;
 }
 
-#hOneDiv {
+#h-one-div {
   width: 30%;
   margin: 50px auto;
   position: relative;
@@ -18,7 +18,7 @@ h1 {
   font-size: 4em;
 }
 
-#formDiv {
+#form-div {
   width: 60%;
   margin: 0 300px 0 300px;
   position: relative;
