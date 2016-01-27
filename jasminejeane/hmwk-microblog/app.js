@@ -18,7 +18,7 @@
 // Your JS will hold an array of posts 
 var posts =[];
 var theform = document.getElementById("newPost");
-var submit = document.getElementById("submit");
+// var submit = document.getElementById("submit");
 
 // var list = document.createElement("li");
 
@@ -30,19 +30,33 @@ var submit = document.getElementById("submit");
 function appendPosts(){
 
 var list = document.createElement("li");
-var text = 
+var text = document.createTextNode("hello");
+list.appendChild(text);
 document.getElementById("appendMe").appendChild(list);
-
+stopDefAction();
 
 //remember to add preventDefault
 }
 
+
+//wrote this just to see if my event listener was working
 function checker(){
 	console.log("was clicked");
 
 }
 
-// submit.addEventListener("clicked", checker);
+
+//prevent Default Function
+function stopDefAction(evt) {
+    evt.preventDefault();
+}
+
+document.getElementById("submit").addEventListener("submit", function(){
+	stopDefAction();
+	appendPosts();
+	console.log("working");
+
+});
 
 
 
