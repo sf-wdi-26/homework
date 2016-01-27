@@ -1,4 +1,27 @@
+/*"Graffiti Wall", copyright Bernie Speed http://www.caedes.net/Zephir.cgi?lib=Caedes::Infopage&image=BernieSpeed-1134941727.jpg*/
+
 body {
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Bangers', cursive;
+  background-image: url('../images/BernieSpeed-1134941727.jpg');
+  background-repeat: no-repeat; 
+  color: white;
+  text-align: center;
+  margin: auto;
+  }
+
+#title {
+  font-size: 4em;
+  background: rgba(0,0,0,0.5);
+
 }
 
+@media only screen and (max-width: 960px) {  
+  /*style*/
+}
+
+@media only screen and (max-width: 640px) {
+  #title {
+    font-size: 2em;
+  }
+}
