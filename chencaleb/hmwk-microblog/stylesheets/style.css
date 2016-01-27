@@ -1,11 +1,10 @@
 body {
 	background-image: url("http://i.stack.imgur.com/p9mUO.jpg");
-	overflow: scroll;
+	font-family: "Quicksand";
 }
 
 h1 {
 	text-align: center;
-	font-family: 'Quicksand';
 	font-size: 3em;
 	color: lightgrey;
 }
@@ -31,11 +30,25 @@ li {
 	font-size: 18px;
 	padding: 6px;
 	border: 1px solid black;
+	font-family: "Quicksand";
 }
 
 #postButton {
 	width: 100px;
+	height: 20px;
 	margin: 10px;
 	font-size: 18px;
 	padding: 5px;
 }
+
+@media only screen and (max-width: 960px) {
+  header nav ul li {
+    display: none;
+  }
+
+ @media only screen and (max-width: 640px) {
+ 	header nav ul li {
+    display: none;
+  }
+ }
+  
