@@ -19,6 +19,7 @@
 var posts =[];
 var theform = document.getElementById("newPost");
 var submit = document.getElementById("submit");
+var info = document.getElementById("blog");
 
 // var list = document.createElement("li");
 
@@ -28,15 +29,26 @@ var submit = document.getElementById("submit");
 
 //that it appends to the HTML list.
 function appendPosts(){
-
+var info = document.getElementById("blog").value;
+var text = document.createTextNode(post);
 var list = document.createElement("li");
-var text = document.createTextNode("hello");
 list.appendChild(text);
 document.getElementById("appendMe").appendChild(list);
-stopDefAction();
 
-//remember to add preventDefault
+
 }
+
+function inputText(post){
+var info = document.getElementById("blog").value;
+var text = document.createTextNode(post);
+
+
+
+
+}
+
+submit.onclick = appendPosts;
+
 
 
 //wrote this just to see if my event listener was working
@@ -45,21 +57,44 @@ function checker(){
 
 }
 
+submit.onclick = appendPosts;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //prevent Default Function
-function stopDefAction(evt) {
-    evt.preventDefault();
-}
+// function stopDefAction(evt) {
+//     evt.preventDefault();
+// }
 
-document.getElementById("submit").addEventListener("submit", function(){
-	stopDefAction();
-	appendPosts();
-	console.log("working");
+//was having alot of trouble with code below 
 
-});
+// document.getElementById("submit").addEventListener("submit", function(){
+// 	stopDefAction();
+// 	appendPosts();
+// 	console.log("working");
+
+// });
 
 
-// element.onclick = checker;
 
 //When your user clicks submit,
 // your JS should handle taking the content of the form 
@@ -67,6 +102,7 @@ document.getElementById("submit").addEventListener("submit", function(){
 
 
 
+//remember to add preventDefault
 
 
 
