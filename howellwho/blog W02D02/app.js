@@ -7,28 +7,25 @@
     // });
 
 window.onload = function (){
-
+    //grabs element from the form after
     document.getElementsByTagName("form")[0].addEventListener("submit", forSubmit);
 };
 
+    //prevents from default linking externally
 function forSubmit(e) {
     e.preventDefault();
     var words = document.getElementById("thoughts").value;
     
 
-    // 2 -v
+    //places "thoughts" into a list on site
     var $li = document.createElement("li");
     $li.innerHTML = words;
     console.log($li);
     document.getElementById('list-id').appendChild($li);
-// }
-
-    // 3 - 
-        
-        
+     
     }
    
-    // document.getElementById("shared-throughs").innerHTML = answer;
+  
 
 
 
