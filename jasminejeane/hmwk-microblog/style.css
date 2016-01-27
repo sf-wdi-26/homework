@@ -5,11 +5,11 @@ body{
 	background-color: blue; 
 }
 
-#newPost,
+
 #blog {
 
-	height: 20px;
-	width: 60px;
+	height: 90px;
+    width: 730px;
 }
 
 /*li {

@@ -18,7 +18,7 @@
 // Your JS will hold an array of posts 
 var posts =[];
 var theform = document.getElementById("newPost");
-// var submit = document.getElementById("submit");
+var submit = document.getElementById("submit");
 
 // var list = document.createElement("li");
 
@@ -59,6 +59,7 @@ document.getElementById("submit").addEventListener("submit", function(){
 });
 
 
+// element.onclick = checker;
 
 //When your user clicks submit,
 // your JS should handle taking the content of the form 
