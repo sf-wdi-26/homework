@@ -2,7 +2,7 @@ window.onload = function() {
 // addButtonsToExamplePost();
 var doNotSubmit = document.querySelector("#form");
 doNotSubmit.addEventListener("submit", clickSubmit);
-// ourTest();
+markToDelete();
 };
 
 function clickSubmit(event) {
