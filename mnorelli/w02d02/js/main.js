@@ -17,10 +17,9 @@ function setListener () {
 }
 
   function addPost(e) {
-    console.log("working");
+    e.preventDefault();
     var posts = document.getElementById("posts");
     var form = document.getElementById("form");
-    e.preventDefault();
     var li = document.createElement("li");
     li.textContent=tagPost.value;
     posts.appendChild(li);

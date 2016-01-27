@@ -1,4 +1,7 @@
 /*"Graffiti Wall", copyright Bernie Speed http://www.caedes.net/Zephir.cgi?lib=Caedes::Infopage&image=BernieSpeed-1134941727.jpg*/
+html {
+  height: 100%;
+}
 
 body {
   /*font-family: 'Ubuntu', sans-serif;*/
@@ -21,10 +24,18 @@ body {
   margin: 1em;
 }
 
-.ul-div {
-
+#postList {
   overflow: scroll;
+  font-family: 'Ubuntu', sans-serif;
+  overflow: scroll;
+  overflow-x: hidden;
+}
 
+li {
+  list-style-type: none;
+  background: rgba(0,0,0,0.5);
+  vertical-align: center;
+  text-decoration: 
 }
 
 input {
@@ -42,6 +53,9 @@ input {
   }
   input {
     width: 14em;
+  }
+  li {
+    font-size: 1em;
   }
 }
 
