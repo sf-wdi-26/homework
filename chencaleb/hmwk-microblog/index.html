@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Caleb's Microblog</title>
+  	<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+  	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand">
+  	<script type="text/javascript" src="./js/app.js"></script>
+</head>
+
+
+<body>
+<div class="container">
+	<h1> Caleb's Microblog </h1>
+	<div id="blogForm">
+		<form method="POST">
+ 	 		<input id="textBox" type="text" name="page_name" placeholder="Write something here..." minlength="1" autofocus required/> 
+ 	 		<!-- minlength does not work -->
+  			<input id="postButton" type="submit" value="Post"/>
+		</form>
+	</div>
+	<div>
+		<ul id="postList">
+			<li>This is my first post...</li>
+			<li>This is my second post...</li>
+			<li>This is my third post...</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
