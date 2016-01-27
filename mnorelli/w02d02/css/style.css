@@ -13,11 +13,18 @@ body {
 
 #title {
   background: rgba(0,0,0,0.5);
+  font-size: 4em;
 }
 
 #form {
   font-family: 'Ubuntu', sans-serif;
   margin: 1em;
+}
+
+.ul-div {
+
+  overflow: scroll;
+
 }
 
 input {
@@ -37,3 +44,4 @@ input {
     width: 14em;
   }
 }
+
