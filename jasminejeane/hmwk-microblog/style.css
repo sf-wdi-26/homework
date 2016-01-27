@@ -2,14 +2,36 @@
 /*my css is not connected*/
 
 body{
-	background-color: blue; 
+	background: linear-gradient(orange, red); 
 }
 
+
+#newPost {
+
+	text-align: center;
+}
 
 #blog {
 
 	height: 90px;
     width: 730px;
+    font-size: 20px;
+    margin-top: 250px;
+}
+
+
+#submit {
+
+	/*height: 90px;*/
+    width: 150px;
+    font-size: 100px;
+}
+
+li {
+	margin-left: 240px;
+	margin-right: 400px;
+	padding: 15px;
+	font-size: 20px;
 }
 
 /*li {

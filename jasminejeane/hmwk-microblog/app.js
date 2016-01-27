@@ -30,25 +30,23 @@ var info = document.getElementById("blog");
 //that it appends to the HTML list.
 function appendPosts(){
 var info = document.getElementById("blog").value;
-var text = document.createTextNode(post);
+var text = document.createTextNode(info);
 var list = document.createElement("li");
 list.appendChild(text);
 document.getElementById("appendMe").appendChild(list);
-
-
-}
-
-function inputText(post){
-var info = document.getElementById("blog").value;
-var text = document.createTextNode(post);
-
-
-
+reset();
 
 }
+
 
 submit.onclick = appendPosts;
 
+
+function reset(){
+	 document.getElementById("blog").value = "";
+
+
+}
 
 
 //wrote this just to see if my event listener was working
@@ -108,6 +106,8 @@ submit.onclick = appendPosts;
 
 //problems
 //having trouble with event listener
+//had to change button from submit to button type. 
+//Going to try with submit later add adding on prevent default 
 
 
 
