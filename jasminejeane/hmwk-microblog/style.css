@@ -1,0 +1,17 @@
+
+/*my css is not connected*/
+
+body{
+	background-color: blue; 
+}
+
+#newPost,
+#blog {
+
+	height: 20px;
+	width: 60px;
+}
+
+/*li {
+	font-size: 50px;
+}*/
