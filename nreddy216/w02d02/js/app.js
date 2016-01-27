@@ -12,8 +12,6 @@ $(document).ready(function(){
 	var postArray = [];
 	
 
-	// var counter = 0;
-
 	function countPosts(){
 		var counter = postArray.length;
 
@@ -50,30 +48,35 @@ $(document).ready(function(){
 		var ul = $(".posts");
 		var li = document.createElement("li");
 
+		if(entry.length!==0){
+
 		//puts list item at the top rather than at the bottom
-		$(ul).prepend(li);
+			$(ul).prepend(li);
 		
 
-		// var closeBtn = document.createElement("img");
-		// // closeBtn = $("img");
+			// var closeBtn = document.createElement("img");
+			// // closeBtn = $("img");
 
-		// // console.log(closeBtn);
-		
-		// closeBtn.attr({
-		// 	src: "../images/cross.svg",
-		// 	alt: "close button",
-		// 	id: "close-"+counter,
-		// 	class: "close"
-		// });
+			// // console.log(closeBtn);
+			
+			// closeBtn.attr({
+			// 	src: "../images/cross.svg",
+			// 	alt: "close button",
+			// 	id: "close-"+counter,
+			// 	class: "close"
+			// });
 
-		var length = postArray.length;
+			var length = postArray.length;
 
-		li.innerHTML = postArray[length-1] + "<p></p>";
-		
+			li.innerHTML = "<p>" + postArray[length-1] + "</p>";
+			
 
-		// deletePost(closeBtn[id]);
+			// deletePost(closeBtn[id]);
 
-		clearForm();
+			clearForm();
+
+		}
+
 	}
 
 	

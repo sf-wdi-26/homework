@@ -4,6 +4,11 @@
 	color: white;
 
 	margin-top: 100px;
+
+	background-color: #006767;
+	background-size: cover;
+
+	margin-left: -30px;
 }
 
 /*.top-container{
@@ -29,12 +34,12 @@
 }
 
 #submit-btn{
-	margin-top: -20px;	
 	background-color: #00cdcd;
 	border-style: none;
 	width: 50px;
-	height: 50px;
-	border-radius: 30px;
+	height: 45px;
+	border-radius: 5px;
+	/*padding-bottom: 5px;*/
 
 	font-size: 20px;
 
@@ -57,7 +62,7 @@ body{
 	background-size: 3000px;
 	background-position: -1500px;
 	background-repeat: no-repeat;
-	position: absolute;
+	/*position: absolute;*/
 }
 
 ul{
@@ -65,8 +70,8 @@ ul{
 	list-style-type: none;
 	text-align: center;
 	
-	min-width: 400px;
-	max-width: 600px;
+	/*min-width: 400px;
+	max-width: 600px;*/
 	margin: 0 auto;
 }
 
@@ -80,24 +85,29 @@ li{
 
 	border-radius: 10px;
 
-	margin-bottom: 20px;
-
 	position: relative;
-
-	clear: both;
-
 	width: 80%;
 
 	margin: 0 auto;
 
-	height: 100px;
+	padding-top: 15px;
+
+	vertical-align: text-top;
+	text-align: center;
 
 }
 
-#close{
+li p{
+ 	padding-bottom: 20px;
+ 	vertical-align: text-top;
+ }
+
+
+
+/*#close{
 	width: 20px;
 	padding-left: 10px;
-}
+}*/
 
 
 ::-webkit-input-placeholder {
@@ -107,7 +117,7 @@ li{
  text-align: center;
  font-weight: bold;
 
- color: #f7f7f7;
+ color: #f0f8f7;
 }
 :-moz-placeholder { /* older Firefox*/
  font-size:14px;
