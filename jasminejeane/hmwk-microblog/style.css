@@ -112,6 +112,8 @@ li {
     width: 730px;
     font-size: 20px;
     margin-top: 250px;
+    margin-bottom: 10px;
+
 }
 
 
@@ -123,8 +125,8 @@ li {
 }
 
 li {
-	margin-left: 240px;
-	margin-right: 400px;
+	margin-left: 50px;
+	margin-right: 150px;
 	padding: 15px;
 	font-size: 20px;
 }
@@ -136,10 +138,12 @@ li {
   }
   #blog {
 
-	height: 90px;
-    width: 730px;
-    font-size: 20px;
+	height: 80px;
+    width: 430px;
+    font-size: 15px;
     margin-top: 250px;
+    margin-bottom: 10px;
+
 }
 
 
@@ -151,10 +155,10 @@ li {
 }
 
 li {
-	margin-left: 240px;
-	margin-right: 400px;
-	padding: 15px;
-	font-size: 20px;
+	margin-left: 50px;
+	margin-right: 150px;
+	padding: 5px;
+	font-size: 18px;
 }
 }
 
