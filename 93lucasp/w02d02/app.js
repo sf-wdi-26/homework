@@ -26,4 +26,3 @@ function catchelement(){
 	 createElement();
 	 console.log(distance);
 }
-
