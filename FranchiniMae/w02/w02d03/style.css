@@ -1,0 +1,76 @@
+body {
+	position: relative;
+	background: url("background.png");
+	font-family: 'Pacifico', cursive;;
+}
+
+article {
+	position: fixed;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+
+}
+
+#blogInput {
+	width: 600px;
+	height:50px;
+	font-size: 1.2em;
+	border: none;
+	border-radius: 15px;
+	background-color: #FFF;
+	margin-bottom: 10px;
+	font-family: arial;
+}
+
+h1 {
+	font-size: 5em;
+	margin-bottom: 40px;
+	margin-top: 100px;
+}
+
+li {
+	list-style-type: none;
+	background-color: #ffc;
+	height: 10em;
+	width: 10em;
+	font-family: arial;
+	padding-left: 15px;
+	padding-top: 10px;
+	font-size: 1.3em;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border-radius: 15px;
+	display: inline-block;
+	clear: both;
+	text-align: center;
+	word-wrap: break-word;
+	font-family:'Homemade Apple', cursive;
+	vertical-align: top;
+	box-shadow: 3px 5px 6px #ccc; 
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin-left: 0;
+	margin-bottom: 50px;
+	width:900px;
+	display: inline-block;
+	clear: both;
+	overflow: auto;
+
+}
+
+
+#inputSubmit {
+	width: 200px;
+	height: 30px;
+	font-size: 1em;
+	font-family: arial;
+	background-color: #99bbff;
+	color: #fff;
+	border: none;
+	margin-bottom: 40px;
+	margin-top: 10px;
+}
