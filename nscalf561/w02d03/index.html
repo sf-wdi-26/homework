@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MicroBlog</title>
+	<script src="http://code.jquery.com/jquery.js" defer></script>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="./style.css"></link>
+	<script type="text/javascript" src="./app.js" defer></script>
+        <!-- Bootstrap JavaScript -->
+</head>
+
+<body>
+	<div id="psuedo-body">
+		<br><br><br>
+		<div id="theTitle" class="anotherTitle jumbotron"> Micro Blog </div>
+		<hr>
+
+		<div>
+			<form id="newSub" method="POST" action="\page">
+				<input id="textBox" type="text" placeholder="All your bullshit goes here">
+				<br><br>
+				<input class="btn" id="postButton" type="submit" value="Post" >
+			</form>
+			<hr>
+		</div>
+
+		<div id="holdsSubmissions">
+			<ul id="listOfSubmissions">
+
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

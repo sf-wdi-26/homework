@@ -13,7 +13,7 @@ body {
 	background-image: url("CSS/cool-wallpaper-1.jpg");
 	background-size: cover;
 	color: white;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 #theTitle {
@@ -35,10 +35,12 @@ hr {
 }
 
 #textBox {
+	color: #000;
 	width: 68%;
 	border-radius: 6px;
 	border: 0.5px solid;
 }
+
 
 #postButton {
 	background-color: green;
@@ -60,9 +62,22 @@ ul {
 	width: 68%;
 	background-color: green;
 	margin: 0 auto;
+	border-radius: 6px;
 }
 
 .deleteButton {
 	float: right;
 	vertical-align: center;
+}
+
+.jumbotron {
+	background: transparent;
+}
+
+.glyphicon {
+	background: transparent;
+	border:transparent;
+	margin-top: 5px;
+	font-size: 23px;
+	/*float:right;*/
 }
