@@ -1,32 +1,38 @@
-
-window.onload = function (){
+$(function () {
     //grabs element from the form after
-    document.getElementsByTagName("form")[0].addEventListener("submit", forSubmit);
-};
+    $('#form-id').on("submit", forSubmit);
+
+    //Empty the local storage.
+    $("a").click(function(){
+      localStorage.clear();
+      document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.buttonClick + " time(s).";
+    })
+
+    $('#clear').on("click", reset)
+ 
+});
 
     //prevents from default linking externally
 function forSubmit(e) {
     e.preventDefault();
-    var words = document.getElementById("thoughts").value;
-    
-
+    var words = $("#thoughts").val();
+    // var words = $(this).find('input').val()
+    if(localStorage.buttonClick){
+        localStorage.buttonClick = Number(localStorage.buttonClick)+1;
+        $("#result").html("You have clicked the button " + localStorage.buttonClick + " time(s).");
+      }else{
+        localStorage.buttonClick = 1;
+        $("#result").html("You have clicked the button " + localStorage.buttonClick + " time(s).");
+      }
     //places "thoughts" into a list on site
-    var $li = document.createElement("li");
-    $li.innerHTML = words;
-    console.log($li);
-    document.getElementById('list-id').appendChild($li);
-    reset(); 
-    }
-
-    //link bottom of page
-  //   var newLink = $( '<br><br><a id="link" href="http://www.google.com">Visit Google<a>' );
-  //   newLink.appendTo('body');
-  //   $('#link').attr( "target", "_blank" );
-  // });
-
-
-   // reset text box
-function reset(){
-     document.getElementById("thoughts").value = "";
-
+    $("#list-id").append("<li>" + words + "</li>");
+    $(this).find('textarea').val('');
+    // equivalent to:
+    // this.reset()
 }
+
+function reset () {
+  localStorage.clear();
+}
+
+
