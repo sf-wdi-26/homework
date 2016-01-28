@@ -16,6 +16,7 @@ body , head, form, ul , li {
 	display: table;
 	margin: 0 auto;
 	border-spacing: 10px;
+
 }
 
 html { 
@@ -30,4 +31,5 @@ button{
 	background-color: grey;
 
 }
+
 
