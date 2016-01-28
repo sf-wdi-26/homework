@@ -35,23 +35,54 @@ $(document).ready(function(){
 	}
 
 	function storePosts(){
-		var entry = $("#entry-box").val();
-
-		postArray.push(entry);
-
-		console.log(entry);
-		console.log(postArray);
-
-		var counter = countPosts();
-		$("#counter").textContent = counter;
+		var photoEntry = $("#photo-entry-box").val();
+		var captionEntry = $("#caption-entry-box").val();
 
 		var ul = $(".posts");
 		var li = document.createElement("li");
+		var img = document.createElement("img");
 
-		if(entry.length!==0){
+		if(photoEntry.length!==0){
 
 		//puts list item at the top rather than at the bottom
+			postArray.push({photo: photoEntry, caption: captionEntry});
+			localStorage.photo = photoEntry;
+			localStorage.caption = captionEntry;
+
+			console.log(postArray);
+
+			var counter = countPosts();
+			$("#counter").text(counter);
+
+			var length = postArray.length;
+
+			li.innerHTML = "<p><span class='quotes'>&ldquo;" + captionEntry + "&rdquo; </span></p>";
+			
+
+			$(img).attr("src", photoEntry);
+			$(img).attr("class", "img-responsive");
+
 			$(ul).prepend(li);
+
+			$(li).append(img);
+
+			//li.innerHTML = "<p>" + postArray[length-1] + "</p>";
+			
+
+
+			clearForm();
+
+
+		}
+
+	}
+
+	
+
+});
+
+	
+
 		
 
 			// var closeBtn = document.createElement("img");
@@ -66,19 +97,7 @@ $(document).ready(function(){
 			// 	class: "close"
 			// });
 
-			var length = postArray.length;
-
-			li.innerHTML = "<p>" + postArray[length-1] + "</p>";
-			
 
 			// deletePost(closeBtn[id]);
 
-			clearForm();
 
-		}
-
-	}
-
-	
-
-});

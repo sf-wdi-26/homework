@@ -5,64 +5,65 @@
 
 	margin-top: 100px;
 
-	background-color: #006767;
-	background-size: cover;
+	background-color: #028482;
 
-	margin-left: -30px;
 }
 
 /*.top-container{
 	margin-left: 100px;
 }*/
 
-#entry-box{
-	text-align: center;
-	min-width: 400px;
-	max-width: 600px;
+#header-img{
+	width: 2em;
+}
 
-	line-height: 40px;
+#subtitle{
+	font-size: 1em;
+	font-family: 'Palanquin', sans-serif;
+}
 
-	border-style: none;
-	border-radius: 5px;
+.quotes{
+	font-size: 2em;
 }
 
 #entry-form{
 	text-align: center;
-	margin-bottom: 100px;
 
 	font-family: 'Palanquin', sans-serif;
 }
 
+
+
 #submit-btn{
 	background-color: #00cdcd;
 	border-style: none;
-	width: 50px;
+	
 	height: 45px;
 	border-radius: 5px;
-	/*padding-bottom: 5px;*/
+	padding-bottom: 5px;
 
 	font-size: 20px;
 
 	color: white;
 
-	font-family: 'Rubik Mono One', sans-serif;
+	font-family: 'Rubik Mono One', sans-serif;*/
 }
 
 #submit-btn:hover{
-	margin-top: -20px;	
+	
 	background-color: #006767;
 	border-style: none;
-	width: 50px;
-	height: 50px;
-	border-radius: 30px;
 }
 
 body{
-	background-image: url(../images/motorcycle.JPG);
-	background-size: 3000px;
+	/*background-image: url(../images/motorcycle.JPG);*/
+	/*background-size: 3000px;
 	background-position: -1500px;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 	/*position: absolute;*/
+	background-size: 400px;
+	background-image: url(../images/wood_yellow.png);
+	background-repeat: repeat;
 }
 
 ul{
@@ -77,11 +78,11 @@ ul{
 
 li{
 	
-	background-color: #00cdcd;
-	border: 1px solid white;
+	/*background-color: #00cdcd;*/
+	/*border: 1px solid white;*/
 	/*border-bottom: 2px solid black;*/
 	font-family: 'Palanquin', sans-serif;
-	color: white;
+	/*color: white;*/
 
 	border-radius: 10px;
 
@@ -95,6 +96,14 @@ li{
 	vertical-align: text-top;
 	text-align: center;
 
+	font-size: 2em;
+	font-style: bold;
+
+}
+
+img{
+	border-radius: 10px;
+	max-width: 50%;
 }
 
 li p{
@@ -102,6 +111,9 @@ li p{
  	vertical-align: text-top;
  }
 
+.footer{
+
+}
 
 
 /*#close{
@@ -112,16 +124,15 @@ li p{
 
 ::-webkit-input-placeholder {
  font-size: 14px;
- text-transform: uppercase;
- text-transform: uppercase;
+ text-transform: lowercase;
  text-align: center;
  font-weight: bold;
 
- color: #f0f8f7;
+ color: #f7f7f7;
 }
 :-moz-placeholder { /* older Firefox*/
  font-size:14px;
- text-transform: uppercase;
+ text-transform: lowercase;
  text-align: center;
  font-weight: bold;
 
@@ -129,7 +140,7 @@ li p{
 }
 ::-moz-placeholder { /* Firefox 19+ */ 
  font-size: 14px;
- text-transform: uppercase;
+ text-transform: lowercase;
  text-align: center;
  font-weight: bold;
 
@@ -137,7 +148,7 @@ li p{
 } 
 :-ms-input-placeholder { 
  font-size: 14px; 
- text-transform: uppercase;
+ text-transform: lowercase;
  text-align: center;
  font-weight: bold;
 
