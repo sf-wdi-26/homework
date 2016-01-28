@@ -1,0 +1,66 @@
+body {
+	background: url("background.png");
+	font-family: 'Homenaje', sans-serif;
+}
+
+article {
+	max-width: 960px;
+	margin: 7em auto;
+	position: relative;
+	text-align: center;
+}
+
+h1 {
+	font-size: 5em;
+	color: #555555;
+}
+
+#blog-input {
+	border: solid .05em #999999;
+	font-family: 'Dosis', sans-serif;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+	padding: .15em 0;
+	text-align: center;
+	width: 15em;
+}
+
+#submit-button {
+	font-family: 'Dosis', sans-serif;
+	border: solid .1em #bbbbbb;
+	font-size: 1.15em;
+	color: #888888;
+	padding: .15em 1em;
+	background-color: #ffffff;
+}
+
+ul {
+	font-size: 2em;
+	list-style: none;
+	min-width: 300px;
+	margin-top: 2em;
+	padding: 0;
+}
+
+@media only screen and (max-width: 640px) {
+	h1 {
+		font-size: 3em;
+	}
+	#blog-input {
+		border-width: .07em;
+		font-size: 1.15em;
+		margin-bottom: 1em;
+		padding: .08em 0;
+		text-align: center;
+		width: 12em;
+	}
+	#submit-button {
+		border-width: .1em;
+		font-size: 1em;
+		padding: .08em .5em;
+	}
+	ul {
+		font-size: 1.5em;
+		margin-top: 2em;
+	}
+}
