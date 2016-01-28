@@ -10,7 +10,7 @@ $(function main() {
     // store theinput from the text field
     var input = $('#text-box').val();
 
-    check(input);
+    check(input).fadeIn();
   });
 
   function check (input) {

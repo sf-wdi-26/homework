@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  background-color: black;
   background-image: url("../assets/pZghu8Q.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,7 +10,7 @@ body {
 
 #h-one-div {
   width: 30%;
-  margin: 50px auto;
+  margin: 50px 518px;
   position: relative;
 }
 
@@ -20,7 +21,7 @@ h1 {
 
 #form-div {
   width: 60%;
-  margin: 0 300px 0 300px;
+  margin: 0 116px 0 300px;
   position: relative;
   z-index: 1;
   border-top: 1px;
@@ -32,8 +33,8 @@ h1 {
 input[type="text"] {
   color: black;
   font-size: 1.5em;
-  margin: 20px 100px 20px 100px;
-  position: relative;
+  margin: 20px 130px;
+  /*position: relative;*/
   width: 70%;
   height: 30%;
 }
@@ -69,7 +70,7 @@ input[type="text"] {
 li {
   background: rgba(104, 104, 104, .95);
   margin: 20px 300px 0 300px;
-  width: 58.7%;
+  width: 60%;
   display: block;
   list-style-type: none;
   border: 0;
