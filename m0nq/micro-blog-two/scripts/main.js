@@ -1,13 +1,14 @@
 $(function main() {
 
   // get submit button
-  $('button').on("click", function (event) {
+  $('#button').click(function (eventObject) {
+    
     // when the button is clicked
     // prevent the default event behavior
-    event.preventDefault();
+    eventObject.preventDefault();
 
-    // store the input from the text field
-    var input = document.getElementById('text-box').value;
+    // store theinput from the text field
+    var input = $('#text-box').val();
 
     check(input);
   });
@@ -15,20 +16,12 @@ $(function main() {
   function check (input) {
     if (input) {
       // reset the textfield
-      document.getElementById('text-box').value = '';
+      $('#text-box').val('');
 
       // create a new li object
-      var newListItem = document.createElement('li');
-
       // place the stored text field info into it's innerHTML
-      newListItem.innerHTML = input;
-
-      // capture immediate child node of the ul
-      var firstChild = document.getElementById('main-list').children[0];
-
       // append first child to the new list item
-      var parentNode = document.getElementById('main-list');
-      parentNode.insertBefore(newListItem, firstChild);
+      $('#main-list').prepend('<li>' + input + '</li>');
     }
   }
 });
