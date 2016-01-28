@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Mini Blog</title>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="app.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="main.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'> 
+</head>
+<body>
+<div class="container">
+<header>
+	<h1 class="text text-center">Jessie's Mini Blog</h1>
+	<h3 class="text text-center">a mini blog for my many musings</h3>
+	<h3 class="text text-center" id="musingCounter">there are 3 posted musings</h3>
+</header>
+
+<div id="row">
+	<form id="form" method="post" role="form">
+		<div id="inputSection" class="col-xl-12">
+	  		<input id="blurb" class="form-control text" type="text" name="blurb_text" placeholder="Type what you want to say here" minlength="1" required autofocus/>
+	  	</div>
+	  	<div id="submitSection" class="text-center text">
+	  	<input id="submitButton" type="submit" class="text text-center" value="Post"/ class="btn btn-primary"></input>
+	  	</div>
+	</form>
+</div>
+
+<div id="postingBoard">
+	<ul id="postingList" class="text-center">
+		<li class="text">This is my first post<button class="btn btn-primary">X</button></li>
+		<li class="text">and my second...<button class="btn btn-primary">X</button></li>
+		<li class="text">and my third...<button class="btn btn-primary">X</button></li>
+	</ul>
+</div>
+</div>
+</body>
+</html>
