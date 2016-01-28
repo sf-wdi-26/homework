@@ -1,0 +1,102 @@
+body {
+  width: 100%;
+  position: relative;
+  font-family: Rokkitt;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('https://static.pexels.com/photos/19578/pexels-photo.jpg');
+  background-size: cover;
+  color: white;
+  background-attachment: fixed;
+}
+#blog {
+  width: 70%;
+  margin: auto;
+}
+.wrapper {
+  width: 90%;
+  margin: auto;
+}
+#blog-title, h2, p {
+  text-align: center;
+  letter-spacing: 6px;
+  color: white;
+}
+
+p {
+  font-size: 20px;
+}
+.animate-dream{
+  letter-spacing: 20px;
+   animation-duration: 5s;
+   animation-name: slidein;
+}
+@keyframes slidein{
+  from { margin-left: 100%; width: 300%;}
+  to {margin-left: 0%; width: 100%;}
+  75% {font-size: 300%;}
+}
+#d {
+  color: red;
+}
+#r {
+  color: orange;
+}
+#e {
+  color: yellow;
+}
+#a {
+  color: green;
+}
+#m {
+  color: blue;
+}
+#s {
+  color: indigo;
+}
+#dot {
+  color: violet;
+}
+h1 {
+  font-size: 60px;
+  color: white;
+}
+
+input {
+  width: 50%;
+  padding: 5px;
+  font-size: 20px;
+  font-family: Rokkitt;
+  display: block;
+  margin: auto;
+}
+
+
+#postBtn {
+  width: 20%;
+  margin: 20px auto;
+  font-size: 25px;
+  display: block;
+  font-family: Rokkitt;
+  padding: 5px;
+  /*background: linear-gradient(rgba(100, 100, 100, .5), rgba(255, 255, 255, .5));*/
+
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  margin-left: 0;
+  padding-left: 0;
+  color: white;
+  padding-bottom: 20px;
+}
+ul li {
+  width: 50%;
+  padding: 20px;
+  font-size: 25px;
+  border-bottom: 1px solid white;
+  margin: auto;
+  padding-bottom: 20px;
+}
+#clearBtn {
+  margin-left: 44%;
+}
