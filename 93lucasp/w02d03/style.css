@@ -1,39 +1,41 @@
 #main {
-   text-align: center; 
-   margin: auto;
-   width: auto;
-   
+	text-align: center; 
+	margin: auto;
+	width: auto;
+	
 }
 li{
-   list-style: none;
-   border-radius: 10%;
-   background-color: #fff;
-   opacity: 0.6;  
+	list-style: none;
+	border-radius: 10%;
+	background-color: #fff;
+	opacity: 0.6;	
 }
 body{
-   background-image: url("http://lemerg.com/data/wallpapers/39/614778.jpg");
-   background-size: cover;
-   
+	background-image: url("http://lemerg.com/data/wallpapers/39/614778.jpg");
+	background-size: cover;
+	
 }
 h1{
-   text-align: center;
-   color: #fff;
+	text-align: center;
+	color: #fff;
 }
 #submit{text-align: center; margin-bottom: 4%;}
 input {
-   width: 240px;
-   height: 140px;
-   border-radius: 100%;
-   outline: none;
-   text-align: center;
+	width: 240px;
+	height: 140px;
+	border-radius: 100%;
+	outline: none;
+	text-align: center;
 }
 #my-list {
-   color: #0050A0;
+	color: #0050A0;
+   font-size: 1.2em;
 
 }
+#result{color:#fff;}
 
 button {
-   outline: none;
+	outline: none;
    border-top: 1px solid #96d1f8;
    background: #65a9d7;
    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
@@ -65,7 +67,7 @@ button:active {
    background: #1b435e;
    }
    #comment {
-      margin-bottom: 2%;
-      font-size: 1.2em;
-      color: #28597a;
+   	margin-bottom: 2%;
+   	font-size: 1.2em;
+   	color: #28597a;
    }
