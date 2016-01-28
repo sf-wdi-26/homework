@@ -4,26 +4,31 @@ $("#postButton").on("click", function(event) {
 event.preventDefault();
 
 
-var newPost = $("<li></li>").attr("class", "text");
 var oldPosts = $("#postList");
+var newPost = $("<li></li>").attr("class", "text");
 
-//newPost.
+var inputText = $("#textBox").val();
+newPost.html(inputText);
+oldPosts.append(newPost);
+$("#textBox").val("");
 
 });
 
 
-var submitButton = document.getElementById("postButton");
-submitButton.addEventListener("click", function(event) {
+//CODE BELOW IS IN JAVASCRIPT
 
-event.preventDefault();
+// var submitButton = document.getElementById("postButton");
+// submitButton.addEventListener("click", function(event) {
 
-var oldPosts = document.getElementById("postList");
-var newPost = document.createElement("li");
-newPost.setAttribute("class", "text");
+// event.preventDefault();
 
-newPost.innerHTML = document.getElementById("textBox").value;
-oldPosts.appendChild(newPost);
-document.getElementById("textBox").value = "";
-});
+// var oldPosts = document.getElementById("postList");
+// var newPost = document.createElement("li");
+// newPost.setAttribute("class", "text");
+
+// newPost.innerHTML = document.getElementById("textBox").value;
+// oldPosts.appendChild(newPost);
+// document.getElementById("textBox").value = "";
+// });
 
 };
