@@ -25,23 +25,37 @@
 				<hr>
 				<div class="form-group">
 				
-					<textarea class="form-control" placeholder="How's it going?"></textarea>
+					<textarea class="form-control" id="inputgetter" placeholder="How's it going?"></textarea>
 					
 				</div>
+
 			
 				<div class="centered">
 					
-					<button type="submit" class="btn btn-primary" id="postbutton">Post</button>
+				<button type="submit" class="btn btn-primary" id="postbutton">Post</button>
 				
 				</div>
 			
+					<div id='text1' style='display:none;'>This is what you posted</div>
 			</form>
 			
 		</div>
 
-		<!-- jQuery -->
+		<!-- jQuery, this is to show the input in another div, need to work on key up vs other event listeners-->
 		<script src="//code.jquery.com/jquery.js">
+		
 
+		$(document).ready(function() {
+		    	$('#inputgetter').keyup(function() {
+		        if ($('#inputgetter').val() > 8) {
+		            if ($('#text1').is(":hidden")) {
+		                $('#text1').show(500);]
+		            } else {
+		                $("#text1").hide(500);
+		            }
+		        }
+		    });
+		});
 		</script>
 		<!-- Bootstrap JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
