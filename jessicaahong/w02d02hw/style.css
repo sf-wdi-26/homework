@@ -13,9 +13,6 @@ ul {
 	display: inline;
 }
 #blurb {
-	width: 600px;
-	height: 30px;
-	display: ;
 	display: block;
 	position: relative;
 	margin: 10px auto;
@@ -72,7 +69,7 @@ h3 {
 	font-size: 18px;
 }
 li {
-	font-size: 16px;
+	font-size: 18px;
 }
 .postingList {
 	max-width: 300px;
