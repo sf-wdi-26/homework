@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>I was thinking about starting a Micro-blog...</h1>
+    <div id="form-container" class="container well col-md-8 col-md-offset-2">
+      <form id="postingForm" class="form-group" method="POST">
+        <label id="post-label" for="post">Thoughts?</label>
+        <input id="post" class="form-control" type="text" name="page_post" placeholder="What do you think?" autofocus />
+        <input id="submit" class="btn btn-sm btn-success" type="submit" value="Tell Me" />
+      </form>
+    </div>
+
+    <div id="posts-container" class="container well col-md-8 col-md-offset-2">
+      <h3>What People think:</h3>
+      <ul id="post-list"></ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
