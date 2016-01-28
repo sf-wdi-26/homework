@@ -18,14 +18,14 @@
 // Your JS will hold an array of posts 
 
 var theform = document.getElementById("newPost");
-var submit = document.getElementById("theButton");
+var submit = document.getElementById("submit");
 
 // var list = document.createElement("li");
 
 //function to append a new list item
 // document.ul.appendChild(list);
 
-
+localStorage.blogAdded = 0;
 //that it appends to the HTML list.
 function appendPosts(event){
 event.preventDefault();
@@ -34,6 +34,7 @@ var text = document.createTextNode(info);
 var list = document.createElement("li");
 list.appendChild(text);
 document.getElementById("appendMe").appendChild(list);
+
 reset();
 
 }
@@ -55,7 +56,6 @@ function checker(){
 
 }
 
-submit.onclick = appendPosts;
 
 
 
@@ -64,6 +64,28 @@ submit.onclick = appendPosts;
 
 
 
+
+
+
+// //local Storage
+// $().ready(function(){
+// 		$("#submit").click(function(){
+// 			if(!localStorage.dayIterator || localStorage.dayIterator >= 6){
+// 				localStorage.dayIterator = 0;
+// 				document.getElementById("result").innerHTML = "The first day of the week is " + daysOfTheWeek[localStorage.dayIterator] + ".";
+// 			}else{
+// 					localStorage.dayIterator = Number(localStorage.dayIterator)+1;
+// 					document.getElementById("result").innerHTML = "The current selected day is " + daysOfTheWeek[localStorage.dayIterator] + ".";
+// 			}
+// 		});
+// 		//Empty the local storage.
+// 		$("a").click(function(){
+// 			localStorage.clear();
+// 			document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.dayIterator + " time(s).";
+// 		})
+// 	});
+
+// localStorage.blogAdded = Number(localStorage.blogAdded)+1
 
 
 
