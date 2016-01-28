@@ -19,14 +19,14 @@ h2{
 }
 
 li {
-  padding: 20px;
+/*  padding: 20px;*/
   text-align: center;
-  margin-right: 40px;
-}
-
-input{
-   text-align: center;
-   font-size: 20px;
+  position: relative;
+  margin: 30px auto;
+  height: 30px;
+  width: 400px;
+  background-color: rgba(255,255,255,.5);
+  right: 1.5em;
 }
 
 #comment {
@@ -36,9 +36,12 @@ input{
   height: 40px;
 }
 
-#post {
+.btn-success {
   display: block;
-  margin: 20px auto;
-  width : 100px;
-  background-color: lightgreen;
+  margin: 0 auto;
+}
+
+.btn-danger {
+  display: block;
+  margin: 3em auto;
 }
