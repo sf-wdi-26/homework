@@ -9,15 +9,13 @@ window.onload = function() {
 	function addToList() {
 		var x = document.getElementById("getsInput").value;
 		addList = document.createElement("li");
-		addList.innerHTML = x;
+		addList.innerHTML = x + "&nbsp &nbsp &nbsp &nbsp";
 		document.getElementById("tasks").appendChild(addList);
-		
-
-
-
-
-		
-};
+		addList.setAttribute("class", "newClass");
+		closeButton = document.createElement("button");
+		closeButton.innerHTML = "X";
+		addList.appendChild(closeButton);
+	};
 }
 
 
