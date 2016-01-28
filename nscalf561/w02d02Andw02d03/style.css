@@ -35,6 +35,7 @@ hr {
 }
 
 #textBox {
+	color: #000;
 	width: 68%;
 	border-radius: 6px;
 	border: 0.5px solid;
@@ -65,4 +66,8 @@ ul {
 .deleteButton {
 	float: right;
 	vertical-align: center;
+}
+
+.jumbotron {
+	background: transparent;
 }
