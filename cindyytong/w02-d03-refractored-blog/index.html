@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--CT====This Website is built by Cindy Tong ====CT-->
+<html>
+	<head>
+	<!--CT============= Stylesheets =============CT-->
+		<link rel="stylesheet" type="text/css" href="css/style.css"
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" src="js/app.js"></script>
+	
+	<!--CT============= Content ==================CT-->
+<title>Cindy's Blog</title>
+</head>
+<body>
+	
+	<div class="container-fluid">
+	<h1>Travel Blog</h1>
+	<form>
+	  <div class="form-group has-success">
+	    <label for="name">Name</label>
+	    <input type="name" class="form-control" id="name" placeholder="Your Name">
+	  </div>
+	  <div class="form-group has-success">
+	    <label for="destination">Destination</label>
+	    <input type="destination" class="form-control" id="destination" placeholder="Where did you go?"
+	  </div>
+	  <br>
+	  <div class="form-group">
+	  	<textarea class= "form-control" id= "story" name= "story" placeHolder="Please share your travel story." minlength = "5" rows = "2"required>
+	  	</textarea> 
+
+	  </div>
+	  <button type="button" id = "submit" class="btn btn-success">Submit</button>
+	  <button type="button" id = "reset" class="btn btn-success">Reset</button>
+	</form>
+	</div>
+	
+<div class="container-fluid">	
+<div class="row">
+  	<div class="col-md-12"><h2>Submitted Stories</h2></div>
+  	<div class="col-md-12" id = "numSubmitted"></div>
+  	<div class="insertStory"></div>
+
+	</div>
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <h5>Created by Cindy Tong for WDI 26</h5>
+  </div>
+</nav>
+		
+</body>
+</html>
