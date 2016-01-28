@@ -1,21 +1,23 @@
 //javascript functions	
 window.onload = function() {
 	
-
-	document.getElementById("form1").addEventListener("submit",function(e){
-	e.preventDefault();
+	document.getElementById("form1").addEventListener("submit",function(event){
+		event.preventDefault();
+		addToList();
 	});
 
-	document.getElementById("btn").addEventListener("click",function(){
-		length += 1;
-	})
+	function addToList() {
+		var x = document.getElementById("getsInput").value;
+		addList = document.createElement("li");
+		addList.innerHTML = x;
+		document.getElementById("tasks").appendChild(addList);
+		
 
-	arrayList = [];	
-	arrayList.push(document.getElementById("getsInput").value);
 
 
 
+		
 };
-
+}
 
 
