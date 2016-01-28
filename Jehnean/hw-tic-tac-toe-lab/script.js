@@ -31,9 +31,9 @@ function addXandOListener(){
 
 // Function for event of X or O playing
 function addXorO(event){
-
+	console.log(event.target);
 	// QUESTION - Does this check to make sure the cell is empty? 
-	if (event.target.innerHTML.length === 0){
+	if (event.target.innerHTML.length == 0){
 		// If even number 
 		if (counter % 2 === 0) {
 			// (and) O moves parseInt parses a string and returns an integer of the data-num location of the table

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MicroBlog</title>
+	<link rel="stylesheet" type="text/css" href="./style.css"></link>
+	<script type="text/javascript" src="./app.js" defer></script>
+</head>
+<body>
+	<div id="psuedo-body">
+		<br><br><br>
+		<div id="theTitle" class="anotherTitle"> Micro Blog </div>
+		<hr>
+
+		<div>
+			<form id="newSub" method="POST" action="\page">
+				<input id="textBox" type="text" placeholder="All your bullshit goes here" pattern=".{1,}" minlength="1" required >
+				<br><br>
+				<input id="postButton" type="submit" value="Post" >
+			</form>
+			<hr>
+		</div>
+
+		<div id="holdsSubmissions">
+			<ul id="listOfSubmissions">
+
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+	background-image: url("http://i.stack.imgur.com/p9mUO.jpg");
+	overflow: scroll;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Quicksand';
+	font-size: 3em;
+	color: lightgrey;
+}
+
+#blogForm {
+	text-align: center;
+}
+
+ul {
+	text-align: center;
+	display: inline;
+	font-size: 20px;
+	color: lightgrey;
+}
+
+li {
+	padding: 5px;
+}
+
+#textBox {
+	width: 50%;
+	height: 20px;
+	font-size: 18px;
+	padding: 6px;
+	border: 1px solid black;
+}
+
+#postButton {
+	width: 100px;
+	margin: 10px;
+	font-size: 18px;
+	padding: 5px;
+}

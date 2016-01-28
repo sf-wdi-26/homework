@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My MiniBlog</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<header>
+	<h1 class="text">Jessie's Mini Blog</h1>
+	<h3 class="text">a mini blog for my many musings</h3>
+</header>
+<div id="postbar">
+<form id="form">
+  <input id="blurb" type="text" name="blurb_text" placeholder="Type what you want to say here" minlength="1" required autofocus/>
+  <input id="submitButton" type="submit" class="text" value="Post"/>
+</form>
+</div>
+<div id="postingBoard">
+	<ul id="postingList">
+		<li class="text">This is my first post<button class="buttonclass">X</button></li>
+		<li class="text">and my second...<button class="buttonclass">X</button></li>
+		<li class="text">and my third...<button class="buttonclass">X</button></li>
+	</ul>
+</div>
+</body>
+<script type="text/javascript" src="app.js"></script>
+</html>

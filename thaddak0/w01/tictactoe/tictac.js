@@ -34,7 +34,7 @@ function addText(event) {
 		checkForWinner();
 	}
 }
-function checkForWinner() {
+function checkForWinner() { //need to figure out how to check to see if there are 3 in a row
 	var a = document.getElementById("a");
 	var atext = a.textContent;
 	
@@ -73,28 +73,5 @@ function checkForWinner() {
 	}
 }
 
-/*function makeMove(event) {
-					 //need to make it so it makes the correct move depending on # of turns taken
-	if (numberOfMoves % 2 === 0) {
-		event.target.textContent = "O";
-		Oscore.push = "O";
-		checkForWinner(O);
-		/*var move = document.createElement("p");
-		Omove.textContent = "O";
-		event.target.appendChild(Omove);
-		Oscore.push = "O";
-		checkForWinner(O);
-	} else {
-		event.target.textContent = "X";
-		Xscore.push = "X";
-		checkForWinner(O);
-		/*var Xmove = document.createElement("p");
-		Xmove.textContent = "X";
-		event.target.appendChild(Xmove);
-		Oscore.push = "X";
-		checkForWinner(X);
-	}
-}
-*/
 
 
