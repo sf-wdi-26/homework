@@ -1,0 +1,40 @@
+@import url("hover-min.css");
+
+
+h1 {
+	font-family: Futura,"Trebuchet MS", Arial, sans-serif; 
+	font-size: 6em;
+	margin-left: 1em;
+}
+
+nav {
+	font-family: Futura;
+}
+
+.navbar-brand {
+	font-family: Futura;
+	font-size: 1em;
+	line-height: 12px;
+	text-align: left;
+	position: relative;
+	bottom: 6px;
+	left: 5px;
+}
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
