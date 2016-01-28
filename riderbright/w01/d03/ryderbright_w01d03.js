@@ -74,6 +74,8 @@ console.log(productOfArray(myNewArray));
 
 
 // Question 5
+
+
 var numberOfArguments = function(){
     return arguments.length;
 }
@@ -81,6 +83,7 @@ var numberOfArguments = function(){
 
 
 // Question 6
+
 var reverseString = function (s){
   var reversed = '';
   for (var i = s.length - 1; i >= 0; i--){
@@ -88,9 +91,12 @@ var reverseString = function (s){
   }
   return reversed;
 };
+reverseString ("good morning worlds");
 
 
 // Question 7
+
+
 function findLongestWord (a) {
   var longestLength = 0;
   for ( var i =0; i < a.length; i++){
@@ -103,6 +109,7 @@ function findLongestWord (a) {
 
 
 // Question 8
+
 function filterLongWords (words, i) {
   var filtered = [];
   for(var i = 0; i < words.length; i++){
