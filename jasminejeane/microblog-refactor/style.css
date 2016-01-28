@@ -1,0 +1,46 @@
+body {
+
+	background: linear-gradient(orange, red); 
+}
+
+
+#blog {
+
+	font-size: 100px;
+	text-align: center;
+}
+
+
+#theForm {
+
+	text-align: center;
+}
+
+#form {
+
+
+}
+
+#info {
+
+	height: 2.5em;
+    width: 23em;
+    font-size: 2em;
+}
+
+
+#theButton {
+	padding: 2em;
+
+	display: center;
+
+}
+
+
+/*#postBlog {
+
+
+	height: 5em;
+	width: 50em;
+
+}*/
