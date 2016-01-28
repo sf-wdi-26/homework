@@ -15,7 +15,9 @@ function cellClicked(element) {
     
     if (!gameOver) {
        
-        if (element.innerHTML == "&nbsp;") {
+        if (element.innerHTML == "&nbsp;
+
+            ") {
             element.innerHTML = curTurn;
 
             
