@@ -1,0 +1,76 @@
+@import url("hover-min.css");
+
+
+h1 {
+	font-family: Futura,"Trebuchet MS", Arial, sans-serif; 
+	font-size: 6em;
+	margin-left: 1em;
+}
+
+nav {
+	font-family: Futura;
+}
+
+h3 {
+	font-family: Futura;
+	font-size: 3.5em;
+}
+
+.navbar-brand {
+	font-family: Futura;
+	font-size: 1em;
+	line-height: 12px;
+	text-align: left;
+	position: relative;
+	bottom: 6px;
+	left: 5px;
+}
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.text {
+	padding: .5em;
+}
+
+#blogForm {
+	text-align: center;
+	overflow: scroll;
+}
+
+#textBox {
+	width: 50%;
+	/*height: 20px;
+	font-size: 18px;*/
+	padding: 6px;
+	border: 1px solid black;
+	font-family: Futura;
+}
+
+#postButton {
+	width: 100px;
+	position: relative;
+	left: 10px;
+}
+
+#postList {
+	text-align: center;
+	display: inline;
+	font-size: 20px;
+	font-family: Futura;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
