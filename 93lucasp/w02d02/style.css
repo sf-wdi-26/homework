@@ -29,8 +29,10 @@ input {
 }
 #my-list {
 	color: #0050A0;
+   font-size: 1.2em;
 
 }
+#result{color:#fff;}
 
 button {
 	outline: none;

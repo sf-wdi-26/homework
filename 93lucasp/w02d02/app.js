@@ -3,27 +3,23 @@ var refNode;
 
 window.onload = function() {
 	console.log("loaded");
-	document.getElementById("invia").addEventListener("click", catchelement);
-
-   
-
-};
-
-
-
-
-function createElement () {
-	console.log("loading");
-	var $li = document.createElement("li");
-	$li.textContent = distance;
-	document.getElementById('my-list').insertBefore($li, refNode);
-	refNode = $li;	
-}
+	$("#invia").on("click", catchelement);
 
 function catchelement(){
+	distance = $("#comment").val();
+	$("ul").prepend("<li>" + distance + "</li>");
+	if(localStorage.buttonClick){
+				localStorage.buttonClick = Number(localStorage.buttonClick)+1;
+				document.getElementById("result").innerHTML = "Your comment is the " + localStorage.buttonClick + ".";
+			}else{
+				localStorage.buttonClick = 1;
+				document.getElementById("result").innerHTML = "Your comment is the " + localStorage.buttonClick + ".";
+			}
+	localStorage.setItem("distance" + localStorage.buttonClick, distance );  
 
-	 distance = document.getElementById("comment").value;
-	 createElement();
-	 console.log(distance);
 }
+$("a").click(function(){
+			localStorage.clear();
+		});
 
+};
