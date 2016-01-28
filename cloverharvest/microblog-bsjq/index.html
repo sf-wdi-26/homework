@@ -8,6 +8,7 @@
 
 		<!-- Bootstrap CSS -->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,19 +18,23 @@
 		<![endif]-->
 
 	</head>
-	<body style="background-image: url('image/pool-coron1.png');">
+	<body>
 		<div class="container">
 			<form action="" method="POST" role="form">
-				<legend>Ticker</legend>
-			
+				<h2>Ticker</h2>
+				<hr>
 				<div class="form-group">
-					<label for="">label</label>
-					<input type="text" class="form-control" id="" placeholder="Input field">
+				
+					<textarea class="form-control" placeholder="How's it going?"></textarea>
+					
 				</div>
 			
+				<div class="centered">
+					
+					<button type="submit" class="btn btn-primary" id="postbutton">Post</button>
 				
+				</div>
 			
-				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 			
 		</div>
