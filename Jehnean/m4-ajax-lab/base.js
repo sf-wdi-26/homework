@@ -17,17 +17,15 @@ var $info_row_target;
 // On page load display google map and get USGS info 
 $(document).ready(function(){
 
-    function getGoogleMap(){
+    $info_row_target = $("#info");
+
         //Part 2. Your next goal is to integrate Google Maps:
         map = new google.maps.Map(document.getElementById('map'), {
-            // Center map on { lat: 37.78, lng: -122.44} 
-            center: { lat: 37.78, lng: -122.44 }, 
-            // You may also want to zoom out if you want to see quakes worldwide
-            zoom: 2
-        });
-    }
-
-    $info_row_target = $("#info");
+        // Center map on { lat: 37.78, lng: -122.44} 
+        center: { lat: 37.78, lng: -122.44 }, 
+        // You may also want to zoom out if you want to see quakes worldwide
+        zoom: 2
+    });
 
     $.get(weekly_quakes_endpoint, function(response_data){
         // Loop over it - for loop or forEach loop
