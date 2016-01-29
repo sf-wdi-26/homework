@@ -25,7 +25,7 @@ function submitPost(event) {
 
 	for (var i = 0; i < postsArray.length; i++) {
 	var list = "<li>" + postsArray[i] + "</li>";
-	localStorage.post = postsArray;
+	localStorage.setItem(i, postsArray[i]);
 	}
 
 	if (newPost.length !== 0 ) {

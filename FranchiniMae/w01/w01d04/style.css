@@ -1,7 +1,8 @@
 body {
   overflow-x: hidden;
   display: inline-block;
-  width: 100%;
+/*  width: 100%;*/
+  text-align: center;
 }
 
 h1 { 
