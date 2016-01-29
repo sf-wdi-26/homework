@@ -10,7 +10,7 @@ var msConvert = 60 * 60 * 1000;                     // convert milliseconds to h
 
 map = new google.maps.Map(document.getElementById('map'), {   // display google map in #map div
   center: { lat: 37.78, lng: -122.44},                        // SF coordinates
-  zoom: 8
+  zoom: 1
 });
 
 var markerSF = new google.maps.Marker({                       // marker for SF
