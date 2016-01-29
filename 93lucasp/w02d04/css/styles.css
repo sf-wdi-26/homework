@@ -1,0 +1,37 @@
+body {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #FAFCFD;
+}
+
+html, body, #map {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 10%;
+}
+
+.column {
+  width: 48%;
+  padding: 2%;
+  float: left;
+}
+
+#titl{font-size: 30px; }
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000050;
+}
+
+h2{
+  color: #000050;
+  font-size: 18px;
+}
+
+p {
+  padding: 10px 0;
+}
+p + p {
+  border-top: 1px solid black;
+}
