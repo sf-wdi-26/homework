@@ -22,13 +22,12 @@ $.get(weekly_quakes_endpoint, function addMapDetail(response_data) {
 		for (var i = 0; i < len; i ++) {
 			
 			titledata = newData.features[i].properties.title;
-			$('#info').append('<p>' + titledata + '</p>');
 
 			var hoursAgo = Math.round(
 				( Date.now() - newData.features[i].properties.time)/ (1000*60*60));
 			//get the time in hours since the last quake happened
 
-			$('#info').append('<p>' + hoursAgo + ' hours ago</p>');
+			$('#info').append('<p>').append(titledata + ' / ' + hoursAgo + ' hours ago');
 			//append hourly info to the page
 			
 			var longitude = newData.features[i].geometry.coordinates[0];
