@@ -1,61 +1,51 @@
-# Functions Lab
+# AJAX + Google Maps
 
-## Introduction
+| Objectives |
+| :--- |
+| Practice AJAX with the USGS Earthquake API |
+| Follow the Google Maps tutorial & problem solve adding pins to a map |
 
-> *Pair programming encouraged*
+## GeoQuakes
+In this lab we will be using live data from the USGS (United States Geological Survey), specifically a data set showing significant earthquakes (M4.0 or greater) from the past week.
 
-This lab provides an opportunity to practice implementing some real-world functions. If you [pair program](https://en.wikipedia.org/wiki/Pair_programming), we recommend [screen sharing](http://osxdaily.com/2012/10/10/remote-control-mac-screen-sharing-os-x/) and alternating roles as a "driver" and "navigator" after each step.
+**Our goal is to**:  
+- List information about each quake.
+- Display a Google Map with a pin at the epicenter of each quake.
 
-## Exercise
+#### Part 1. Rendering Data
+Take a moment to familiarize yourself with the dataset by opening it in your browser: [http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson](http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson).
 
-#### Requirements
++ What is the structure of the data?
+    + How many earthquakes does it list?
+    + How would you grab the first earthquake?
+        * How would you grab it's title?
+        * How would you grab it's geological coordinates:
+            - *latitude*?
+            - *longitude*?
+        * When did it happen?
+            - How many hours ago is that?
 
-Please write code that implements various functions, following the requirements in the list below:
+Now, take a moment to familiarize yourself with the layout in `index.html`.
+- Your short term goal is to render each *title* to the "info" section of the page (see the commented example in your HTML)
+    - Psuedo Code:
+        - grab the data from the USGS endpoint.
+        - loop over it
+        - add each title to the page
 
-1. Define a function `maxOfTwoNumbers` that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript. Do some googling to figure this out if you forget how conditionals work.
-2. Define a function `maxOfThree` that takes three numbers as arguments and returns the largest of them.
-3. Write a function `isCharacterAVowel` that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
-4. Define a function `sumArray` and a function `multiplyArray` that sums and multiplies (respectively) all the numbers in an array of numbers. For example, `sumArray([1,2,3,4])` should return 10, and `multiplyArray([1,2,3,4])` should return 24.
-5. Write a function that return the number of arguments passed to the function when called.
-6. Define a function `reverseString` that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
-7. Write a function `findLongestWord` that takes an array of words and returns the length of the longest one.
-8. Write a function `filterLongWords` that takes an array of words and a number `i` and returns the array of words that are longer than i characters long.
+#### Part 2. Add Google Maps
+- Your next goal is to integrate Google Maps:
+    - Follow the tutorial at [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial)
+        + Note that you will need to sign up for an API key. (See `index.html#L13`)
+        + Be VERY careful when you copy paste code!
+    - Please center your map on San Francisco: `{ lat: 37.78, lng: -122.44}`
+    - You may also want to zoom out if you want to see quakes worldwide
 
+#### Part 3. Add pins to your map
+Once you've got the map to show up, your next goal is to drop a single pin on San Francisco. This is a sanity check.  
+- Next, can you add only the first earthquake to the map?
+- Can you add pins for *all* the earthquakes to the map?
 
-**Bonus**
-
-1. Attach the function `reverseString` (from question 6) to the object String so that it is possible to call: `"General Assembly".reverseString()`.
-2. Write a function that takes a string as argument and returns an object where:
-  - the keys are the characters that occur in the string
-  - the values are the number of occurences for each letter, regardless of the case
-
-For example, calling the function with the string "General Assembly" will return:
-
-```javascript
-{
-  a: 2,
-  b: 1,
-  e: 3,
-  g: 1,
-  l: 2,
-  m: 1,
-  n: 1,
-  r: 1,
-  s: 2,
-  y: 1
-}
-```
-
-#### Starter Code
-
-Open the file `functions.js`. All the function names are already inside the file, you just need to implement them by adding code inside each one.
-
-Use the Chrome dev tools console to practice executing your code.
-
-#### Deliverable
-
-You'll review the answers with the instructor in class.
-
-## Additional Resources
-
-- [MDN Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+#### Bonus:  
+- Calculate how long ago the quake occured and add it to the page. E.g. "28 hours ago".
+- Parse the title to only include the location, E.g. Instead of "M 4.2 - 1km ESE of Fontana, California", it should just say "Fontana, California"
+- Create a visual indicator of the magnitude of a quake. For instance, maybe a 4.0 is indicated by a "yellow" dot, a 5.0 by an "orange" dot, and anything larger is "red".
