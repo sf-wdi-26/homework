@@ -21,11 +21,27 @@ var li = document.createElement("li");
 // grab area where ul lives and assign it to variable 
 var main = document.getElementById('main');
 // grab input value and put it in list item
-li.innerHTML = document.getElementById("blogInput").value;
-console.log(li.innerHTML); //check to see if it works
-main.appendChild(li); //append li items to page 
+
+if (document.getElementById("blogInput").value.length !== 0) {
+	li.innerHTML = document.getElementById("blogInput").value;
+	main.appendChild(li); //append li items to page 
+}
 
 }
+
+		// $('#formButton').click(function() {
+
+		// 	event.preventDefault();
+
+		// 	var input = $("#input").val();
+		// 	//grab the input
+		// 	//store input in local storage
+		// 	localStorage.posts = input;
+			
+
+		// 	console.log(input);
+		// });
+
 //adding delete button
 //find a way to insert button with text input
 //grab that button and assign it a variable
