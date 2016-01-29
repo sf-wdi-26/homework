@@ -1,4 +1,5 @@
 
+/*
 body {
 	background-image: url("../image/pool-coron1.png");
 	color: purple;
@@ -11,6 +12,7 @@ h2{
 	font-size: 50px;
 }
 
+
 .form-control {
 	display: block;
     margin-left: auto;
@@ -19,6 +21,7 @@ h2{
     min-width: 600px;
     border-radius: 10px;
 }
+
 
 #postbutton {
 	height: 40px;      
@@ -41,4 +44,4 @@ h2{
 #text1 {
 	font-family: Avenir;
 	color: purple;
-}
+} */
