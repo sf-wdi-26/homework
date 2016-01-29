@@ -35,25 +35,12 @@ function markToDelete() {
  // }
 
 
-// javascript function that deletes a button's post!
- function deleteIt() {
- 		this.parentNode.setAttribute("id","toDelete");
- 		var post = document.querySelector("#toDelete");
-		post.parentNode.removeChild(post);
+// jQuery function that deletes a button's post!
+ function deleteIt(e) {
+ 	$(this).parent().attr("id", "toDelete");
+ 		var post = $("#toDelete");
+		post.remove();
  }
-
-
-//still working on a jquery function that deletes the post
-// function deleteIt() {
-// 	//assign the parent element of every clicked button (this) an id of toDelete
-// 	//delete every element with id toDelete
-// var	parentTag = this;
-// console.log(parentTag);
-// // 	parentTag.attr('id', 'toDelete');
-// // this.parent().attr('id', 'toDelete');
-// 	// var post = $('#toDelete');
-// 	// button.parent().remove(post);
-// }
 
 
 
