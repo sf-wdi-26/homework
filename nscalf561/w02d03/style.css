@@ -18,8 +18,9 @@ body {
 
 #theTitle {
 	text-align: center;
-	font-size: 38px;
+	font-size: 20px;
 	color: white;
+	text-shadow: 1px 1px 1px #fff;
 }
 
 #newSub {
@@ -27,6 +28,10 @@ body {
 }
 
 #holdsSubmissions {
+	text-align: center;
+}
+
+#storageCounter {
 	text-align: center;
 }
 
@@ -79,5 +84,6 @@ ul {
 	border:transparent;
 	margin-top: 5px;
 	font-size: 23px;
+	color: black;
 	/*float:right;*/
 }
