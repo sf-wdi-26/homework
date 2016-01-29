@@ -7,7 +7,7 @@
 		<title>Ticker</title>
 
 		<!-- Bootstrap CSS -->
-		<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -20,31 +20,40 @@
 	</head>
 	<body>
 		<div class="container">
-			<form action="" method="POST" role="form">
+			<form id="typebox" action="" method="POST" role="form">
 				<h2>Ticker</h2>
 				<hr>
 				<div class="form-group">
 				
-					<textarea class="form-control" id="inputgetter" placeholder="How's it going?"></textarea>
+					<textarea class="form-control" id="inputGetter" placeholder="How's it going?"></textarea>
 					
 				</div>
-
+					
 			
 				<div class="centered">
 					
-				<button type="submit" class="btn btn-primary" id="postbutton">Post</button>
+				<button type="submit" class="btn btn-primary" id="postButton">Post</button>
 				
 				</div>
 			
-					<div id='text1' style='display:none;'>This is what you posted</div>
 			</form>
+
+					<div id='text1'>This is what you posted</div>
+						<ul id="list"> </ul>
+			
 			
 		</div>
 
 		<!-- jQuery, this is to show the input in another div, need to work on key up vs other event listeners-->
+		
 		<script src="//code.jquery.com/jquery.js">
 		
 
+		
+		
+
+
+		/*
 		$(document).ready(function() {
 		    	$('#inputgetter').keyup(function() {
 		        if ($('#inputgetter').val() > 8) {
@@ -56,6 +65,11 @@
 		        }
 		    });
 		});
+*/
+
+
+
+
 		</script>
 		<!-- Bootstrap JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
