@@ -48,7 +48,7 @@
 
 
 
-
+//copied from solutions 
 
 var $info_row_target;
 var map;
