@@ -13,35 +13,43 @@ map = new google.maps.Map(document.getElementById('map'), {
   zoom: 3
 });
 
-var marker = new google.maps.Marker({
-  position: center,
-  map: map,
-  title: 'Hello World!'
-});
+// var marker = new google.maps.Marker({
+//   position: center,
+//   map: map,
+//   title: 'Hello World!'
+// });
 
 $.ajax({
   type: 'GET',
   url: weekly_quakes_endpoint,
   dataType: 'json',
   success: function(data) {
+    // console.log(data);
 
     for (var i = 0; i < data.features.length; i++) {
-      $('#info').append("<li>" + data.features[i].properties.title +
-        "</li>");
-      var latitude = data.features[i].geometry.coordinates[1];
-      var longitude = data.features[i].geometry.coordinates[0];
-
+      var timeInDays = Math.floor((Date.now() / (1000 * 24 * 60)) -
+        (data.features[i].properties
+          .time) / (
+          1000 * 24 * 60));
+      $('#info').append("<li>" + data.features[i].properties.place + " " +
+        "<span>" + timeInDays + " hours ago.</span>" + "</li>");
       var marker = new google.maps.Marker({
         position: {
-          lat: latitude,
-          lng: longitude
+          lat: data.features[i].geometry.coordinates[1],
+          lng: data.features[i].geometry.coordinates[0]
         },
         map: map,
         title: 'Hello World!'
       });
+      $('li').css('list-style', 'none');
+      $('li').css('line-height', '28px');
+      $('span').css('color', 'red');
 
     }
 
 
   }
 });
+
+//Third bonus, I would add an if else statement to check whether the magnitude is larger or not
+//Then I would add pictures of the dots and prepend the list items.
