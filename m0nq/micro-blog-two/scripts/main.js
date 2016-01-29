@@ -15,13 +15,12 @@ $(function main() {
 
   function check (input) {
     if (input) {
-      // reset the textfield
+      
       $('#text-box').val('');
 
-      // create a new li object
-      // place the stored text field info into it's innerHTML
-      // append first child to the new list item
       $('#main-list').prepend('<li>' + input + '</li>');
     }
   }
+
+  // localStorage
 });
