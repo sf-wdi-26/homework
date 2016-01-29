@@ -10,7 +10,7 @@ var center = {
 
 map = new google.maps.Map(document.getElementById('map'), {
   center: center,
-  zoom: 8
+  zoom: 3
 });
 
 var marker = new google.maps.Marker({
@@ -24,12 +24,13 @@ $.ajax({
   url: weekly_quakes_endpoint,
   dataType: 'json',
   success: function(data) {
-    console.log(data);
+
     for (var i = 0; i < data.features.length; i++) {
       $('#info').append("<li>" + data.features[i].properties.title +
         "</li>");
-      var latitude = data.features[i].geometry.coordinates[0];
-      var longitude = data.features[i].geometry.coordinates[1];
+      var latitude = data.features[i].geometry.coordinates[1];
+      var longitude = data.features[i].geometry.coordinates[0];
+
       var marker = new google.maps.Marker({
         position: {
           lat: latitude,
@@ -38,8 +39,7 @@ $.ajax({
         map: map,
         title: 'Hello World!'
       });
-      console.log(latitude);
-      console.log(longitude);
+
     }
 
 
