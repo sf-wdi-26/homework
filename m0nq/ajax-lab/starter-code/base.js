@@ -5,7 +5,7 @@ var map;
 $(function main() {
 
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 11.6, lng: 43.16},
+    center: {lat: 37.78, lng: -122.44},
     zoom: 8
   });
 
@@ -13,30 +13,16 @@ $(function main() {
   $.ajax({
     url: weekly_quakes_endpoint,
     dataType: "json",
-    success: function (data, textStatus, jqXHR) {
+    success: function success(data) {
       // loop over it
       for (var set in data) {
         if (set === "title") {
-          $('#info').append('<h1>' + data[set] + '</h1>');
+          // add each title to the page
+          $('#info').append('<p>' + data[set] + '</p>');
+        } else if (typeof data[set] === "object") {
+          success(data[set]);
         }
       }    
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-      // body...
     }
   });
-  // add each title to the page
-
 });
-
-/*
-  else if (typeof data[set] === "object") {
-          success(data[set]);
-        } else if (Array.isArray(data[set])) {
-          data[set].forEach(function (element, i) {
-            if (element[i] === "object") {
-              success(element[i]);
-            }
-          });
-        }
-*/
