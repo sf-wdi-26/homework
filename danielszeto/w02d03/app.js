@@ -28,6 +28,8 @@ window.onload = function() {
 
      	$('#new-form').val("");
 
+     	// localStorage.clear();
+
 		});
 
 		 	// function removetheLi() {
