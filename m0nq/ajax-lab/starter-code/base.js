@@ -6,7 +6,7 @@ $(function main() {
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 37.78, lng: -122.44},
-    zoom: 1
+    zoom: 2
   });
 
   // grab the data from the usgs endpoint
@@ -21,7 +21,7 @@ $(function main() {
           // add each title to the page
           $('#info').append('<p>' + data[set] + '</p>');
         } else if (set === "coordinates") {
-          makeMarker(data[set][0], data[set][1])();
+          makeMarker(data[set][1], data[set][0])();
         } else if (typeof data[set] === "object") {
           success(data[set]);
         }
