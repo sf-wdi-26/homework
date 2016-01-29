@@ -2,7 +2,6 @@ var today = new Date();
 var currentTime = today.getTime();
 var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson";
 var map;
-var quakeTitle;
 var quakeData;                                      // variable to store ajax response
 var quakeTimes = [];                                // empty array to store times in
 var quakeTitles = [];                               // empty array to store titles in
@@ -29,14 +28,14 @@ $.ajax({                                                      // request to USGS
           var quakeLat = (quakeData.features)[i].geometry.coordinates[1]; // store lattitude of quake
           var quakeLong = (quakeData.features)[i].geometry.coordinates[0];// store longitude of quake
           var quakeTime = (quakeData.features)[i].properties.time;   // store time of quake
-          quakeTitle = (quakeData.features)[i].properties.title;      // store the title of quake
+          var quakeTitle = (quakeData.features)[i].properties.title;      // store the title of quake
           console.log(quakeTitle);
           var marker = new google.maps.Marker({                           // new google maps marker for quake
             map: map,
             position: { lat: quakeLat, lng: quakeLong }                   // lattitude / longitude of quake
           });
-          var timeAgo = Math.round((currentTime - quakeTime) / msConvert);
-          $('#info').append("<p>" + timeAgo + " hours ago: " + quakeTitle + "</p>");  // append time to #info div
+          var timeAgo = Math.round((currentTime - quakeTime) / msConvert);  // stores difference between times and converts to hours
+          $('#info').append("<p>" + timeAgo + " hours ago: " + quakeTitle + "</p>");  // append time and title to #info div
           quakeTimes.push(quakeTime);                                     // push quake time to times array
           quakeTitles.push(quakeTitle);                                   // push quake title to titles array
           markers.push(marker);                                           // push marker to markers array
@@ -44,12 +43,7 @@ $.ajax({                                                      // request to USGS
         }
 
       }
-      // for(var j = 0; j < quakeTimes.length; j++){                         // loop through quake times array
-      //
-      //   for(var k = 0; k < quakeTitles.length; k++){                        // loop through quake titles array
-      //
-      //   }
-      // }
+
 
   }
 });
