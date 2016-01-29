@@ -45,6 +45,9 @@ function onPostClick (event) {
 	}
 }
 
+
+
+
 function removeLi (event) {
 	$(this).parent().attr("id", "removeMe");
 	$("#removeMe").remove();
