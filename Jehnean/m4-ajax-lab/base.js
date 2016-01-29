@@ -24,7 +24,7 @@ $(document).ready(function(){
         // Center map on { lat: 37.78, lng: -122.44} 
         center: { lat: 37.78, lng: -122.44 }, 
         // You may also want to zoom out if you want to see quakes worldwide
-        zoom: 2
+        zoom: 1
     });
 
     $.get(weekly_quakes_endpoint, function(response_data){
@@ -32,7 +32,7 @@ $(document).ready(function(){
         response_data.features.forEach(function i(quakeInfo) {
         // Add each title to the page
         var title = quakeInfo.properties.title; 
-        $info_row_target.append( "<p>" + title + " hours ago</p>");
+        $info_row_target.append( "<p>" + title + "</p>");
 
         // Part 3. Add pins to your map
         /* your next goal is to drop a single pin on San Francisco
