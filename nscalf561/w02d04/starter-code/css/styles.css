@@ -10,6 +10,8 @@ html, body, #map {
   padding: 0;
 }
 
+
+
 .column {
   width: 48%;
   padding: 2%;
@@ -24,7 +26,6 @@ h1 {
 #earthquakeCount {
   font-size: 32px;
   margin-bottom: 10px;
-
 }
 
 p {

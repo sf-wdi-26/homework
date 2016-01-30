@@ -87,6 +87,15 @@ $(document).ready(function(){
 				imgUsed = magGtrThan5;
 			}
 
+
+
+			//WORK IN PROGRESS
+			//This will round the edges of the images, but it doesn't do that...
+		//$("#map").css({"border-radius": "10px"});
+			//WORK IN PROGRESS	
+
+
+
 			//appends how long ago the earthquake occured
 			$("#info").append("<p>This earthquake occured " + timeAgo + " hours ago.</p><hr>");
 
