@@ -28,7 +28,6 @@ function getQuakeData(){
     	var hoursAgo = Math.round((Date.now() - earthquake.properties.time) / (1000*60*60));
     //add data to div with #info
     	$('#info').append( "<p>" + title + " - detected " + hoursAgo + " hours ago</p>");
-  		
     //get locations for map markers
     	// var coordinates = earthquake.geometry.coordinates;
     	var latitude = earthquake.geometry.coordinates[1];
