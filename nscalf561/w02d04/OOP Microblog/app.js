@@ -40,7 +40,10 @@ Post.prototype = {
 	createPost: function createPost (event) {
 		//keeps the page from redirecting after sumission
 		event.preventDefault();
+		this.postChecker(event);
+	},
 
+	postChecker: function postChecker (event) {
 		//defines our variables, ul grabs the list we're adding things to, then we create
 		//the other items we're appending to the ul (and it's children)
 		var ul = $("#listOfSubmissions"),
@@ -50,6 +53,7 @@ Post.prototype = {
 	
 		//checks for a blank textbox and changes the placeholder if it occurs
 		if ($("#textBox").val() === "") {
+
 			$("#textBox").attr("placeholder", "You didn't do anything!");
 		//adds a specific response to the phrase "where's the joke?"
 		} else if ($("#textBox").val() == "where's the joke?") {
