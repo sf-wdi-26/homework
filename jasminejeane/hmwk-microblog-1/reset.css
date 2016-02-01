@@ -1,0 +1,11 @@
+
+body{
+  background-color: blue; 
+}
+
+#newPost,
+#blog {
+
+  height: 20px;
+  width: 60px;
+}
