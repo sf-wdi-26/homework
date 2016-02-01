@@ -17,14 +17,15 @@ $(document).ready(function(){
 
 // Your JS will hold an array of posts 
 // var posts =[];
-var theForm = document.getElementById("newPost");
-var submit = document.getElementById("submit");
-var info = document.getElementById("blog");
-var clear = document.getElementById("clear");
+var theForm = $("#newPost");
+var submit = $("#submit");
+var info = $("#blog");
+var clear = $("#clear");
 
 // theForm.addEventListener('submit', submitPost);
-submit.onclick = submitPost;
-clear.onclick = clearLocal;
+
+$(submit).click(submitPost);
+$(clear).click(clearLocal);
 
 retrieveStorage();
 
@@ -58,6 +59,16 @@ function addToList (item) {
   document.getElementById("appendMe").appendChild(list);
   // $('#appendMe').append('<li>' + item + '</li>');
 }
+
+
+
+// function ifEmpty (){
+
+// 	if ($("#blog") === null || undefined){
+
+// 		alert("Please enter content");
+// 	}
+// }
 
 function reset(){
   document.getElementById("blog").value = "";
