@@ -33,10 +33,6 @@ h1{
     font-size: 100px;
 }
 
-button {
-  margin-left: 1020p;
-}
-
 li {
 	margin-left: 240px;
 	margin-right: 400px;
@@ -69,6 +65,7 @@ li {
 
 #submit {
 
+	/*height: 90px;*/
     width: 150px;
     font-size: 100px;
 }
@@ -97,7 +94,7 @@ li {
 
 #submit {
 
-	
+	/*height: 90px;*/
     width: 150px;
     font-size: 100px;
 }
@@ -128,6 +125,7 @@ li {
 
 #submit {
 
+	/*height: 90px;*/
     width: 150px;
     font-size: 100px;
 }
@@ -157,6 +155,7 @@ li {
 
 #submit {
 
+	/*height: 90px;*/
     width: 150px;
     font-size: 100px;
 }
@@ -200,7 +199,7 @@ li {
 	padding: 5px;
 	font-size: 15px;
 	color: white;
-
+}
 }
 
 
