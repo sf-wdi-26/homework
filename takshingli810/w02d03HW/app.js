@@ -21,18 +21,11 @@ var $myForm = $("#myForm");
 
 $('#clear').on('click', reset);
 
-$myForm.on("submit", function(e) {
+$myForm.on("click", function(e) {
 	e.preventDefault(); //Prevent Refreshing
 	console.log('clicked'); //log 
-	if(localStorage.clickCount){
-				localStorage.clickCount = Number(localStorage.clickCount)+1;
-				$("#result").html("You have clicked the button " + localStorage.clickCount + " time(s).");
-			}else{
-				localStorage.clickCount = 1;
-				$("#result").html("You have clicked the button " + localStorage.clickCount + " time(s).");
-			}
 	getInput();
-	$('#typing').val(' ');
+	// $('#typing').val(' ');
 } );
 
 function getInput(){
@@ -41,14 +34,18 @@ function getInput(){
 	userArray.push($userInput);
 	console.log(userArray);
 	$('uL').append("<li>"+$userInput+"</li>");// put li into ul
+	resetBox();
 	} 
 		
 
 
 function reset() {
 	localStorage.clear();
+	userArray = [];
 }
 
-
+function resetBox () {
+	this.reset();
+}
 });
 
