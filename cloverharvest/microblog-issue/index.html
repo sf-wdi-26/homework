@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" conten="width=device-width, initial-scale=1">
+	 
+	<title>Ticker</title>
+
+
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	</head>
+
+	<body>
+		
+		  <form>
+
+		  	<header>Ticker</header>
+		  	<hr>
+		  	<div>
+		    <h2>What's on your mind?</h2>
+		    <input id="userInput" type="text" placeholder="How's it going?" />
+		    </div>
+		    <div>
+			<input id="prettybutton" type="button" value="Post"onclick="insert()" />
+			</div>
+
+		    </form>
+			<hr>
+			<h2> Most Recent Posts </h2>
+	  		<div>
+	  			<textarea id="display" type="text"></textarea>
+		    </div>
+	  		</div>
+
+		  
+	</body>	
+	<script>
+
+		var recentPosts  = [];
+
+
+		var userInput  = document.getElementById("userInput");
+
+		var messageBox  = document.getElementById("display");
+
+		
+
+		function insert( ) {
+	 	
+	 	recentPosts.push(userInput.value);
+	  
+	 	clearAndShow();
+		}
+
+		function clearAndShow () {
+	  	// Clear our fields
+	  	userInput.value = "";
+	  
+	  	// Show our output
+	  	messageBox.innerHTML = "";
+	  
+	  	messageBox.innerHTML += recentPosts.join("\n");
+	 
+		}
+	</script>
+		
+</html>
