@@ -1,0 +1,43 @@
+body {
+  font-family: verdana; sans-serif;
+  color: black;
+    background:url('home.jpeg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+s
+header, main {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+main .column {
+  width: 33.33%;
+  float: left;
+  min-width: 320px;
+}
+
+ul{
+    list-style: none;
+}
+
+/* HEADER */
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+.glyphicon .glyphicon-plane {
+    display:block;
+    text-align:center
+}
+
+label{
+  font-size: 18px;
+}
