@@ -1,7 +1,11 @@
+//define global functions on top; if this app was actually in development you should put these variables in functions
+
 var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson"
 
 var map;
 //loop over each title 
+
+//when the document is ready create the map and fetch the earthquake data
 $(document).ready(function(){
 
 	// call the function to create the Map
