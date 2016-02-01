@@ -1,6 +1,6 @@
 
 
-
+// This is the working code before trying to refactor to jquery
 
 //Sudo Code
 
