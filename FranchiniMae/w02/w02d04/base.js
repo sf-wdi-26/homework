@@ -34,13 +34,19 @@ $(document).ready(function(){
 $.get(weekly_quakes_endpoint).done(function(data) {
 	window.mapData = data;
 
+//for loop to go through the data object
 for (var i = 0; i < mapData.features.length; i++) {
+	//accessing the title in json data
 	var titles = mapData.features[i].properties.title;
+	//add the titles to the page
 	$('#info').append("<div>" + titles + "</div>");
 
+
+	//grab both the latitude and longitude
 	var lng = mapData.features[i].geometry.coordinates[0];
 	var lat = mapData.features[i].geometry.coordinates[1];
 
+	//add a marker by creating object for lat/long
 	new google.maps.Marker({
 		position: new google.maps.LatLng(lat, lng),
 		map: map,
@@ -48,8 +54,6 @@ for (var i = 0; i < mapData.features.length; i++) {
 	})
 ;
 
-//grab lat and long
-//
 
 	}
 
