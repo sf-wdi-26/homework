@@ -12,47 +12,49 @@ var addToHTML;
 // My Google API Key: AIzaSyC6x1Yk7HCuQ6RFEWNvxI0XFTnInz8sW9k
 
 // On page load display google map and get USGS info 
-$(document).ready(function(){
+$(document).ready(function() {
 
     var addToHTML = $("#info");
 
-        //Part 2. Your next goal is to integrate Google Maps:
-        map = new google.maps.Map(document.getElementById('map'), {
+    //Part 2. Your next goal is to integrate Google Maps:
+    map = new google.maps.Map(document.getElementById('map'), {
         // Center map on { lat: 37.78, lng: -122.44} 
-        center: { lat: 37.78, lng: -122.44 }, 
+        center: {
+            lat: 37.78,
+            lng: -122.44
+        },
         // You may also want to zoom out if you want to see quakes worldwide
         zoom: 1
     });
 
-    $.get(weeklyQuakesEndpoint, function(response_data){
+    $.get(weeklyQuakesEndpoint, function(responseData) {
         // Loop over it - for loop or forEach loop
-        response_data.features.forEach(function i(quakeInfo) {
-        // Add each title to the page
-        var title = quakeInfo.properties.title; 
-        addToHTML.append( "<p>" + title + "</p>");
+        responseData.features.forEach(function(quakeInfo) {
+            // Add each title to the page
 
-        // Part 3. Add pins to your map
-        /* your next goal is to drop a single pin on San Francisco
+            var title = quakeInfo.properties.title;
+
+            var hoursAgo = Math.round((Date.now() - quakeInfo.properties.time) / (1000 * 60 * 60));
+            addToHTML.append("<p>" + title + " / " + hoursAgo + " hours ago</p>");
+
+            // Part 3. Add pins to your map
+            /* your next goal is to drop a single pin on San Francisco
         var marker = new google.maps.Marker({
             position: { lat: 37.78, lng: -122.44 },
             map: map,
             title: 'Hello World!'
         }); */
-        // Vars for google maps marker to accept
-        var lat = quakeInfo.geometry.coordinates[1]; 
-        var lng = quakeInfo.geometry.coordinates[0]; 
+            // Vars for google maps marker to accept
+            var lat = quakeInfo.geometry.coordinates[1];
+            var lng = quakeInfo.geometry.coordinates[0];
 
-        // Goggle Markers from longitude and latitude
-        new google.maps.Marker({
-            // Struggled with this for a long time before finding LatLng is a property
-            position: new google.maps.LatLng(lat,lng),
-            map: map,
-            title: 'Hello World!'
-            }); 
-        }); 
-    }); 
-}); 
-
-
-
-    
+            // Goggle Markers from longitude and latitude
+            new google.maps.Marker({
+                // Struggled with this for a long time before finding LatLng is a property
+                position: new google.maps.LatLng(lat, lng),
+                map: map,
+                title: 'Hello World!'
+            });
+        });
+    });
+});
