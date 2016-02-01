@@ -3,6 +3,11 @@ window.onload = function() {
 $("#postButton").on("click", function(event) {
 event.preventDefault();
 
+if(sessionStorage.clickCount){
+	sessionStorage.clickCount = Number(sessionStorage.clickCount)+1;
+}else{
+	sessionStorage.clickCount = 1;
+}
 
 var oldPosts = $("#postList");
 var newPost = $("<li></li>").attr("class", "text");
@@ -11,7 +16,6 @@ var inputText = $("#textBox").val();
 newPost.html(inputText);
 oldPosts.append(newPost);
 $("#textBox").val("");
-
 });
 
 
