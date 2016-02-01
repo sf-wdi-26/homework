@@ -3,6 +3,7 @@ window.onload = function() {
 $("#postButton").on("click", function(event) {
 event.preventDefault();
 
+
 if(sessionStorage.clickCount){
 	sessionStorage.clickCount = Number(sessionStorage.clickCount)+1;
 }else{
