@@ -1,13 +1,24 @@
 var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson";
 var map;
 
-$(document).ready(function(){
+
+// $(document).ready(function(){
+// //get and push quake info to page
+//   getQuakeData();
+// // don't need to call on initMap because i coded that callback function into my HTML as google recommended
+//   // initMap();
+// });
+
+
+//Alternative way of calling on load that Ilias reccomends (see HTML file too)
+function init(){
 //get and push quake info to page
   getQuakeData();
 // don't need to call on initMap because i coded that callback function into my HTML as google recommended
   // initMap();
+}
 
-});
+
 function getQuakeData(){
   $.get(weekly_quakes_endpoint, function(responseData){
     responseData.features.forEach(function getInfo(earthquake) {
@@ -17,7 +28,6 @@ function getQuakeData(){
     	var hoursAgo = Math.round((Date.now() - earthquake.properties.time) / (1000*60*60));
     //add data to div with #info
     	$('#info').append( "<p>" + title + " - detected " + hoursAgo + " hours ago</p>");
-  		
     //get locations for map markers
     	// var coordinates = earthquake.geometry.coordinates;
     	var latitude = earthquake.geometry.coordinates[1];
