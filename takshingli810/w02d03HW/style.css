@@ -26,10 +26,11 @@ li {
 	width:800px;
 	height:400px;
 	border:2px solid black;
-	margin-left:10%;
+	margin-left:auto;
+	margin-right:auto;
 	margin-top: 10px;
 	clear:both;
-	
+	position:absolute;	
 } 
 
 
