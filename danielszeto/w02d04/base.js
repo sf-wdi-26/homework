@@ -3,6 +3,7 @@ var map;
 
 
 $(document).ready(function(){
+
 	console.log("base.js working..");
   
 	var myLatLng = {lat: 37.78, lng: -122.44};
@@ -26,6 +27,7 @@ $(document).ready(function(){
 		// console.log(response_data);
 
 		var newData = response_data;
+		//window.newDataw = response_data;
 		// var title;
 		// var lng;
 		// var lat;
@@ -34,6 +36,11 @@ $(document).ready(function(){
 
 		for (var i = 0; i < newData.features.length; i++) {
 
+
+			//better
+			//var infoEl = $('<p></p>').html(title + '/' + hoursAgo + 'hours ago')
+			//infoE.innerText = title + '/' + hoursAgo + 'hours ago';
+			//$('$info').append($infoEl)
 			var title = newData.features[i].properties.title; 
 			$('#info').append('<div>' + title + '</div>');
 
