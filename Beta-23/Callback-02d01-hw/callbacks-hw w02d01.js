@@ -1,6 +1,6 @@
-
+window.onload = function(){
 var traNsport = ["cars","planes","trains"];
-  function(traNsport, callback) {
+  function (traNsport, callback) {
     for (var i = 0; i < traNsport.length; i++) {
       callback(list[i]);
     }
@@ -11,4 +11,4 @@ function myFunction() {
     numbers = document.getElementById("demo");
     return output;
   }
-  
+  };

@@ -40,7 +40,7 @@ function renDerQuake(){
 
 		//used jquery to append info id with title on page//
 		$("#info").append("<li>"+ x.properties.title+ "</li>");
-
+		
 	});
 	});
 }
