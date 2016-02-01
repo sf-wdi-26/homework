@@ -1,6 +1,7 @@
 var today = new Date();
 var currentTime = today.getTime();
-var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson";
+//var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson";
+var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geojson";
 var map;
 var quakeData;                                      // variable to store ajax response
 var quakeTimes = [];                                // empty array to store times in
@@ -15,7 +16,7 @@ map = new google.maps.Map(document.getElementById('map'), {   // display google 
 
 var markerSF = new google.maps.Marker({                       // marker for SF
   map: map,
-  position: { lat: 37.78, lng: -122.44 }
+  position: { lat: 37.78, lng: -122.44 },
 });
 
 $.ajax({                                                      // request to USGS api for earthquake data
@@ -32,7 +33,8 @@ $.ajax({                                                      // request to USGS
           console.log(quakeTitle);
           var marker = new google.maps.Marker({                           // new google maps marker for quake
             map: map,
-            position: { lat: quakeLat, lng: quakeLong }                   // lattitude / longitude of quake
+            position: { lat: quakeLat, lng: quakeLong },                  // lattitude / longitude of quake
+            title: quakeTitle
           });
           var timeAgo = Math.round((currentTime - quakeTime) / msConvert);  // stores difference between times and converts to hours
           $('#info').append("<p>" + timeAgo + " hours ago: " + quakeTitle + "</p>");  // append time and title to #info div

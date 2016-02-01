@@ -4,8 +4,12 @@
   var $form = $("#postingForm");                     // selecting the form element
   var $post = $("#post");                            // selecting the form input
   var $postList = $("#post-list");                   // selecting the ul for the posts to be appended to
-
+  var $resetButton = $("#reset-button");
   var counter = 0;                                   // init a counter to keep track of number of posts (submit events)
+
+  $resetButton.click(function(e){
+    window.localStorage.clear();
+  });
 
   $form.submit(function(e){                          // listen for submit events
     e.preventDefault();                              // prevents default behaviors of the form element
