@@ -14,13 +14,13 @@
 
 
 
-
+$(document).ready(function(){
 // Your JS will hold an array of posts 
 var posts =[];
-var theform = document.getElementById("newPost");
-var submit = document.getElementById("submit");
-var content = document.getElementaById("blog");
-var clearButton = document.getElementById("button");
+var theform = $("#newPost");
+var submit = $("#submit");
+var content = $("#blog");
+var clearButton = $("#button");
 
 
 //function to append a new list item
@@ -31,36 +31,37 @@ var clearButton = document.getElementById("button");
 function appendPosts(event){
 event.preventDefault();
 var info = content.value;
-var text = document.createTextNode(info);
-var list = document.createElement("li");
-list.appendChild(text);
-document.getElementById("appendMe").appendChild(list);
+var text = $(info).html();
+var list = $("<li>");
+list.append(text);
+$("#appendMe").append(list);
 
 
 localStorage.getItem("input", info);
 
 // reset();
-
+// checker();
 }
 
 
-submit.onclick = appendPosts;
+submit.click(appendPosts);
 
 
 
 function reset(){
-	 document.getElementById("blog").value = "";
+	 $("#blog").value = "";
 
 
 }
 
 //clears local storage
-function clearStorage (){
-
- button.onclick = localStorage.clear();
 
 
-}
+$('button').click(function(){
+
+	checker();
+
+});
 
 
 // function localStore(){
@@ -72,14 +73,13 @@ function clearStorage (){
 //wrote this just to see if my event listener was working
 function checker(){
 	console.log("was clicked");
-
 }
 
-submit.onclick = appendPosts;
+// submit.onclick = appendPosts;
 
 
 
-
+});
 
 
 

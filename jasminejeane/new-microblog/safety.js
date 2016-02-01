@@ -16,66 +16,63 @@
 
 
 // Your JS will hold an array of posts 
-var posts =[];
-var theform = document.getElementById("newPost");
+// var posts =[];
+var theForm = document.getElementById("newPost");
 var submit = document.getElementById("submit");
-var content = document.getElementaById("blog");
-var clearButton = document.getElementById("button");
+var info = document.getElementById("blog");
+var clear = document.getElementById("clear");
 
+// theForm.addEventListener('submit', submitPost);
+submit.onclick = submitPost;
+clear.onclick = clearLocal;
+
+retrieveStorage();
+
+// var list = document.createElement("li");
 
 //function to append a new list item
 // document.ul.appendChild(list);
 
 
 //that it appends to the HTML list.
-function appendPosts(event){
-event.preventDefault();
-var info = content.value;
-var text = document.createTextNode(info);
-var list = document.createElement("li");
-list.appendChild(text);
-document.getElementById("appendMe").appendChild(list);
-
-
-localStorage.getItem("input", info);
-
-// reset();
-
+function submitPost (event) {
+  event.preventDefault();
+  var info = document.getElementById("blog").value;
+  addToList(info);
+  // posts.push(info);
+  var newItem = "info" + localStorage.length;
+  localStorage.setItem(newItem, info);
+  reset();
 }
 
+function retrieveStorage (){
+  for (var key in localStorage) {
+    addToList(localStorage.getItem(key));
+  }
+}
 
-submit.onclick = appendPosts;
-
-
+function addToList (item) {
+  var text = document.createTextNode(item);
+  var list = document.createElement("li");
+  list.appendChild(text);
+  document.getElementById("appendMe").appendChild(list);
+  // $('#appendMe').append('<li>' + item + '</li>');
+}
 
 function reset(){
-	 document.getElementById("blog").value = "";
-
-
+  document.getElementById("blog").value = "";
 }
 
-//clears local storage
-function clearStorage (){
+function clearLocal(){
 
- button.onclick = localStorage.clear();
-
-
+localStorage.clear();
 }
-
-
-// function localStore(){
-// 	var info = content.value;
-
-// 	localStorage.setItem("entry", info);
-// }
 
 //wrote this just to see if my event listener was working
 function checker(){
 	console.log("was clicked");
 
 }
-
-submit.onclick = appendPosts;
 
 
 
