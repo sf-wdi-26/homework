@@ -1,0 +1,108 @@
+body {
+  background-color: black;
+  background-image: url("../assets/pZghu8Q.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: lighter;
+  color: white;
+}
+
+h1 {
+  margin: 50px;
+  display: block;
+  font-size: 4em;
+}
+
+#form-div {
+  padding: 2%;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-color: white;
+  border-style: solid;
+  font-size: .9em;
+}
+
+#text-box {
+  display: block;
+  color: black;
+  font-size: 1.7em;
+  margin: auto;
+  width: 80%;
+  font-weight: lighter;
+}
+
+#button {
+  display: block;
+  background: rgba(104, 104, 104, .95);
+  border-style: solid;
+  border: 0;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 2%;
+  font-size: 1.5em;
+}
+
+#button:hover {
+  display: block;
+  background: white;
+  color: black;
+  border-style: solid;
+  border: 0;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 2%;
+  font-size: 1.5em;
+}
+
+#button:active {
+  display: block;
+  background: rgba(104, 104, 104, .95);
+  border-style: solid;
+  border: 0;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 2%;
+  font-size: 1.5em;
+}
+
+li {
+  background: rgba(104, 104, 104, 1);
+  margin: 2% auto;
+  width: 77%;
+  display: block;
+  border-radius: 3px;
+  font-size: 1.5em;
+  padding: .5%;
+  text-align: left;
+}
+
+.delete-button {
+  background: rgba(104, 104, 104, .95);
+  color: black;
+  border-style: solid;
+  border: 0;
+  border-radius: 2px;
+  /*margin: 0 0 0 23.3%;*/
+  font-size: .8em;
+}
+
+.delete-button:hover {
+  background: rgba(144, 144, 144, .95);
+  color: black;
+  border-style: solid;
+  border: 0;
+  border-radius: 2px;
+  /*margin: 0 0 0 23.3%;*/
+  font-size: .8em;
+}
+
+.delete-button:active {
+  background: rgba(104, 104, 104, .95);
+  color: black;
+  border-style: solid;
+  border: 0;
+  border-radius: 2px;
+  /*margin: 0 0 0 23.3%;*/
+  font-size: .8em;
+}
