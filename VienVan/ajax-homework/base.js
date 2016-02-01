@@ -10,7 +10,7 @@ var center = {
 
 map = new google.maps.Map(document.getElementById('map'), {
   center: center,
-  zoom: 3
+  zoom: 2
 });
 
 // var marker = new google.maps.Marker({
@@ -27,10 +27,10 @@ $.ajax({
     // console.log(data);
 
     for (var i = 0; i < data.features.length; i++) {
-      var timeInDays = Math.floor((Date.now() / (1000 * 24 * 60)) -
+      var timeInDays = Math.floor((Date.now() / (1000 * 60 * 60)) -
         (data.features[i].properties
           .time) / (
-          1000 * 24 * 60));
+          1000 * 60 * 60));
       $('#info').append("<li>" + data.features[i].properties.place + " " +
         "<span>" + timeInDays + " hours ago.</span>" + "</li>");
       var marker = new google.maps.Marker({
@@ -41,10 +41,6 @@ $.ajax({
         map: map,
         title: 'Hello World!'
       });
-      $('li').css('list-style', 'none');
-      $('li').css('line-height', '28px');
-      $('span').css('color', 'red');
-
     }
 
 
