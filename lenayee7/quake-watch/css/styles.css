@@ -1,0 +1,50 @@
+body {
+  color: #333;
+  font-family: monospace;
+  background-color: #FAFCFD;
+}
+
+html, body, #map {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.column {
+  width: 48%;
+  padding: 2%;
+  float: left;
+}
+
+h1 {
+  margin-top: 2%;
+  font-size: 3.2em;
+  margin-bottom: 10px;
+  background-color: #383F47;
+  padding: 2%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+ color: black;
+ -webkit-text-fill-color: #CBE649; /* Will override color (regardless of order) */
+ -webkit-text-stroke-width: 2px;
+ -webkit-text-stroke-color: #CDED2D;
+}
+
+p {
+  padding: 10px 0;
+}
+
+p + p {
+  border-top: 1px solid black;
+}
+
+li {
+  color: purple;
+  font-size: 2em;
+  font-weight:bold;
+  background-color: #503D52;
+  color: #CBE649;
+  margin: 1%;
+  padding: 1%;
+}
