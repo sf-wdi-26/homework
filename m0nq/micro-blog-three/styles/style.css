@@ -83,17 +83,15 @@ li {
   border-style: solid;
   border: 0;
   border-radius: 2px;
-  /*margin: 0 0 0 23.3%;*/
   font-size: .8em;
 }
 
 .delete-button:hover {
-  background: rgba(144, 144, 144, .95);
-  color: black;
+  background: rgba(104, 104, 104, .95);
+  color: white;
   border-style: solid;
   border: 0;
   border-radius: 2px;
-  /*margin: 0 0 0 23.3%;*/
   font-size: .8em;
 }
 
@@ -103,6 +101,5 @@ li {
   border-style: solid;
   border: 0;
   border-radius: 2px;
-  /*margin: 0 0 0 23.3%;*/
   font-size: .8em;
 }

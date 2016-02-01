@@ -89,11 +89,12 @@ function addToStorage (input) {
 // removes the parent list item of the calling element/button and from storage
 function deleteElement ($eventObject) {
   
+  var splitParts = $('.delete-button').parent().html() ? $('.delete-button').parent().html().split('<') : "";
   // find which position the calling element is to remove it from localStorage
   var i = 0;
   var len = localStorage.length;
   while (i < len) {
-    if (localStorage[i]) {
+    if (splitParts && (splitParts[0] == localStorage[i])) {
       localStorage.removeItem(i);
       break;
     }
