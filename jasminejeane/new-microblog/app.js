@@ -12,7 +12,7 @@
 //
 //
 
-
+$(document).ready(function(){
 
 
 // Your JS will hold an array of posts 
@@ -69,14 +69,11 @@ localStorage.clear();
 }
 
 //wrote this just to see if my event listener was working
-function checker(){
-	console.log("was clicked");
-
-}
 
 
 
 
+});
 
 
 
