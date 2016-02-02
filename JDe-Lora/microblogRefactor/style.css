@@ -11,7 +11,7 @@ header {
   position: relative;
 }
 
-body , head, form, ul , li {
+body , head, form {
 
 	text-align: center;
 	display: table;
@@ -20,7 +20,7 @@ body , head, form, ul , li {
 
 }
 
-html { 
+html body { 
         background: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS2KrAOS0mpqJDEfqSwePeJHKxh_JnNSjtL_wsRyD0JL_nrftyP5Fy6IQ7z") no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -31,4 +31,10 @@ html {
 .primary-button{
 	background-color: grey;
 
+}
+
+#texBox{
+  height: 35px;
+  width: 223px;
+  font-size: 14px
 }
