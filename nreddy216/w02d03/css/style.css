@@ -2,16 +2,11 @@
 	text-align: center;
 	font-family: 'Rubik Mono One', sans-serif;
 	color: white;
-
 	margin-top: 100px;
-
 	background-color: #028482;
 
 }
 
-/*.top-container{
-	margin-left: 100px;
-}*/
 
 #header-img{
 	width: 2em;
@@ -20,6 +15,8 @@
 #subtitle{
 	font-size: 1em;
 	font-family: 'Palanquin', sans-serif;
+	margin-top: -20px;
+	margin-bottom: 20px;
 }
 
 .quotes{
@@ -31,6 +28,63 @@
 
 	font-family: 'Palanquin', sans-serif;
 }
+
+.box{
+	line-height: 200px;
+}
+
+
+@media (min-width: 990px) {
+  .post-container {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header h1{
+    font-size: 2.1em;
+  }
+  #subtitle{
+  	font-size: 1.1em;
+  	margin-top: 0.5px;
+  }
+  .box{
+  	max-width: 300px;
+  	height: 300px;
+  }
+  .quotes{
+  	font-size: 1em;
+  	line-height: auto;
+  	padding-bottom: 0px;
+  	padding-top: 50px;
+  }
+  .sloth-img{
+  	min-width: 200px;
+  	max-width: 700px;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .header h1{
+    font-size: 2.1em;
+  }
+  #subtitle{
+  	font-size: 1.1em;
+  	margin-top: 0px;
+  }
+  .box{
+  	max-width: 300px;
+  	height: 300px;
+  }
+  .quotes{
+  	font-size: 1em;
+  	padding-bottom: 0px;
+  	padding-top: 50px;
+  }
+
+}
+
 
 
 
@@ -56,11 +110,6 @@
 }
 
 body{
-	/*background-image: url(../images/motorcycle.JPG);*/
-	/*background-size: 3000px;
-	background-position: -1500px;
-	background-repeat: no-repeat;*/
-	/*position: absolute;*/
 	background-size: 400px;
 	background-image: url(../images/wood_yellow.png);
 	background-repeat: repeat;
@@ -70,40 +119,26 @@ ul{
 
 	list-style-type: none;
 	text-align: center;
-	
-	/*min-width: 400px;
-	max-width: 600px;*/
 	margin: 0 auto;
 }
 
 li{
 	
-	/*background-color: #00cdcd;*/
-	/*border: 1px solid white;*/
-	/*border-bottom: 2px solid black;*/
 	font-family: 'Palanquin', sans-serif;
-	/*color: white;*/
-
 	border-radius: 10px;
-
 	position: relative;
 	width: 80%;
-
 	margin: 0 auto;
-
 	padding-top: 15px;
-
 	vertical-align: text-top;
 	text-align: center;
-
 	font-size: 2em;
 	font-style: bold;
-
 }
 
 img{
 	border-radius: 10px;
-	max-width: 50%;
+	max-width: 600px;
 }
 
 li p{

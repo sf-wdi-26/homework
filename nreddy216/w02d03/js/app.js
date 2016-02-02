@@ -11,19 +11,18 @@ $(document).ready(function(){
 
 	var postArray = [];
 	
-
+	//COUNTER
 	function countPosts(){
 		var counter = postArray.length;
-
-		
-
 		return counter;
 	}
 
+	//clears form after entered
 	function clearForm(){
 		$("#entry-form")[0].reset();
 	}
 
+	//TODO: Find way to delete meme after ?
 	function deletePost(closeID){
 
 		var closeBtn = $("#close-"+closeID);
@@ -34,6 +33,7 @@ $(document).ready(function(){
 		});
 	}
 
+	//Main function
 	function storePosts(){
 		var photoEntry = $("#photo-entry-box").val();
 		var captionEntry = $("#caption-entry-box").val();
@@ -44,32 +44,25 @@ $(document).ready(function(){
 
 		if(photoEntry.length!==0){
 
-		//puts list item at the top rather than at the bottom
+			//puts list item at the top rather than at the bottom
 			postArray.push({photo: photoEntry, caption: captionEntry});
 			localStorage.photo = photoEntry;
 			localStorage.caption = captionEntry;
 
-			console.log(postArray);
+			//TODO: add later
+			//$("#counter").text(countPosts());
 
-			var counter = countPosts();
-			$("#counter").text(counter);
-
-			var length = postArray.length;
-
-			li.innerHTML = "<p><span class='quotes'>&ldquo;" + captionEntry + "&rdquo; </span></p>";
+			li.innerHTML = "<p><span class='quotes carousel-caption'>&ldquo;" + captionEntry + "&rdquo; </span></p>";
 			
-
+			//set input URL to the src and make sure that the img is responsive
 			$(img).attr("src", photoEntry);
-			$(img).attr("class", "img-responsive");
+			$(img).attr("class", "img-responsive sloth-img");
 
+			//prepend allows image to be the top image
 			$(ul).prepend(li);
-
 			$(li).append(img);
 
-			//li.innerHTML = "<p>" + postArray[length-1] + "</p>";
-			
-
-
+			//resets the form each time
 			clearForm();
 
 
@@ -84,7 +77,7 @@ $(document).ready(function(){
 	
 
 		
-
+			//PART OF CLOSE BUTTON : NOT WORKING
 			// var closeBtn = document.createElement("img");
 			// // closeBtn = $("img");
 

@@ -32,24 +32,36 @@
 			<div class="header container-fluid">
 				<h1><img id="header-img" src="http://orig05.deviantart.net/40e2/f/2014/109/9/c/baka_neutral_temp_by_the_knick-d7f6jum.png" alt="sloth icon">Slothoughts</h1>
 				
-				<h3 id="subtitle"></h5>
+				<h3 id="subtitle">
+				Make your own sloth meme!
+				</h3>
 			</div>
 			<p></p>
 
 			<div class="form col-md-1 form-group">
 				<form class="container row form-horizontal form-group margin-bottom center-block" id="entry-form" method="POST" action="#" role="form">
 					<label class="control-label" for="text">URL</label>
-					<input type="text" id="photo-entry-box" class="form-control img-fluid" placeholder="Post a URL to your favorite sloth picture here"/>
+					<input type="text" id="photo-entry-box" class="form-control img-fluid box" placeholder="Post a URL to your favorite sloth picture here"/>
 					<label class="control-label" for="text">CAPTION</label>
-					<input type="text" id="caption-entry-box" class="form-control" placeholder="What is the sloth thinking?"/>
+					<input type="text" id="caption-entry-box" class="form-control box" placeholder="What is the sloth thinking?"/>
 					<p></p>
 					<input type="submit" class="btn btn-default center-block" id="submit-btn" value="sleep here"/>
 				</form>
 			</div>
 		</div>
-
-		<ul class="posts">
-		</ul>
+		
+		<div class="post-container carousel slide" id="mycarousel" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="item-active">
+					<ul class="posts">
+						<li>
+							<p><span class="quotes carousel-caption ">&ldquo; Hello, there old friend &rdquo;</span></p>
+							<img class="sloth-img img-responsive" src="http://i.huffpost.com/gen/1164733/images/o-PHOTOS-OF-SLOTHS-facebook.jpg" alt="sloth-default">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<div class="footer-header">
