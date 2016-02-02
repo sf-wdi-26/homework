@@ -1,33 +1,39 @@
 
 //JQuery
-var counter = 0;
 var myListArray = [];
+var $xBtn = document.createElement("button");
+$xBtn.setAttribute("class", "closeBtn");
+$xBtn.innerHTML = "X";
+
+//Loads when ready
 $(document).ready(function(){
+// Prevents Default	
 $("#form1").click(function(event){
 	event.preventDefault();
 });
 
-/*$("#btn").click(function(){
-		var $lists = $("#getsInput").val();
-		$("#tasks").append("<li>"+$lists+"</li>");	
-});*/
-
+//clear lists function
 $("#clr").click(function(){
-	$("#tasks").remove();
-	
+	$("li").remove();
 });
-	
-	$("#btn").click(function(){
-		var $lists = $("#getsInput").val();
-		$("#tasks").prepend('<li id="' + counter +'">'+ $lists+"</li>");
-		counter ++;
 
+//button builder
+//var btnRight = document.createElement("button");
+//btnRight.innerHTML = "X";
+
+//Adds event listener to button-->post
+//Adds individual lists with id
+//resets form
+$("#btn").click(function(){	
+	var $lists = $("#getsInput").val();
+	$("#tasks").prepend("<li>"+$lists+"<button class="+'closeBtn'+">X</button>"+"</li>");
+	$("#form1").trigger("reset");
+	$(".closeBtn").click(function(){
+	$(this).parent().remove();
+});	
 	});
 
-	for(var i=0; i<counter; i++) {
-		var $lists = $("#getsInput").val();
-		myListArray.push($lists);
-	}
+
 
 
 
@@ -38,6 +44,5 @@ $("#clr").click(function(){
 });
 
 
-//update arrayLength 
 
 
