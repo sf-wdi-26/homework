@@ -1,17 +1,82 @@
+//generates random letter to display inside the text area box
+// function letterrandomize(){
+
+//     var text = "";
+//     var possible = "abcdefghijklmnopqrstuvwxyz";
+
+//     for( var i=0; i < 25; i++ )
+//         text += possible.charAt(Math.random() * possible.length);
+
+//     return text;
+// }
+
+var alphabet = "abcdefghijklmnopqrstuvwxyz";
+var currentLetter;
+
+function takeTurn(event) {
+	console.log("turn taken");
+	var userInput = String.fromCharCode(event.which);
+	if (userInput === currentLetter) {
+		$('.spaceShip').animate({ left: '+=50px' },"slow");
+		generateRandomLetter(alphabet);
+	}
+}
+
+function generateRandomLetter(letters) {
+  var max = letters.length - 1;
+  var min = 0;
+  var index = Math.floor(Math.random() * (max - min + 1)) + min;
+  currentLetter = letters[index];
+}
+
 $(function(){
 	console.log("Linked");
+	generateRandomLetter(alphabet);
+	$(window).keypress(takeTurn);
 });
 
+//the number 62 through 90 are the keycodes for the letters
+//needing to put in this array to get it as a function 
+//to show what is being worked at in the array
+// var letterArray = [62-90];
 
-$(document).ready(function(){
-	$(window).keypress(function( event ) {
-		if ( event.which == 68) {
-			event.preventDefault();
-		}
-		$('.spaceShip').animate({ left: '+=50px' },"slow");
-		console.log("Hi");
-	});
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
