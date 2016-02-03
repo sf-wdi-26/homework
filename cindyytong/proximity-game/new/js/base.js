@@ -31,6 +31,10 @@
 //How to make geolocations work
 //How to randomly select from array of bars and not repeat
 // Best organizational method? Create new page for each questiona dn link to each other? 
+//How to account for input strings that are capitalized differently (take input from Google and user's answer make them all lowercase and delete any spacing)
+//should i use different pages and link to them or keep refreshing the same page upon click? How do I save data across multiple pages - local storage? 
+//how to make map initialize only when I click on start button?
+
 //-------------------------------------------
 //I. SETUP
 //GLOBAL VARIABLES 
