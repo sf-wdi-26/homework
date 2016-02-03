@@ -1,11 +1,31 @@
 //MOVE TO SECOND PAGE when Start button is clicked
 
 //Initialize functions:
+
+
+
+// $().ready(function(){
+//         $("#submit").click(function(){console.log("hello")});
+//       });
+
 $(document).ready(function(){
     google.maps.event.addDomListener(document.getElementById('next'), 'click', initialize);
+
+    $("#submit").click(function(){
+      var userAnswer = $('#answer').val();
+      console.log(userAnswer);
+      });
 });
 
+//when we click the answer button we want to store the button click in local storage so that we can end the game once 10 questions have passed
+//make this mark the next button as clicked
+//store the answer and initialize the function to compare answers
+// store users answer to compare at the end
+//clear the form 
 
+
+var solutionArray = [];
+var userInputArray =[];
 
 function initialize() {
 
@@ -30,7 +50,7 @@ function initialize() {
 
       var map = new google.maps.Map(document.getElementById('map'), {
         center: generalAssembly,
-        zoom: 16,
+        zoom: 15,
         scrollwheel: false,
         
       });
@@ -58,6 +78,7 @@ function initialize() {
                { visibility: "off" }
              ]
            }
+
          ];
 
       map.setOptions({styles: stylesArray});
@@ -70,22 +91,18 @@ function initialize() {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
 
           var place = results[arrRandomTen[0]];
-          //skips places that has geometry attribute of undefined
-          if(typeof(results[arrRandomTen[0]].geometry) === undefined){
-            var place = results[arrRandomTen[1]];
-          } 
-          console.log(results);
+  //????????????????skips places that has geometry attribute of undefined & fix error of getting object of undefined
+          // if(typeof(place.geometry) === undefined){
+          //   var place = results[arrRandomTen[1]];
+          // } 
 
-          // for (var i = 0; i < results.length; i++) {
-          //   var place = results[i];
-          //   // If the request succeeds, draw the place location on
-          //   // the map as a marker, and register an event to handle a
-          //   // click on the marker.
-          //   console.log(results[0].name);
-          //    if(results[0].name ==="BAR CRUDO"){
-          //     console.log("Correct")
-          //   }
-            var marker = new google.maps.Marker({
+          //set the answer for the current place to the name
+          var answer = place.name;
+          //push the answer to the solution array
+          solutionArray.push(answer);
+
+      
+          var marker = new google.maps.Marker({
               map: map,
               position: place.geometry.location
             });
@@ -94,15 +111,13 @@ function initialize() {
       });
 }
 
-//END OF FUNCTION INITIALIZE -------------------------------------
 
-// Run the initialize function when the window has finished loading.
-// google.maps.event.addDomListener(window, 'load', initialize);
+//END OF FUNCTION INITIALIZE -------------------------------------
 
 
 
 //For places
-//results[0].name = name of the restaurant
+//results[0].name OR place.name= name of the restaurant
 //var marker = new google.maps.Marker({
         //   map: map,
         //   position: place.geometry.location
