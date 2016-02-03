@@ -27,6 +27,7 @@ function generateRandomLetter(letters) {
   var min = 0;
   var index = Math.floor(Math.random() * (max - min + 1)) + min;
   currentLetter = letters[index];
+	$("#letter-box").text(currentLetter);
 }
 
 $(function(){
