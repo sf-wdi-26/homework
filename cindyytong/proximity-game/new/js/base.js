@@ -49,8 +49,11 @@ $(document).ready(function(){
 	createMap();
 	// getLocation();
 
-	// fetch the data - bar endpoints
-
+	// update map with bar map????????
+	$('#start').click(function(e){
+		e.preventDefault();
+		console.log("click working");
+	})
 });
 
 // Create map of based on coordinates passed through, set default map to show San Francisco 
@@ -90,5 +93,4 @@ function createMap() {
 //   coordinates = {lat: lat, lng: long};
 // 	createMap();
 // 	}
-
 

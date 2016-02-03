@@ -44,7 +44,6 @@ function initialize() {
 // Run the initialize function when the window has finished loading.
 google.maps.event.addDomListener(window, 'load', initialize);
 
-
 //TO DO:
 //1. how many places does google places api give back for search result bar?
 //2. how to randomly select only one place to show at a time (use binary?)
