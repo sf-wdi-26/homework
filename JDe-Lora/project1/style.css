@@ -4,10 +4,22 @@
 
 }
 
+.box{
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  float: right;
+  background-color: red;
+
+}
+
 
 #track {
 	border: 3px black solid;
 }
+
+
 
 /*body{*/
 	/*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT1Dt-bGmUsbHZ1weOP5HmaQwb-4r-5o2J_Ur4WjxWFmRJIewMkQ");
