@@ -17,9 +17,15 @@
 
 
   <!--CT=== jQuery, Bootstrap JS & APIs if Linked to Any =====CT-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<!-- <script type="text/javascript" src="https://api.yelp.com/v2/js?oauth_consumer_key=OqEriLrNOIRdv--q59Es6g&oauth_token=vN3S7-leAGuSEB7LMjA9Wam6cFXOxr7r&oauth_signature_method=hmac-sha1&oauth_signature="></script> -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script> 
+<!-- To load Google Maps API -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJLhbeMfsvTf2976Yn6byi7vaqXxJUdNM"></script>
+<!-- To load Google Places API -->
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJLhbeMfsvTf2976Yn6byi7vaqXxJUdNM&libraries=places"></script> -->
+
+<script type="text/javascript" src="js/base.js"></script>
 
 <!--CT============= Content ==================CT-->
 </head>
@@ -29,30 +35,22 @@
 <!--CT============= Header Begins ===========CT-->
   <header>
   	<nav>
-  		<li><h1>Header</h1></li>
+  		<h1>Proximity</h1>
 		<ul>
-			<li><a href = "">Tab1</a></li>
-			<li><a href = "">Tab2</a></li>
-			<li><a href = "">Tab3</a></li>
 		</ul>
   	</nav>
   </header>
 
 <!--CT============= Header Ends ===========CT-->
   <section>
-  <main>
-  <div class="column">
-      <h2></h2>
-      <p></p>
-    </div>
-    <div class="column">
-      <h2></h2>
-      <p></p>
-    </div>
-  </main>
-  </section>
+  
+    <a href ="#" id= "get_location">Get location</a>
+      <div id = "map">  </div>
 
-  <section>
+<!--     This map should be updated when user clicks on Get Location -->
+    <!--   <iframe id ="google_map" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.965630722535!2d-122.40346888542074!3d37.79084521900916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858089e1c87065%3A0xead8e2a5febd2279!2s225+Bush+St%2C+San+Francisco%2C+CA+94104!5e0!3m2!1sen!2sus!4v1454476476456"></iframe> -->
+      
+     
   </section>
     
 
@@ -62,9 +60,8 @@
 
 
 <!--CT============= Javascript Begins ========CT-->
-<!--CT============= My JS Files ==================CT-->
-<script type="text/javascript" src="js/base.js"></script>
 
+<!--CT============= My JS Files ==================CT-->
 
 </body>
 </html>
