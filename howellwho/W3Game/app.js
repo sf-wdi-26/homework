@@ -158,12 +158,17 @@ var ballr = 10;
 
 //play again button
 //event listener that refreshed page on click
-  var resetButton = document.getElementById("reset-game");
-    resetButton.addEventListener("click", function() {  
-    window.location.reload(); 
-  });
+  // var resetButton = document.getElementById("reset-game");
+  //   resetButton.addEventListener("click", function() {  
+  //   window.location.reload(); 
+  // });
+
+ $("#reset-game").on("click", function() {
+    window.location.reload();
+ });  
+    
  $(function() {
-    $("#airhorn").get(0).play();
+    $("#airhorn")[0].play();
 });
    
 
