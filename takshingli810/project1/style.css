@@ -1,0 +1,52 @@
+/*stylesheet and lay out for project 1*/
+ul, li {
+	list-style-type: none;
+}
+
+#numbersDiv{
+	list-style-type: none;
+	font-size: 5em;
+	padding-left: 1em;
+	text-align: center;
+	
+}
+
+#numberRow{
+	padding: 10em;
+}
+
+p {
+	margin:0 auto;
+}
+
+
+.instructions {
+	text-align: center;
+	width:400px;
+	margin:0 auto;
+	clear:both;
+}
+
+h1 {
+	font-size:45px;
+}
+
+#startButton {
+	height:50px;
+	width:85px;
+	margin:60px;
+	position: relative;
+	left: 50px;
+}
+
+.scoreli {
+	font-size:20px;
+	margin:30px;
+}
+
+.turnli {
+	font-size: 20px;
+	margin:55px;
+
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Project 1</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="app.js"></script>
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		
+		<div class="instructions">
+			<h1>Digit Memorization</h1>
+			<p><b>Instructions: </b>Each number will pop up for 2 seconds. It will then disappear. you will then type in the number you saw to gain scores.</p>
+		</div>
+
+		<!-- First row *start button* *scoreboard* *Turns -->
+		<div class="row"> 
+
+			<div class ="col-md-4">
+				<button id="startButton" type="button" autofocus="true" class="btn btn-secondary"> Start </button>
+			</div>
+			
+			<div class ="col-md-4">	
+				<div id="turns">
+					<ul>
+						<li class="turnli">Turn : </li>
+					</ul>
+				</div>
+			</div>
+
+			<div class ="col-md-4">
+				<div id="scores">
+					<ul>
+						<li id="p1" class="scoreli">Player 1 : </li>
+						<li id="p2" class="scoreli">Player 2 : </li>
+					</ul>
+				</div>
+			</div>
+
+		</div>	
+		<!-- Second row *Correct Or Wrong*-->
+		<div class="row">
+
+			<div class ="col-md-12">
+				<div id="rightWrong"></div>
+					<ul>
+					<li id="rightWrongLi"> </li>
+					</ul>
+					
+			</div>	
+
+		</div>
+
+		<!-- Third Row  *NUMBERS*-->
+		<div id="numberRow" class="row">
+			<div id="numbersDiv">
+				<p id="numbers"> </p>
+			</div>
+		</div>
+
+		<!-- Fourth row *Answer row* -->
+		<div class="row">
+			<!-- create an input where user will type in numbers -->
+			<form id="enterButton" action="submit">
+				<input id="userAnswer" type="text" autofocus="true">
+				<button> Enter </button>
+			</form>
+			
+		</div>
+
+
+	</body>
+</html>
