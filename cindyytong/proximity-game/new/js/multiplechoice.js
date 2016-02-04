@@ -6,47 +6,70 @@ var submitString = "<button type='button' id = 'submit' class='btn btn-success v
 
 var nextString = "<button type='button' id = 'next' class='btn btn-success viewquestion'>Next</button>";
 
-//define address string based on data returned from Google
-var addressDisplayed;
-var addressString = "<h5>Hint: The address of this restaurant is: " + addressDisplayed +"</h5>";
+var multipleChoiceString = "<form class='form-horizontal'> <div class='form-group'><div class='col-sm-offset-1 col-sm-11'><div id='multiple-choice-1' class='radio'><label><input type='radio'> Multiple Choice 1</label></div></div></div><div class='form-group'><div class='col-sm-offset-1 col-sm-11'><div id='multiple-choice-2' class='radio'><label><input type='radio'> Multiple Choice 2</label></div></div></div><div class='form-group'><div class='col-sm-offset-1 col-sm-11'><div id='multiple-choice-3' class='radio'><label><input  type='radio'> Multiple Choice 3</label></div></div></div><div class='form-group'><div class='col-sm-offset-1 col-sm-11'>";
+
+// see initialize function
+var multipleChoices = [];
+
 //Initialize functions:
 
 $(document).ready(function(){
 //when start button is clicked, layout for first question is presented (map is generated and form for submission)
 //insertForm, insertSubmit, insertNext
-      $("#start").click(function(){
-        //create random array of 10
-          generateRandomArray();
-        //remove instructions
-            $("#instructions").html("");
-        //add form for question submission and buttons next and submit
-            $("#insertAddress").html(addressString);
-            $("#insertForm").html(formString);
-            $("#insertSubmit").html(submitString);
-            $("#insertNext").html(nextString);
-            $("#start").hide();  
-            initialize();   
-            //when submit clicked
-          $("#submit").click(function(){
-          initialize();
-            //check if answer is correct
-            checkAnswer();
-            $("#answer").val("");
-            displayWinnings();
-        });
 
-          $("#next").click(function(){
-          initialize();
-          displayWinnings();
-        });
-        });
+      $('form').hide();
+      initEventListeners();
 
-
-
-//creates google map once anything with class viewquestion is clicked (start, next, submit buttons) 
+//creates google map once anything with class viewquestion is clicked (start, next, submit buttons)
     // google.maps.event.addDomListener(document.getElementsByClassName('viewquestion'), 'click', initialize);
 
 });
+
+function initEventListeners () {
+
+  $("#start").click(function () {
+    //create random array of 10
+      generateRandomArray();
+      // console.log(arrRandomTen);
+    //remove instructions
+    // use $.hide() to remove the element from the DOM, thus doesn't take up space
+    $('#instructions').hide();
+        // $("#instructions").html("");
+    //add form for question submission and buttons next and submit
+    $('form').show();
+        // $("#insertForm").html(formString);
+        // $("#insertSubmit").html(submitString);
+        // $("#insertNext").html(nextString);
+
+    $("#start").hide();
+    initialize();
+  });
+
+
+  // $("#next").click(function () {
+  //   initialize();
+  //   displayWinnings();
+  // });
+
+  //when submit clicked
+  // worth reading: http://stackoverflow.com/questions/9122078
+  $("form").on('submit', function (e) {
+    e.preventDefault();
+    // http://stackoverflow.com/questions/596351
+    var answer = multipleChoices[parseInt($(this).find('input:checked').val(), 10)];
+    console.log('you answered: ', answer);
+
+    //check if answer is correct
+    checkAnswer(answer);
+
+    initialize();
+
+    // $("#answer").val("");
+    displayWinnings();
+  });
+
+}
+
 
 //global variables used to keep track of store
 var scoreRight = 0;
@@ -60,28 +83,28 @@ var userInputArray =[];
 var indexNumberUsed = [];
 
 
-//function creates 10 random numbers between 1 to 30 and returns them in array of numbers 
+//function creates 10 random numbers between 1 to 30 and returns them in array of numbers
 var arrRandomTen = [];
     function generateRandomArray(){
       console.log("generateRandomArray called");
       while(arrRandomTen.length<10){
-        var randomNumber = Math.ceil(Math.random()*10)
+        var randomNumber = Math.ceil(Math.random()*10);
         var found = false;
         for(var i = 0; i<arrRandomTen.length; i++){
           if(arrRandomTen[i]==randomNumber){
-            found=true; 
+            found=true;
             break;
             }
           }
           if(!found)arrRandomTen[arrRandomTen.length]=randomNumber;
         }
-        
+
       return arrRandomTen;
     }
 //function checks if user's answer is correct (matches against what google provides); it also updates the solution array and userinput array
 
-function checkAnswer(userInput, solution){
-    userInput = $('#answer').val();
+function checkAnswer(userInput){
+    // userInput = $('#answer').val();
     userInputLower = String(userInput).toLowerCase();
     if(solutionLower==userInputLower){
       scoreRight++;
@@ -96,7 +119,7 @@ function checkAnswer(userInput, solution){
 //function creates google map with one location identified based on random number generated by randomten
 function initialize() {
 
-//player runs through game five times 
+//player runs through game five times
 if(count<5){
       //default location of where map displays
       var generalAssembly = new google.maps.LatLng(37.790841,-122.401280);
@@ -105,7 +128,7 @@ if(count<5){
         center: generalAssembly,
         zoom: 15,
         scrollwheel: false,
-        
+
       });
 
       // Specify location, radius and place types for your Places API search.
@@ -137,28 +160,38 @@ if(count<5){
 
       // Create the PlaceService and send the request.
       // Handle the callback with an anonymous function.
-    
+
       var service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, function(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
+
+            console.log('google results: ', results);
+
             var place = results[arrRandomTen[count]];
-            console.log(results);
-            
+
+            console.log('random place: ', place);
+
             // if(typeof(place.geometry) === undefined){
             //   var place = results[arrRandomTen[1]];
-            // } 
+            // }
 
             //set the solution for the current place to the name
             solution = results[arrRandomTen[count]].name;
+            console.log('the solution is: ', solution);
+
+            // multiple choices
+            multipleChoices = getMultipleChoices(results, 3);
+            console.log('the choices are: ', multipleChoices);
+            $('#multiple-choice-1').html("<label><input type='radio' name='optionsRadios' value='0'>" + multipleChoices[0] + "</label>");
+            $('#multiple-choice-2').html("<label><input type='radio' name='optionsRadios' value='1'>" + multipleChoices[1] + "</label>");
+            $('#multiple-choice-3').html("<label><input type='radio' name='optionsRadios' value='2'>" + multipleChoices[2] + "</label>");
+
             // solution = place["name"];
             solutionLower = String(solution).toLowerCase();
             console.log(solution);
             //push the answer to the solution array
             solutionArray.push(solutionLower);
 
-            //get the address of the solution to be displayed as hint
-            addressDisplayed = results[arrRandomTen[count]].vicinity;
-        
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location
@@ -175,6 +208,28 @@ if(count<5){
       });
   }
 }
+
+// returns three unique restaurant names, one of which is the correct answer
+// data is the list of restarants returned from google
+// choiceCount is the number of choices we want
+function getMultipleChoices(data, choiceCount) {
+
+  var min = 0;
+  var max = data.length - 1;
+  var choices = [];
+
+  while (choices.length < choiceCount) {
+    choices.push(solution); // start by putting the correct answer in the array
+    // start on 1 because there's already one item (correct answer) in the array
+    for (var i = 1; i < choiceCount; i++) {
+      var randNum = Math.floor(Math.random() * (max - min + 1)) + min;
+      choices.push(data[randNum].name);
+    }
+    choices = _.uniq(choices);
+  }
+  return _.shuffle(choices);  // ensures correct answer is randomly placed
+}
+
 
 function displayWinnings(){
   // after five questions, end game and display map with all solutions, put back label on map, hide submit and next buttons
@@ -206,51 +261,22 @@ function displayWinnings(){
              ]
            }
          ];
+
       map.setOptions({styles: stylesArray});
-
-//add info window https://developers.google.com/places/javascript/
-      
-    var infowindow = new google.maps.InfoWindow();
-
     var service = new google.maps.places.PlacesService(map);
-    document.getElementById('submit').addEventListener('click', function placeDetailsByPlaceId(service, map, infowindow) {
-        var request = {
-          placeId: document.getElementById('place-id').value};
-        });
-
-    service.getDetails(request, function (place, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-
       service.nearbySearch(request, function(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
-
-          service.getDetails(request, function (place, status) {
-              if (status == google.maps.places.PlacesServiceStatus.OK) {
-                 var y;
-                var len = indexNumberUsed.length;
-                for(y = 0; y<len; y++){
-                  var place = results[indexNumberUsed[y]];
-                  var marker = new google.maps.Marker({
-                    map: map,
-                    position: place.geometry.location
-                  });
-                }                
-                });
+          var y;
+          var len = indexNumberUsed.length;
+          for(y = 0; y<len; y++){
+            var place = results[indexNumberUsed[y]];
+            var marker = new google.maps.Marker({
+              map: map,
+              position: place.geometry.location
+            });
+          }
         }
       });
-
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-          'Place ID: ' + place.place_id + '<br>' +
-          place.formatted_address + '</div>');
-        infowindow.open(map, this);
-      });
-
-      map.panTo(place.geometry.location);
 
 //DONT TOUCH THESE
 

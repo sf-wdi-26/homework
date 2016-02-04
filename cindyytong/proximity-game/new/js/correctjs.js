@@ -9,6 +9,7 @@ var nextString = "<button type='button' id = 'next' class='btn btn-success viewq
 //define address string based on data returned from Google
 var addressDisplayed;
 var addressString = "<h5>Hint: The address of this restaurant is: " + addressDisplayed +"</h5>";
+
 //Initialize functions:
 
 $(document).ready(function(){
@@ -20,7 +21,7 @@ $(document).ready(function(){
         //remove instructions
             $("#instructions").html("");
         //add form for question submission and buttons next and submit
-            $("#insertAddress").html(addressString);
+            $("#insertAddress").append(addressDisplayed);
             $("#insertForm").html(formString);
             $("#insertSubmit").html(submitString);
             $("#insertNext").html(nextString);
@@ -28,7 +29,7 @@ $(document).ready(function(){
             initialize();   
             //when submit clicked
           $("#submit").click(function(){
-          initialize();
+            initialize();
             //check if answer is correct
             checkAnswer();
             $("#answer").val("");
@@ -58,26 +59,27 @@ var userInput;
 var userInputLower;
 var userInputArray =[];
 var indexNumberUsed = [];
+var arrRandomTen = [];
 
 
 //function creates 10 random numbers between 1 to 30 and returns them in array of numbers 
-var arrRandomTen = [];
-    function generateRandomArray(){
-      console.log("generateRandomArray called");
-      while(arrRandomTen.length<10){
-        var randomNumber = Math.ceil(Math.random()*10)
-        var found = false;
-        for(var i = 0; i<arrRandomTen.length; i++){
-          if(arrRandomTen[i]==randomNumber){
-            found=true; 
-            break;
-            }
-          }
-          if(!found)arrRandomTen[arrRandomTen.length]=randomNumber;
+
+function generateRandomArray(){
+  console.log("generateRandomArray called");
+  while(arrRandomTen.length<10){
+    var randomNumber = Math.ceil(Math.random()*10);
+    var found = false;
+    for(var i = 0; i<arrRandomTen.length; i++){
+      if(arrRandomTen[i]==randomNumber){
+        found=true; 
+        break;
         }
-        
-      return arrRandomTen;
+      }
+      if(!found)arrRandomTen[arrRandomTen.length]=randomNumber;
     }
+    
+  return arrRandomTen;
+}
 //function checks if user's answer is correct (matches against what google provides); it also updates the solution array and userinput array
 
 function checkAnswer(userInput, solution){
@@ -97,7 +99,7 @@ function checkAnswer(userInput, solution){
 function initialize() {
 
 //player runs through game five times 
-if(count<5){
+if(count < 5){
       //default location of where map displays
       var generalAssembly = new google.maps.LatLng(37.790841,-122.401280);
 
@@ -155,10 +157,14 @@ if(count<5){
             console.log(solution);
             //push the answer to the solution array
             solutionArray.push(solutionLower);
-
+            
             //get the address of the solution to be displayed as hint
-            addressDisplayed = results[arrRandomTen[count]].vicinity;
-        
+            addressDisplayed = String(results[arrRandomTen[count]].vicinity);
+            console.log(addressDisplayed);
+            console.log(typeof(addressDisplayed));
+            // alert(addressDisplayed);
+            $("#insertAddress").html(addressDisplayed);
+
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location
@@ -206,51 +212,22 @@ function displayWinnings(){
              ]
            }
          ];
+
       map.setOptions({styles: stylesArray});
-
-//add info window https://developers.google.com/places/javascript/
-      
-    var infowindow = new google.maps.InfoWindow();
-
     var service = new google.maps.places.PlacesService(map);
-    document.getElementById('submit').addEventListener('click', function placeDetailsByPlaceId(service, map, infowindow) {
-        var request = {
-          placeId: document.getElementById('place-id').value};
-        });
-
-    service.getDetails(request, function (place, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-
       service.nearbySearch(request, function(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
-
-          service.getDetails(request, function (place, status) {
-              if (status == google.maps.places.PlacesServiceStatus.OK) {
-                 var y;
-                var len = indexNumberUsed.length;
-                for(y = 0; y<len; y++){
-                  var place = results[indexNumberUsed[y]];
-                  var marker = new google.maps.Marker({
-                    map: map,
-                    position: place.geometry.location
-                  });
-                }                
-                });
+          var y;
+          var len = indexNumberUsed.length;
+          for(y = 0; y<len; y++){
+            var place = results[indexNumberUsed[y]];
+            var marker = new google.maps.Marker({
+              map: map,
+              position: place.geometry.location
+            });
+          }
         }
       });
-
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-          'Place ID: ' + place.place_id + '<br>' +
-          place.formatted_address + '</div>');
-        infowindow.open(map, this);
-      });
-
-      map.panTo(place.geometry.location);
 
 //DONT TOUCH THESE
 
@@ -259,4 +236,4 @@ function displayWinnings(){
 
 
 
-//END OF FUNCTION INITIALIZE -------------------------------------
+//END OF FUNCTION INITIALIZE 
