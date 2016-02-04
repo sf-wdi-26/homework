@@ -250,7 +250,11 @@ function displayWinnings(){
 
 function displayHintCount(){
   $("#hint").click(function(){
-      console.log("It's been clicked " + countHint);
       countHint++;
+      if (countHint<solutionInLetters.length){
+        console.log("It's been clicked " + countHint);
+      } else{
+        console.log("Out of hints");
+      }
   });
 }
