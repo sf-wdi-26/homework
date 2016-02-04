@@ -20,25 +20,24 @@
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJLhbeMfsvTf2976Yn6byi7vaqXxJUdNM&libraries=geometry,places"></script>
 
         <!-- APPLICATION JS Base JS file -->
-        <script src="js/base.js"></script>
+        <script src="testjs.js"></script>
 	</head>
 	<body>
     <div class="container">
         <h1>Proximity</h1>
 
-        <p id = "instructions">Are you a foodie? How well do you know the restaurants in the vicinity of General Assembly? We'll show you a location on a map and you will have ten seconds to identify the restaurant's name. Hint: answers are not case sensitive. Click start and let it rip!</p> 
+        <p id ="instructions">Are you a foodie? How well do you know the restaurants in the vicinity of General Assembly? We'll show you a location on a map and you will have ten seconds to identify the restaurant's name. Hint: answers are not case sensitive. Click start and let it rip!</p> 
     
-        <button type="button" id = "start" class="btn btn-success viewquestion">Start</button>
+        <button type="button" id = "start" class="btn btn-success">Start</button>
 
         <div id = "insertForm"></div>
-        <div id = "insertNext"></div>
+        <div id = "insertSkip"></div>
         <div id = "insertSubmit"></div>
 
     </div>
 <!--     End of container -->
 
 <!-- Google map cannot go inside of the container with Bootstrap settings -->
-        <div id = "results"></div>
         <div id="map"></div>
 
 	</body>

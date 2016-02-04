@@ -1,103 +1,226 @@
-//SOURCES:
-//Place Details: https://developers.google.com/places/web-service/details
-//Places: https://developers.google.com/places/javascript/
-//Customization of Maps: https://developers.google.com/maps/documentation/javascript/styling?hl=en#map_features
+//elements to be added to the page after start button is clicked on
 
+var formString = "<label for='answer'>Name the restaurant depicted below in the map</label> <input type='answer' class='form-control' id='answer' placeholder='Restaurant Name'>";
 
+var submitString = "<button type='button' id = 'submit' class='btn btn-success viewquestion'>Submit</button>";
 
-//PSEUDO CODE:
-//I. Declare global variables and functions, load document, generate default layout with mape of SF
-//II. GEOLOCATION - User clicks get location button and using geolocation, the coordinates on the map are updated to the users specific location 
-//III. GRAB BAR DATA - Based on current location, do search for nearby bars, return those results as var barResults = {} which is an object with data
-//IV. SELECT ONE BAR TO GENERATE QUESTIONS - on random, select one bar from the barResults object, grab the coordinates and generate google map showing pinned location of bar
-//Disable labels for business name
-//Disable zoom feature on map
-//Grab bar name and save to variable barName which should be an array holding 10 bars  
-//V. PLAYER ANSWERS QUESTION
-// compare players typed answer in input box to bar name and write conditional function, if it is a match, increase score by one and also change to next question
-//VI. TIMER
-//Add 10 second timer for each question. Question will change under 2 circumstances, time runs out or an answer is submitted.
-//Repeat for 10 questions - need to make sure bars are not repeated when randomly selected 
-//VII. RESULTS 
-//Generate score for player with number correct and number wrong, show map of places with name tags  
+var nextString = "<button type='button' id = 'next' class='btn btn-success viewquestion'>Next</button>";
 
-//VIII. ADDITONAL IF TIME PERMITS 
-//colors add https://snazzymaps.com/style/14814/vintage-simple-blue-and-yellow
-//fix so that random store works 
-//Add pass button
-//Include get a hint
-//If player wins, they receive info on bar deals/ events
-//Player can challenge other players 
-//Player can save their results/ send it to themselves so they can visit the bars
+//Initialize functions:
 
-//QUESTIONS:
-//How to make geolocations work
-//How to randomly select from array of bars and not repeat
-// Best organizational method? Create new page for each questiona dn link to each other? 
-//How to account for input strings that are capitalized differently (take input from Google and user's answer make them all lowercase and delete any spacing)
-//should i use different pages and link to them or keep refreshing the same page upon click? How do I save data across multiple pages - local storage? 
-//how to make map initialize only when I click on start button?
-
-//-------------------------------------------
-//I. SETUP
-//GLOBAL VARIABLES 
-var bar_endpoints = []; 
-
-var map;
-
-var coordinates = {lat: 37.78, lng: -122.44}
-//this variable will get updated with new values throughout based on user's location and bar locations
-
-//FUNCTIONS
-//when the document is ready create the map and fetch the earthquake data
 $(document).ready(function(){
+//when start button is clicked, layout for first question is presented (map is generated and form for submission)
+//insertForm, insertSubmit, insertNext
+      $("#start").click(function(){
+        //create random array of 10
+          generateRandomArray();
+        //remove instructions
+            $("#instructions").html("");
+        //add form for question submission and buttons next and submit
+            $("#insertForm").html(formString);
+            $("#insertSubmit").html(submitString);
+            $("#insertNext").html(nextString);
+            $("#start").hide();  
+            initialize();   
+            //when submit clicked
+          $("#submit").click(function(){
+          initialize();
+            //check if answer is correct
+            checkAnswer();
+            $("#answer").val("");
+            displayWinnings();
+        });
 
-	// call the function to create the Map
-	createMap();
-	// getLocation();
+          $("#next").click(function(){
+          initialize();
+          displayWinnings();
+        });
+        });
 
-	// update map with bar map????????
-	$('#start').click(function(e){
-		e.preventDefault();
-		console.log("click working");
-	})
+
+
+//creates google map once anything with class viewquestion is clicked (start, next, submit buttons) 
+    // google.maps.event.addDomListener(document.getElementsByClassName('viewquestion'), 'click', initialize);
+
 });
 
-// Create map of based on coordinates passed through, set default map to show San Francisco 
+//global variables used to keep track of store
+var scoreRight = 0;
+var count = 0;
+var solution;
+var solutionLower;
+var solutionArray = [];
+var userInput;
+var userInputLower;
+var userInputArray =[];
+var indexNumberUsed = [];
 
-function createMap() {
-  	map = new google.maps.Map(document.getElementById('map'), {
-    center: coordinates,
-    zoom: 12
-  });
+
+//function creates 10 random numbers between 1 to 30 and returns them in array of numbers 
+var arrRandomTen = [];
+    function generateRandomArray(){
+      console.log("generateRandomArray called");
+      while(arrRandomTen.length<10){
+        var randomNumber = Math.ceil(Math.random()*10)
+        var found = false;
+        for(var i = 0; i<arrRandomTen.length; i++){
+          if(arrRandomTen[i]==randomNumber){
+            found=true; 
+            break;
+            }
+          }
+          if(!found)arrRandomTen[arrRandomTen.length]=randomNumber;
+        }
+        
+      return arrRandomTen;
+    }
+//function checks if user's answer is correct (matches against what google provides); it also updates the solution array and userinput array
+
+function checkAnswer(userInput, solution){
+    userInput = $('#answer').val();
+    userInputLower = String(userInput).toLowerCase();
+    if(solutionLower==userInputLower){
+      scoreRight++;
+      console.log("You answered correctly " +scoreRight);
+    } else {
+      console.log("You answered incorrectly");
+    }
+    solutionArray.push(solution);
+    userInputArray.push(userInput);
 }
 
-//II. GET USER'S LOCATION 
-//When user clicks on button "get location", the event handler is run and the callback function c is run which gets the lat and long coordinates and redefines the coordinates, createMap is then called again with the redefined coordinates 
-//???????????????????????????????????????????????????????????????????????????????????????????????
-// //FIGURE OUT HOW TO ALLOW GEOLOCATION EXCEPTION https://support.google.com/chrome/answer/3123708?p=settings_manage_exceptions&rd=1
-// http://www.w3schools.com/html/html5_geolocation.asp
+//function creates google map with one location identified based on random number generated by randomten
+function initialize() {
 
-// x.onclick = function(
-	// function getLocation() {
-	//     if (navigator.geolocation) {
-	//         navigator.geolocation.getCurrentPosition(showPosition);
-			// c();
-	//     } else {
-	//         document.getElementById("get_location").innerHTML = "Geolocation is not supported by this browser.";
-	//     }
-	// }
-	// function showPosition(position) {
-	//    document.getElementById("get_location").innerHTML = "Latitude: " + position.coords.latitude + 
-	//     "<br>Longitude: " + position.coords.longitude; 
-	// }
-// )};
+//player runs through game five times 
+if(count<5){
+      //default location of where map displays
+      var generalAssembly = new google.maps.LatLng(37.790841,-122.401280);
 
-//This callback function sets the new lat and long to the coordinates and calls the Map function again to update with the new coordinates
-// function c(position){
-//   var lat = position.coords.latitude;
-//   var long = position.coords.longitude;
-//   coordinates = {lat: lat, lng: long};
-// 	createMap();
-// 	}
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: generalAssembly,
+        zoom: 15,
+        scrollwheel: false,
+        
+      });
 
+      // Specify location, radius and place types for your Places API search.
+      var request = {
+        location: generalAssembly,
+        radius: '300',
+        types: ['restaurant']
+      };
+
+    //turn off labels from map
+      var stylesArray = [
+           {
+             featureType: "administrative",
+             elementType: "labels",
+             stylers: [
+               { visibility: "off" }
+             ]
+           },
+           {
+             featureType: "poi",
+             elementType: "labels",
+             stylers: [
+               { visibility: "off" }
+             ]
+           }
+         ];
+
+      map.setOptions({styles: stylesArray});
+
+      // Create the PlaceService and send the request.
+      // Handle the callback with an anonymous function.
+    
+      var service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, function(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            var place = results[arrRandomTen[count]];
+            console.log(results);
+            
+            // if(typeof(place.geometry) === undefined){
+            //   var place = results[arrRandomTen[1]];
+            // } 
+
+            //set the solution for the current place to the name
+            solution = results[arrRandomTen[count]].name;
+            // solution = place["name"];
+            solutionLower = String(solution).toLowerCase();
+            console.log(solution);
+            //push the answer to the solution array
+            solutionArray.push(solutionLower);
+        
+            var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location
+              });
+
+            //update the count and use this value for place index
+            count++;
+            console.log(count);
+            indexNumberUsed.push(arrRandomTen[count]);
+            console.log(indexNumberUsed);
+            arrRandomTen.splice(count,1);
+            console.log(arrRandomTen);
+            }
+      });
+  }
+}
+
+function displayWinnings(){
+  // after five questions, end game and display map with all solutions, put back label on map, hide submit and next buttons
+  if(count === 5){
+    console.log("End of game");
+    $("#insertForm").html("");
+    $("#insertSubmit").html("");
+    $("#insertNext").html("");
+    $("#results").html("<p>You answered " + scoreRight + " correctly!</p>");
+
+    //generate map with all places
+    var generalAssembly = new google.maps.LatLng(37.790841,-122.401280);
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: generalAssembly,
+        zoom: 15,
+        scrollwheel: false,
+      });
+    var request = {
+        location: generalAssembly,
+        radius: '300',
+        types: ['restaurant']
+      };
+    var stylesArray = [
+           {
+             featureType: "poi",
+             elementType: "labels",
+             stylers: [
+               { visibility: "on" }
+             ]
+           }
+         ];
+
+      map.setOptions({styles: stylesArray});
+    var service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, function(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          var y;
+          var len = indexNumberUsed.length;
+          for(y = 0; y<len; y++){
+            var place = results[indexNumberUsed[y]];
+            var marker = new google.maps.Marker({
+              map: map,
+              position: place.geometry.location
+            });
+          }
+        }
+      });
+
+//DONT TOUCH THESE
+
+  }
+}
+
+
+
+//END OF FUNCTION INITIALIZE -------------------------------------
