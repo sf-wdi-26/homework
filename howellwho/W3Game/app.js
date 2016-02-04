@@ -21,8 +21,13 @@ var brickHeight = 15;
 var padding = 1;
 //to add later
 var score = 0;
-var lives = 3;
-
+var airhorn;
+function rooster(){
+    document.getElementById("rooster").play();
+    }
+function airhorn(){
+    document.getElementById("airhorn").play();
+    }
 //sets game board elements
 function init() {
   ctx = $('#canvas')[0].getContext("2d");
@@ -55,15 +60,12 @@ function clear() {
   rect(0,0,width,height);
 }
 
-function drawScore() {
-    $("#score").html(num);
-}
-function drawLives() {
-    $("#lives").html(num);
+function addScore() {
+    $("#score").html(number);
 }
 
 
-//allows functionablity to move padddle
+//allows functionality to move padddle
 function onKeyDown(evt) {
   if (evt.keyCode == 39) rightDown = true;
   else if (evt.keyCode == 37) leftDown = true;
@@ -87,7 +89,7 @@ function initbricks() {
         }
     }
 }
-//
+//adds rows and columns for bricks
 function drawbricks() {
   for (i=0; i < rows; i++) {
     ctx.fillStyle = rowcolors[i];
@@ -141,12 +143,11 @@ var ballr = 10;
             dy = -dy;
           }
           else if (y + dy + ballr > height) {
-            // added Game Over functionality
-          
+            // Game Over functionality
             $("h1").html("Game Over");
               document.location;
               clearInterval(intervalId)
-  }
+    }
         }
         x += dx;
         y += dy;
@@ -157,13 +158,12 @@ var ballr = 10;
 
 //play again button
 //event listener that refreshed page on click
-
   var resetButton = document.getElementById("reset-game");
-    resetButton.addEventListener("click", function() {
-    console.log('wtf');
-    window.location.reload();
-
+    resetButton.addEventListener("click", function() {  
+    window.location.reload(); 
   });
-
+ $(function() {
+    $("#airhorn").get(0).play();
+});
    
 
