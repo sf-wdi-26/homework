@@ -30,43 +30,32 @@
 //make invisible grid for for size or just say if image ix at xy coodinates 
 
 
-var everyThingInItsRightPlace = {
-  drag1: {
-    top: -160,
-    left: -140,
-    inCorrectPlace: false
-  },
-  drag2: {
-
-  }
-};
-
-//potential code
-
-// $(".drag1").on("mouseup", function(e){
-//   console.log( $(e.target).position())
-// })
-
-// $(".drag1").on("mouseup", function(e){
-//   console.log( $(e.target).position())
-// })
-
 
 function init() {
 
-  $(".drag1").draggable({
+  
+
+  $(".drag").draggable({
         grid: [10, 10]        
     });
 
 
 
-  $("#drag1").draggable({
-        snap: '#drag2',
-        snapTolerance: 5
+  $( "#inner" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "linked" );
+          console.log("I'm dropped");
+          
+}
 
-        
+
+  // $("#fullpic").on('click').show();
+
   });
+
+}
 	//do stuff on page load...
   //set event listeners maybe
-}
+
 
