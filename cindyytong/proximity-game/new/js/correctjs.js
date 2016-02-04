@@ -26,19 +26,24 @@ $(document).ready(function(){
             $("#insertHint").html(hintString);
             $("#insertNext").html(nextString);
             $("#start").hide();  
-            initialize();   
+            initialize(); 
+            displayHintCount();  
             //when submit clicked
           $("#submit").click(function(){
+            //refresh the counter on the hint button
             initialize();
+            countHint=0;
             //check if answer is correct
             checkAnswer();
             $("#answer").val("");
-            displayWinnings();
+              displayWinnings();
         });
 
           $("#next").click(function(){
-          initialize();
-          displayWinnings();
+            initialize();
+            countHint = 0;
+            displayWinnings();
+
         });
         });
 
@@ -60,11 +65,11 @@ var userInputLower;
 var userInputArray =[];
 var indexNumberUsed = [];
 var arrRandomTen = [];
-var solutionInLetters; 
 var addressDisplayed;
 //for hint displayed
 var hintDisplayed;
-var coountHint;
+var countHint = 0;
+var solutionInLetters;
 
 
 //function creates 10 random numbers between 1 to 30 and returns them in array of numbers 
@@ -165,8 +170,6 @@ if(count < 5){
 
             //split name into individual letters to display hint
             solutionInLetters = solution.split("");
-            console.log(solutionInLetters);
-            console.log(solutionInLetters[0]);
             
             //get the address of the solution to be displayed as hint
             addressDisplayed = String(results[arrRandomTen[count]].vicinity);
@@ -238,12 +241,16 @@ function displayWinnings(){
           }
         }
       });
-
-//DONT TOUCH THESE
-
   }
 }
 
-
-
 //END OF FUNCTION INITIALIZE 
+
+//generates how many times the hint button has been pressed
+
+function displayHintCount(){
+  $("#hint").click(function(){
+      console.log("It's been clicked " + countHint);
+      countHint++;
+  });
+}
