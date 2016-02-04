@@ -19,6 +19,7 @@ body {
 		background-color: lightgrey;
 
 		width: 601px;
+		
 		height: 400px;
 		border: 10px solid black;
 		position: absolute;
@@ -26,6 +27,44 @@ body {
     	left: 440px;
 
 }
+
+
+.box {
+	width: 120px;
+	height: 80px;
+	border: .01px solid black;
+	position: absolute;
+
+}
+
+.box1 {
+	top: 0px;
+	left: -8px;
+}
+
+
+.box2 {
+	top: 0px;
+	left: 114px;
+}
+
+.box3 {
+	top: 0px;
+	left: 236px;
+}
+
+.box4 {
+	top: 0px;
+	left: 358px;
+}
+
+.box5 {
+	top: 0px;
+	left: 480px;
+}
+
+
+
 
 .drag {
 
