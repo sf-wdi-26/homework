@@ -33,19 +33,29 @@
 
 function init() {
 
-  
+  var pieceClass;
 
   $(".drag").draggable({
-        grid: [10, 10]        
+        grid: [10, 10],
+        drag: function(){
+          pieceClass = this.class;
+        }    
     });
 
 
 
-  $( "#inner" ).droppable({
+  $( ".inner" ).droppable({
       drop: function( event, ui ) {
-        $( this )
-          .addClass( "linked" );
+        if($(this).hasClass(pieceClass)){
+          $(this).addClass( "linked" );
           console.log("I'm dropped");
+          
+        }
+
+
+//boxes have class linked win
+
+
           
 }
 
