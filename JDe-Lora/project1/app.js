@@ -40,12 +40,18 @@ function generateRandomLetter(letters) {
 	//from the div of the box to show the letter put that in the text
 }
 
+// function starGame(){
+//   alert("The goal of the game is type what is in the box in the center the screen and have the spaceship reach the end of the screen, Have Fun!!");
+// }
+// setTimeout(starGame, 250);
+
+
 $(function(){
 	console.log("Linked");
 	generateRandomLetter(alphabet);
 	$(window).keypress(takeTurn);
 });
-//have these work when the windows is on
+//have these run when the windows is on after it is started
 
 
 
