@@ -9,25 +9,35 @@
 
 //     return text;
 // }
-
+//in the alphabe that shows what letter is representing in
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var currentLetter;
+//what the recent letter in that was chosens
 
 function takeTurn(event) {
 	console.log("turn taken");
 	var userInput = String.fromCharCode(event.which);
+	//gives out the user input on what to see on the lettet that is being
+	//being shown
 	if (userInput === currentLetter) {
 		$('.spaceShip').animate({ left: '+=50px' },"slow");
+		//if userInput is on the same letter that is presenting then
+		//should move the spaceShip to the right
 		generateRandomLetter(alphabet);
+		//generates the next random in the alphabet
 	}
 }
 
 function generateRandomLetter(letters) {
   var max = letters.length - 1;
   var min = 0;
+    //max and min are what is the first in the array and last in the array
   var index = Math.floor(Math.random() * (max - min + 1)) + min;
+  //index is equal to make a random letter in the aplhabet
   currentLetter = letters[index];
+  //whatever the currentLetter is coming from the letters in the index
 	$("#letter-box").text(currentLetter);
+	//from the div of the box to show the letter put that in the text
 }
 
 $(function(){
@@ -35,60 +45,60 @@ $(function(){
 	generateRandomLetter(alphabet);
 	$(window).keypress(takeTurn);
 });
+//have these work when the windows is on
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //the number 62 through 90 are the keycodes for the letters
 //needing to put in this array to get it as a function 
 //to show what is being worked at in the array
 // var letterArray = [62-90];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	// $(".spaceShip").click(function(){
 	// // 	//alert();
 	// $(window).on(keypress)
