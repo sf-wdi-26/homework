@@ -140,11 +140,13 @@ var ballr = 10;
             dx = 8 * ((x-(paddlex+paddlew/2))/paddlew);
             dy = -dy;
           }
-          else if (y + dy + ballr > height){
+          else if (y + dy + ballr > height) {
             // added Game Over functionality
+          
             $("h1").html("Game Over");
-              document.location();
-}
+              document.location;
+              clearInterval(intervalId)
+  }
         }
         x += dx;
         y += dy;
