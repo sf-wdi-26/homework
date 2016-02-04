@@ -30,6 +30,28 @@
 //make invisible grid for for size or just say if image ix at xy coodinates 
 
 
+var everyThingInItsRightPlace = {
+  drag1: {
+    top: -160,
+    left: -140,
+    inCorrectPlace: false
+  },
+  drag2: {
+
+  }
+};
+
+//potential code
+
+// $(".drag1").on("mouseup", function(e){
+//   console.log( $(e.target).position())
+// })
+
+// $(".drag1").on("mouseup", function(e){
+//   console.log( $(e.target).position())
+// })
+
+
 function init() {
 
   $(".drag1").draggable({
