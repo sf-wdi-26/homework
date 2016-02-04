@@ -2,6 +2,7 @@
 	position: absolute;
 	left: 20px;
 
+
 }
 
 .box{
@@ -18,6 +19,10 @@
 
 #track {
 	border: 3px black solid;
+}
+#finish{
+	border: 50px black solid;
+	float: right;
 }
 
 

@@ -20,6 +20,7 @@ function takeTurn(event) {
 	//gives out the user input on what to see on the lettet that is being
 	//being shown
 	if (userInput === currentLetter) {
+		//move by percentage, instead of px amount
 		$('.spaceShip').animate({ left: '+=50px' },"slow");
 		//if userInput is on the same letter that is presenting then
 		//should move the spaceShip to the right
@@ -46,10 +47,24 @@ function generateRandomLetter(letters) {
 // setTimeout(starGame, 250);
 
 
+//1st method
+//when ship gets to finish div, end game
+//ship moves 5% per letter, takes x # of correct letters to get to end
+//if x # of correct letter has happened, stop ship from moving, display win message
+
+//2nd method
+//when ship collides with finish div, end game
+
+
+	// function startFinish(){
+	// 	$("#ship").
+	// }
+
 $(function(){
 	console.log("Linked");
 	generateRandomLetter(alphabet);
 	$(window).keypress(takeTurn);
+
 });
 //have these run when the windows is on after it is started
 
