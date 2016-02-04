@@ -20,7 +20,10 @@
 //Repeat for 10 questions - need to make sure bars are not repeated when randomly selected 
 //VII. RESULTS 
 //Generate score for player with number correct and number wrong, show map of places with name tags  
+
 //VIII. ADDITONAL IF TIME PERMITS 
+//colors add https://snazzymaps.com/style/14814/vintage-simple-blue-and-yellow
+//fix so that random store works 
 //Add pass button
 //Include get a hint
 //If player wins, they receive info on bar deals/ events
