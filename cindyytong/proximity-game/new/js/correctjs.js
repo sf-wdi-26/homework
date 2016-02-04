@@ -6,9 +6,8 @@ var submitString = "<button type='button' id = 'submit' class='btn btn-success v
 
 var nextString = "<button type='button' id = 'next' class='btn btn-success viewquestion'>Next</button>";
 
-//define address string based on data returned from Google
-var addressDisplayed;
-var addressString = "<h5>Hint: The address of this restaurant is: " + addressDisplayed +"</h5>";
+var hintString = "<button type='button' id = 'hint' class='btn btn-success viewquestion'>Hint Please</button>";
+
 
 //Initialize functions:
 
@@ -24,6 +23,7 @@ $(document).ready(function(){
             $("#insertAddress").append(addressDisplayed);
             $("#insertForm").html(formString);
             $("#insertSubmit").html(submitString);
+            $("#insertHint").html(hintString);
             $("#insertNext").html(nextString);
             $("#start").hide();  
             initialize();   
@@ -60,6 +60,11 @@ var userInputLower;
 var userInputArray =[];
 var indexNumberUsed = [];
 var arrRandomTen = [];
+var solutionInLetters; 
+var addressDisplayed;
+//for hint displayed
+var hintDisplayed;
+var coountHint;
 
 
 //function creates 10 random numbers between 1 to 30 and returns them in array of numbers 
@@ -157,13 +162,18 @@ if(count < 5){
             console.log(solution);
             //push the answer to the solution array
             solutionArray.push(solutionLower);
+
+            //split name into individual letters to display hint
+            solutionInLetters = solution.split("");
+            console.log(solutionInLetters);
+            console.log(solutionInLetters[0]);
             
             //get the address of the solution to be displayed as hint
             addressDisplayed = String(results[arrRandomTen[count]].vicinity);
             console.log(addressDisplayed);
             console.log(typeof(addressDisplayed));
             // alert(addressDisplayed);
-            $("#insertAddress").html(addressDisplayed);
+            $("#insertAddress").html("The address of this restaurant is: " + addressDisplayed);
 
             var marker = new google.maps.Marker({
                 map: map,
