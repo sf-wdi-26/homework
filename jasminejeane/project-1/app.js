@@ -44,7 +44,10 @@ function init() {
 
 
 
-  $( ".inner" ).droppable({
+
+
+
+  $( ".box" ).droppable({
       drop: function( event, ui ) {
         if($(this).hasClass(pieceClass)){
           $(this).addClass( "linked" );
@@ -52,16 +55,12 @@ function init() {
           
         }
 
-
+        console.log("I'm working");
 //boxes have class linked win
-
-
-          
+         
 }
 
-
-  // $("#fullpic").on('click').show();
-
+  // $("#fullpic").on('click').show()
   });
 
 }

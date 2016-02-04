@@ -1,14 +1,35 @@
 body {
 
   background: url(images/glitter.gif);
-	margin: 15px;
+	margin: 60px;
 
+}
+
+header {
+	position: relative;
+}
+
+h1 {
+	position: absolute;
+	top: -37px;
+    left: 602px;
+    font-size: 60px;
+	color: black;
+
+}
+
+h2 {
+	position: absolute;
+	font-size: 30px;
+
+	top: 30px;
+    left: 875px;
 }
 
 
 
 #outter {
-		width: 1550px;
+		width: 1450px;
 		height: 600px;
 		position: relative;
 		border: 5px solid grey;
@@ -18,12 +39,12 @@ body {
 #inner {
 		background-color: lightgrey;
 
-		width: 601px;
-		
-		height: 400px;
-		border: 10px solid black;
+		width: 612px;
+
+		height: 407px;
+		border: 10px solid grey;
 		position: absolute;
-		top: 162px;
+		top: 126px;
     	left: 440px;
 
 }
@@ -39,29 +60,148 @@ body {
 
 .box1 {
 	top: 0px;
-	left: -8px;
+	left: 1px;
 }
 
 
 .box2 {
 	top: 0px;
-	left: 114px;
+	left: 123px;
 }
 
 .box3 {
 	top: 0px;
-	left: 236px;
+	left: 245px;
 }
 
 .box4 {
 	top: 0px;
-	left: 358px;
+	left: 367px;
 }
 
 .box5 {
 	top: 0px;
-	left: 480px;
+	left: 489px;
 }
+
+
+
+
+
+.box6 {
+	top: 80px;
+	left: 1px;
+}
+
+
+.box7 {
+	top: 80px;
+	left: 123px;
+}
+
+.box8 {
+	top: 80px;
+	left: 245px;
+}
+
+.box9 {
+	top: 80px;
+	left: 367px;
+}
+
+.box10 {
+	top: 80px;
+	left: 489px;
+}
+
+
+
+
+
+.box11 {
+	top: 160px;
+	left: 1px;
+}
+
+
+.box12 {
+	top: 160px;
+	left: 123px;
+}
+
+.box13 {
+	top: 160px;
+	left: 245px;
+}
+
+.box14 {
+	top: 160px;
+	left: 367px;
+}
+
+.box15 {
+	top: 160px;
+	left: 489px;
+}
+
+
+
+
+.box16 {
+	top: 242px;
+	left: 1px;
+}
+
+
+.box17 {
+	top: 242px;
+	left: 123px;
+}
+
+.box18 {
+	top: 242px;
+	left: 245px;
+}
+
+.box19 {
+	top: 242px;
+	left: 367px;
+}
+
+.box20 {
+	top: 242px;
+	left: 489px;
+}
+
+
+
+.box21 {
+	top: 325px;
+	left: 1px;
+}
+
+
+.box22 {
+	top: 325px;
+	left: 123px;
+}
+
+.box23 {
+	top: 325px;
+	left: 245px;
+}
+
+.box24 {
+	top: 325px;
+	left: 367px;
+}
+
+.box25 {
+	top: 325px;
+	left: 489px;
+}
+
+
 
 
 
@@ -72,29 +212,41 @@ body {
 	left: -445px;
 }
 
+
+
+
+
+
+
+
+
 .set1 {
-
-	top: 0px;
-
+	left: -368;
+ top: -90px;
 }
 
 .set2 {
+left: -300px;
 	top: 40px;
 
 }
 
 .set3 {
-
-	top: 65px;
+	left: -368px;
+ top: 135px;
 }
 
 .set4 {
-	top:95px;
+
+ top: 195px;
 }
 
 .set5 {
-	top: 110px;
+	left: -300px;
+top: 308px;
 }
+}
+
 #fullpic {
 
 /*	display: none;
