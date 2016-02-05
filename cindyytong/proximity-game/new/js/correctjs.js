@@ -28,6 +28,7 @@ $(document).ready(function(){
             checkAnswer();
             $("#answer").val("");
               displayWinnings();
+              resetHint();
             //hits submit after 12 seconds
             setTimeout(function() { 
                document.getElementById("submit").click();
@@ -66,6 +67,8 @@ var nextString = "<button type='button' id = 'next' class='btn btn-success viewq
 
 var hintString = "<button type='button' id = 'hint' class='btn btn-success viewquestion'>Hint Please</button>";
 
+var resetString = "<button type='button' id = 'reset' class='btn btn-success viewquestion'>Play Again</button>";
+
 var scoreRight = 0;
 var count = 0;
 var solution;
@@ -85,7 +88,8 @@ var countHint = 0;
 var solutionInLetters;
 
 function resetHint(){
-    document.getElementById("#hint").textContent="Submit";
+    document.getElementById("hint").textContent = "Hint";
+    countHint=0;
 }
 
 //function creates 10 random numbers between 1 to 30 and returns them in array of numbers 
@@ -216,9 +220,11 @@ function displayWinnings(){
   if(count === 5){
     console.log("End of game");
     $("#insertForm").html("");
+    $("#insertHint").html("");
     $("#insertSubmit").html("");
     $("#insertNext").html("");
     $("#results").html("<p>You answered " + scoreRight + " correctly!</p>");
+    $("#insertResetGame").html(resetString);
 
     //generate map with all places
     var generalAssembly = new google.maps.LatLng(37.790841,-122.401280);
@@ -289,8 +295,15 @@ function displayHintCount(){
           document.getElementById("hint").textContent = "The name begins with " + hintDisplayed.join("");
         
       } else{
-        $("#hint").prop("disabled", true);
+        resetHint();
       }
+  });
+}
+
+//when button clicked play again
+function resetGame(){
+  $("#reset").click(function(){
+      window.location.reload();
   });
 }
 
