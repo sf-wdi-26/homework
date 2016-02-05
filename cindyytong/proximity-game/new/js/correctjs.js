@@ -37,12 +37,27 @@ $(document).ready(function(){
             checkAnswer();
             $("#answer").val("");
               displayWinnings();
+            //hits submit after 12 seconds
+            setTimeout(function() { 
+               document.getElementById("submit").click();
+            }, 12000);
         });
+
+          //call click event on submit button after 10 seconds
+          // var that = document.getElementById("submit");
+          setTimeout(function() { 
+               document.getElementById("submit").click();
+            }, 12000);
+
+          //
 
           $("#next").click(function(){
             initialize();
             countHint = 0;
             displayWinnings();
+            setTimeout(function() { 
+               document.getElementById("submit").click();
+            }, 12000);
 
         });
         });
