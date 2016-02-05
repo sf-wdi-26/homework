@@ -3,26 +3,39 @@ ul, li {
 	list-style-type: none;
 }
 
+body {
+	font-size: 21px;
+	background-color: #A09999;
+	background-image: url('background.jpg');
+	font-family: 'Indie Flower', cursive;
+	color:white;
+
+}
 #numbersDiv{
 	list-style-type: none;
-	font-size: 5em;
+	font-size: 4em;
 	padding-left: 1em;
 	text-align: center;
 	
 }
 
 #numberRow{
-	padding: 10em;
+	height: 150px;
 }
 
 .row {
 	text-align: center;
 	padding-top:10px;
+	font-family: 'Roboto Slab', serif;
 }
 
-/*p {
-	margin:0 auto;
-}*/
+#classLi {
+	font-size:2em;
+}
+
+#p1 {
+	font-size:35px;
+}
 
 
 .instructions {
@@ -43,6 +56,7 @@ h1 {
 	position: relative;
 	left: 50px;
 	font-size: 25px;
+	top:10px;
 }
 
 .scoreli {
@@ -58,13 +72,34 @@ h1 {
 
 #userAnswer {
 	margin:0 auto;
-	height:40px;
+	height:100px;
 	width:200px;
 	text-align: center;
+	color:black;
+	background-color: transparent;
+	border-color:transparent;
+}
+
+:focus {
+outline: 0;
 }
 
 #answerRow {
 	text-align: center;
+	height:150px;
 		
 	
 }
+
+#secondRow {
+	height:150px;
+}
+
+#enterForm {
+	position: relative;
+	top: 40px;
+
+}
+
+
+

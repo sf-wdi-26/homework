@@ -8,6 +8,8 @@
 
 		<!-- Bootstrap CSS -->
 		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script src="app.js"></script>
@@ -17,7 +19,7 @@
 		
 		<div class="instructions">
 			<h1>Digit Memorization</h1>
-			<p><b>Instructions: </b>Each number will pop up for 2 seconds. It will then disappear. you will then type in the number you saw to gain scores.</p>
+			<p><b>Instructions: </b>Each number will pop up for 2 seconds. It will then disappear. you will then type in the number you saw to gain scores. 10 points per guess.</p>
 		</div>
 
 		<!-- First row *start button* *scoreboard* *Turns -->
@@ -45,7 +47,7 @@
 
 		</div>	
 		<!-- Second row *Correct Or Wrong*-->
-		<div class="row">
+		<div id ="secondRow" class="row">
 
 			<div class ="col-md-12">
 				<div id="rightWrong"></div>
@@ -68,9 +70,9 @@
 		<div id="answerRow" class="row">
 			<!-- create an input where user will type in numbers -->
 			<form id="enterForm">
-				<input id="userAnswer" type="text" autofocus="true" placeholder="Please enter your answer">
+				<input id="userAnswer" type="text" autofocus="true" placeholder="Enter your answer">
 				<input id="enterFormSubmit" type="submit" value="Enter">
-			</form>
+				</form>
 
 			
 		</div>
