@@ -22,12 +22,7 @@ var padding = 1;
 //to add later
 var score = 0;
 var airhorn;
-function rooster(){
-    document.getElementById("rooster").play();
-    }
-function airhorn(){
-    document.getElementById("airhorn").play();
-    }
+var pizza = "pizza_small.png"
 //sets game board elements
 function init() {
   ctx = $('#canvas')[0].getContext("2d");
@@ -47,6 +42,7 @@ function circle(x,y,r) {
   ctx.closePath();
   ctx.fill();
 }
+
 //creates paddle
 function rect(x,y,w,h) {
   ctx.beginPath();
@@ -58,10 +54,6 @@ function rect(x,y,w,h) {
 function clear() {
   ctx.clearRect(0, 0, width, height);
   rect(0,0,width,height);
-}
-
-function addScore() {
-    $("#score").html(number);
 }
 
 
@@ -102,11 +94,18 @@ function drawbricks() {
     }
   }
 };
+
+//if no bricks left, winner
+// function brickDetection() {
+//   if (brick==0) {
+//     $("h1").html("Winner !!!!!!!!!!!");;
+//   }
+// }
 //variables for pieces on board
 var ballr = 10;
       var rowcolors = ["red", "orange", "yellow", "green", "blue"];
-      var paddlecolor = "pink";
-      var ballcolor = "purple";
+      var paddlecolor = "brown";
+      var ballcolor = "purple"
       var backcolor = "black";
       
       function draw() {
@@ -131,6 +130,12 @@ var ballr = 10;
         if (y < rows * rowheight && row >= 0 && col >= 0 && bricks[row][col] == 1) {
           dy = -dy;
           bricks[row][col] = 0;
+          score+=100
+          $("#score").html("Score: "+score);
+        }
+        if (score == 2500) {
+          $("h1").html("Winner!!!!!!!!!!!!!!!!");
+          $("#cheer")[0].play();
         }
         if (x + dx + ballr > width || x + dx - ballr < 0)
           dx = -dx;
@@ -142,9 +147,10 @@ var ballr = 10;
             dx = 8 * ((x-(paddlex+paddlew/2))/paddlew);
             dy = -dy;
           }
-          else if (y + dy + ballr > height) {
+        else if (y + dy + ballr > height) {
             // Game Over functionality
             $("h1").html("Game Over");
+            $("#lose")[0].play();
               document.location;
               clearInterval(intervalId)
     }
@@ -153,22 +159,17 @@ var ballr = 10;
         y += dy;
       }
 
+
       init();
       initbricks();
-
-//play again button
-//event listener that refreshed page on click
-  // var resetButton = document.getElementById("reset-game");
-  //   resetButton.addEventListener("click", function() {  
-  //   window.location.reload(); 
-  // });
+      
 
  $("#reset-game").on("click", function() {
     window.location.reload();
  });  
     
  $(function() {
-    $("#airhorn")[0].play();
+    $("#dolphin")[0].play();
 });
    
 

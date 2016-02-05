@@ -16,42 +16,28 @@ h1 {
  margin-top: 0;
 }
 
-#lives {
-
-  font-size: 15px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-
-}
-
-#score {
-
-  font-size: 15px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-
-} 
-
-/*.lives {
-	text-align: left;
-	color: black;
-}
-
-.score {
-	text-align: right;
-	color: black;
-}
-*/
-/*#reset-game {
-
-}*/
-
 canvas {
 
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
 #lives {
+
+  font-size: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+
+#score {
+
+  font-size: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+} 
+
+#directions {
 
   font-size: 15px;
 
@@ -61,58 +47,4 @@ canvas {
 
   font-size: 15px;
 }
-
-/*table {
-  margin: 0 auto;
-  border-radius:10px;
-  background: #a58855;
-}
-td {
-  border: 1px solid black;
-  width: 65px;
-  height: 65px;
-  text-align: center;
-  font-size: 12px;
-  box-sizing:border-box;
-
-} 
-
-td:hover{
-  cursor:pointer;
-}
-
-td:first-child{
-  border-left: none;
-}
-td:last-child{
-  border-right: none;
-}
-
-td:nth-child(2n+2){
-  border-right: none;
-  border-left: none;
-}
-
-thead tr td{
-  border-top:none;
-  border-bottom: none;
-}
-
-tfoot tr td{
-  border-top:none;
-  border-bottom: none;
-}
-
-.container, .playerTurn {
-  text-align: center;
-  color: white;
-}
-*/
-/*.X, .O {
-  border-radius: 10px;
-  background: black;
-  color: white;
-}*/
-
-
 
