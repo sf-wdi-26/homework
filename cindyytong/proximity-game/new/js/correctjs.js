@@ -32,14 +32,14 @@ $(document).ready(function(){
             //hits submit after 12 seconds
             setTimeout(function() { 
                document.getElementById("submit").click();
-            }, 12000);
+            }, 15000);
         });
 
           //call click event on submit button after 10 seconds
           // var that = document.getElementById("submit");
           setTimeout(function() { 
                document.getElementById("submit").click();
-            }, 12000);
+            }, 15000);
 
           //
 
@@ -50,7 +50,7 @@ $(document).ready(function(){
             displayWinnings();
             setTimeout(function() { 
                document.getElementById("submit").click();
-            }, 12000);
+            }, 15000);
 
         });
         });
@@ -95,7 +95,6 @@ function resetHint(){
 //function creates 10 random numbers between 1 to 30 and returns them in array of numbers 
 
 function generateRandomArray(){
-  console.log("generateRandomArray called");
   while(arrRandomTen.length<10){
     var randomNumber = Math.ceil(Math.random()*10);
     var found = false;
@@ -117,7 +116,6 @@ function checkAnswer(userInput, solution){
     userInputLower = String(userInput).toLowerCase();
     if(solutionLower==userInputLower){
       scoreRight++;
-      console.log("You answered correctly " +scoreRight);
     } else {
       console.log("You answered incorrectly");
     }
@@ -174,17 +172,11 @@ if(count < 5){
       service.nearbySearch(request, function(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             var place = results[arrRandomTen[count]];
-            console.log(results);
-            
-            // if(typeof(place.geometry) === undefined){
-            //   var place = results[arrRandomTen[1]];
-            // } 
 
             //set the solution for the current place to the name
             solution = results[arrRandomTen[count]].name;
             // solution = place["name"];
             solutionLower = String(solution).toLowerCase();
-            console.log(solution);
             //push the answer to the solution array
             solutionArray.push(solutionLower);
 
@@ -193,8 +185,6 @@ if(count < 5){
             
             //get the address of the solution to be displayed as hint
             addressDisplayed = String(results[arrRandomTen[count]].vicinity);
-            console.log(addressDisplayed);
-            console.log(typeof(addressDisplayed));
             // alert(addressDisplayed);
             $("#insertAddress").html("The address of this restaurant is: " + addressDisplayed);
 
@@ -205,11 +195,8 @@ if(count < 5){
 
             //update the count and use this value for place index
             count++;
-            console.log(count);
             indexNumberUsed.push(arrRandomTen[count]);
-            console.log(indexNumberUsed);
             arrRandomTen.splice(count,1);
-            console.log(arrRandomTen);
             }
       });
   }
@@ -223,8 +210,10 @@ function displayWinnings(){
     $("#insertHint").html("");
     $("#insertSubmit").html("");
     $("#insertNext").html("");
-    $("#results").html("<p>You answered " + scoreRight + " correctly!</p>");
+    $("#results").html("<p>You answered " + scoreRight + " correctly!. Click on the markers to view the answers.</p>");
     $("#insertResetGame").html(resetString);
+    $("#insertAddress").html('');
+    resetGame();
 
     //generate map with all places
     var generalAssembly = new google.maps.LatLng(37.790841,-122.401280);
@@ -257,6 +246,7 @@ function displayWinnings(){
         if (status == google.maps.places.PlacesServiceStatus.OK) {
           var y;
           var len = indexNumberUsed.length;
+          var markers = [];
           for(y = 0; y<len; y++){
             var place = results[indexNumberUsed[y]];
             var marker = new google.maps.Marker({
@@ -265,9 +255,9 @@ function displayWinnings(){
               name: place.name,
             });
 
-            google.maps.event.addListener(marker, 'click', function(){
-              $("#restaurantName").html("<p>" + marker.name + "</p>");
-            });
+            markers.push(marker);
+
+            google.maps.event.addListener(markers[y], 'click', makeMarkerEvent(map, markers[y]));
 
             //
           //
@@ -289,9 +279,7 @@ function displayHintCount(){
       if (countHint<solutionInLetters.length){
         for(var i = 0; i<countHint; i++){
           hintDisplayed.push(solutionInLetters[i]);
-          console.log(hintDisplayed);
         }
-          console.log(hintDisplayed);
           document.getElementById("hint").textContent = "The name begins with " + hintDisplayed.join("");
         
       } else{
@@ -300,11 +288,15 @@ function displayHintCount(){
   });
 }
 
-//when button clicked play again
-function resetGame(){
-  $("#reset").click(function(){
-      window.location.reload();
-  });
+//Set the click event for marker
+function makeMarkerEvent(map, marker){
+  return function(){
+    $("#restaurantName").html("<p>" + marker.name + "</p>");
+  };
 }
 
-
+function resetGame(){
+  $("#reset").click(function(){
+    location.reload();
+  });
+}
