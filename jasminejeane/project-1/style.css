@@ -88,8 +88,28 @@ input {
 	padding: 10px;
 	padding-left: 40px;
 	padding-right: 40px;
-	background: url(images/glitter.gif);;
-	border: 5px solid grey;
+	background:  url(images/ice.jpg);
+/*	border: 5px solid grey;
+*/	box-shadow: 3px 3px 5px 6px #ccc;
+
+}
+
+
+.lastInput {
+	top: 0;
+	left: 0;
+	color: black;
+
+}
+
+#last {
+	left: 50px;
+}
+
+#last2 {
+	top: -16px;
+    left: 184px;
+    font-size: 30px;
 }
 
 #images {

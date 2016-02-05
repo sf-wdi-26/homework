@@ -39,7 +39,9 @@ function init() {
   var pieceMatch;
   var score = 0; 
   newScore  = $("#score").val();
+  // $("#last2").html('<p class ="lastInput">' + localStorage.getItem('lastScore') + '</p>');
 
+$("#last2").append(localStorage.getItem('lastScore'));
 
   $(".drag").draggable({
         grid: [5, 5],
@@ -76,11 +78,12 @@ function init() {
         //boxes have class linked win
       if ($(".box").not(".pair").length === 0 ) {
           console.log("Puzzle Complete");
-          prompt("You completed the puzzle!");
+          alert("You completed the puzzle!");
           // make a big dancng gif come on the screen
                
       }
       $("#score").html('<p class = "scoreInput" style="font-size: 50px;">' + score + '</p>');
+
       localStorage.setItem('lastScore', score);
 
       }
