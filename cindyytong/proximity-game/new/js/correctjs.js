@@ -45,6 +45,7 @@ $(document).ready(function(){
           $("#next").click(function(){
             initialize();
             countHint = 0;
+            resetHint();
             displayWinnings();
             setTimeout(function() { 
                document.getElementById("submit").click();
@@ -83,6 +84,9 @@ var concatenateHintDisplayed;
 var countHint = 0;
 var solutionInLetters;
 
+function resetHint(){
+    document.getElementById("#hint").textContent="Submit";
+}
 
 //function creates 10 random numbers between 1 to 30 and returns them in array of numbers 
 
