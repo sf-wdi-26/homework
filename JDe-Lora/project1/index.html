@@ -9,23 +9,31 @@
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
 </head>
 <body>
-	<h1>Amazing Space typing game</h1>
-<img src="http://i889.photobucket.com/albums/ac92/x7iBiT/Android/Asteroides/nave.png" class="spaceShip" id="ship">
-<img src="http://bestanimations.com/Earth&Space/black-hole-animation-4.gif" id="finish">
+<div class="displayWrapper">
+	
+	<h1>Amazing Space typing game</h1><p>Instructions: </p>
+		<ol>
+			<li>The goal is to type the letter in the box</li>
+			<li>To reach the goal to the end of the finish line</li>
+			<li>as fast as you can!</li>
+		</ol>
+		<div class="box" id="letter-box"></div>
+		<a href="javascript:history.go(0)" class="refresh">Click to refresh to start a new game</a>
+	</div>
+	<span class="Gameplay">
+		<img src="http://i889.photobucket.com/albums/ac92/x7iBiT/Android/Asteroides/nave.png" class="spaceShip" id="ship">
+		<img src="http://bestanimations.com/Earth&Space/black-hole-animation-4.gif" id="finish">
+	</span>
 
-	<a href="javascript:history.go(0)" class="refresh">Click to refresh to start a new game</a>
+	
 
  	<div id="track">
  		<div id="start" style= "left: 60px"></div>
  		<div id="finish" style= "left: 600px"></div>
  	</div>
- 	<div class="box" id="letter-box"></div>
- 	<p>Instructions: </p>
-	<ol>
-		<li>The goal is to type the letter in the box</li>
-		<li>To reach the goal to the end of the finish line</li>
-		<li>as fast as you can!</li>
-	</ol>
+ 	
+ 	
+
  	
 </body>
 </html>

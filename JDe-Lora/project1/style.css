@@ -1,46 +1,83 @@
 html{
+	
+	height: 100%;
+}
+
+body {
+
 	background-image: url(./images/scifi-supernova.jpg);
 	background-size: cover;
 	background-repeat:repeat-x;
+	height: 100%;
+	margin: 0;
+
 }
 
+.Gameplay{
+	display: inline-block;
+	height: 500px;
+	width: 600px;
+
+}
 
 .spaceShip{
 	position: absolute;
+	top: 350px;
 	left: 20px;
 	margin-right: auto;
 	 margin-left: auto; 
 	 width: 150px
-	 
+	float:left;
 
+}
+.finish{
+	top: 350px;
+	left: 20px;
+	float: right;
+	margin-right: auto;
+	margin-left: auto;
+}
+#displayWrapper{
+	height: 200px;
+}
 
+ol {
+
+	padding: 0;
+
+}
+
+p, ol, li {
+
+	text-align: center;
+	color: white;
+	list-style-type: none;	
 }
 h1{
 	text-align: center;
 	color: white;
 }
 
+
+
 .box{
    
-  display: inline-block;
+
   width: 59px;
   height: 86px;
   margin: 1em;
-  float: right;
-  background-color: 52226D;
+  float: left;
   font-size: 75px;
-  text-align: center;
+  color: white;
+  
 }
 
 
-#track {
+/*#track {
 	border: 3px black solid;
-}
-#finish{
-	position: relative;
-	float: right;
-	background-color: grey
-}
+}*/
+
 .refresh{
-	
+	float: center;
+	text-align: center;
 }
