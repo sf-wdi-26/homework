@@ -39,7 +39,7 @@ function init() {
   var pieceMatch;
 
   $(".drag").draggable({
-        grid: [10, 10],
+        grid: [5, 5],
         // revert: true, --- moves the item out of the droppable b4 drops
         drag: function(){
           pieceMatch = $(this).attr('match');
@@ -56,18 +56,27 @@ function init() {
                 // $(this).removeClass( "box" );
 
         if($(this).attr("match") == pieceMatch){
-          $(this).addClass( "linked" );
-          console.log("I'm dropped");
-          
+          $(this).addClass( "pair" );
+          console.log("I'm a match");
+          //you can add a point right here 
+        }
+        else{
+          //can take away a point
         }
 
-        console.log("I'm working");
-//boxes have class linked win
+        //boxes have class linked win
+
          
 }
 
   // $("#fullpic").on('click').show()
   });
+
+
+  if ($("#inner div.pair").length == $("#inner div").length) {
+    console.log("Puzzle Complete");
+    // all list items are selected
+}
 
 }
   //do stuff on page load...
