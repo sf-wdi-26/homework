@@ -50,6 +50,14 @@ p {
 	font-weight: bold;
 }
 
+
+input {
+
+	position: absolute;
+	top: 440px ;
+	left: 0;
+}
+
 #attempts{
 
 	top:100px ;
@@ -75,8 +83,13 @@ p {
 
 }
 
-p{
+.scoreInput {
 	top: -49px;
+	padding: 10px;
+	padding-left: 40px;
+	padding-right: 40px;
+	background: url(images/glitter.gif);;
+	border: 5px solid grey;
 }
 
 #images {

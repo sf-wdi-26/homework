@@ -80,8 +80,15 @@ function init() {
           // make a big dancng gif come on the screen
                
       }
-      $("#score").html('<p style="font-size: 50px;">' + score + '</p>');
+      $("#score").html('<p class = "scoreInput" style="font-size: 50px;">' + score + '</p>');
       }
+
+
+
+      // $("input").click(function(){
+      //     console.log("clicked");
+
+      // });
 
 
 
