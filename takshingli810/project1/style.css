@@ -15,9 +15,14 @@ ul, li {
 	padding: 10em;
 }
 
-p {
-	margin:0 auto;
+.row {
+	text-align: center;
+	padding-top:10px;
 }
+
+/*p {
+	margin:0 auto;
+}*/
 
 
 .instructions {
@@ -34,19 +39,20 @@ h1 {
 #startButton {
 	height:50px;
 	width:85px;
-	margin:60px;
+	/*margin:60px;*/
 	position: relative;
 	left: 50px;
+	font-size: 25px;
 }
 
 .scoreli {
 	font-size:20px;
-	margin:30px;
+	/*margin:30px;*/
 }
 
 .turnli {
 	font-size: 20px;
-	margin:55px;
+	/*margin:55px;*/
 
 }
 

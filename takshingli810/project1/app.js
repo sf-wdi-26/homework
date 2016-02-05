@@ -17,6 +17,9 @@ $(function(){
 
 
 	$("#startButton").click(function(){ 
+		numberString = '';
+		$("#p1").html("Player : " + scores);
+		$("#classLi").html("Turns : " + turns);
 		showNumber();
 		// enterAnswer();
 	});
@@ -40,7 +43,6 @@ function showNumber() {
 	// create a timed loop that will present a series of numbers
 		//present a number
 		setTimeout(function(){
-			$("#classLi").html(turns);
 			nextNum = Math.floor(Math.random() * 10);
 			numberString += nextNum;
 			console.log("number string is", numberString)
@@ -68,15 +70,6 @@ function showNumber() {
 
 //p1 selector .append(score)
 
-// taking the answer in from user
-// function enterAnswer(userAnswer){
-// 	// e.preventDefault;
-// 	console.log("userAnswer: " + userAnswer);
-// 	compareAnswer(userAnswer, numberString);
-
-// }
-
-
 
 // write a function where input numbers will be compared with numbers string
 // increment turns
@@ -85,8 +78,8 @@ function compareAnswer(userAnswer){
 	turns += 1;
 	if (userAnswer == numberString) {
 		$("#rightWrongLi").append("<h1>Correct Answer</h1>");
-		// $("#startButton").html("<button class='btn btn-secondary playAgain'>Play Again?</button>");
-		scores += scores;
+		scores = scores + 10;
+		console.log(scores)
 			setTimeout(function (){
 				$("#rightWrongLi").html("");
 			},500);
