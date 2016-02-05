@@ -54,7 +54,7 @@ function init() {
   $( ".box" ).droppable({
       drop: function( event, ui ) {
                 // $(this).removeClass( "box" );
-
+        ui.draggable.detach().css({top: -10, left: -32}).appendTo($(this));
         if($(this).attr("match") == pieceMatch){
           $(this).addClass( "pair" );
           console.log("I'm a match");
@@ -65,18 +65,21 @@ function init() {
         }
 
         //boxes have class linked win
+      if ($(".box").not(".pair").length === 0 ) {
+          console.log("Puzzle Complete");
+               
+      }
+      }
 
-         
-}
+
 
   // $("#fullpic").on('click').show()
   });
 
 
-  if ($("#inner div.pair").length == $("#inner div").length) {
-    console.log("Puzzle Complete");
+  
     // all list items are selected
-}
+
 
 }
   //do stuff on page load...
