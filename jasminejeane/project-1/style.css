@@ -27,17 +27,19 @@ h2 {
 }
 
 
-
 #outter {
 		width: 1450px;
 		height: 600px;
 		position: relative;
 		border: 5px solid grey;
+		box-shadow: 3px 3px 5px 6px #ccc;
+
 		background-color: white;
 
 }
 #inner {
 		background-color: lightgrey;
+		box-shadow: 3px 3px 5px 6px #ccc;
 
 		width: 612px;
 
