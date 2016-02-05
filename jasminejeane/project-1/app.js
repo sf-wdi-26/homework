@@ -38,7 +38,7 @@ function init() {
 
   var pieceMatch;
   var score = 0; 
-  var newScore  = $("#score").val();
+  newScore  = $("#score").val();
 
 
   $(".drag").draggable({
@@ -56,20 +56,21 @@ function init() {
 
   $( ".box" ).droppable({
       drop: function( event, ui ) {
-                // $(this).removeClass( "box" );
+       // var newScore  = $("#score").val();
         ui.draggable.detach().css({top: -10, left: -32}).appendTo($(this));
         if($(this).attr("match") == pieceMatch){
           $(this).addClass( "pair" );
           console.log("I'm a match");
-          score += 5;
-          newScore = score;
+          score += 1;
+          newScore ="" +score + "";
+
          console.log(score);
 
         }
         else{
-    
-          score -= 1;
-          console.log(score);
+    //just counting trys not score
+          score += 1;
+          // console.log(score);
             }
 
         //boxes have class linked win
@@ -79,6 +80,7 @@ function init() {
           // make a big dancng gif come on the screen
                
       }
+      $("#score").html('<p>' + score + '</p>');
       }
 
 
