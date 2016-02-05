@@ -6,9 +6,15 @@
 
 		<!-- CSS Reglar and Reset-->
 		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/styles.css">
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="css/styles.css">
 
+<!-- Style for Buttons -->
+         <meta name="author" content="www.twitter.com/cheeriottis">
+          <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+<!-- Remove -->
         <!-- Jquery -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -25,38 +31,37 @@
 	<body>
     
     <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <!-- <a class="navbar-brand" href="#">
-            <img alt="Brand" src="...">
-          </a> -->
-          <h4>Proximity</h4>
-        </div>
-      </div>
+    <!--   <div class="container-fluid"> -->
+        <!-- <div class="navbar-header"> -->
+          <h1>Proximity</h1>
+      <!--   </div> -->
+<!--       </div> -->
     </nav>
 
-
-    <div class="container">
-
-        <p id = "instructions">Are you a foodie? How well do you know the restaurants in the vicinity of General Assembly? We'll show you a location on a map and you will have ten seconds to identify the restaurant's name. Hint: answers are not case sensitive. Click start and let it rip!</p> 
-    
-        <button type="button" id = "start" class="btn btn-success viewquestion">Start</button>
-        
-
-        <div id = "insertForm"></div>
-        <div id = "insertAddress"></div> 
-        <div id = "insertHint"></div> 
-        <div id = "insertNext"></div>
-        <div id = "insertSubmit"></div>
-        <div id = "insertResetGame"></div>
-        <div id = "restaurantName"></div>
-
+    <div class = "row">
+        <div class="container pagination-center">
+            <div class="span6">
+                <p id = "instructions">Are you a foodie? How well do you know the restaurants in the vicinity of General Assembly? We'll show you five locations on a map and provide you with the address. You will have twenty seconds to identify the restaurant's name. If you get stuck, there's a hint button! Answers are not case sensitive. Click start to begin!</p> 
+                
+                <a href="#" class="action-button animate blue" id="start">Start</a>
+                
+                <div id = "insertForm"></div>
+                <br>
+                <div id = "insertAddress"></div> 
+                <br>
+                <div id = "insertHint"></div> 
+                <div id = "insertNext"></div>
+                <div id = "insertSubmit"></div>
+                <div id = "insertResetGame"></div>
+                <div id = "restaurantName"></div>
+                <div id = "results"></div>   
+            </div>
+        </div>
+        <div class="container">
+            <div class="span6">
+                <div id="map"></div>
+            </div>
+        </div>
     </div>
-<!--     End of container -->
-
-<!-- Google map cannot go inside of the container with Bootstrap settings -->
-        <div id = "results"></div>
-        <div id="map"></div>
-
 	</body>
 </html>

@@ -8,6 +8,7 @@ $(document).ready(function(){
           generateRandomArray();
         //remove instructions
             $("#instructions").html("");
+            $("div").removeClass("jumbotron");
         //add form for question submission and buttons next and submit
             $("#insertAddress").append(addressDisplayed);
             $("#insertForm").html(formString);
@@ -39,7 +40,7 @@ $(document).ready(function(){
           // var that = document.getElementById("submit");
           setTimeout(function() { 
                document.getElementById("submit").click();
-            }, 15000);
+            }, 20000);
 
           //
 
@@ -61,13 +62,13 @@ $(document).ready(function(){
 //elements to be added to the page after start button is clicked on
 var formString = "<label for='answer'>Name the restaurant depicted below in the map</label> <input type='answer' class='form-control' id='answer' placeholder='Restaurant Name'>";
 
-var submitString = "<button type='button' id = 'submit' class='btn btn-success viewquestion'>Submit</button>";
+var submitString = "<a href='#' class='action-button animate red' id = 'submit'>Submit</a>";
 
-var nextString = "<button type='button' id = 'next' class='btn btn-success viewquestion'>Next</button>";
+var nextString = "<a href='#' class='action-button animate blue' id = 'next'>Next</a>";
 
-var hintString = "<button type='button' id = 'hint' class='btn btn-success viewquestion'>Hint Please</button>";
+var hintString = "<a href='#' class='action-button animate green' id = 'hint'>Hint</a>";
 
-var resetString = "<button type='button' id = 'reset' class='btn btn-success viewquestion'>Play Again</button>";
+var resetString = "<a href='#' class='action-button animate green' id = 'reset'>Play Again</a>";
 
 var scoreRight = 0;
 var count = 0;
