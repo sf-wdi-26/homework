@@ -60,18 +60,22 @@ h1{
 	text-align: center;
 	color: white;
 }
-
+a {
+	text-align: center;
+	display: block;
+}
 
 
 .box{
    
-
+	display: inline-block;
   width: 59px;
   height: 86px;
   margin-left: 1em;
   float: left;
   font-size: 75px;
   color: white;
+
 
   
 }
