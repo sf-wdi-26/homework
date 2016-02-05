@@ -28,6 +28,8 @@ $(document).ready(function(){
             $("#start").hide();  
             initialize(); 
             displayHintCount();  
+
+
             //when submit clicked
           $("#submit").click(function(){
             //refresh the counter on the hint button
@@ -61,11 +63,6 @@ $(document).ready(function(){
 
         });
         });
-
-
-
-//creates google map once anything with class viewquestion is clicked (start, next, submit buttons) 
-    // google.maps.event.addDomListener(document.getElementsByClassName('viewquestion'), 'click', initialize);
 
 });
 
@@ -132,9 +129,9 @@ if(count < 5){
 
       var map = new google.maps.Map(document.getElementById('map'), {
         center: generalAssembly,
-        zoom: 15,
-        scrollwheel: false,
-        
+        zoom: 16,
+        zoomControl: true,
+        scaleControl: true
       });
 
       // Specify location, radius and place types for your Places API search.
@@ -226,7 +223,8 @@ function displayWinnings(){
     var map = new google.maps.Map(document.getElementById('map'), {
         center: generalAssembly,
         zoom: 15,
-        scrollwheel: false,
+        zoomControl: true,
+        scaleControl: true
       });
     var request = {
         location: generalAssembly,
