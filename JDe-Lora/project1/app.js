@@ -32,7 +32,7 @@ function takeTurn(event) {
 		currentPosition = $('.spaceShip').css("left");
 			// $('.spaceship').stop(('.finish'), 600);
 			 if(parseInt(currentPosition) >= 1320){
-			 	alert("You Win!!");
+			 	alert("You Win and traveled through space to your homeworld!!");
 			} else{
 				var newPosition = (parseInt(currentPosition) + 100);
 				$('.spaceShip').animate({ left: newPosition + "px"},"slow");
