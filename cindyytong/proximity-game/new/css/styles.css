@@ -1,6 +1,6 @@
 body {
   color: #ffffff;
-  font-family: 'Railway', sans-serif;
+  font-family:'Railway', sans-serif !important;
   background:url('table.jpeg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -11,9 +11,9 @@ body {
   font-size: 2em;
 }
 
-.container{
-
-}
+.jumbotron{
+    background-color: rgba(201, 180, 116, 0.5) !important;
+  }
 
 h1{
   font-family: 'Pacifico', sans-serif;
@@ -22,16 +22,10 @@ h1{
   color: '#FFFFFF';
 }
 
-html, body, #map {
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-.column {
-  width: 48%;
-  padding: 2%;
-  float: left;
 }
 
 h1 {
@@ -39,23 +33,27 @@ h1 {
   margin-bottom: 10px;
 }
 
-p {
-  padding: 10px 0;
-/*  color: '#454347';*/
+/*Fix fonts for items that are apended to DOM*/
+#insertForm{
+  font-family: 'Railway', sans-serif !important;
 }
 
-p + p {
-  border-top: 1px solid black;
+#insertAddress{
+  font-family: 'Railway', sans-serif !important;
 }
 
 #map {
-  min-width: 200px;
+  min-width: 50%;
   width: 90%;
-  min-height: 200px;
+  min-height: 500px;
   height: 70%;
+  margin: auto 0;
 }
 
 /*Style for Buttons*/
+.clickButton{
+  margin: auto;
+}
 .animate
 {
   transition: all 0.1s;

@@ -8,7 +8,6 @@ $(document).ready(function(){
           generateRandomArray();
         //remove instructions
             $("#instructions").html("");
-            $("div").removeClass("jumbotron");
         //add form for question submission and buttons next and submit
             $("#insertAddress").append(addressDisplayed);
             $("#insertForm").html(formString);
@@ -211,7 +210,7 @@ function displayWinnings(){
     $("#insertHint").html("");
     $("#insertSubmit").html("");
     $("#insertNext").html("");
-    $("#results").html("<p>You answered " + scoreRight + " correctly!. Click on the markers to view the answers.</p>");
+    $("#results").html("<p>You answered " + scoreRight + " correctly! Click on the markers to view the answers.</p>");
     $("#insertResetGame").html(resetString);
     $("#insertAddress").html('');
     resetGame();
