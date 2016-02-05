@@ -1,19 +1,34 @@
+
+@font-face {
+    font-family: frozenfont;
+    src: url('frozenfont.woff');
+}
+
+
+
+
+
 body {
 
   background: url(images/glitter.gif);
 	margin: 60px;
 	position: relative;
-
+    font-family: frozenfont;
 }
 
 
 
 h1 {
 	position: absolute;
-	top: -37px;
-    left: 602px;
-    font-size: 60px;
-/*	text-shadow: 3px 3px 5px 6px black;
+	top: -57px;
+    left: 460px;
+    font-size: 80px;
+    color: lightblue;
+    text-shadow: 3px 3px 5px 6px #lightblue;
+
+/*    font-family: myFirstFont;
+*//*    src: url(frozen/Kusren.woff);
+*//*	text-shadow: 3px 3px 5px 6px black;
 */;
 
 }
@@ -23,6 +38,8 @@ h2 {
 	font-size: 30px;
 	top: 30px;
     left: 875px;
+    color: rgba(213, 57, 160, 0.58);
+
 /*    text-shadow: 3px 3px 5px 6px black;
 */
 }
@@ -33,30 +50,34 @@ p {
 	font-weight: bold;
 }
 
-#timer{
+#attempts{
 
 	top:100px ;
-	left:0 ;
+	left:40px;
+	font-size: 40px;
 }
 
 
 #score{
 
-top:200px ;
-	left:0 ;
+	top: 140px;
+    left: 140px;
+    font-size: 70px;
 }
 
 
 #picture{
-	background: url(images/olof-main.gif);
-	width: 400px;
-	height: 250px;
-	top:300px ;
-	left:0 ;
+	background: url(images/anna.gif);
+    width: 235px;
+    height: 250px;
+    top: 280px;
+    left: 0px;
 
 }
 
-
+p{
+	top: -49px;
+}
 
 #images {
 	height: 500px;
@@ -71,10 +92,10 @@ top:200px ;
 		width: 1450px;
 		height: 600px;
 		position: relative;
-		border: 5px solid grey;
-		box-shadow: 3px 3px 5px 6px #ccc;
+/*		border: 5px solid grey;
+*/		box-shadow: 3px 3px 5px 6px #ccc;
 
-		background-color: white;
+		background-color: rgb(255, 255, 255);
 
 }
 #inner {

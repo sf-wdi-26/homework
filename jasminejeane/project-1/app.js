@@ -57,7 +57,7 @@ function init() {
   $( ".box" ).droppable({
       drop: function( event, ui ) {
        // var newScore  = $("#score").val();
-        ui.draggable.detach().css({top: -10, left: -32}).appendTo($(this));
+        // ui.draggable.detach().css({top: 0, left: 0}).appendTo($(this));
         if($(this).attr("match") == pieceMatch){
           $(this).addClass( "pair" );
           console.log("I'm a match");
@@ -80,7 +80,7 @@ function init() {
           // make a big dancng gif come on the screen
                
       }
-      $("#score").html('<p>' + score + '</p>');
+      $("#score").html('<p style="font-size: 50px;">' + score + '</p>');
       }
 
 
