@@ -1,14 +1,3 @@
-//elements to be added to the page after start button is clicked on
-
-var formString = "<label for='answer'>Name the restaurant depicted below in the map</label> <input type='answer' class='form-control' id='answer' placeholder='Restaurant Name'>";
-
-var submitString = "<button type='button' id = 'submit' class='btn btn-success viewquestion'>Submit</button>";
-
-var nextString = "<button type='button' id = 'next' class='btn btn-success viewquestion'>Next</button>";
-
-var hintString = "<button type='button' id = 'hint' class='btn btn-success viewquestion'>Hint Please</button>";
-
-
 //Initialize functions:
 
 $(document).ready(function(){
@@ -66,7 +55,16 @@ $(document).ready(function(){
 
 });
 
-//global variables used to keep track of store
+//GLOBAL
+//elements to be added to the page after start button is clicked on
+var formString = "<label for='answer'>Name the restaurant depicted below in the map</label> <input type='answer' class='form-control' id='answer' placeholder='Restaurant Name'>";
+
+var submitString = "<button type='button' id = 'submit' class='btn btn-success viewquestion'>Submit</button>";
+
+var nextString = "<button type='button' id = 'next' class='btn btn-success viewquestion'>Next</button>";
+
+var hintString = "<button type='button' id = 'hint' class='btn btn-success viewquestion'>Hint Please</button>";
+
 var scoreRight = 0;
 var count = 0;
 var solution;
@@ -226,6 +224,7 @@ function displayWinnings(){
         zoomControl: true,
         scaleControl: true
       });
+
     var request = {
         location: generalAssembly,
         radius: '300',
@@ -242,6 +241,7 @@ function displayWinnings(){
          ];
 
       map.setOptions({styles: stylesArray});
+
     var service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, function(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -251,8 +251,16 @@ function displayWinnings(){
             var place = results[indexNumberUsed[y]];
             var marker = new google.maps.Marker({
               map: map,
-              position: place.geometry.location
+              position: place.geometry.location,
+              name: place.name,
             });
+
+            google.maps.event.addListener(marker, 'click', function(){
+              $("#restaurantName").html("<p>" + marker.name + "</p>");
+            });
+
+            //
+          //
           }
         }
       });
@@ -281,4 +289,5 @@ function displayHintCount(){
       }
   });
 }
+
 
