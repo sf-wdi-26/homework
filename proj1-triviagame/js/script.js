@@ -1,55 +1,83 @@
-//AS A  USER
 
-//Wait for first question
-//Give an answer
-//Press next button
-//Repeat 5 times
-//Get total score after 5 questions
+$(document).ready(function(){
+	addEventListeners();
+});
 
-//AS A PROGRAMMER
+function addEventListeners(){
+	
+	addListenerToNextButton();
+	addListenerToSubmitButton();
 
-//Show questions one at a time using display: none or visibility
-//Get answer
-//Check for correctness
-//Start running score
-//Await Next button prompt 
-//show questions until all 5 questions are used
-// Show total after 5
-
-/*$(document).ready(function(){
-
-	submitAnswer();
-});*/
+}
 
 
+function addListenerToNextButton(){
+	$("#next").click(function() {
+		// debugger
+		var current = $(".qn:visible");
+		
+		total = $(".qn").length;
+		
+		last = $(".qn:last");
+		
+		$(current).next().show();
+		
+		$(current).hide();
+		
+		$(current).next().is(last){
+			$("#next").hide();
+			$("#prettysubmit").show();
+		}
+});		
+}
+
+function addListenerToSubmitButton(){
+	$("#prettysubmit").click(function(){
+		console.log("hi anna the submit button was clicked");
+	
+	
+		total = 5;
+		score = 0;
+
+	//Get User Input
+		var q1 = document.forms["quizbox"]["q1"].value;
+		var q2 = document.forms["quizbox"]["q2"].value;
+		var q3 = document.forms["quizbox"]["q3"].value;
+		var q4 = document.forms["quizbox"]["q4"].value;
+		var q5 = document.forms["quizbox"]["q5"].value;
+		
+
+	//Validate Form
+
+		for(i = 1; i <= total; i++) {
+			if ( (eval("q" + i) === null) || (eval("q" + i) === "") ){
+			alert("You missed question " + i);
+			return false;
+		}
+	}
+
+	//Make answer key
+
+	var answers = ["a", "c", "d", "b", "c"];
+
+	//Check answers
+
+	for(i = 1; i <= total; i++) {
+		if (eval("q" + i) === answers[ i - 1]) {
+			score++;
+		}
+	}
+
+	var results = documentGetElementById('results');
+	results.innerHTML = "<h3>You scored" +score+ "out of" +total+"</h3>";
+	alert("You scored " + score + " out of " + total);
+
+	return false;
 
 
+});
 
-
-function submitAnswer() {
-	total = 5;
-	score = 0;
-
-//Get User Input
-	var q1 = document.forms["quizbox"]["q1"].value;
-	var q2 = document.forms["quizbox"]["q2"].value;
-	var q3 = document.fomrs["quizbox"]["q3"].value;
-	var q4 = document.forms["quizbox"]["q4"].value;
-	var q5 = document.forms["quizbox"]["q5"].value;
-	alert(q1);
-
-//Validate Form
- for (i = 0; i <= total; i ++) {
- 	if eval("q" + i == null) || eval ())
- }
-
-
-// Answer Key
-
-// Keep Score
-
-//Show Results
-
+}
 
 
 

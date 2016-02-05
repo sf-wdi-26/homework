@@ -1,3 +1,4 @@
+{ "questions":
 [ 
 	{
 	"question": "How do we declare a variable in JavaScript?",
@@ -13,8 +14,62 @@
 	"question": "What is 'parseFloat()'?", 
 	"choices": ["Extracts the characters from a string, between two specified indices", "Parses a string and returns a floating point number", "Parses a string and returns an integer", "Converts a JSON text into a JavaScript object"], 
 	"correct": 4
-	}
+	},
 	{
-	
+	"question": "What is 'unshift()'?",
+	"choices": ["Removes and returns the first item", "Prepends items to the start of the array", "Pulls the last element off of the given array and returns it", "AppendS one or more elements to the end of an array"], 
+	"correct": 2
+	},
+	{
+	"question": "This object stores data without expirations. The data will not be deleted when the browser is closed, and will be available the next day, week, or year. What is this?",
+	"choices": ["session storage", "cookies", "local storage", "cache"],
+	"correct": 3
 	}
 ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
