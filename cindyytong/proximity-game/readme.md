@@ -7,6 +7,8 @@
 ###I. Description:
 Proximity is a quiz game that tests your knowledge on the restaurants near the General Assembly Campus. Users are asked to identify the name of a restaurant when shown its location on a map along with its address. For each question right, the user gains a point. The game is best played on a desktop in full screen mode. 
 
+[Link to Proximity](http://performer-moneys-36512.bitballoon.com/#)
+
 
 ###II. How Was This Project Built:
 Proximity was built using the Google Places API, Javascript, jQuery, Bootstrap and a lot of *emotional self management*. 
