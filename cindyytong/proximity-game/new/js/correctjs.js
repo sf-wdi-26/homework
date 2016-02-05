@@ -67,7 +67,9 @@ var indexNumberUsed = [];
 var arrRandomTen = [];
 var addressDisplayed;
 //for hint displayed
-var hintDisplayed;
+var hintDisplayed = [];
+var hintDisplayedLast;
+var concatenateHintDisplayed;
 var countHint = 0;
 var solutionInLetters;
 
@@ -251,10 +253,19 @@ function displayWinnings(){
 function displayHintCount(){
   $("#hint").click(function(){
       countHint++;
+      hintDisplayed = [];
+      hintDisplayedLast="";
       if (countHint<solutionInLetters.length){
-        console.log("It's been clicked " + countHint);
+        for(var i = 0; i<countHint; i++){
+          hintDisplayed.push(solutionInLetters[i]);
+          console.log(hintDisplayed);
+        }
+          console.log(hintDisplayed);
+          document.getElementById("hint").textContent = "The name begins with " + hintDisplayed.join("");
+        
       } else{
-        console.log("Out of hints");
+        $("#hint").prop("disabled", true);
       }
   });
 }
+
