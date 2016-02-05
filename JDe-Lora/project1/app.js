@@ -32,9 +32,9 @@ function takeTurn(event) {
 		currentPosition = $('.spaceShip').css("left");
 			// $('.spaceship').stop(('.finish'), 600);
 			 if(parseInt(currentPosition) >= 1320){
-			 	
+			 	alert("You Win!!");
 			} else{
-				var newPosition = (parseInt(currentPosition) + 50);
+				var newPosition = (parseInt(currentPosition) + 100);
 				$('.spaceShip').animate({ left: newPosition + "px"},"slow");
 			}
 		}
@@ -100,92 +100,3 @@ $(function(){
 });
 //have these run when the windows is on after it is started
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//the number 62 through 90 are the keycodes for the letters
-//needing to put in this array to get it as a function 
-//to show what is being worked at in the array
-// var letterArray = [62-90];
-	// $(".spaceShip").click(function(){
-	// // 	//alert();
-	// $(window).on(keypress)
-	// // });
-
-	// $("spaceShip").keydown(function(e){
-	// 	if ((e.keyCode || e.which) == 37)
-	// 		console.log("Hi!");
-
-	// });
-
-// 	// $(document).keydown(function (key) {
- //        switch (parseInt(key.which, 10)) {
- //        case 65: //a
- //            $('img').animate({
- //                left: "+=500"
- //            }, 'fast');
- //            break;
- //        case 83: //s
- //            $('img').animate({
- //                top: "+=25"
- //            }, 'fast');
- //            break;
- //        case 87: //w
- //            $('img').animate({
- //                top: "-=25"
- //            }, 'fast');
- //            break;
- //        case 68: //d
- //            $('img').animate({
- //                left: "+=25"
- //            }, 'fast');
- //            break;
- //        default:
- //            break;
- //        }
-     // });

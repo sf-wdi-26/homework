@@ -15,7 +15,7 @@ body {
 
 .Gameplay{
 	display: inline-block;
-	height: 500px;
+	height: 400px;
 	width: 600px;
 
 }
@@ -28,11 +28,14 @@ body {
 	 margin-left: auto; 
 	 width: 150px
 	float:left;
+	z-index: 1;
 
 }
-.finish{
+#finish{
+	position:absolute;
+	right:0;
 	top: 350px;
-	left: 20px;
+	/*left: 20px;*/
 	float: right;
 	margin-right: auto;
 	margin-left: auto;
@@ -70,6 +73,7 @@ h1{
   font-size: 75px;
   color: white;
   
+  
 }
 
 
@@ -78,6 +82,7 @@ h1{
 }*/
 
 .refresh{
-	float: center;
+	margin-left: auto;
 	text-align: center;
+	color: white;
 }
