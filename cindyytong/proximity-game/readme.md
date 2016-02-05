@@ -1,7 +1,7 @@
 #Proximity
-##WDI 26 Project 1
-##Cindy Tong 
-##February 5, 2016
+###WDI 26 Project 1
+**Cindy Tong** 
+**February 5, 2016**
 
 ###I. Description:
 Proximity is a quiz game that tests your knowledge on the restaurants near the General Assembly Campus. Users are asked to identify the name of a restaurant when shown its location on a map along with its address. For each question right, the user gains a point. The game is best played on a desktop in full screen mode. 
@@ -11,7 +11,7 @@ Proximity is a quiz game that tests your knowledge on the restaurants near the G
 Proximity was built using the Google Places API, Javascript, jQuery, Bootstrap and a lot of *emotional self management*. 
 
 
-###III.How to Contribute:
+####III.How to Contribute:
 There are many areas for improvement, including:
 *adding Geolocations so that users can use their own location to search for nearby restaurants
 *debugging my code for the random number generator to allow for my than 5 questions
