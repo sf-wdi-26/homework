@@ -1,13 +1,20 @@
 
 
+
+Bit Balloon : preacher-lily-52255.bitballoon.com
+
 ##Technologies
 
 -Gimp Image editior to cut puzzle peices
+
 -JqueyUI
+
 -Jquery
+
 -CSS
+
 -gifs
--
+
 
 
 
