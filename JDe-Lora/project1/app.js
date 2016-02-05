@@ -1,3 +1,9 @@
+
+// $(document).ready(function(){
+
+// });
+
+
 //generates random letter to display inside the text area box
 // function letterrandomize(){
 
@@ -20,14 +26,27 @@ function takeTurn(event) {
 	//gives out the user input on what to see on the lettet that is being
 	//being shown
 	if (userInput === currentLetter) {
+
+
 		//move by percentage, instead of px amount
-		$('.spaceShip').animate({ left: '+=50px' },"slow");
+		currentPosition = $('.spaceShip').css("left");
+			// $('.spaceship').stop(('.finish'), 600);
+			 if(parseInt(currentPosition) >= 1320){
+			 	
+			} else{
+				var newPosition = (parseInt(currentPosition) + 50);
+				$('.spaceShip').animate({ left: newPosition + "px"},"slow");
+			}
+		}
+		// checkWinner();
 		//if userInput is on the same letter that is presenting then
 		//should move the spaceShip to the right
 		generateRandomLetter(alphabet);
 		//generates the next random in the alphabet
-	}
+	
 }
+
+
 
 function generateRandomLetter(letters) {
   var max = letters.length - 1;
@@ -44,8 +63,15 @@ function generateRandomLetter(letters) {
 // function starGame(){
 //   alert("The goal of the game is type what is in the box in the center the screen and have the spaceship reach the end of the screen, Have Fun!!");
 // }
-// setTimeout(starGame, 250);
+// setTimeout(starGame, 250)
 
+// function checkWinner(){
+// 	var Ship = $(".spaceship").
+// 	var showfinish = $('#finish');
+// 	if (Ship >= showfinish)
+// 		return false;
+
+// }
 
 //1st method
 //when ship gets to finish div, end game
@@ -60,10 +86,16 @@ function generateRandomLetter(letters) {
 	// 	$("#ship").
 	// }
 
+
 $(function(){
 	console.log("Linked");
 	generateRandomLetter(alphabet);
 	$(window).keypress(takeTurn);
+		var x = 0;
+		setInterval(function(){
+			x-=1;
+			$('html').css('background-position', x + 'px 0');
+		}, 10);
 
 });
 //have these run when the windows is on after it is started

@@ -1,17 +1,33 @@
+html{
+	background-image: url(./images/scifi-supernova.jpg);
+	background-size: cover;
+	background-repeat:repeat-x;
+}
+
+
 .spaceShip{
 	position: absolute;
 	left: 20px;
+	margin-right: auto;
+	 margin-left: auto; 
+	 width: 150px
+	 
 
 
 }
+h1{
+	text-align: center;
+	color: white;
+}
 
 .box{
+   
   display: inline-block;
   width: 59px;
   height: 86px;
   margin: 1em;
   float: right;
-  background-color: red;
+  background-color: 52226D;
   font-size: 75px;
   text-align: center;
 }
@@ -21,11 +37,10 @@
 	border: 3px black solid;
 }
 #finish{
-	border: 50px black solid;
+	position: relative;
 	float: right;
+	background-color: grey
 }
-
-
-body {
-	background-image: url("");
+.refresh{
+	
 }
