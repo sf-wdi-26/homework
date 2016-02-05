@@ -37,6 +37,9 @@
 function init() {
 
   var pieceMatch;
+  var score = 0; 
+  var newScore  = $("#score").val();
+
 
   $(".drag").draggable({
         grid: [5, 5],
@@ -58,15 +61,22 @@ function init() {
         if($(this).attr("match") == pieceMatch){
           $(this).addClass( "pair" );
           console.log("I'm a match");
-          //you can add a point right here 
+          score += 5;
+          newScore = score;
+         console.log(score);
+
         }
         else{
-          //can take away a point
-        }
+    
+          score -= 1;
+          console.log(score);
+            }
 
         //boxes have class linked win
       if ($(".box").not(".pair").length === 0 ) {
           console.log("Puzzle Complete");
+          prompt("You completed the puzzle!");
+          // make a big dancng gif come on the screen
                
       }
       }
