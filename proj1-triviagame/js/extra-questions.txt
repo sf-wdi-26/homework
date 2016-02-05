@@ -1,0 +1,16 @@
+What is the correct jQuery code to set the background color of all p elements to red?
+
+$("p").css("background-color","red");
+
+("p").manipulate("background-color","red");
+
+("p").style("background-color","red");
+
+$("p").layout("background-color","red");
+
+
+ Which jQuery method is used to perform an asynchronous HTTP request?
+
+  jQuery.ajaxSetup()
+ jQuery.ajax()
+ jQuery.ajaxAsync()
