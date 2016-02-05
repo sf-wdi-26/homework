@@ -81,6 +81,8 @@ function init() {
                
       }
       $("#score").html('<p class = "scoreInput" style="font-size: 50px;">' + score + '</p>');
+      localStorage.setItem('lastScore', score);
+
       }
 
 
