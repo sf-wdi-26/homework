@@ -5,77 +5,104 @@
 //players would have 2-3 seconds to memorize the number shown. 
 //players will submit answer after all the number is shown
 //scripts will be used to create animations.  
+var numberString = ""; //empty number box
+var turns = 1;
+var scores = 0;
+var nextNum;
+var userAnswer;
 
 
 $(function(){
 	console.log("ready")
-	var numbers = ""; //empty number box
-	var turns = 5;
-	var scores = 0;
+
+
 
 	$("#startButton").click(function(){ 
+		numberString = "";
 		showNumber();
-		enterAnswer();
-		// compareAnswer();
+		// enterAnswer();
 	});
 
+	$("#enterForm").on("click", function(){
+		enterAnswer(userAnswer, numberString);
+	});
 
+	$("#userAnswer").on('keyup', function(){
+		userAnswer = this.value;
+		console.log(userAnswer);
+	});
+});
 
 	// function playGame(){
 	// 	console.log("playGame called");
 	// 	setTimeout(showNumber, 2000);
 	// }
-
 	//click start to start game.
 	function showNumber() {
 		console.log("showNumber called");
 		// create a timed loop that will present a series of numbers
 			//present a number
 			setTimeout(function(){
-				var nextNum = Math.floor(Math.random() * 10);
-				numbers += nextNum;
+
+				nextNum = Math.floor(Math.random() * 10);
+				numberString += nextNum;
 				$("#numbers").html(nextNum);
-				console.log(numbers);
-				if(numbers.length < turns){
+				console.log(numberString);
+				if(numberString.length < turns){
 					showNumber();
-				} // else {
-				// 	$("#numbers").html("Enter guess");
-				// }
-			}, 500);
-			compareAnswer();
-			
+				 }  else {
+				 		// $("#numbers").html("Enter guess");
+				 // }
+					setTimeout(function(){
+						$("#numbers").html("Please enter the all the digits");
+					}, 400);
+				} 
+
+			}, 400);
+
+			}	
+		
 		// var wait = function(){ console.log("waiting"); };
 		// console.log(numbers);
-	}
+	
 
 //
 
 //p1 selector .append(score)
 
-
 // taking the answer in from user
-	function enterAnswer(e){
-		$("#enterButton").on("submit", function(){ 
-			e.preventDefault;
-			var userAnswer = $("#userAnswer");
-		});
+	function enterAnswer(userAnswer, numberString){
+			// e.preventDefault;
+			console.log("userAnswer: " + userAnswer);
+			compareAnswer(userAnswer, numberString);
 	}
+	
 
 
 // write a function where input numbers will be compared with numbers string
 // increment turns
-	function compareAnswer(){
-		if (userAnswer == nextNum) {
-			$("#rightWrongLi").append("Correct Answer");
+	function compareAnswer(userAnswer, numberString){
+		console.log()
+		if (userAnswer == numberString) {
+			$("#rightWrongLi").append("<h1>Correct Answer</h1>");
+			// $("#startButton").html("<button class='btn btn-secondary playAgain'>Play Again?</button>");
 			turns++
-			scores += scores; 
+			scores += scores;
+				setTimeout(function (){
+					$("#rightWrongLi").html("");
+				},500);
+			}
+		
+		else if (userAnswer != numberString){
+			$("#rightWrongLi").append("<h1>Wrong Answer</h1>");
+			turns++
+			setTimeout(function (){
+					$("#rightWrongLi").html("");
+				},500);
 		}
-		else if (userAnswer != nextNum);
-			$("rightWrongLi").append("Wrong Answer")
-			turns++
-			return scores;
 	}
 
-});
+
+	// $("#classLi").d
 
 

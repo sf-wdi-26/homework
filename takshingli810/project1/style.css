@@ -50,3 +50,15 @@ h1 {
 
 }
 
+#userAnswer {
+	margin:0 auto;
+	height:40px;
+	width:200px;
+	text-align: center;
+}
+
+#answerRow {
+	text-align: center;
+		
+	
+}
