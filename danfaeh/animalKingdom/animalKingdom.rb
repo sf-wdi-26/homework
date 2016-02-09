@@ -1,6 +1,10 @@
 class Animal
   attr_accessor :type
 
+  def initialize (type)
+    @type = type
+  end
+
   def eat food
     p "The #{@type} is eating the #{food}"
   end
@@ -14,11 +18,24 @@ class Animal
   end
 end
 
-class Person < Animal
-attr_accessor :age, :gender, :name
 
-  def type
+
+class Person < Animal
+  attr_accessor :age, :gender, :name
+  @@count = 0
+
+  def initialize (age,gender,name)
     @type = "person"
+    @age = age
+    @gender = gender
+    @name = name
+    @@count += 1
+  end
+
+  def self.count
+    @@count
+  end
+    
   end
 
   def eat food
