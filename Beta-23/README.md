@@ -1,53 +1,45 @@
-#SF-WDI-26 Homework submission
-
-Homework will be turned in to your fork of this repository daily.
-
-##Setup
-
-To set up your initial homework repository do the following:
-
-* fork this repo to create a copy of it on your github account
-* clone the forked repo from your github account onto your computer inside your `dev/` directory
-* `cd` into the newly cloned repo on your computer
-* `mkdir **GIT-USER-NAME**`
-* `cd **GIT-USER-NAME**`
-* `echo "#**YOUR NAME**'s Homework repo" > README.md` to set up your repo's README
-* `git add -A` to stage your changes
-* `git commit -m "inital commit"` to have git save your changes
-* `git push origin master` to put your changes up on github!
-
-**GIT-USER-NAME** should be replaced with your actual git user name (must be exact)
-
-**YOUR NAME** should be your actual name.
+*** What's my Game ***
 
 
+	~Battleship~
 
-##Submit homework
+	I wanted to create a game my son would enjoy playing and be challenged.
 
-Each day you will submit your homework by doing the following from within your homework repo on your computer:
+	User Stories: As the developer I want to create an experience where children wants to come back and play the game over and over.  As a kid and user of the Battleship Game, I want to be engaged and challenged to beat my opponent. Wanting to come back again to play this classic game!
 
-* copy any required files into your homework repo directory as instructed in homework writeup
-* `git add -A` to stage all your changes
-* `git commit -m "homework commit"` to have git save the changes -- feel free to add to the commit message if you'd like
-* `git push origin master` to put the changes up on github
-* go to your homework repo's page on your account on github.com
-* create a pull request according to the guidelines below
+	Play:  During play the players and computer take turns is making a shot at the opponent board, by ramdomly calling out the coordinates of a square on game board.
 
-####Pull request details
+	Moves: During play computer should record their opponent's shots on grid as "Red Cell" for a hit and "White Cell" for a miss.
 
-(Must be in this format)
+	Board: Computer and Player have 5 x 5 grids, labelled along the sides with letters and numbers (checkbox grid).
+	Each ship occupies a number of adjacent squares on the grid, horizontally or vertically. Diagonal not allowed.
 
-**Title:** `w##d##`
+	End Game: The first player to lose all their ships loses the game. 
 
-Replace ## with week and day number (eg w01d02  = homework for week 1 day 2)
 
-**Message:**
+	~How Was It Built~
 
-```
-comfort: #
-completeness: #
+		**Wireframe**
 
-Message about your experience goes here
-```
+		![picture alt](wireframe.jpg)
 
-Replace the `#`s next to comfort and completness with a number (1 - 5) to represent how comfortable you are with the topic and how much of the assignment you were able to complete.  A 1 is the lowest (least comfortable / very little complete), and a 5 is the highest (most comfortable / fully complete).
+		***Event Code***
+
+		![picture alt](eventfunction.jpg)
+
+	~How to contribute?~
+
+		-Add amazing animations
+		-Get logic to work properly
+		-Make it more responsive
+
+~Online host~
+
+[Battleship](https://www.bitballoon.com/sites/jeweler-pig-20564)
+
+		~shout-outs!~
+			
+			Danny- for his metoring during my first project
+			Caleb- for helping me to work figure out some of the logic
+			Ben- for his awsome support and believe in my concept and pair programing
+
