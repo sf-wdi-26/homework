@@ -1,0 +1,50 @@
+body {
+ font-family: futura;
+ font-size: 12px;
+ line-height: 1.5;
+ margin: 10px;
+ padding: 10px;
+ background: grey;
+
+}
+
+h1 {
+ 
+ font-weight: bold;
+ text-align: center;
+ color: black ;
+ margin-top: 0;
+}
+
+canvas {
+
+  margin: 0 auto;
+}
+
+#lives {
+
+  font-size: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+
+#score {
+
+  font-size: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+} 
+
+#directions {
+
+  font-size: 15px;
+
+}
+
+#score {
+
+  font-size: 15px;
+}
+
