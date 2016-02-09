@@ -1,8 +1,8 @@
 class Animal
     def initialize (type,eat,sleep)
-        @type = (type)
-        @eat = (eat)
-        @state = (sleep)
+        @type = type
+        @eat = eat
+        @state = sleep
     end
     
     def eat(food)
@@ -22,7 +22,7 @@ class Person < Animal
     def initialize(eat, sleep, age, gender, name)
         @type = ("Person")
         @eat = eat
-        @sleep = sleep
+        @state = sleep
         @age = age
         @gender = gender
         @name = name
@@ -37,7 +37,9 @@ class Person < Animal
     end
 end
 
-def zebra = new.Animal('mammal','grass','sleeping') 
-
+def zebra = new.Animal("mammal","grass","sleeping") 
+def mercedes = new.Person("flaminghot cheetos",wake,"immortal","female","TheBoss")
+def ilias = new.Person("deconstructed mimosas",wake,"immortal","male","TheMaster")
+def zombro = new.Person("Person",wake,"undead","idk","TheZombie")
      
 
