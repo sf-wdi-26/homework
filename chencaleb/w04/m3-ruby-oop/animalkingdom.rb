@@ -33,5 +33,6 @@ class Person < Animal
 			p "You can't eat other people!"
 		else
 			p "I am eating #{food}."
+		end
 	end
 end
