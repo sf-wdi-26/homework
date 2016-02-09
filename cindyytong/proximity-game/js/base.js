@@ -6,9 +6,9 @@ $(document).ready(function(){
           $("#submit").click(function(){
             submitFunctions();
             });
-          setTimeout(function() { 
-               document.getElementById("submit").click();
-            }, 30000);
+          // setTimeout(function() { 
+          //      document.getElementById("submit").click();
+          //   }, 30000);
           $("#next").click(function(){
               nextFunctions();
               });
@@ -52,7 +52,7 @@ var solutionInLetters;
 
 //callback functions and methods run when start button is clicked on 
 function startFunctions(){
-  generateRandomArray();
+  generateRandomArray(arrRandomTen);
   $("#instructions").html("");
   $("#insertAddress").append(addressDisplayed);
   $("#insertForm").html(formString);
@@ -72,9 +72,9 @@ function submitFunctions(){
   $("#answer").val("");
     displayWinnings();
     resetHint();
-  setTimeout(function() { 
-     document.getElementById("submit").click();
-      }, 20000);
+  // setTimeout(function() { 
+  //    document.getElementById("submit").click();
+  //     }, 20000);
 }
 
 //callback functions and methods run when next button is clicked on 
@@ -83,9 +83,9 @@ function nextFunctions(){
   countHint = 0;
   resetHint();
   displayWinnings();
-  setTimeout(function() { 
-    document.getElementById("submit").click();
-    }, 20000);
+  // setTimeout(function() { 
+  //   document.getElementById("submit").click();
+  //   }, 20000);
 }
 
 //function used to reset the hint button and empty out it's text and return it back to "hint"
@@ -95,20 +95,44 @@ function resetHint(){
 }
 
 //Function used to create an array of 10 numbers between 1 through 10 that are randomly sorted; this is used later to call the restaurants to be displayed 
-function generateRandomArray(){
-  while(arrRandomTen.length<10){
-    var randomNumber = Math.ceil(Math.random()*10);
-    var found = false;
-    for(var i = 0; i<arrRandomTen.length; i++){
-      if(arrRandomTen[i]==randomNumber){
-        found=true; 
-        break;
-        }
-      }
-      if(!found)arrRandomTen[arrRandomTen.length]=randomNumber;
-    }  
+// function generateRandomArray(){
+//   while(arrRandomTen.length<10){
+//     var randomNumber = Math.ceil(Math.random()*10);
+//     var found = false;
+//     for(var i = 0; i<arrRandomTen.length; i++){
+//       if(arrRandomTen[i]==randomNumber){
+//         found=true; 
+//         break;
+//         }
+//       }
+//       if(!found)arrRandomTen[arrRandomTen.length]=randomNumber;
+//     }  
+//   return arrRandomTen;
+// }
+
+var arrRandomTen = [1,2,3,4,5,6,7,8,9,10];
+
+function generateRandomArray(arrRandomTen) {
+  var currentIndex = arrRandomTen.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = arrRandomTen[currentIndex];
+    arrRandomTen[currentIndex] = arrRandomTen[randomIndex];
+    arrRandomTen[randomIndex] = temporaryValue;
+  }
+
   return arrRandomTen;
 }
+
+
+
 
 //function checks if user's answer is correct by matching it against the place name returned by the google place search; it also updates the solution array and userinput array
 function checkAnswer(userInput, solution){
@@ -129,7 +153,7 @@ function checkAnswer(userInput, solution){
 
 function initialize() {
 //when we have not completed the game yet:
-  if(count < 5){
+  if(count < 10){
       //default location of where map displays is general assembly
       var generalAssembly = new google.maps.LatLng(37.790841,-122.401280);
 
@@ -203,7 +227,7 @@ function initialize() {
 
 // after five questions, end game and display map with all solutions
   function displayWinnings(){
-    if(count === 5){
+    if(count === 10){
       console.log("End of game");
       $("#insertForm").html("");
       $("#insertHint").html("");
