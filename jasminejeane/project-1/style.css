@@ -1,0 +1,355 @@
+
+@font-face {
+    font-family: frozenfont;
+    src: url('frozenfont.woff');
+}
+
+
+
+
+
+body {
+
+  background: url(images/glitter.gif);
+	margin: 60px;
+	position: relative;
+    font-family: frozenfont;
+}
+
+
+
+h1 {
+	position: absolute;
+	top: -57px;
+    left: 460px;
+    font-size: 80px;
+    color: lightblue;
+    text-shadow: 3px 3px 5px 6px #lightblue;
+
+/*    font-family: myFirstFont;
+*//*    src: url(frozen/Kusren.woff);
+*//*	text-shadow: 3px 3px 5px 6px black;
+*/;
+
+}
+
+h2 {
+	position: absolute;
+	font-size: 30px;
+	top: 30px;
+    left: 875px;
+    color: rgba(213, 57, 160, 0.58);
+
+/*    text-shadow: 3px 3px 5px 6px black;
+*/
+}
+
+p {
+	position: absolute;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+input {
+
+	position: absolute;
+	top: 440px ;
+	left: 0;
+}
+
+#attempts{
+
+	top:100px ;
+	left:40px;
+	font-size: 40px;
+}
+
+
+#score{
+
+	top: 140px;
+    left: 140px;
+    font-size: 70px;
+}
+
+
+#picture{
+	background: url(images/anna.gif);
+    width: 235px;
+    height: 250px;
+    top: 280px;
+    left: 0px;
+
+}
+
+.scoreInput {
+	top: -49px;
+	padding: 10px;
+	padding-left: 40px;
+	padding-right: 40px;
+	background:  url(images/ice.jpg);
+/*	border: 5px solid grey;
+*/	box-shadow: 3px 3px 5px 6px #ccc;
+
+}
+
+
+.lastInput {
+	top: 0;
+	left: 0;
+	color: black;
+
+}
+
+#last {
+	left: 50px;
+}
+
+#last2 {
+	top: -16px;
+    left: 184px;
+    font-size: 30px;
+}
+
+#images {
+	height: 500px;
+	width: 700px;
+	border: 5px solid grey;
+	top: 0;
+	left: 0;
+	}
+
+
+#outter {
+		width: 1450px;
+		height: 600px;
+		position: relative;
+/*		border: 5px solid grey;
+*/		box-shadow: 3px 3px 5px 6px #ccc;
+
+		background-color: rgb(255, 255, 255);
+
+}
+#inner {
+		background: url(images/ice.jpg);
+		box-shadow: 3px 3px 5px 6px #ccc;
+
+		width: 612px;
+
+		height: 407px;
+/*		border: 10px solid grey;
+*/		position: absolute;
+		top: 126px;
+    	left: 387px;
+
+}
+
+
+.box {
+	width: 120px;
+	height: 80px;
+/*	border: .01px solid black;
+*/	position: absolute;
+
+}
+
+.box1 {
+	top: 0px;
+	left: 1px;
+}
+
+
+.box2 {
+	top: 0px;
+	left: 123px;
+}
+
+.box3 {
+	top: 0px;
+	left: 245px;
+}
+
+.box4 {
+	top: 0px;
+	left: 367px;
+}
+
+.box5 {
+	top: 0px;
+	left: 489px;
+}
+
+
+
+
+
+.box6 {
+	top: 80px;
+	left: 1px;
+}
+
+
+.box7 {
+	top: 80px;
+	left: 123px;
+}
+
+.box8 {
+	top: 80px;
+	left: 245px;
+}
+
+.box9 {
+	top: 80px;
+	left: 367px;
+}
+
+.box10 {
+	top: 80px;
+	left: 489px;
+}
+
+
+
+
+
+.box11 {
+	top: 160px;
+	left: 1px;
+}
+
+
+.box12 {
+	top: 160px;
+	left: 123px;
+}
+
+.box13 {
+	top: 160px;
+	left: 245px;
+}
+
+.box14 {
+	top: 160px;
+	left: 367px;
+}
+
+.box15 {
+	top: 160px;
+	left: 489px;
+}
+
+
+
+
+.box16 {
+	top: 242px;
+	left: 1px;
+}
+
+
+.box17 {
+	top: 242px;
+	left: 123px;
+}
+
+.box18 {
+	top: 242px;
+	left: 245px;
+}
+
+.box19 {
+	top: 242px;
+	left: 367px;
+}
+
+.box20 {
+	top: 242px;
+	left: 489px;
+}
+
+
+
+.box21 {
+	top: 325px;
+	left: 1px;
+}
+
+
+.box22 {
+	top: 325px;
+	left: 123px;
+}
+
+.box23 {
+	top: 325px;
+	left: 245px;
+}
+
+.box24 {
+	top: 325px;
+	left: 367px;
+}
+
+.box25 {
+	top: 325px;
+	left: 489px;
+}
+
+
+
+
+
+
+.drag {
+
+	position: absolute;
+	left: -445px;
+}
+
+
+
+
+
+
+
+
+
+.set1 {
+	left: 662px;
+ top: -90px;
+}
+
+.set2 {
+left: 800px;
+	top: 40px;
+
+}
+
+.set3 {
+	left: 662px;
+ top: 135px;
+}
+
+.set4 {
+left: 700px;
+ top: 195px;
+}
+
+.set5 {
+	left: 800px;
+top: 308px;
+}
+}
+
+#fullpic {
+
+/*	display: none;
+*/	position: absolute;
+	top: 162px;
+    left: 450px;
+
+}
+
+
