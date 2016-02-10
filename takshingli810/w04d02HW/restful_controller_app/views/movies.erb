@@ -1,0 +1,13 @@
+<h2>Lists of Movies</h2>
+
+<ul class="text-left">
+  <% @movies.each_with_index do |movie, index| %>
+  <a href="/movies/<%= index %>">
+    <li>
+      <%= movie %>
+    </li>
+  <% end %>
+</ul>
+
+<!--each with index does gives you access to your array -->
+
