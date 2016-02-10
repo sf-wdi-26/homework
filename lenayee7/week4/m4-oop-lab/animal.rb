@@ -47,7 +47,7 @@ class Person < Animal
 	end
 end
 
-luca = Person.new("person",22,"male","Luca")
+luca = Person.new(@type,22,"male","Luca")
 luca.greet
 
 franchini = Person.new("person",28,"female","Francini")
