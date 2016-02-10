@@ -1,4 +1,4 @@
-Here is the link to W04D02's homework.
+Here is the link to W04D02's homework: https://github.com/nscalf561/RESTful-Polynesian-Islands
 
 Comfort: 3
 Completeness: 3
