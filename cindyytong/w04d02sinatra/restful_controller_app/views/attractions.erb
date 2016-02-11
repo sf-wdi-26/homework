@@ -1,7 +1,9 @@
 <ul>
-  <% @attractions.each do |attraction| %>
+<% @attractions.each_with_index do |attraction, index| %>
+    <a href="/attractions/<%= index %>">
     <li>
-      <%= attraction %>
+      <%= @attraction %>
     </li>
+  	</a>
   <% end %>
 </ul>
