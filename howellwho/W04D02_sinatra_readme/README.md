@@ -1,3 +1,3 @@
-# Sinatra-App
+# Sinatra-App Repo Link
 
-test blah blah
+link to my repo: https://github.com/howellwho/Sinatra-App
