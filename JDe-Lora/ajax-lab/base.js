@@ -49,7 +49,9 @@ function initMap()	{
 	// console.log(marker);
 	marker.setMap(map);
 
-}
+}//1000*60*60 is for the number to get into hours
+
+//creat a var for lat and lng with quake.geometry.coorinatnes[0] and lng [1]
 
 // feature.properties.place
 
