@@ -1,0 +1,12 @@
+<h2>Edit pizza</h2>
+
+<form action='/Pizzas/<%= "#{@pizza.id}" %>' method="post">
+  <label for="pizza[name]">Name:</label>
+  <input name="pizza[name]" value='<%= "#{@pizza.name}" %>'>
+
+  <label for="pizza[sauce]">Sauce:</label>
+  <input name="pizza[sauce]" value='<%= "#{@pizza.sauce}" %>'>
+
+
+  <input type="submit" value="Create">
+</form>

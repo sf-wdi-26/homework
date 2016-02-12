@@ -18,9 +18,18 @@
     <![endif]-->
   </head>
   <body>
-    <h1> PIZZZZAAAA </h1>
-    
-    <%= yield %>
+
+    <nav>
+      <ul>
+        <li><a href="/">Pizzaria</a></li>
+        <li><a href="/Pizzas">Pizzas</a></li>
+        <li><a href="/Pizzas/new">New Pizzas</a></li>
+      </ul>
+    </nav>
+    <main>
+      <%= yield %>
+
+    </main>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
