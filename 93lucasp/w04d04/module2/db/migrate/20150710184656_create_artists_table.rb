@@ -4,7 +4,6 @@ class CreateArtistsTable < ActiveRecord::Migration
        t.string :name
        t.string :photo_url
        t.string :nationality
-
        t.timestamps
      end
   end
