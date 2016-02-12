@@ -7,7 +7,7 @@ function init() {
   newScore  = $("#score").val();
   // $("#last2").html('<p class ="lastInput">' + localStorage.getItem('lastScore') + '</p>');
 
-$("#last2").append(localStorage.getItem('lastScore'));
+$("#last2").append(localStorage.getItem('Score'));
 
   $(".drag").draggable({
         grid: [5, 5],
