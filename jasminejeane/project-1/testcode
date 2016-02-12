@@ -1,0 +1,45 @@
+var solutionKey = ["drag5", "drag4", "drag3", "drag2", "drag1"];
+var attemptArray = [];
+
+
+// not using this...
+var everyThingInItsRightPlace = {
+  drag1: {
+    top: -160,
+    left: -140,
+    inCorrectPlace: false
+  },
+  drag2: {
+
+  }
+};
+
+//potential code
+
+
+// $(".drag1").on("mouseup", function(e){
+//   console.log( $(e.target).position())
+// })
+
+
+// $(".drag1").on("mouseup", function(e){
+//   console.log( $(e.target).position())
+// })
+
+
+function init() {
+
+  $("#inner").droppable({
+    drop: function( event, ui ) {
+      var currentDraggable = String(event.toElement.id);
+        // console.log(event.toElement.id);
+        console.log( currentDraggable + " dropped");
+        attemptArray.push(currentDraggable);
+         if(attemptArray == solutionKey) {
+           console.log("WIN!");
+        } else {
+          console.log(attemptArray);
+          console.log("keep trying");
+        }
+      }
+  });
