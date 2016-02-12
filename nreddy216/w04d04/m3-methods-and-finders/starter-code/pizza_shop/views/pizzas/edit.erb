@@ -1,0 +1,12 @@
+
+<h2>Edit Artist</h2>
+
+<form action='/pizzas/<%= "#{@pizza.id}" %>' method="post">
+  <label for="pizza[name]">Name:</label>
+  <input name="pizza[name]" value='<%= "#{@pizza.name}" %>'>
+
+  <label for="pizza[sauce]">Photo URL:</label>
+  <input name="pizza[sauce]" value='<%= "#{@pizza.sauce}" %>'>
+
+  <input type="submit" value="Create">
+</form>

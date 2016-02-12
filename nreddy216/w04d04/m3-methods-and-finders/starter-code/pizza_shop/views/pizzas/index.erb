@@ -1,0 +1,32 @@
+<h2>pizzas</h2>
+
+<a class="btn" href="/pizzas/new">Add pizza</a>
+
+<div class="pizzas">
+  <% @pizzas.each do |pizza| %>
+  <div class="row">
+    <!-- <img src="<%= pizza.sauce %>" alt="<%= pizza.name %> photo"> -->
+    <ul>
+      <li>
+        <h2>
+          <a href="/pizzas/<%= pizza.id %>">
+            <%= pizza.name %>
+          </a>
+        </h2>
+      </li>
+      <li>
+        <a href="/pizzas/<%= pizza.id %>/edit">
+          Edit
+        </a>
+      </li>
+      <li>
+        <li>
+          <form method="/pizzas/<%= pizza.id %>/delete" action="post">
+            <button>Delete</button>
+          </form>
+        </li>
+      </li>
+    </ul>
+  </div>
+  <% end %>
+</div>
