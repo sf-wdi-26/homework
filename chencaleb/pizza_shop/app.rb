@@ -26,4 +26,9 @@ class PizzaShop < Sinatra::Base
   		@pizza.update_attributes(params)
   	end
 
+  	#destroy
+  	delete "/pizzas/:id" do
+  		@pizza = Pizza.find(params[:id])
+  		@pizza.destroy
+  	end
 end
