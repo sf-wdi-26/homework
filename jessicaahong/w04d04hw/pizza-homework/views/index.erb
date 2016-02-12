@@ -1,0 +1,10 @@
+<h1> Welcome to Pizza Wonderland </h1>
+<ul>
+	<% @pizzas.each_with_index do |pizza, index| %>
+	<a href="/pizzas/<%= index + 1 %>">
+	<li>
+		<%= pizza.name %>
+	</li>
+	</a>
+	<% end %>
+</ul>
