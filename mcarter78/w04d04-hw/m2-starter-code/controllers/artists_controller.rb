@@ -30,7 +30,7 @@ class Tunr < Sinatra::Base
   end
 
   # edit
-  get '/artists/:id/edit' do
+  get '/artists/:id' do
     @artist = Artist.find(params[:id])
     erb(:"artists/edit")
   end
