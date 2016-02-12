@@ -14,4 +14,16 @@ class PizzaShop < Sinatra::Base
     	@pizza.save
   	end
 
+  	#show
+  	get "/pizzas/:id" do
+  		@pizza = Pizza.find(params[:id])
+  	end
+
+  	#update
+  	put "/pizzas/:id" do
+  		params = {name: "Veggie", sauce: 'red', cheese:true, mushrooms: true}
+  		@pizza = Pizza.find(params[:id])
+  		@pizza.update_attributes(params)
+  	end
+
 end
