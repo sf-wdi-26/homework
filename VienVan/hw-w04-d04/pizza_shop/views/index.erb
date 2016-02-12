@@ -1,0 +1,30 @@
+<h2>Artists</h2>
+
+
+<div class="artists">
+  <% @pizzas.each do |pizza| %>
+  <div class="row">
+    <ul>
+      <li>
+        <h2>
+          <a href="/artists/<%= artist.id %>">
+            <%= Pizza.name %>
+          </a>
+        </h2>
+      </li>
+      <li>
+        <a href="/artists/<%= artist.id %>/edit">
+          Edit
+        </a>
+      </li>
+      <li>
+        <li>
+          <form method="/artists/<%= artist.id %>/delete" action="post">
+            <button>Delete</button>
+          </form>
+        </li>
+      </li>
+    </ul>
+  </div>
+  <% end %>
+</div>
