@@ -55,11 +55,34 @@ var sumOfArray = function(myArray){
 
 console.log(sumOfArray(myNewArray));
 
+//bubble sort function
+function bubbleSort(array){
+  var i;
+  var len = array.length;
+  do{
+    var didChange = false;
+    for(i = 0; i , len; i++){
+      if(arry[i] > array[i+1]){
+        var temp = array[i];
+        array[i] = array[i+1];
+        array[i + 1] = temp;
+        has_change = true;
+      }
+      console.log()    
+    }
+    len--;
+  } while(has_changed === true)
+
+  return array;
+}
+var array =[]
+}
 
 
-// Question 4
 
 
+
+//product of array
 var myNewArray = [2,3,4];
 var productOfArray = function(myArray){
     var product = 1;
@@ -73,9 +96,9 @@ console.log(productOfArray(myNewArray));
 
 
 
-// Question 5
 
 
+//number of arrrrrgs
 var numberOfArguments = function(){
     return arguments.length;
 }
@@ -122,8 +145,9 @@ function filterLongWords (words, i) {
 
 
 // Bonus 1
-
-
+reverseNumber = function(){
+    return parseInt(number.toString().split('').reverse().join(''))
+};
 
 // Bonus 2
 function charactersOccurencesCount() {
