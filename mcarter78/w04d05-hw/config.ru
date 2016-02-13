@@ -3,10 +3,10 @@ require 'bundler'
 Bundler.require
 
 # Models
-require './models/'#modelname
+require './models/snes_game'
 
 # Controllers
 require './app'
-require './controllers/'#controllername
+require './controllers/snes_games_controller'
 
-run #AppName
+run SnesGamesApp
