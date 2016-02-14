@@ -1,0 +1,26 @@
+<h1>Existing Orders</h1>
+<a href="/orders/new">Add new order</a>
+<ul>
+<% @orders.each do |order| %>
+<div>
+	<div class="index_text">
+		<a class="order_name" href="/orders/<%= order.id %>">
+			<li><%= order.dish_name %></li>
+		</a>
+	</div>
+
+	<div class="index_text">
+		<form method="get" action="/orders/<%= order.id %>/edit">
+			<input type="submit" class="btn btn-default" value="Edit Order">
+		</form>
+	</div>
+
+	<div class="index_text">
+		<form method="post" action="/orders/<%= order.id %>/delete">
+		<input type="hidden" name="_method" value="delete">
+			<input type="submit" class="btn btn-default" value="Delete Order">
+		</form>
+	</div>
+<% end %>
+</div>
+</ul>

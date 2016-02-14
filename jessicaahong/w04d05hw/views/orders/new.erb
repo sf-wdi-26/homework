@@ -1,0 +1,19 @@
+<h1>Add a new order</h1>
+<p id="required_input"><span style="color:red">*</span><b> required</b></p>
+<br>
+<form method="post" action="/orders">
+	<label for="order[dish_name]">Dish Name<span style="color:red">*</span>:</label>
+	<input type="text" name="order[dish_name]" placeholder="ex. cheese pizza">
+	<br>
+	<label for="order[dish_type]">Dish Type:</label>
+	<input type="text" name="order[dish_type]" placeholder="appetizer/main/dessert">
+	<br>
+	<label for="order[table_number]">Table Number<span style="color:red">*</span>:</label>
+	<input type="text" name="order[table_number]" placeholder="ex. 8">
+	<br>
+	<label for="order[special_requests]">Special Requests:</label>
+	<input type="text" name="order[special_requests]" placeholder="ex. extra chili flakes">
+	<br>
+	<input type="submit" value="Add Order">
+</form>
+
