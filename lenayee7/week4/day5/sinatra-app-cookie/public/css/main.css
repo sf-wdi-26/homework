@@ -1,0 +1,90 @@
+.container {
+	max-width: 960px;
+}
+
+body {
+	background-color: white;
+	font-family: monospace;
+	font-size: 1em;
+	/*background-image: url('../theCookie.jpg');*/
+}
+
+.header {
+	text-align: center;
+	background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR51uUdKpq168V5VrOr6f5ajMZeim2LiSqrPkSXEHzv8jv0vILu");
+	padding-bottom: 4%;
+}
+
+.cookies {
+/*	background-color: #1CB2B2; /*aqua blu*/
+	text-align: center;
+	padding: 1%;
+}
+
+.mainBox {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.cookieBox {
+	text-align: center;
+}
+
+.eachCookie {
+	text-align: center;
+}
+
+button {
+	font-family: monospace;
+	font-size: 1.5em;
+	background-color: #1CB2B2;
+	color: yellow;
+	border-radius: 5px;
+}
+nav {
+	color: yellow;
+}
+
+h1 {
+	font-size: 3.5em;
+	color: black;
+	padding-top: 2%;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+nav {
+	display: inline-block;
+}
+
+li {
+	list-style: none;
+	text-align: center;
+	color: yellow;
+}
+
+a{
+	color: #1CB2B2;
+	font-size: 2em;
+}
+
+img {
+	width: 50%;
+}
+
+ul li a.subTitle {
+	color: yellow;
+}
+
+a.eachCookie {
+	list-style: none;
+	font-size: 2em;
+	color: red;
+	font-family: monospace;
+}

@@ -1,0 +1,27 @@
+<h1> Edit Cookie </h1>
+
+<form action='/cookies/<%= "#{@cookie.id}" %>' method="post">
+	<div>
+		<label for ="cookie[name]">Name:</label>
+		<input name="cookie[name]" value='<%= "#{@cookie.name}" %>'>
+	</div>
+
+	<div>
+		<label for ="cookie[cookie_type">Type of Cookie:</label>
+		<input name="cookie[cookie_name]" value='<%= "#{@cookie.cookie_type}" %>'>
+	</div>
+
+	<div>
+		<label for ="cookie[cookie_name]">Cookie Name:</label>
+		<input name="cookie[cookie_name]" value='<%= "#{@cookie.cookie_name}" %>'>
+	</div>
+
+	<div>
+		<label for ="cookie[photo_url]">Post a photo:</label>
+		<input name="cookie[photo_url]" value='<%= "#{@cookie.photo_url}" %>'>
+	</div>
+
+	<div>
+		<input id="addBtn" type="submit" value="Create">
+	</div>
+</form>
