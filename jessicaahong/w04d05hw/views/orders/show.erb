@@ -1,8 +1,21 @@
 <h1><%= @order.dish_name %></h1>
-<h2>Dish Type:</h2>
-<p><%= @order.dish_type %></p>
-<h2>Table Number:</h2>
-<p><%= @order.table_number %></p>
-<h2>Special Requests?</h2>
-<p><%= @order.special_requests %></p>
-<a href="/orders">Return to all orders</a>
+
+
+<div class="show_text">
+	<h3>Dish Type:</h3>
+	<p><%= @order.dish_type %></p>
+	<h3>Table Number:</h3>
+	<p><%= @order.table_number %></p>
+	<h3>Special Requests?</h3>
+	<p><%= @order.special_requests %></p>
+	<% if @order.rush? %><h3 style="color: red">Rush order!</h3>
+	<% end %>
+</div>
+	<br>
+	<form method="get" action="/orders/<%= @order.id %>/edit">
+	<input type="submit" class="btn btn-default" value="Edit Order">
+	</form>
+	<br>
+	<form method="get" action="/orders">
+	<input type="submit" class="btn btn-default" value="Return to all orders">
+	</form>

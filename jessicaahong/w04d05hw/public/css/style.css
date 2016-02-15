@@ -1,11 +1,26 @@
 body {
 	padding: 70px 30px;
 }
+.buttons {
+	display:inline;
+}
+.form {
+	font-size: 16px;
+}
+.form_entry {
+	padding: 10px 0;
+}
 .index_text {
 	display: inline-block;
 	padding: 20px 10px;
+	vertical-align: middle;
 }
-
+.instructional_text {
+	padding-left: 10px;
+	font-size: 16px;
+	color: gray;
+	font-style: italic;
+}
 .order_name {
 	font-size: 18px;
 	color: black;
@@ -16,4 +31,21 @@ body {
 }
 .navbar-brand {
 	font-size: 20px;
+}
+.show_text {
+	margin-left: 20px;
+}
+#main_pic {
+	max-height: 100%;
+	max-width: 100%;
+}
+#new_order_button {
+	margin-top: 12px;
+}
+
+/*media queries*/
+@media (max-width: 767px) {
+	#main {
+		margin-top: 150px;
+	}
 }

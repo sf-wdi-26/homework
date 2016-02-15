@@ -23,8 +23,8 @@ class OrderUp < Sinatra::Base
 	post '/orders' do
 		@order = Order.new(params[:order])
 		if @order.save
-			redirect("/orders")
-		else
+			redirect("/orders/#{@order.id}")
+		else 
 			erb(:"orders/new")
 		end
 	end
