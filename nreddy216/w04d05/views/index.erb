@@ -6,34 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+
 
   </head>
   <body>
 
+    <nav>
+
+    </nav>
+
+    <h1>What am I going to do today?</h1>
+
     <ul>
       <% @tasks.each do |task| %>
       <li>
-        <p>
-          <strong>"<%= task.title %>"</strong>
-            due date: <%= task.due_date %>
-          <p>
-            description: <%= task.description %>
-            project: <%= task.project %>
-
-          </p>
-        </p>
+        <p><strong>"<%= task.title %>"</strong></p>
+        <p>due date: <%= task.due_date %></p>
+        <p>description: <%= task.description %></p>
+        <p>project: <%= task.project %></p>
       </li>
       <% end %>
     </ul>
 
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!-- Your own javascript -->
+  
 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  </body>
+</body>
 </html>
