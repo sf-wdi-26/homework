@@ -1,6 +1,8 @@
 require "rubygems"
 require "bundler"
-Budler.require
+Bundler.require
 
 require "./models/wine"
 require "./app"
+
+run WinesApp
