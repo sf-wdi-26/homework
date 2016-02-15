@@ -14,12 +14,19 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="text-center">
-
+  <body class="text-center" >
+    <h1>Dreamix</h1>
     <div class="container">
       <%= yield %>
     </div>
 
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <a href="/song" class="btn">Songs</a>
+        <a href="/new" class="btn">Add Song</a>
+        <a href="/"></a>
+      </div>
+    </nav>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
