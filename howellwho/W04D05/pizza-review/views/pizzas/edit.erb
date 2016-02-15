@@ -1,0 +1,28 @@
+<h2>Edit Place</h2>
+
+<form action="/pizzas/<%= @pizza.id %>" method="post" class='pizza' id="edit-pizza">
+  <input type="hidden" name="_method" value="put">
+  <div>
+    <label for="pizza[restaurant]">Restaurant:</label>
+    <input name="pizza[restaurant]" value="<%= @pizza.restaurant %>">
+  </div>
+
+  <div>
+    <label for="pizza[style]">Style:</label>
+    <input name="pizza[style]" value="<%= @pizza.style %>">
+  </div>
+
+  <div>
+    <label for="pizza[stars]">Stars:</label>
+    <input type="radio" name="pizza[stars]" value="1">1
+    <input type="radio" name="pizza[stars]" value="2">2
+    <input type="radio" name="pizza[stars]" value="3">3
+    <input type="radio" name="pizza[stars]" value="4">4
+    <input type="radio" name="pizza[stars]" value="5">5
+    <!-- <input name="pizza[stars]" value="<%= @pizza.stars %>"> -->
+  </div>
+
+  <div>
+    <input type="submit" value="Save" class=" btn-primary btn-lg">
+  </div>
+</form>

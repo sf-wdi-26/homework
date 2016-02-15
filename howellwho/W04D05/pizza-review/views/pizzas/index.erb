@@ -1,0 +1,17 @@
+<div class>
+<h1 class="text-center">Places </h1>
+
+<ul class="pizzas">
+<% @pizzas.each do | pizza | %>
+<li>
+    <strong>
+      <a href="/pizzas/<%= pizza.id %>"><%= pizza.restaurant %></a>
+    </strong>
+      </a>
+<% end %>
+</ul>
+<p>
+<br>
+<a class=" btn-primary btn-lg" href="/pizzas/new">Add Place</a>
+</p>
+</div>
