@@ -1,0 +1,31 @@
+<div class="header">
+    <h1>To-do List</h1>
+</div>
+
+<div class="list">
+  <ol id="sortable">
+    <% @tasks.each do |task| %>
+    <li class="ui-state-default">
+      <p class="task-title"><strong><%= task.title %></strong>  <div class="task-buttons">
+          <form action="/tasks/<%=task.id%>/edit"><button type="submit" class="btn btn-primary" id="edit" >Edit</button></form>
+          <form action="/tasks/<%=task.id%>" method="post" class="delete"><button name="_method" type="submit" class="btn btn-primary delete" value="delete" id="delete" >Delete</button></form>
+
+      </div>
+
+
+      <!-- <a href ="/tasks/<%=task.id %>/edit">Edit</a> -->
+      </p>
+      <p>due date: <%= task.due_date %></p>
+      <p>description: <%= task.description %></p>
+      <p>project: <%= task.project %></p>
+
+
+    </li>
+
+    <p>
+    </p>
+
+    <% end %>
+
+  </ol>
+</div>

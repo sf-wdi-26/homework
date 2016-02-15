@@ -13,20 +13,27 @@
   left: 10%;
 
   text-align: left;
+
+
 }
 
-/*
-.list ul li{
-  list-style-type: none;
-}*/
+
+.list li{
+  background-color: #f9d0d8;
+  width: 70%;
+
+
+}
+
+.list li p{
+  padding-left: 5%;
+}
 
 .task-title{
   background-color: #d3d3d3;
-
-  border: 1px solid black;
-
-  width: 70%;
-
+/*
+  width: 70%;*/
+  line-height: 50px;
 
 }
 
@@ -34,6 +41,14 @@
   padding-top: 15%;
 }
 
-.btn{
+#new-submit{
   background-color: green;
+}
+
+.task-buttons form{
+  display: inline;
+  float: right;
+  clear:left;
+
+  /*margin-top: -100px;*/
 }
