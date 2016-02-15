@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
 
+    <!-- MAIN CSS  -->
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
 
-
-
-
   </head>
   <body>
+
+    <div class="navbar">
+           <a class="navbar-brand" href="/tasks">All Tasks</a>
+           <ul class="nav navbar-nav">
+            <li class="active">
+             <a href="/tasks/new">New Task</a>
+            </li>
+            <li>
+             <a href="/tasks/edit">Edit Task</a>
+            </li>
+           </ul>
+    </div>
 
     <%=yield%>
 

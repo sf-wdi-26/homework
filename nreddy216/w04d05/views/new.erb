@@ -1,8 +1,25 @@
-<h1>Add Task</h1>
-<form method="POST" action="/tasks">
-    Title: <br>
-    <input type="text" name="task[title]" value="Title"><br>
-    Artist: <br>
-    <input type="text" name="task[description]" value="Description"><br>
-    <input type="submit" value="Submit">
+<form action="/tasks" method="POST" role="form">
+       <legend>Add Task</legend>
+
+       <div class="form-group">
+        <!-- <label for="">label</label> -->
+        <p>
+          <input type="text" class="form-control input" name="task[title]" placeholder="Task">
+        </p>
+        <p>
+          <input type="text" class="form-control input" name="task[description]" placeholder="Description">
+        </p>
+
+        <p>
+          <input type="text" class="form-control input" name="task[due_date]" placeholder="Due Date">
+        </p>
+
+        <p>
+          <input type="text" class="form-control input" name="task[project]" placeholder="Project">
+        </p>
+      </div>
+
+
+
+       <button type="submit" class="btn btn-primary">Submit</button>
 </form>

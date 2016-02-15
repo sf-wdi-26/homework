@@ -14,29 +14,29 @@
   </head>
   <body>
 
-    <nav>
+    <div class="header">
+      <h1>What am I going to do today?</h1>
+    </div>
 
-    </nav>
-
-    <h1>What am I going to do today?</h1>
-
-    <ul>
-      <% @tasks.each do |task| %>
-      <li>
-        <p><strong>"<%= task.title %>"</strong></p>
-        <p>due date: <%= task.due_date %></p>
-        <p>description: <%= task.description %></p>
-        <p>project: <%= task.project %></p>
-      </li>
-      <% end %>
-    </ul>
+    <div class="list">
+      <ol>
+        <% @tasks.each do |task| %>
+        <li>
+          <p class="task-title"><strong>"<%= task.title %>"</strong></p>
+          <p>due date: <%= task.due_date %></p>
+          <p>description: <%= task.description %></p>
+          <p>project: <%= task.project %></p>
+        </li>
+        <% end %>
+      </ol>
+    </div>
 
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <!-- Your own javascript -->
-  
+
 
 </body>
 </html>
