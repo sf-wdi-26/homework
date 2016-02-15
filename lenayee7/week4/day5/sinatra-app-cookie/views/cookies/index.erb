@@ -5,16 +5,13 @@
 			<a class="eachCookie" href="/cookies/<%= cookie.id %>"><%= cookie.name %>: <%= cookie.cookie_type %> "<%= cookie.cookie_name %>"</a>
 		</div>
 
-		<div class="editDelete">
+		<div id="editBtn">
 				<a href="/cookies/<%=cookie.id %>/edit">Edit</a>
-				<form method="post" action="/cookies/<%= cookie.id %>"
-				<input type="submit" value="Add Cookie">
-				
-
+		</div>
+		<div>
 				<form method="post" action="/cookies/<%= cookie.id %>/delete">
 				<input name="_method" type="hidden" value="delete" />
-				<input type="submit" value="Delete Cookie">
-				<!-- <button>Delete</button> -->
+				<button id="deleteBtn">Delete</button>
 				</form>
 		</div>
 	</div>

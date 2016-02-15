@@ -34,13 +34,14 @@ body {
 	text-align: center;
 }
 
-button {
+#deleteBtn{
 	font-family: monospace;
 	font-size: 1.5em;
 	background-color: #1CB2B2;
 	color: yellow;
 	border-radius: 5px;
 }
+
 nav {
 	color: yellow;
 }
@@ -57,10 +58,6 @@ h2 {
 
 h3 {
 	font-size: 1.5em;
-}
-
-nav {
-	display: inline-block;
 }
 
 li {
