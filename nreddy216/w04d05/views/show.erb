@@ -1,0 +1,9 @@
+<%= @task.title %>
+<%= @task.description %>
+<%= @tasks.due_date %>
+
+
+<form action="/tasks/<%= @task.id %>" method="post" class='delete'>
+  <input type="hidden" name="_method" value="delete">
+  <input type='submit' value="Delete">
+</form>
