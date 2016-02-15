@@ -1,0 +1,8 @@
+<ul>
+<% @pokemonss.each do | pokemon | %>
+    <li>
+        <p><strong>"<%= pokemon.name %>"</strong>, 
+        <%= pokemon.level %></p>
+    </li>
+<% end %>
+</ul>
