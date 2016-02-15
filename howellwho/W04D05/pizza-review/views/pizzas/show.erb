@@ -1,7 +1,6 @@
 <a href="/pizzas">Back to All Places</a>
-
-<!-- <h2><%= @pizza.to_s %></h2> -->
-
+<br>
+<br>
 <h1><%= @pizza.restaurant %></h1>
 
 <ul>
@@ -9,9 +8,12 @@
   <li>Stars:<%= @pizza.stars %></li>
 </ul>
 <p>
+
 <form action="/pizzas/<%= @pizza.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" class=" btn-primary btn-lg" value="Delete">
 </form>
 </p>
+<br>
 <a class="btn-primary btn-lg" href="/pizzas/<%= @pizza.id %>/edit" role="button">Edit</a>
+</div>

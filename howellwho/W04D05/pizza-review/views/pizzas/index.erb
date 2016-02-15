@@ -1,11 +1,11 @@
 <div class>
-<h1 class="text-center">Places </h1>
+<h1 id="places" class="text-center">Places </h1>
 
 <ul class="pizzas">
 <% @pizzas.each do | pizza | %>
 <li>
     <strong>
-      <a href="/pizzas/<%= pizza.id %>"><%= pizza.restaurant %></a>
+      <a href="/pizzas/<%= pizza.id %>"><%= pizza.restaurant %> </a>
     </strong>
       </a>
 <% end %>
