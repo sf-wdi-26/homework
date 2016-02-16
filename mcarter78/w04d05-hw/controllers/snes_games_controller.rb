@@ -1,15 +1,15 @@
 class SnesGamesController < Sinatra::Base
 
-  #home
-  get '/' do
-    "placeholder welcome message"
-    erb :home
-  end
   #index
-
-  #get
+  get '/snesgames/index' do
+    @snes_games = SnesGame.all
+    erb :index
+  end
 
   #new
+  get '/snesgames/new' do
+    erb :new
+  end
 
   #post
 

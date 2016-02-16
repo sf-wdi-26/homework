@@ -1,0 +1,11 @@
+<form method="post" action="/snesgames/<%= @snes_game.id %>">
+  <input type="text" placeholder="<%= @snes_game.title %>" name="snes_game[title]"><br>
+  <input type="text" placeholder="<%= @snes_game.developer %>" name="snes_game[developer]"><br>
+  <input type="text" placeholder="<%= @snes_game.publisher %>" name="snes_game[publisher]"><br>
+  <input type="text" placeholder="<%= @snes_game.year_released %>" name="snes_game[year_released]"><br>
+  <input type="text" placeholder="<%= @snes_game.genre %>" name="snes_game[genre]"><br>
+  <input type="text" placeholder="<%= @snes_game.box_art_url %>" name="snes_game[box_art_url]"><br>
+  <label for="owned">I own this game</label>
+  <input id="owned" type="checkbox" name="snes_game[owned]"><br>
+  <input type="submit" value="Submit Game">
+</form>
