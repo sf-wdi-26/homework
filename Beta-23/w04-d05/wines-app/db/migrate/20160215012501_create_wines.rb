@@ -4,7 +4,7 @@ class CreateWines < ActiveRecord::Migration
       t.string   :name
       t.string   :category
       t.string   :country
-      t.string   :popular reigion
+      t.string   :reigion
       t.string   :price
       t.timestamps
       
