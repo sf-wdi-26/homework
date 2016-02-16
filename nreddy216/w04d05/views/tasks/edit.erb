@@ -9,8 +9,8 @@
            <input type="text" value="<%=@task.title%>" class="form-control input" name="task[title]" placeholder="Task">
          </div>
          <div>
-           <label for="task[description]" value="<%=@task.description%>">Description: </label>
-           <input type="text" class="form-control input" name="task[description]" placeholder="Description">
+           <label for="task[description]">Description: </label>
+           <input type="text" class="form-control input" value="<%=@task.description%>" name="task[description]" placeholder="Description">
          </div>
 
          <p>

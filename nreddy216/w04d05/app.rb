@@ -36,7 +36,7 @@ class TaskApp < Sinatra::Base
   get '/tasks/:id' do
     @tasks = Task.all
     @task = Task.find(params[:id])
-    @task.title
+    # @task.title
     erb(:"tasks/show")
   end
 
@@ -49,11 +49,13 @@ class TaskApp < Sinatra::Base
   #update
   put '/tasks/:id' do
     @task = Task.find(params[:id])
-    if @song.destroy
-      redirect('/songs')
+
+    if @task.update_attributes(params[:task])
+      redirect("/tasks")
     else
-      redirect('/songs/#{@task.id}')
+      erb(:"tasks/new")
     end
+    redirect('/tasks')
   end
 
 
