@@ -1,7 +1,7 @@
 body {
   font-family: futura;
   line-height: 1.5;
-  background: #f1f4f6;
+  background: #eceec7;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -19,7 +19,7 @@ a {
 }
 
 ul.pizzas {
-  font-size: 1.5em
+  font-size: 1.5em;
 }
 
 header {
@@ -32,6 +32,7 @@ header nav {
   margin: 0 auto;
   height: 60px;
   line-height: 60px;
+  background: #404040;
 }
 
 header nav ul {
@@ -73,13 +74,13 @@ form.pizza div label {
   font-weight: bold;
   margin-top: 1rem;
 }
-form.song div input {
+form.pizza div input {
   padding: 4px 10px;
-  font-size: 1rem;
+  font-size: 10px;
 }
-form.song input[type=submit]{
+form.pizza input[type=submit]{
   margin-top: 1.618rem;
-  font-size: 0.8rem;
+  font-size: 15px;
 }
 
 .btn {
@@ -100,7 +101,7 @@ form.song input[type=submit]{
 
 form.delete, form.delete input[type=submit] {
   border: none;
-  font-size: 1rem;
+  font-size: 15px;
   background: none;
   text-decoration: underline;
   display: inline-block;
