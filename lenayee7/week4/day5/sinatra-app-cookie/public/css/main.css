@@ -15,6 +15,7 @@ body {
 
 #title {
 	font-family: 'Candal', sans-serif;
+   -webkit-text-stroke: 2px #25A79C;
 }
 
 .header {
@@ -22,6 +23,10 @@ body {
 	background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR51uUdKpq168V5VrOr6f5ajMZeim2LiSqrPkSXEHzv8jv0vILu");
 	background-repeat: repeat;
 	padding-bottom: 1%;
+}
+
+footer {
+	height: 200px;
 }
 
 .cookies {
@@ -40,7 +45,6 @@ body {
 	padding-bottom: 5%;
 	margin-top: 10%;
 	border: 1px solid yellow;
-
 }
 
 #newEdit {
@@ -65,12 +69,6 @@ body {
   font-weight: 700;
   margin-top: 2%;
   color: #B73131;
-/*	font-family: monospace;
-	font-size: 1.5em;
-	background-color: #1CB2B2;
-	color: red;*/
-/*	color: #055058;*/
-/*	border-radius: 5px;*/
 }
 
 a#editBtn {
@@ -117,7 +115,7 @@ h1 {
 }
 
 #cookiesh2 {
-	margin-top: 2%;
+	margin: 2% 0;
 	text-align: center;
 	font-size: 2.5em;
 	text-decoration: underline;
@@ -139,6 +137,7 @@ h3 {
 
 img {
 	width: 50%;
+	border-radius: 10px;
 }
 a#recipe:hover {
 	background-color: #E17983;
