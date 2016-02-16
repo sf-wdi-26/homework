@@ -44,7 +44,7 @@ class PokemonApp < Sinatra::Base
 
 	#update
 	put '/pokemons/:id' do
-		@pokemons = Pokemon.find(params[:id])
+		@pokemon = Pokemon.find(params[:id])
 		@pokemon.update_attributes(params[:pokemon])
 		redirect("/pokemons")
 	end

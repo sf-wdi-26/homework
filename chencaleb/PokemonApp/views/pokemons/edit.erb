@@ -1,10 +1,12 @@
 <h2>Edit Pokemon</h2>
 
-<form action="pokemons/<%= @pokemon.id %>" method="post">
+<form action="/pokemons/<%= @pokemon.id %>" method="post">
 	<input type="hidden" name="_method" value="put">
-	Name:
-	<input type="text" name="pokemon[name]" value="<%= @pokemon.name %>"><br>
+	Name:<br>
+	<input name="pokemon[name]" value="<%= @pokemon.name %>">
+	<br>
+	<br>
     Level: <br>
-    <input type="text" name="pokemon[level]" value="<%= @pokemon.level %>"><br>
+    <input name="pokemon[level]" value="<%= @pokemon.level %>"><br>
     <input type="submit" value="Save Pokemon">
 </form>
