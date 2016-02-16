@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="menupizza">
+<h1>Menu</h1>
+
+<% @pizzas.each do |pizza| %>
+
+
+<a class="eachPizza" href="/pizzas/<%= pizza.id %>"> <%= pizza.name %> </a><br/>
+
+
+		<% end %>
+		</div>
+</body>
+</html>

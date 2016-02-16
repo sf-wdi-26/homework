@@ -1,0 +1,15 @@
+<div class="eachPizza">
+	<h2> <%= @pizza.name %> </h2>
+	<img src="<%= @pizza.photo_url %>" >
+	<br />
+	<button><a href="/pizzas/<%= @pizza.id %>/edit">
+          Edit
+  </a>
+  </button>
+
+  <form method="post" action="/pizzas/<%= @pizza.id %>/delete" >
+  <input type="hidden" name="_method" value="delete" />
+            <button>Delete</button>
+          </form>
+
+</div>
