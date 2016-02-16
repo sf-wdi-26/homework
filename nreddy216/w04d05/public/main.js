@@ -4,7 +4,11 @@ $(document).ready(function(){
 
   sortableList();
 
-  datePicker();
+  $("#due-date").click(function(){
+    console.log("HELLO");
+    datePicker();
+  });
+
 
 
 });
@@ -17,5 +21,5 @@ function sortableList(){
 
 
 function datePicker(){
-  $("#due-date").datepicker({dateFormat: 'dd/mm/yy'});
+  // $("#due-date").datepicker({dateFormat: 'dd/mm/yy'});
 }

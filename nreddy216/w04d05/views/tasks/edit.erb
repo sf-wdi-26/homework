@@ -1,18 +1,22 @@
-<form action="/tasks/<%= @task.id %>" method="POST" class="task" id="edit-task" role="form">
+<form action="/tasks/<%= @task.id %>" method="POST" class="task edit-or-new-form" id="edit-task" role="form">
   <input type="hidden" name="_method" value="put" />
        <legend>Edit Task</legend>
 
     <div>
       <div class="form-group">
-         <label for="task[title]">Title: </label>
-         <div>
-           <input type="text" value="<%=@task.title%>" class="form-control input" name="task[title]" placeholder="Task">
-         </div>
-         <div>
-           <label for="task[description]">Description: </label>
-           <input type="text" class="form-control input" value="<%=@task.description%>" name="task[description]" placeholder="Description">
-         </div>
 
+         <p>
+           <div>
+             <label for="task[title]">Title: </label>
+             <input type="text" value="<%=@task.title%>" class="form-control input" name="task[title]" placeholder="Task">
+           </div>
+         </p>
+         <p>
+           <div>
+             <label for="task[description]">Description: </label>
+             <input type="text" class="form-control input" value="<%=@task.description%>" name="task[description]" placeholder="Description">
+           </div>
+         </p>
          <p>
            <label for="task[due_date]">Due Date: </label>
            <input type="text" value="<%=@task.due_date%>" class="form-control input due-date" name="task[due_date]" placeholder="Due Date">

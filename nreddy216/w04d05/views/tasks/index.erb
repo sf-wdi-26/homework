@@ -9,16 +9,16 @@
       <p class="task-title"><strong><%= task.title %></strong>  <div class="task-buttons">
 
           <form action="/tasks/<%=task.id%>" method="post" class="delete"><button name="_method" type="submit" class="btn btn-primary delete" value="delete" id="delete" >✓</button></form>
-          <form action="/tasks/<%=task.id%>/edit"><button type="submit" class="btn btn-primary edit" id="edit" >	&#9997;</button></form>
+          <form action="/tasks/<%=task.id%>/edit"><button type="submit" class="btn btn-primary edit" id="edit"><span id="writing-symbol">&#9997;</span></button></form>
 
       </div>
 
 
       <!-- <a href ="/tasks/<%=task.id %>/edit">Edit</a> -->
       </p>
-      <p>Due date: <%= task.due_date %></p>
-      <p>Description: <%= task.description %></p>
-      <p>Project: <%= task.project %></p>
+      <p><span class="task-details">Due date: </span><%= task.due_date %></p>
+      <p><span  class="task-details">Description:  </span><%= task.description %></p>
+      <p><span  class="task-details">Project:  </span><%= task.project %></p>
 
 
     </li>
