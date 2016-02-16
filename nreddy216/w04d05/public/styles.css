@@ -5,10 +5,6 @@ body{
 }
 
 .header{
-  /*font-family: Futura;*/
-  /*background-color: #d3d3d3;*/
-
-  margin-bottom: 5%;
 
   font-size: 40px;
 
@@ -60,6 +56,8 @@ body{
 
 
 
+
+
 .list li{
   background-color: rgba(255,255,88,0.8);
   width: 90%;
@@ -75,8 +73,12 @@ body{
 .list li p{
   padding-left: 5%;
 
-  font-family: 'Roboto Slab', serif;
+  /*font-family: 'Roboto Slab', serif;*/
 
+}
+
+p{
+  font-family: 'Roboto Slab', serif;
 }
 
 .task-title strong{
@@ -105,9 +107,6 @@ button{
   height: 60px;
 }
 
-.edit{
-
-}
 
  .edit button{
   border: none;
@@ -118,6 +117,9 @@ button{
 .delete button{
   background-color: #00e500;
   border: none;
+
+  margin-right: 20px;
+
 }
 
 #new-submit{
@@ -126,4 +128,13 @@ button{
 
 .delete button:hover{
   background-color: #bf8;
+}
+
+media (min-width: 844px) {
+
+  .navbar #new-task-btn{
+    float: right;
+    clear: left;
+  }
+
 }
