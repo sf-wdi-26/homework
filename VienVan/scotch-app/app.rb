@@ -21,20 +21,13 @@ class BooksApp < Sinatra::Base
 
 
   post '/books' do
-    @book = Book.new(params[:title])
-    if @book.save
+    @book = Book.create(params[:book])
       redirect("/books/#{@book.id}")
-    else
-      erb(:"/new")
-    end
   end
 
-  delete "/books/:id/delete" do
+  delete '/books/:id' do
     @book = Book.find(params[:id])
-    if @book.destroy
-      redirect("/books")
-    else
-      redirect("/books/#{@book.id}")
-    end
+    @book.destroy
+    redirect("/books")
   end
 end

@@ -8,4 +8,5 @@ require "./models/book"
 #controller
 require "./app"
 
+use Rack::MethodOverride
 run BooksApp

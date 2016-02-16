@@ -1,9 +1,15 @@
-<h2>Add A new Book!</h2>
+<div class='well panel-body'>
 
-<form method="POST" action="/books">
-  Title: <br>
-  <input type='text' name='book[title]' value='title'><br>
-  Author: <br>
-  <input type='text' name='book[author]' value='author'><br>
-  <input type='submit' value='Submit'>
-</form>
+          <h2>Add A new Book!</h2>
+
+          <form method="POST" action="/books">
+                  Title: <br>
+                  <input type='text' name='book[title]' placeholder='Title'><br>
+                  Author: <br>
+                  <input type='text' name='book[author]' placeholder='Author'><br>
+                  It makes me feel: <br>
+                  <input type='text' name='book[feel]' placeholder='Feeling'><br>
+                  <input type='submit' value='Submit'>
+          </form>
+
+</div>
