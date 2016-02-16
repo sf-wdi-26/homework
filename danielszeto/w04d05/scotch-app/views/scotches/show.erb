@@ -1,0 +1,11 @@
+<h2> <%= @scotch.brand %> </h2>
+<%= @scotch.year%> <br>
+<%= @scotch.blended %> <br>
+<%= @scotch.rating %> <br>
+
+<form action="/scotches/<%= @scotch.id %>" method="post" class='delete'>
+  <input type="hidden" name="_method" value="delete">
+  <input type='submit' value="Delete">
+</form>
+
+<a href="/scotches/<%= @scotch.id %>/edit"> Edit</a>

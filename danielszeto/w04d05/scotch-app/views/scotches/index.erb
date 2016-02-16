@@ -1,0 +1,12 @@
+<ul>
+<% @scotches.each do | scotch | %>
+    <li>
+        <a href ="/scotches/<%= scotch.id %>"><strong><%= scotch.brand %> &nbsp  
+        <%= scotch.year %></strong> &nbsp
+        <%= scotch.blended %> &nbsp
+        <%= scotch.rating %></a>
+    </li>
+
+
+<% end %>
+</ul>
