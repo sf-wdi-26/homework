@@ -11,18 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160214002635) do
+ActiveRecord::Schema.define(version: 20160216035548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cookies", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",        null: false
     t.string   "cookie_type"
     t.string   "cookie_name"
     t.string   "photo_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "recipe_url"
   end
 
 end

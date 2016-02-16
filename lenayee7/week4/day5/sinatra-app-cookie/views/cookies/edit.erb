@@ -10,7 +10,7 @@
 	<div>
 		<label for ="cookie[cookie_type">Type of Cookie:</label>
 		<input name="cookie[cookie_type]" value='<%= "#{@cookie.cookie_type}" %>'>
-	</div>
+	</div> 
 
 	<div>
 		<label for ="cookie[cookie_name]">Cookie Name:</label>
@@ -18,7 +18,17 @@
 	</div>
 
 	<div>
-		<input type="submit" value="Save Cookie">
+		<label for ="cookie[Photo_url]">Photo url:</label>
+		<input name="cookie[photo_url]" value='<%= "#{@cookie.photo_url}" %>'>
 	</div>
 
+	<div>
+		<label for ="cookie[recipe_url]">Recipe url:</label>
+		<input name="cookie[recipe_url]" value='<%= "#{@cookie.recipe_url}" %>'>
+	</div>
+
+	<div class="addBtn">
+		<input class="addCookie" type="submit" value="Save Cookie">
+	</div>
+	
 </form>

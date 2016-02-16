@@ -1,19 +1,21 @@
-<h1>Cookies</h1>
+<h2 id="cookiesh2">Cookies</h2>
 	<% @cookies.each do |cookie| %>
 	<div class="cookieBox">
+
 		<div class="cookies">
 			<a class="eachCookie" href="/cookies/<%= cookie.id %>"><%= cookie.name %>: <%= cookie.cookie_type %> "<%= cookie.cookie_name %>"</a>
 		</div>
 
-		<div id="editBtn">
-				<a href="/cookies/<%=cookie.id %>/edit">Edit</a>
+		<!-- <div class="editDelete" id="editBtn">
+			<a href="/cookies/<%=cookie.id %>/edit">Edit</a>
 		</div>
-		<div>
-				<form method="post" action="/cookies/<%= cookie.id %>/delete">
-				<input name="_method" type="hidden" value="delete" />
-				<button id="deleteBtn">Delete</button>
-				</form>
-		</div>
+		<div class="editDelete">
+			<form method="post" action="/cookies/<%= cookie.id %>/delete">
+			<input name="_method" type="hidden" value="delete" />
+			<button id="deleteBtn">Delete</button>
+			</form>
+		</div> -->
+
 	</div>
 <% end %>
 

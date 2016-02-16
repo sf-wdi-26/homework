@@ -47,14 +47,13 @@ class CookiesApp < Sinatra::Base
 		if @cookie.update_attributes(params[:cookie])
 			redirect('/cookies')
 		else 
-			erb(:"/cookies/<%= cookie.id %>/edit'")
+			erb(:"/cookies/<%= cookie.id %>/edit")
 		end
 	end
 
 	# delete
 	delete '/cookies/:id/delete' do
 		@cookie = Cookie.find(params[:id])
-		p "deleting"
 		if @cookie.destroy
 			redirect('/cookies')
 		else 
