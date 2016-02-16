@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-# require './models/flannels'
+require './models/flannel'
 require './app'
 
 run FlannelsApp

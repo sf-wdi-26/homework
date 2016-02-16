@@ -1,0 +1,8 @@
+<ul>
+<% @flannels.each do | flannel | %>
+	<li>
+		<p><strong>"<%= flannel.color %>"</strong>, 
+		<%= flannel.terribleLooking? %></p>
+	</li> 
+<% end %>
+</ul>
