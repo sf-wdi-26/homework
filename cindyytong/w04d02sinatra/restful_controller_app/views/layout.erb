@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,29 +10,15 @@
         <title>San Francisco Bucket List</title>  
 
 <!-- //For some reason I am unable to link my style sheet to this file -->
-<style>
-body {
-  background:url('IMG_8386.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  padding: 75px;
-  text-align: center;
-}
 
-li{
-	list-style-type: none;
-}
-</style>
+<!-- This page acts as the general style sheet for all of the pages, add in links to style sheet which is in public folder and also  yield indicating where the data will show up-->
 
 </head>
     <body>
 	<div class ="container">
-    	<div class = "navbar navbar-fixed-top">
       		<h1>San Francisco Bucket List</h1>
-     	</div>
       	<%= yield %>
      </div>
     </body>
 </html>
+
