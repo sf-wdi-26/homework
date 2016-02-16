@@ -18,6 +18,6 @@ class Dreamix < Sinatra::Base
 end
 
 
-# figure out how to get values from forms
-# how to crud the database with values from forms
+# understanding the routes better.
+# how to crud the database with values from forms.
 # understanding styling in bootstrap better, or understanding sass.
