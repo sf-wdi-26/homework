@@ -1,0 +1,81 @@
+
+@-ms-viewport{
+  width:device-width;
+}
+
+header {
+	width:7000px;
+	height:20px;
+	background-color:black;
+	margin:-10px -10px 0px -10px;
+
+}
+
+body {
+	font-family: 'Jockey One', sans-serif;
+
+}
+
+.top {
+	text-align: center;
+}
+
+h1 {
+	font-size: 100px;
+	margin:18px 0px -30px 0px;
+	position: center;
+}
+
+h4 {
+	position: relative;
+	top:400px;
+}
+
+.box1{
+	position:relative;
+	margin-left:150px;
+	text-align: center;
+}
+
+.infoMe {
+	height:25px;
+	width:350px;
+	border: 1px;
+	font-size: 25px;
+	text-align: left;
+	float:left;
+	clear:right;
+	left: 70px;
+}
+
+.box2{
+	margin-right: 100px;
+	position:relative;
+	top:-30px;
+	text-align: center;
+}
+
+.picMe {
+	border:2px solid black;
+	position: relative;
+	padding:auto;
+	float:right;
+	clear:left;
+	margin:0px 50px 500px 450px;
+}
+
+.alignment {
+	position:inherit;
+}
+
+footer {
+	font-size: 20px;
+	clear:both;
+	position:relative;
+	text-align: center;
+	top:-400px;
+}
+
+h5 {
+	font-size:50px;
+}

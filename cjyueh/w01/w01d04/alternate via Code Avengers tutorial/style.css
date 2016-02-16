@@ -1,0 +1,57 @@
+body {
+	max-width: 700px;
+	margin: 5% auto;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	padding: .5em 5em;
+	font-family: 'Numans', sans-serif;
+	font-size: 1.5em;
+	background-color: #d4fcf3;
+	border: none;
+	border-radius: .2em;
+}
+
+h2 {
+	display: block;
+	width: 7.75em;
+	margin: 2.5% auto;
+	padding: .5em 5em;
+	font-family: 'Numans', sans-serif;
+	font-size: 1.25em;
+	background-color: white;
+}
+
+select {
+	border: none;
+	border-radius: .2em;
+	font-size: 1em;
+}
+
+table{
+	margin: 5% auto;
+    table-layout: fixed;
+    text-align: center;
+}
+
+tr {
+	height: 150px;
+}
+
+td {
+    width: 150px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 100px;
+}
+
+.mid-row {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+.mid-col {
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}

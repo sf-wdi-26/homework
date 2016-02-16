@@ -1,0 +1,59 @@
+body {
+	/*background-image: url("http://1.bp.blogspot.com/-Km7n1UPrqUk/UPvtbiF7UgI/AAAAAAAAI1w/0ue9dfq3_gU/s1600/IMG_3569.JPG");*/
+	/*background-image: url("http://freesoftwarekit.com/server13/photos/oQzk759jUl6J3M~/846_Fine-art-wallpapers-Shop-online-Neo-Fauvism-Print-Cerisiers-en_1296x864.jpg")   */
+	background-image: url("http://www.wallcoo.net/paint/Background_Series_%20Brush_Works_01/wallpapers/1024x768/Background_Series_%20Brush_Works_BS08016_wallcoo.com.jpg");
+	background-size: cover;
+}
+h1 {
+	text-align: center;
+	color: white;
+	margin: 1em 0 0 0;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 4em;
+	font-weight: 700;
+
+}
+h2 {
+	text-align:center;
+	font-family: 'Quicksand', sans-serif;
+	color: #FFFFFF;
+	margin-bottom: 1em;
+}
+
+form {
+	text-align: center;
+	margin: 0 auto;
+
+}
+ul {
+	list-style-type: none;
+	text-align: center;
+	color: #FFFFFF;
+
+}
+li {
+	font-size: 5em;
+	font-family: 'Quicksand', sans-serif;
+
+}
+#button {
+	background-color: #5EC172;
+	color: white;
+	border: none;
+
+}
+#delete {
+	margin-top: 1em;
+
+}
+/*.onscreen {
+	height: 10px;
+	width: 10px;
+	font-size: 10px;
+	color:black;
+	padding: 1px;
+	margin-bottom: 20px;*/
+
+}
+
+

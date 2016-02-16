@@ -1,0 +1,150 @@
+
+body {
+	background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQxK11gEwk6S32l0tleQIsmxGLBp5NU9Qn1mG8bXW1pH9wcvhP1Xg");
+	
+
+	/*font-family: 'Montserrat', sans-serif;*/
+
+	/*font-family: 'Arvo', serif;*/
+
+	/*font-family: 'Candal', sans-serif;*/
+
+	/*font-family: 'Sigmar One', cursive;*/
+
+	font-family: 'Russo One', sans-serif;
+	color: #964CAB
+
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	margin-top:10%;
+	background-color: #D3FC55;
+	border-radius: 5px;
+}
+
+div#blog {
+	margin-top:10%;
+	width: 100%;
+	height: 70%;
+	overflow: scroll;
+}
+
+div#blog h1{
+	font-family: 'Russo One', sans-serif;
+	background-image: url("https://wallpaperscraft.com/image/circles_turquoise_texture_pattern_surface_44972_1024x1024.jpg");
+	background-size: 100%;
+	background-color: #13ACA5;
+	padding: 3%;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 38px;
+	border: 5px solid red;
+	color: #D3FC55;
+	
+}
+
+form {
+	text-align: center;
+	margin-top: 5%;
+	height: 400px;
+	/*border: 2px solid red;*/
+}
+
+input#userText {
+	width: 40%;
+	height: 10%;
+	font-family: 'Russo One', sans-serif;
+	font-size: 16px;
+	text-align: center;
+	color: red;
+	border: 2px solid black;
+}
+
+ul#ulBox {
+	width: 40%;
+	height: 10%;
+	margin: 0 auto;
+}
+
+ #postButton {
+ 	margin-top: 2%;
+	border: 3px solid purple;
+	background-color: black;
+	color: white;
+	font-family: 'Russo One', sans-serif;
+	font-size: 28px;
+ }
+
+ li {
+ 	margin-top: 4%;
+ 	text-align: left;
+ 	list-style-type: disc;
+ 	/*border: 1px solid black;*/
+ }
+
+li#resize {
+	text-align: center;
+	font-size: 24px;
+	list-style: none;
+}
+
+@media only screen and (max-width: 980px) {
+
+  .container {
+  	max-width: 700px;
+  }
+	
+ body {
+	background-color: #13ACA5;
+	/*color: #8DE144;*/
+/*
+   -webkit-text-stroke: 1px black;
+   color: #8DE144;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;*/
+}
+
+ /*div#blog {
+ 	background-image: url("slade.jpg");
+ 	background-size: 100% 100%
+ }*/
+
+}
+
+@media only screen and (max-width: 760px) {
+
+  .container {
+  	max-width: 560px;
+  }
+
+@media only screen and (max-width: 660px) {
+
+  .container {
+  	max-width: 400px;
+  }
+  input #userInput {
+  	font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+  	max-width: 350px;
+  }
+
+  body {
+  	background-image: none;
+	background-color: #A02F3E;
+}
+
+
+
+
+
+

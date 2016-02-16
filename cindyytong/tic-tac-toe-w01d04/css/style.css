@@ -1,0 +1,63 @@
+/*Text*/
+body{
+    color: 454347;
+    width: 1200px;
+    margin: 0 auto; 
+    text-align: center;
+    font-family: Arial;
+}
+
+/*BUTTONS*/
+/*start*/
+#start{
+    color:green;
+    font-size: 16px;
+    
+}
+
+/*clear*/
+.clear{
+    color:green;
+    font-size: 16px;
+}
+
+/*--------------------------------------------*/
+
+/*the grid*/
+.grid-container{
+    width: 50%;
+    height: 60%;
+    margin: 0 auto;
+}
+
+/*fixes clearing of grid cells*/
+/*reference for making grid: http://j4n.co/blog/Creating-your-own-css-grid-system*/
+ .row:before, 
+    .row:after {
+        content:"";
+          display: table ;
+        clear:both;
+    }
+
+ .col {
+        float: left; 
+        width: 31.33%;
+        height: 31.33%;
+        /*-- our gutter -- */
+        padding: 1%; 
+        background-color: #c0c8ce;
+        outline: 2px solid #454347; 
+    }
+
+/*--------------------------------------------*/
+
+/*the images*/
+    img{
+        height: 31.33%;
+        width: 31.33% ;
+        max-width: 100%;
+    }
+/*style scoreboard*/
+.scoreboard{
+    
+}

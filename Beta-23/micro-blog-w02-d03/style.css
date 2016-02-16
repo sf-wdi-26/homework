@@ -1,0 +1,66 @@
+html { 
+
+}
+
+header{
+  
+  float: right;
+  padding-right: 15px;
+
+}
+
+.container{
+width: 300px;
+    margin: auto;
+
+
+}
+
+#bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+h1 {
+
+  color: white;
+}
+body {
+  background-image: url(./cos2.jpg);
+  background-size: cover;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 100px;
+  padding: 50px;
+  list-style-type: none;
+
+}
+ul {
+  width: 100%;
+  position: absolute
+  text-align: center
+  font-size: 15;
+  left: 0;
+  top: 50%;
+  list-style-type: none;
+  color: white
+
+  }
+  
+}
+  li{
+
+
+    display: inline-block
+    position: relative
+    text-align: center
+    font-size: 15
+    list-style-type: none;
+    color: black
+  }

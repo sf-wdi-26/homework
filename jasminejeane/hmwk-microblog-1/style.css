@@ -1,0 +1,222 @@
+
+/*my css is not connected*/
+
+body{
+	background: linear-gradient(orange, red); 
+}
+
+h1{
+	margin-top: 50px;
+	text-align: center;
+	font-size: 100px;
+}
+
+
+#newPost {
+
+	text-align: center;
+}
+
+#blog {
+
+	height: 90px;
+    width: 730px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+
+#submit {
+
+	/*height: 90px;*/
+    width: 150px;
+    font-size: 100px;
+}
+
+li {
+	margin-left: 240px;
+	margin-right: 400px;
+	padding: 15px;
+	font-size: 20px;
+}
+
+/*li {
+	font-size: 50px;
+}*/
+
+
+
+
+/*Media Queries*/
+
+
+@media (max-width: 1424px) {
+  body {
+	background: linear-gradient(orange, red); 
+  }
+ #blog {
+
+	height: 90px;
+    width: 730px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+
+#submit {
+
+	/*height: 90px;*/
+    width: 150px;
+    font-size: 100px;
+}
+
+li {
+	margin-left: 240px;
+	margin-right: 400px;
+	padding: 15px;
+	font-size: 20px;
+}
+
+}
+
+@media (max-width: 1200px) {
+  body {
+	background: linear-gradient(pink, purple); 
+  }
+  #blog {
+
+	height: 90px;
+    width: 730px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+
+#submit {
+
+	/*height: 90px;*/
+    width: 150px;
+    font-size: 100px;
+}
+
+li {
+	margin-left: 240px;
+	margin-right: 400px;
+	padding: 15px;
+	font-size: 20px;
+}
+}
+
+
+@media (max-width: 1000px) {
+  body {
+	background: linear-gradient(lightblue, blue); 
+  }
+  #blog {
+
+	height: 90px;
+    width: 730px;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+}
+
+
+#submit {
+
+	/*height: 90px;*/
+    width: 150px;
+    font-size: 100px;
+}
+
+li {
+	margin-left: 50px;
+	margin-right: 150px;
+	padding: 15px;
+	font-size: 20px;
+}
+}
+
+@media (max-width: 800px) {
+  body {
+	background: linear-gradient(yellow, green); 
+  }
+  #blog {
+
+	height: 80px;
+    width: 430px;
+    font-size: 15px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+}
+
+
+#submit {
+
+	/*height: 90px;*/
+    width: 150px;
+    font-size: 100px;
+}
+
+li {
+	margin-left: 50px;
+	margin-right: 150px;
+	padding: 5px;
+	font-size: 18px;
+}
+}
+
+@media (max-width: 500px) {
+  body {
+	background: linear-gradient(grey, black); 
+  }
+
+  h1{
+  	font-size: 45px;
+  }
+  #blog {
+
+	height: 50px;
+    width: 300px;
+    font-size: 10px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+
+
+#submit {
+
+    width: 150px;
+    font-size: 100px;
+}
+
+li {
+	margin-left: 50px;
+	margin-right: 50px;
+	padding: 5px;
+	font-size: 15px;
+	color: white;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

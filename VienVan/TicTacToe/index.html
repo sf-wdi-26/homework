@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <h1>Exes and Ohs</h1>
+    <h2>A tic is not a tac is not a toc is not a tic tac toc</h2>
+    <p>I mean tic tac toe. Good luck!</p>
+    <h2 id='winner'></h2>
+    <!-- <div class='score-board'>
+        <div class='scores' id='X'><label id='exes'>Exes: </label><input type='number'></div>
+        <div class='scores' id='O'><label id='ohs'>Ohs: </label><input type='number'></div>
+    </div> -->
+    <div class='box'>
+      <canvas id="canvas1" width='100px' height='100px' onclick='canvasClicked(1)'></canvas>
+      <canvas id="canvas2" width='100px' height='100px' onclick='canvasClicked(2)'></canvas>
+      <canvas id="canvas3" width='100px' height='100px' onclick='canvasClicked(3)'></canvas>
+      <canvas id="canvas4" width='100px' height='100px' onclick='canvasClicked(4)'></canvas>
+      <canvas id="canvas5" width='100px' height='100px' onclick='canvasClicked(5)'></canvas>
+      <canvas id="canvas6" width='100px' height='100px' onclick='canvasClicked(6)'></canvas>
+      <canvas id="canvas7" width='100px' height='100px' onclick='canvasClicked(7)'></canvas>
+      <canvas id="canvas8" width='100px' height='100px' onclick='canvasClicked(8)'></canvas>
+      <canvas id="canvas9" width='100px' height='100px' onclick='canvasClicked(9)'></canvas>
+    </div>
+
+    <!-- <div class='board-wrapper'>
+          <div class='board' id='top-left'></div>
+          <div class='board' id='top-center'><p></p></div>
+          <div class='board' id='top-right'><p></p></div>
+          <div class='board' id='middle-left'><p></p></div>
+          <div class='board' id='middle-center'><p></p></div>
+          <div class='board' id='middle-right'><p></p></div>
+          <div class='board' id='bottom-left'><p></p></div>
+          <div class='board' id='bottom-center'><p></p></div>
+          <div class='board' id='bottom-right'><p></p></div>
+    </div> -->
+    <!-- <div class='exes'>X</div>
+    <div class='ohs'>O</div> -->
+    <div id='btn'><button>Play Again?</button></div>
+
+    <script src='tictactoe.js'></script>
+</body>
+</html>

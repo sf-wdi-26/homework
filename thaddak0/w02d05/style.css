@@ -1,0 +1,36 @@
+body {
+	/*background-image: url("http://1.bp.blogspot.com/-Km7n1UPrqUk/UPvtbiF7UgI/AAAAAAAAI1w/0ue9dfq3_gU/s1600/IMG_3569.JPG");*/
+	/*background-image: url("http://freesoftwarekit.com/server13/photos/oQzk759jUl6J3M~/846_Fine-art-wallpapers-Shop-online-Neo-Fauvism-Print-Cerisiers-en_1296x864.jpg")   */
+	/*background-image: url("http://www.wallcoo.net/paint/Background_Series_%20Brush_Works_01/wallpapers/1024x768/Background_Series_%20Brush_Works_BS08016_wallcoo.com.jpg");*/
+	/*background-image: url("http://fxandesbin.com/wp-content/uploads/2015/12/space_images_background.jpg");*/
+	background-image: url("http://www.universe-beauty.com/albums/userpics/1/7/stars-and-planets-photo-img355-JPG.jpg");
+	background-size: cover;
+	color: #FFFFFF;
+	font-family: 'Quicksand', sans-serif;
+}
+h1 {
+	margin: 1em 0 0 0;
+	font-size: 4em;
+	font-weight: 700;
+
+}
+h2 {
+	margin-bottom: 1em;
+	font-size: 2em;
+}
+
+ul {
+	list-style-type: none;
+	font-size: 3em;
+}
+
+
+#button {
+	background-color: #5EC172;
+	color: white;
+	border: none;
+}
+
+
+
+

@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tick Tack Toe</title>
+
+  <link rel="stylesheet" href="tic-tac-toe.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato|Titillium+Web' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body>
+	<div class="container">
+	<header>
+		<div id="button">
+			<h1>Tic Tac Toe</h1>
+			<button id="reset">Reset Me</button>
+		</div>
+	</header>
+	<h2 id="message">msg</h2>
+
+		<table style="width:100%">
+		  <tr id="box1">
+		    <td class="square" onclick="nextMove(this);">X</td>
+		    <td class="square" onclick="nextMove(this);">X</td>
+		    <td class="square" onclick="nextMove(this);">X</td>
+		  </tr>
+
+		  <tr id="box2">
+		    <td class="square" onclick="nextMove(this);">X</td>
+		    <td class="square" onclick="nextMove(this);">X</td>
+		    <td class="square" onclick="nextMove(this);">X</td>
+		  </tr>
+
+		  <tr id="box3">
+		    <td class="square" onclick="nextMove(this);">X</td>
+		    <td class="square" onclick="nextMove(this);">X</td>
+		    <td class="square" onclick="nextMove(this);">X</td>
+		   </tr>
+		</table>
+	</div>
+
+  <script src="tic-tac-toe.js"></script>
+</body>
+</html>
+
+
+

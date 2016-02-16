@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tic-Tac-Toe</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div id="button">
+      <button type="button">reset</button>
+    </div>
+    <div id="turnBanner"></div>
+    <div id="page"><!-- outer group -->
+      <div class="columnGlue" id="leftCol"><!-- left column -->
+        <div class="grid" id="leftTop"></div> <!-- left top (1,1) -->
+        <div class="grid" id="leftMiddle"></div> <!-- left middle (1,2) -->
+        <div class="grid" id="leftBot"></div> <!-- left bottom (1,3) -->
+      </div>
+      <div class="columnGlue" id="centerCol"><!-- center column -->
+        <div class="grid" id="centerTop"></div> <!-- center top (2,1) -->
+        <div class="grid" id="centerMiddle"></div> <!-- center middle (2,2) -->
+        <div class="grid" id="centerBot"></div> <!-- center bottom (2,3) -->
+      </div>
+      <div class="columnGlue" id="rightCol"><!-- right column -->
+        <div class="grid" id="rightTop"></div> <!-- right top (3,1) -->
+        <div class="grid" id="rightMiddle"></div> <!-- right middle (3,2) -->
+        <div class="grid" id="rightBot"></div> <!-- right bottom (3,3) -->
+      </div>
+    </div>
+    <!-- scripts -->
+    <script type="text/javascript" src="scripts/script.js"></script>
+  </body>
+</html>

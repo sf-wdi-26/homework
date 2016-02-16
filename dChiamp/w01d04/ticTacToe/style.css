@@ -1,0 +1,79 @@
+/* UNIVERSAL STYLES */
+body {
+    font-family: Helvetica;
+}
+ .center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.italic {
+    font-style: italic;
+    text-decoration: underline;
+}
+/* ELEMENT STYLES */
+ h1 {
+    text-align: center;
+    color: #666666;
+    border: 0;
+}
+
+h3 {
+    text-align: center;
+    color: #666666;
+    border: 0;
+}
+p {
+    text-align: center;
+    line-height: 16pt;
+    color: #666666;
+}
+.button {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+#reset {
+    font-size: 12pt;
+    text-transform: uppercase;
+    background-color: grey;
+    margin-top: 40px;
+    padding: 5px 15px 5px 15px;
+    border-radius:28px;
+    border:1px solid grey;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+
+}
+
+#restart:hover {
+    background-color: red;
+}
+
+
+/* BOARD STYLES */
+ #board-outer {
+    height: 350px;
+    width: 350px;
+    background-color:none;
+    overflow: hidden;
+}
+#board {
+    width: 354px;
+    height: 354px;
+    background-color:none;
+    border-spacing:0;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+td {
+    height: 116px;
+    width: 116px;
+    text-align: center;
+    font-size: 40pt;
+    border-collapse: collapse;
+    border: 2px solid black;
+    text-transform: uppercase;
+    color: #999999;
+}

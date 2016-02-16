@@ -1,0 +1,221 @@
+.header{
+	text-align: center;
+	font-family: 'Rubik Mono One', sans-serif;
+	color: white;
+	margin-top: 100px;
+	background-color: #028482;
+
+}
+
+
+#header-img{
+	width: 2em;
+}
+
+#subtitle{
+	font-size: 1em;
+	font-family: 'Palanquin', sans-serif;
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+
+.quotes{
+	font-size: 2em;
+}
+
+#entry-form{
+	text-align: center;
+
+	font-family: 'Palanquin', sans-serif;
+}
+
+.box{
+	line-height: 200px;
+}
+
+
+@media (min-width: 990px) {
+  .post-container {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header h1{
+    font-size: 2.1em;
+  }
+  #subtitle{
+  	font-size: 1.1em;
+  	margin-top: 0.5px;
+  }
+  .box{
+  	max-width: 300px;
+  	height: 300px;
+  }
+  .quotes{
+  	font-size: 1em;
+  	line-height: auto;
+  	padding-bottom: 0px;
+  	padding-top: 50px;
+  }
+  .sloth-img{
+  	min-width: 200px;
+  	max-width: 700px;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .header h1{
+    font-size: 2.1em;
+  }
+  #subtitle{
+  	font-size: 1.1em;
+  	margin-top: 0px;
+  }
+  .box{
+  	max-width: 300px;
+  	height: 300px;
+  }
+  .quotes{
+  	font-size: 1em;
+  	padding-bottom: 0px;
+  	padding-top: 50px;
+  }
+
+}
+
+
+
+
+#submit-btn{
+	background-color: #00cdcd;
+	border-style: none;
+	
+	height: 45px;
+	border-radius: 5px;
+	padding-bottom: 5px;
+
+	font-size: 20px;
+
+	color: white;
+
+	font-family: 'Rubik Mono One', sans-serif;*/
+}
+
+#submit-btn:hover{
+	
+	background-color: #006767;
+	border-style: none;
+}
+
+body{
+	background-size: 400px;
+	background-image: url(../images/wood_yellow.png);
+	background-repeat: repeat;
+}
+
+ul{
+
+	list-style-type: none;
+	text-align: center;
+	margin: 0 auto;
+}
+
+li{
+	
+	font-family: 'Palanquin', sans-serif;
+	border-radius: 10px;
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 15px;
+	vertical-align: text-top;
+	text-align: center;
+	font-size: 2em;
+	font-style: bold;
+}
+
+img{
+	border-radius: 10px;
+	max-width: 600px;
+}
+
+li p{
+ 	padding-bottom: 20px;
+ 	vertical-align: text-top;
+ }
+
+.footer{
+
+}
+
+
+/*#close{
+	width: 20px;
+	padding-left: 10px;
+}*/
+
+
+::-webkit-input-placeholder {
+ font-size: 14px;
+ text-transform: lowercase;
+ text-align: center;
+ font-weight: bold;
+
+ color: #f7f7f7;
+}
+:-moz-placeholder { /* older Firefox*/
+ font-size:14px;
+ text-transform: lowercase;
+ text-align: center;
+ font-weight: bold;
+
+ color: #f7f7f7;
+}
+::-moz-placeholder { /* Firefox 19+ */ 
+ font-size: 14px;
+ text-transform: lowercase;
+ text-align: center;
+ font-weight: bold;
+
+ color: #f7f7f7;
+} 
+:-ms-input-placeholder { 
+ font-size: 14px; 
+ text-transform: lowercase;
+ text-align: center;
+ font-weight: bold;
+
+ color: #f7f7f7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

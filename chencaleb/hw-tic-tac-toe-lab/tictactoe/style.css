@@ -1,0 +1,95 @@
+body {
+	background-color: #666666;
+}
+h1 {
+	text-align: center;
+	padding: 30px;
+	font-family: "Chewy", Georgia, serif;
+	font-size: 3em;
+	color: #d9d9d9;
+}
+
+h2 {
+	text-align: center;
+	font-family: "Chewy";
+	font-size: 2em;
+	color: #d9d9d9;
+}
+
+table {
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+td {
+  
+  border: 3px solid steelblue;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+tr:hover {
+	cursor: pointer;
+}
+td:first-child {
+	border-left: none;	
+}
+
+td:last-child {
+	border-right: none;
+}
+
+td:nth-child(2n+2) {
+	border-right: none;
+	border-left: none;
+}
+
+thead tr td {
+	border-top: none;
+	border-bottom: none;
+}
+
+tfoot tr td {
+	border-bottom: none;
+	border-top: none;
+}
+
+.main {
+	text-align: center;
+}
+
+#reset {
+	font-size: 1.8em;
+	width: 140px;
+	font-family: "Chewy", Georgia, serif;
+	padding: 5px;
+	cursor: pointer;
+	text-align: center;
+	color: #d9d9d9;
+	background-color: #666666;
+}
+
+#reset:hover{
+  background: salmon;
+  border-color: white;
+}
+
+.X {
+  background: #ff6666;
+  font-size: 3em;
+  color: white;
+  border-radius: 8px;
+}
+.O {
+  background: #4ddbff;
+  font-size: 3em;
+  color: white;
+  border-radius: 8px;
+}
+
+
+
+

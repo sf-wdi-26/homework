@@ -1,0 +1,13 @@
+body {
+  background:url('IMG_8386.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  padding: 50px;
+  text-align: center;
+}
+
+li {
+  color: #FFFFFF;
+}

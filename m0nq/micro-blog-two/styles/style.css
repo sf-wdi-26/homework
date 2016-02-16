@@ -1,0 +1,80 @@
+body {
+  width: 100%;
+  background-color: black;
+  background-image: url("../assets/pZghu8Q.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+#h-one-div {
+  width: 30%;
+  margin: 50px 518px;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+}
+
+#form-div {
+  width: 60%;
+  margin: 0 116px 0 300px;
+  position: relative;
+  z-index: 1;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-color: white;
+  border-style: solid;
+}
+
+input[type="text"] {
+  color: black;
+  font-size: 1.5em;
+  margin: 20px 130px;
+  /*position: relative;*/
+  width: 70%;
+  height: 30%;
+}
+
+#button {
+  background: rgba(104, 104, 104, .95);
+  border-style: solid;
+  border: 0;
+  border-radius: 4px;
+  margin: 0 385px 20px;
+  font-size: 1.5em;
+}
+
+#button:hover {
+  background: white;
+  color: black;
+  border-style: solid;
+  border: 1px;
+  border-radius: 4px;
+  margin: 0 385px 20px;
+  font-size: 1.5em;
+}
+
+#button:active {
+  background: rgba(104, 104, 104, .95);
+  border-style: solid;
+  border: 1px;
+  border-radius: 4px;
+  margin: 0 385px 20px;
+  font-size: 1.5em;
+}
+
+li {
+  background: rgba(104, 104, 104, .95);
+  margin: 20px 300px 0 300px;
+  width: 60%;
+  display: block;
+  list-style-type: none;
+  border: 0;
+  border-radius: 3px;
+  font-size: 1.5em;
+  padding: 10px;
+}
