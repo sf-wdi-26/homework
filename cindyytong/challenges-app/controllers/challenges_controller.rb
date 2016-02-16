@@ -24,24 +24,21 @@ end
 
 #show
 get '/challenges/:id' do
-	id = params['id'].to_i
-	@challenge = Challenge.find(id)
+	@challenge = Challenge.find(params[:id].to_i)
 	erb(:"./challenges/show")
 end
 
 #edit
 get '/challenges/:id/edit' do
-	id = params['id'].to_i
-	@challenge = Challenge.find(id)
+	@challenge = Challenge.find(params[:id].to_i)
 	erb(:'./challenges/edit')
 end
 
 #update
 put '/challenges/:id' do
-	id = params['id'].to_i
-	@challenge = Challenge.find(id)
+	@challenge = Challenge.find(params[:id].to_i)
 	if @challenge.update_attributes(params[:challenge])
-		redirect('/challenges/#{challenge.id}')
+		redirect('/challenges')
 	else
 		erb(:'./challenges/edit')
 	end
@@ -49,13 +46,10 @@ end
 
 #delete
 delete '/challenges/:id/delete' do
-	id = params['id'].to_i
-	@challenge = Challenge.find(id)
-		if @challenge.destroy
-			redirect('/challenges')
-		else
-			redirect('/challenges/#{@challenge.id}')
-		end
+	@challenge = Challenge.find(params[:id].to_i)
+	@challenge.destroy
+	redirect('/challenges')
 	end
+
 end
 

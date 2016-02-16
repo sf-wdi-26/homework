@@ -7,4 +7,5 @@ require './models/challenge'
 require './app'
 require './controllers/challenges_controller'
 
+use Rack::MethodOverride
 run ChallengesApp

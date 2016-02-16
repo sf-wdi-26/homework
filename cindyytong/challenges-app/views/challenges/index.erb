@@ -39,8 +39,8 @@
 				</li>
 
 				<li>
-					<form method="/challenges/<%= challenge.id %>/delete" action="post">
-						<button>Delete</button>
+					<form method="post" action="/challenges/<%= challenge.id %>/delete"> <input type="hidden" name="_method" value="delete">
+						<button type ="submit">Delete</button>
 					</form>
 				</li>
 <!-- 		add another li? -->

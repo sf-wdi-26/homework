@@ -1,32 +1,32 @@
 <h2>Edit Challenge</h2>
-<form action="/challenges/<%= @challenge.id %>" method="post" class="challenge" id="edit-challenge">
-	<input type="hidden" name="_method" value="put">
+<form method="post" action="/challenges/<%= @challenge.id %>"> 
+<input type="hidden" name="_method" value="put">
 	<div>
 		<label for="challenge[name]">Challenge:</label>
-		<input name="challenge[name]" value="<%= @challenge.name %>">
+		<input name="challenge[name]" value='<%= "#{@challenge.name}" %>'>
 	</div>
 
 	<div>
 		<label for="challenge[difficulty]">Difficulty:</label>
-		<input name="challenge[difficulty]" value="<%= @challenge.difficulty %>">
+		<input name="challenge[difficulty]" value='<%= "#{@challenge.difficulty}" %>'>
 	</div>
 
 	<div>
 		<label for="challenge[start]">Start:</label>
-		<input name="challenge[start]" value="<%= @challenge.start %>">
+		<input name="challenge[start]" value='<%= "#{@challenge.start}" %>'>
 	</div>
 	
 	<div>
 		<label for="challenge[end]">End:</label>
-		<input name="challenge[end]" value="<%= @challenge.end %>">
+		<input name="challenge[end]" value='<%= "#{@challenge.end}" %>'>
 	</div>
 
 	<div>
 		<label for="challenge[photo_url]">Photo URL:</label>
-		<input name="challenge[photo_url]" value="<%= @challenge.photo_url %>">
+		<input name="challenge[photo_url]" value='<%= "#{@challenge.photo_url}" %>'>
 	</div>
 	
 	<div>
-		<input type="submit" value="Create">
+		<button type="submit">Submit</button>
 	</div>
 </form>
