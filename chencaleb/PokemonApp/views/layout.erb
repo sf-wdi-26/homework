@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pokedex</title>
+        <title>Pokemon</title>
+
     </head>
     <body>
-        <h1>Pokemon</h1>
+      <header>
+      	<nav>
+      	  <ul>
+      	    <li><a href="/pokemons">Pokemon</li>
+      	    <li><a href="/pokemons/new">Create a Pokemon</a></li>
+      	  </ul>
+      	</nav>
+      </header>
+
+      <main>
         <%= yield %>
+      </main>
     </body>
 </html>

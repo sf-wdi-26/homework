@@ -1,27 +1,19 @@
 class PokemonApp < Sinatra::Base
 	#root
 	get '/' do
-		@pokemons = Pokemon.all
-		p @pokemons
-		erb :index		
+		redirect('/pokemons')		
 	end
 
 	#pokemon index
 	get '/pokemons' do
 		@pokemons = Pokemon.all
-		erb :index
+		erb :"pokemons/index"
 	end
 
-	#create form
+	#new
 	get '/pokemons/new' do
 		erb :"pokemons/new"
 	end
-
-	#show form
-	# get '/pokemons/id' do
-	# 	@pokemon = Pokemon.find(params[:id])
-	# 	erb :"pokemons/show"
-	# end
 
 	#create pokemon
 	post '/pokemons' do
@@ -31,17 +23,29 @@ class PokemonApp < Sinatra::Base
 		redirect "/"
 	end
 
-	#show?
+	#show
 	get '/pokemons/:id' do
-		@pokemons = Pokemon.all
 		@pokemon = Pokemon.find(params[:id])
-		@pokemon.name
+		erb(:"pokemons/show")
 	end
 
 	#destroy
 	delete '/pokemons/:id' do
 		@pokemon = Pokemon.find(params[:id])
 		@pokemon.destroy
+		redirect("/pokemons")
+	end
+
+	#edit
+	get '/pokemons/:id/edit' do
+		@pokemon = Pokemon.find(params[:id])
+		erb :"pokemons/edit"
+	end
+
+	#update
+	put '/pokemons/:id' do
+		@pokemons = Pokemon.find(params[:id])
+		@pokemon.update_attributes(params[:pokemon])
 		redirect("/pokemons")
 	end
 

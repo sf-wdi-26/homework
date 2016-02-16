@@ -1,7 +1,13 @@
 <ul>
-<% @pokemons.each do | pokemon | %>
+  <% @pokemons.each do | pokemon | %>
     <li>
-        <p><strong><%= pokemon.name %></strong>, <%= pokemon.level %></p>
+        <p>
+          <strong>
+            <a href="/pokemons/<%= pokemon.id %>"><%= pokemon.name %></a>
+          </strong>, Level: 
+          	<%= pokemon.level %>
+        </p>
+
         <form action="/pokemons/<%= pokemon.id %>" method="post" class='delete'>
         	<input type="hidden" name="_method" value="delete">
         	<input type='submit' value="Release">

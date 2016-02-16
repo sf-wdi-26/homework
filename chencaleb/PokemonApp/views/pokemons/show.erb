@@ -1,7 +1,3 @@
-<%= @pokemon.name %>
-<%= @pokemon.level %>
+<a href="/pokemons">Return to PokeList</a>
 
-<form action="/pokemons/<%= @pokemon.id %>" method="post" class='delete'> 
-	<input type="hidden" name="_method" value="delete">
-	<input type='submit' value="Delete">
-</form>
+<h2><%= @pokemon.name %></h2>

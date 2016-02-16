@@ -5,4 +5,5 @@ Bundler.require
 require './models/pokemon'
 require './app'
 
+use Rack::MethodOverride
 run PokemonApp
