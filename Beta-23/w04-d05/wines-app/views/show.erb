@@ -1,0 +1,10 @@
+<%= @wine.name %>
+<%= @wine.category %>
+<%= @wine.country %>
+<%= @wine.region %>
+<%= @wine.price %>
+<form action="/wines/<%= @wine.id%>" method="post" class="delete">
+<input type="hidden" name="_method" value="delete">
+<input type="submit" value="Delete">
+
+</form>
