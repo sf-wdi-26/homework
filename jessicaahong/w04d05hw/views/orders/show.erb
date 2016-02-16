@@ -1,7 +1,14 @@
-<h1><%= @order.dish_name %></h1>
-
-
+<% if @order.rush? %>
+	<h1 style="color: red"><%= @order.dish_name %></h1>
+<% else %>
+	<h1><%= @order.dish_name %></h1>
+<% end %>
+<p class="instructional_text">Created <%= Time.parse(@order.created_at.to_s).utc.localtime("-08:00").strftime("%b %d, %l:%M%P") %></p>
+<% if (@order.created_at != @order.updated_at) %>
+<p class="instructional_text">Last Updated <%= Time.parse(@order.updated_at.to_s).utc.localtime("-08:00").strftime("%b %d, %l:%M%P") %></p>
+<% end %>
 <div class="show_text">
+
 	<h3>Dish Type:</h3>
 	<p><%= @order.dish_type %></p>
 	<h3>Table Number:</h3>

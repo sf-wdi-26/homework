@@ -10,7 +10,7 @@
 </div>
 
 <ul>
-<% @orders.each do |order| %>
+<% @orders.sort.each do |order| %>
 <div>
 	<div class="index_text">
 		<a class="order_name" href="/orders/<%= order.id %>">
@@ -19,6 +19,7 @@
 			<li><%= order.dish_name %></li>
 			<% end %>
 		</a>
+		<p class="instructional_text">Created <%= Time.parse(order.created_at.to_s).utc.localtime("-08:00").strftime("%b %d, %l:%M%P") %></p>
 	</div>
 
 	<div class="buttons">
