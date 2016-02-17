@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valintine's Wine App</title>
+	
+</head>
+<body>
+
+<h1>My Valintine Wine App</h1>
+<%= yield %>
+
+<ul>
+<% @wines.each do |wine| %>
+	<li>
+		<p><strong>"<%= wine.name %>", by <%= wine.category</strong>,
+		<%= wine.country %>,
+		<%= wine.region %>,
+		<%= wine.price %></p>
+	</li>	
+<% end %>
+</ul>
+
+</body>
+</html>
