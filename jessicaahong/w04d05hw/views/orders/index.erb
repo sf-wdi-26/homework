@@ -1,0 +1,41 @@
+<div class="header">
+	<div class="index_text"><h1>Existing Orders</h1></div>
+	<div id="new_order_button" class="buttons index_text">
+		<form method="get" action="/orders/new">
+		<input type="submit" class="btn btn-default" value="Create New Order">
+		</form>
+	</div>
+	<p class="instructional_text">Click on each order for more details.
+	<br><span style="color: red">Red orders are rush orders!</span></p>
+</div>
+
+<ul>
+<% @orders.sort.each do |order| %>
+<div>
+	<div class="index_text">
+		<a class="order_name" href="/orders/<%= order.id %>">
+			<% if order.rush? %><li style="color: red; font-style: italic"><%= order.dish_name %></li>
+			<% else %>
+			<li><%= order.dish_name %></li>
+			<% end %>
+		</a>
+		<p class="instructional_text">Created <%= Time.parse(order.created_at.to_s).utc.localtime("-08:00").strftime("%b %d, %l:%M%P") %></p>
+	</div>
+
+	<div class="buttons">
+	<div class="index_text">
+		<form method="get" action="/orders/<%= order.id %>/edit">
+			<input type="submit" class="btn btn-default" value="Edit Order">
+		</form>
+	</div>
+
+	<div class="index_text">
+		<form method="post" action="/orders/<%= order.id %>/delete">
+		<input type="hidden" name="_method" value="delete">
+			<input type="submit" class="btn btn-default" value="Delete Order">
+		</form>
+	</div>
+	</div>
+<% end %>
+</div>
+</ul>
