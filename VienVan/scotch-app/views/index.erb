@@ -1,0 +1,9 @@
+<div class='panel well'>
+    <ul>
+      <% @books.each do | book | %>
+        <li>
+            <p><a href='/books/<%= book.id %>'><strong>"<%= book.title %>"</strong></a> by <em><%= book.author %></em> will make you feel <%= book.feel %></p>
+        </li>
+      <% end %>
+    </ul>
+</div>
