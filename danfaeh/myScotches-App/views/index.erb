@@ -1,0 +1,23 @@
+<h1>My Scotch List</h1><strong id="home"><a href="/" style="color:white">Home</a></strong>
+<ul id="scotchList">
+  <% @scotches.each do |scotch| %>
+    <li>
+      <a href="/scotches/<%= scotch.id %>"><%= scotch.name %></a>   
+        
+        <form action="/scotches/<%= scotch.id %>/edit">
+          <button>edit</button>
+        </form>
+
+        <form method="post" action="/scotches/<%= scotch.id %>/delete">
+          <button>delete</button>
+        </form>
+
+    </li>
+  <% end %>
+
+<form action="/scotches/new">
+    <input id="newScotchBtn" type="submit" value="Add New Scotch">
+</form>
+</ul>
+
+

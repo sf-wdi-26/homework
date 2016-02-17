@@ -1,0 +1,62 @@
+<h3>Edit Scotch</h3>
+
+<form method="post" action="/scotches/<%= @scotch.id %>">
+  <div>
+    <label for="scotch[name]">Name:</label>
+    <input name="scotch[name]" value='<%= "#{@scotch.name}"%>'>
+  </div>
+  <div>
+    <label for="scotch[year]">Year Made:</label>
+    <input name="scotch[year]" value='<%= "#{@scotch.year}"%>'>
+  </div>
+
+  <div>
+    <label>Blended: </label>
+    <input type="radio" class="radio" id="blended1" name="scotch[blended]" value="true"
+      <% if @scotch.blended == true%>
+        checked="checked"
+      <% end %>
+      >true
+    <input type="radio" class="radio" id="blended2" name="scotch[blended]" value="false"
+      <% if @scotch.blended == false%>
+        checked="checked"
+      <% end %>
+    >false
+  </div>
+  <div>
+    <label>Rating: </label>
+    <input type="radio" class="radio" id="radio1" name="scotch[rating]" value="1" 
+    <% if @scotch.rating == 1%>
+      checked="checked"
+    <% end %>
+    >1
+    
+    <input type="radio" class="radio" id="radio2" name="scotch[rating]" value="2"
+    <% if @scotch.rating == 2%>
+      checked="checked"
+    <% end %>
+    >2
+
+    <input type="radio" class="radio" id="radio3" name="scotch[rating]" value="3"
+    <% if @scotch.rating == 3%>
+      checked="checked"
+    <% end %>
+    >3
+
+    <input type="radio" class="radio" id="radio4" name="scotch[rating]" value="4"
+    <% if @scotch.rating == 4%>
+      checked="checked"
+    <% end %>
+    >4
+
+    <input type="radio" class="radio" id="radio5" name="scotch[rating]" value="5"
+    <% if @scotch.rating == 5%>
+      checked="checked"
+    <% end %>
+    >5
+  </div>
+
+  <div>
+    <button type="submit">Update</button>
+  </div>
+</form>

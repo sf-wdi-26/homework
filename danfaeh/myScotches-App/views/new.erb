@@ -1,0 +1,37 @@
+<h3>New Scotch</h3>
+
+<form id="add-scotch" method="POST" action="/scotches">
+  <div>
+    <label for="scotch[name]">Name:</label>
+    <input name="scotch[name]">
+  </div>
+  <div>
+    <label for="scotch[year]">Year Made:</label>
+    <input name="scotch[year]">
+  </div>
+  <div>
+    <label for="scotch[blended]">Blended? True</label>
+    <input type="radio" class="radio" id="blended1" name="scotch[blended]" value="true">
+    <label>False</label>
+    <input type="radio" class="radio" id="blended2" name="scotch[blended]" value="false">
+  </div>
+  <div>
+    <input type="radio" class="radio" id="radio1" name="scotch[rating]" value="1">
+    <label class="label" for="radio1">1</label>
+    
+    <input type="radio" class="radio" id="radio2" name="scotch[rating]" value="2">
+    <label class="label" for="radio2">2</label>
+
+    <input type="radio" class="radio" id="radio3" name="scotch[rating]" value="3">
+    <label class="label" for="radio3">3</label>
+
+    <input type="radio" class="radio" id="radio4" name="scotch[rating]" value="4">
+    <label class="label" for="radio3">4</label>
+
+    <input type="radio" class="radio" id="radio5" name="scotch[rating]" value="5">
+    <label class="label" for="radio3">5</label>
+  </div>
+  <div>
+    <input type="submit" value="Add Scotch">
+  </div>
+</form>
