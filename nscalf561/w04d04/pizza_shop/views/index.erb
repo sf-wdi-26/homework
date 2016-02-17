@@ -1,0 +1,11 @@
+<ul>
+<% @pizzas.each do | pizza | %>
+    <li>
+        <p><strong>"<%= pizza.name %>", 
+        <%= pizza.sauce %></strong>, 
+        <%= pizza.cheese %>, 
+        <%= pizza.mushrooms %>,
+        <%= pizza.extra_toppings %></p>
+    </li>
+<% end %>
+</ul>

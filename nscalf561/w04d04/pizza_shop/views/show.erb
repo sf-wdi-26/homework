@@ -1,0 +1,10 @@
+<%= @pizza.name %>
+<%= @pizza.sauce %>
+<%= @pizza.cheese %>
+<%= @pizza.mushrooms %>
+
+
+<form action="/pizzas/<%= @pizza.id %>" method="post" class='delete'>
+  <input type="hidden" name="_method" value="delete">
+  <input type='submit' value="Delete">
+</form>
