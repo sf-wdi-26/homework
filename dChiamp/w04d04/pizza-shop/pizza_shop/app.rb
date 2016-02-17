@@ -15,8 +15,8 @@ class PizzaShop < Sinatra::Base
   # create
   post "/pizzas" do
     #these will eventually be real params passed from the client
-    # params = {name: "Red Anchove Delight", sauce: 'red', cheese:true, mushrooms:true, extra_toppings: "anchoves"}
-    @pizza = Pizza.new(params[:pizza])
+    params = {name: "Red Anchove Delight", sauce: 'red', cheese:true, mushrooms:true, extra_toppings: "anchoves"}
+    @pizza = Pizza.new(params)
     @pizza.save
    erb(:"pizzas/new")
   end
