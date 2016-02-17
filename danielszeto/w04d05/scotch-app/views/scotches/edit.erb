@@ -1,0 +1,20 @@
+<h2>Edit Scotch</h2>
+
+
+<form method="POST" action="/scotches/<%= "#{@scotch.id}" %>">
+<input type="hidden" name="_method" value="put">
+
+
+    Brand: <br>
+    <input type="text" name="scotch[brand]" value='<%= "#{@scotch.brand}" %>'><br>
+    Year: <br>
+    <input type="text" name="scotch[year]" value='<%= "#{@scotch.year}" %>'><br>
+    Blended: <input type="radio" name="scotch[blended]" value="Blended"><br>
+    <input type="radio" name="scotch[rating]" value="1"> 1
+    <input type="radio" name="scotch[rating]"value="2"> 2
+    <input type="radio" name="scotch[rating]" value="3"> 3
+    <input type="radio" name="scotch[rating]" value="4"> 4
+    <input type="radio" name="scotch[rating]"value="5"> 5 <br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
