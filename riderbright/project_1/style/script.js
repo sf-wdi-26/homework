@@ -87,7 +87,7 @@ window.onload = function(){
         if (39 in keysDown) { 
             redShip.x += redShip.speed * modifier;
         }
-       
+        //40==up  87==up,
         //console.log("updating")
         
         if (redShip.x <= (boxShip.x + 25)
