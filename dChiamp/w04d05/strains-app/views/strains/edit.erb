@@ -1,0 +1,28 @@
+<h2>Edit Strain</h2>
+
+<form action="/strains/<%= @strain.id %>" method="post" >
+  <input type="hidden" name="_method" value="put">
+  <div>
+    <label for="strain[name]">Name:</label>
+    <input name="strain[name]" value="<%= @strain.name %>">
+  </div>
+
+  <div>
+    <label for="strain[kind]">Type:</label>
+    <input name="strain[kind]" value="<%= @strain.kind %>">
+  </div>
+
+  <div>
+    <label for="strain[origin]">Origin:</label>
+    <input name="strain[origin]" value="<%= @strain.origin %>">
+  </div>
+
+  <div>
+    <label for="strain[rating]">Rating:</label>
+    <input name="strain[rating]" value="<%= @strain.rating %>">
+  </div>
+
+  <div>
+    <input type="submit" value="Save Strain" class='btn'>
+  </div>
+</form>

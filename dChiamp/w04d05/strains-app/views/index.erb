@@ -1,0 +1,22 @@
+<h2>Strains</h2>
+
+<ul>
+  <% @strains.each do |strain| %>
+    <li>
+        <a href="/strains/<%= strain.id %>"> <%= strain[:name] %> </a>
+
+      <a href="/strains/<%= strain.id %>/edit">
+        Edit
+      </a>
+
+      <form action="/strains/<%= strain.id %>" method="post" class='delete'>
+        <input type="hidden" name="_method" value="delete">
+        <input type='submit' value="Delete strain">
+      </form>
+    </li>
+  <% end %>
+</ul>
+
+<hr/>
+
+<a class="btn" href="/strains/new">Add Strain</a>
