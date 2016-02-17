@@ -1,0 +1,10 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Press Start 2P', sans-serif;
+  background-color: #cccacf;
+}
+
+#hero {
+  text-align: center;
+}

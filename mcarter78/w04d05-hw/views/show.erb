@@ -1,0 +1,13 @@
+<ul id="show">
+  <style>
+    #content {
+      background-image: url('<%= @snes_game.box_art_url %>');
+      background-size: contain;
+    }
+    </style>
+  <li>Title: <%= @snes_game.title %><br></li>
+  <li>Developer: <%= @snes_game.developer %><br></li>
+  <li>Publisher: <%= @snes_game.publisher %><br></li>
+  <li>Year: <%= @snes_game.year_released %><br></li>
+  <li>Genre: <%= @snes_game.genre %><br></li>
+</ul>

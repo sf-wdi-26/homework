@@ -1,0 +1,5 @@
+<ul>
+    <% @snes_games.each do |snes_game| %>
+      <li><a href="/snesgames/<%= snes_game.id %>"><%= snes_game.title %></a></li>
+    <% end %>
+</ul>
