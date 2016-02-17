@@ -1,0 +1,22 @@
+<div class="eachCookie">
+	<h2> Name: <%= @cookie.name %> </h2>
+	<h2> Cookie Name: <%= @cookie.cookie_name %> </h2>
+	<h2> Type of Cookie: <%= @cookie.cookie_type %> </h2>
+	<h2>Recipe url: <a id="recipe" href="<%= @cookie.recipe_url %>">Get Recipe</a></h2>
+	<img src="<%= @cookie.photo_url %>">
+
+	<div>
+		<div class="editDelete">
+			<button class="EDbtn"><a id="editBtn" href="/cookies/<%=@cookie.id %>/edit">Edit</a></button>
+		</div>
+
+		<div class="editDelete">
+			<form method="post" action="/cookies/<%= @cookie.id %>/delete">
+			<input name="_method" type="hidden" value="delete" />
+			<button class="EDbtn">Delete</button>
+			</form>
+		</div>
+	</div>
+
+</div>
+
