@@ -1,0 +1,38 @@
+<h2><%= @castle.name %></h2>
+
+<div class="pic">
+  <img src="<%= @castle.photo_url %>">
+</div>
+
+  <ul>
+    <li><div>Location: <%= @castle.location %></div></li>
+    <li><div>Originally built: <%= @castle.year_built %></div></li>
+    <li><div>Architectural Style: <%= @castle.style %></div></li>
+    <li><div>Famous Resident: <%= @castle.royal_residents %></div></li>
+      <li><% if @castle.in_use %>
+          <div class="status">Still in use</div>
+          <% end %>
+      </li>
+      <li><% if @castle.heritage %>
+          <div class="status">Heritage Site</div>
+          <% end %>
+      </li>
+      <li><% if @castle.ruins %>
+          <div class="status">Ruins</div>
+          <% end %>
+      </li>
+  </ul>
+
+
+  <button class="ground">
+    <a class='button' href='/castles/<%= @castle.id %>/edit'>Edit Info</a>
+  </button>
+
+  <form action="/castles/<%= "#{@castle.id}" %>" method="post" class="ground">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form>
+
+  <button>
+    <a class="ground" href='/'>Return to Home</a>
+  </button>
