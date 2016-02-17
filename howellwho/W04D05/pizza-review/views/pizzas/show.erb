@@ -1,0 +1,20 @@
+<a href="/pizzas">Back to All Places</a>
+<br>
+<br>
+<h1><%= @pizza.restaurant %></h1>
+
+<ul>
+  <li>Style:<%= @pizza.style %></li>
+  <li>Stars:<%= @pizza.stars %></li>
+</ul>
+<br>
+<p>
+<a class="btn-primary btn-lg" href="/pizzas/<%= @pizza.id %>/edit" role="button">Edit</a>
+</p>
+<br>
+<form action="/pizzas/<%= @pizza.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" class=" btn-primary btn-lg" value="Delete">
+</form>
+
+</div>
