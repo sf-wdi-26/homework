@@ -1,0 +1,70 @@
+#menu {
+	background-image: url("http://www.agrodolce.it/wp-content/uploads/2014/10/shutterstock_219008905-980x400.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 300px;
+	color: #fff;
+	text-align: center;
+
+}
+input {
+	border-radius: 25px;
+}
+.eachPizza {
+	background-color: gray;
+	color: #fff;
+}
+
+* {margin: 0; 
+	text-align: center;
+
+}
+body {
+	background-color: gray;
+}
+#edit {
+	background-color: gray;
+	color: #fff;
+
+}
+li{
+	list-style: none;
+	display: inline-block;
+	padding: 0 5%;
+
+}
+a{
+	text-decoration: none;
+	color: #000;
+	margin: 2% 0;
+
+}
+button {
+	width: 10%;
+	background-color: #fff;
+	opacity: 0.6;
+	border-radius: 25px;
+	
+}
+
+#menupizza {
+	background-color: gray;
+	opacity: 0.6;
+	color: #fff;
+  padding: 2% 0 5% 0;
+  font-size: 1.4em;
+
+
+}
+
+#menupizza a{
+	padding: 0 5%;
+	width: 100%;
+	opacity: 0.7;
+	text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 25px;
+
+}
