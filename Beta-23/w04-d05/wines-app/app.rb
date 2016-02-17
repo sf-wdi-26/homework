@@ -8,7 +8,7 @@ get "/wines" do
   erb :"index"
   end
 
-  get "/wines/new" do
+  get "/wines/views" do
       erb :new
   end
 

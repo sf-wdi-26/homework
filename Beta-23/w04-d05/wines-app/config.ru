@@ -4,5 +4,6 @@ Bundler.require
 
 require "./models/wine"
 require "./app"
+use Rack::MethodOverride
 
 run WinesApp
