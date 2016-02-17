@@ -1,0 +1,26 @@
+<h2>Edit Info</h2>
+
+<form action='/castles/<%= "#{@castle.id}" %>' method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="castle[name]">Name: </label>
+  <input type="text" name="castle[name]" value="<%= "#{@castle.name}" %>">
+  <label for="castle[photo_url]">Photo: </label>
+  <input type="text" name="castle[photo_url]" value="<%= "#{@castle.photo_url}" %>">
+  <label for="castle[location]">Location: </label>
+  <input type="text" name="castle[location]" value="<%= "#{@castle.location}" %>">
+  <label for="castle[style]">Architectural Style: </label>
+  <input type="text" name="castle[style]" value="<%= "#{@castle.style}" %>">
+  <label for="castle[year_built]">Year built: </label>
+  <input type="text" name="castle[year_built]" value="<%= "#{@castle.year_built}" %>">
+  <label for="castle[royal_residents]">Famous resident: </label>
+  <input type="text" name="castle[royal_residents]" value="<%= "#{@castle.royal_residents}" %>">
+  <input type="checkbox" name="castle[in_use]" value="true"> Still in use<br>
+  <input type="checkbox" name="castle[heritage]" value="true"> Heritage Site<br>
+  <input type="checkbox" name="castle[ruins]" value="true"> Ruins<br>
+
+  <input type="submit" value="edit">
+</form>
+
+<button>
+  <a class='button' href='/'>Return to Home</a>
+</button>

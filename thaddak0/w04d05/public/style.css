@@ -1,0 +1,87 @@
+body {
+  width: 100%;
+  /*background-color: #8EECDF;
+  background-color: #9EFFE0;*/
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+.jumbotron {
+  /*background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/0c/Blenheim_Palace_panorama.jpg);*/
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/7f/Panoramique_Ch%C3%A2teau_de_Versailles_depuis_le_parc.jpg);
+  background-size: cover;
+  color: whitesmoke;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  padding: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+h2 {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 20px;
+}
+.button {
+  font-size: 1em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+label {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+input {
+  display: block;
+  margin: 15px auto;
+}
+
+input[type=checkbox] {
+  margin: auto;
+  display: inline;
+}
+
+.pic {
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  margin: 15px;
+  padding: 5px;
+
+}
+li {
+  text-align: center;
+
+}
+li a {
+  font-size: 1.5em;
+}
+/*.castles {
+  background: rgba(255,255,255,.6);
+  width: 50%;
+  margin:auto;
+}*/
+
+img {
+height: 300px;
+text-align: center;
+margin: 0 auto;
+}
+
+.form {
+  width: 100%;
+}
+
+.ground {
+  display: inline-block;
+}

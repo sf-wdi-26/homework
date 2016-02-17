@@ -1,0 +1,16 @@
+<nav>
+  <button>
+  <a class="button" href="/castles/new">add new estate</a>
+  </button>
+</nav>
+
+<div class="castles">
+
+  <% @castles.each do |castle| %>
+    <ul>
+      <li><a href="/castles/<%= castle.id %>"><%= castle.name %></a></li>
+      <li><%= castle.location %></li>
+    </ul>
+    <% end %>
+
+</div>

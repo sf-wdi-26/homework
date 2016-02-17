@@ -1,0 +1,29 @@
+<h2>Add a new estate:</h2>
+
+<form class="form" method="post" action="/castles">
+
+  <input type="text" name="castle[name]" placeholder= "name">
+
+  <input type="text" name="castle[location]" placeholder= "location">
+
+  <input type="text" name="castle[year_built]" placeholder= "year built">
+
+  <input type="text" name="castle[style]" placeholder= "style">
+
+  <input type="text" name="castle[royal_residents]" placeholder= "famous residents">
+
+  <input type="checkbox" name="castle[in_use]" value="true"> Still in use<br>
+  <input type="checkbox" name="castle[heritage]" value="true"> Heritage Site<br>
+  <input type="checkbox" name="castle[ruins]" value="true"> Ruins<br>
+
+  <input type="text" name="castle[photo_url]" placeholder= "photo url">
+
+  <input type="submit" value="Add">
+
+</form>
+
+<footer class="footer">
+  <button>
+    <a href='/'>Return to Home</a>
+  </button>
+</footer>
