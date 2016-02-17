@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--  GOOGLE FONT OSWALD -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
+    <!-- MAIN CSS  -->
+    <link rel="stylesheet" href="/styles.css" type="text/css">
+
+    <!-- jQuery CSS  -->
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+
+
+    <!-- Bootstrap JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+
+    <!-- JQUERY UI  -->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    <!-- Your own javascript -->
+    <script src="./main.js"></script>
+  </head>
+  <body>
+
+    <div class="navbar navbar-collapse">
+           <a class="navbar-brand header" href="/tasks">My To-Dos</a>
+           <ul class="nav navbar-nav" >
+            <li class="active">
+             <a id="new-task-btn" href="/tasks/new">New Task</a>
+            </li>
+           </ul>
+    </div>
+
+    <%=yield%>
+
+  </body>
+
+
+
+</html>

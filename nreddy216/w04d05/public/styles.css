@@ -1,0 +1,182 @@
+body{
+  background-image: url(./background_pattern.png);
+  background-repeat: repeat;
+
+}
+
+.header{
+
+  font-size: 40px;
+
+  margin-left: 20px;
+
+}
+
+.header:hover{
+  background: white;
+}
+
+.navbar a{
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+
+.navbar{
+  background: rgba(255, 25, 50, 1);
+  height:60px;
+}
+
+.navbar a:hover{
+  background: rgba(255, 0, 255, 0);
+}
+
+#new-task-btn{
+  float: right;
+  background-color: rgba(255, 0, 255, 0);
+
+  margin-right: 4%;
+
+  font-size: 20px;
+}
+
+#new-task-btn:hover{
+  color: yellow;
+}
+
+
+.list{
+  top: 20%;
+  /*left: 10%;*/
+
+  text-align: left;
+
+
+
+}
+
+
+
+
+
+.list li{
+  background-color: rgba(255,255,88,0.8);
+  width: 90%;
+  padding-bottom: 20px;
+
+  border-radius: 10px;
+
+  list-style-type: none;
+
+  box-shadow:  0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.list li p{
+  padding-left: 5%;
+
+  /*font-family: 'Roboto Slab', serif;*/
+
+}
+
+legend{
+  font-family: 'Oswald', sans-serif;
+}
+
+label{
+  font-family: 'Roboto Slab', serif;
+}
+
+p{
+  font-family: 'Roboto Slab', serif;
+}
+
+form input{
+
+}
+
+input{
+  font-family: 'Roboto Slab', serif;
+}
+
+
+.edit-or-new-form{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.task-title strong{
+  /*background-color: #d3d3d3;*/
+  background-color: rgba(0,150,150,0.2);
+  line-height: 50px;
+
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+
+  padding-left: 0;
+}
+
+
+.task-buttons form{
+  display: inline;
+  float: right;
+  clear:left;
+}
+
+button{
+  margin: 5px;
+  width: 40px;
+  height: 60px;
+
+  font-family: 'Oswald', sans-serif;
+}
+
+
+ .edit button{
+  border: none;
+
+
+}
+
+.edit span{
+  text-align: center;
+}
+
+#writing-symbol{
+  font-size: 24px;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.delete button{
+  background-color: #00e500;
+  border: none;
+
+  margin-right: 30px;
+
+}
+
+#new-submit{
+  width: 20%;
+}
+
+.delete button:hover{
+  background-color: #bf8;
+}
+
+.task-details{
+  text-decoration: underline;
+
+  text-transform: full-width;
+  padding-right: 10px;
+
+  font-weight: bolder;
+}
+
+@media (min-width: 844px) {
+
+  #new-task-btn{
+    float: right !important;
+  }
+
+}

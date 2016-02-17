@@ -1,0 +1,3 @@
+development:
+  adapter: postgresql
+  database: task_app_development
