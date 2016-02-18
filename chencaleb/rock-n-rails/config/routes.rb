@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  get '/records' => "records#index"
+  get "/records", to: "records#index"
 
-  get '/records/new' => "records#new"
+  get "/records/new", to: "records#new"
 
-  get '/records' => "records#create"
+  post "/records", to: "records#create"
 
-  get 'records/:id' => "records#show", as: "record"
+  get "/records/:id", to: "records#show", as: "record"
+
+  delete "/records/:id", to: "records#destroy"
 
 end
