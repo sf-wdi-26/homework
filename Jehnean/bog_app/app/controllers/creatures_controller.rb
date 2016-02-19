@@ -15,9 +15,10 @@ class CreaturesController < ApplicationController
         creature = Creature.new(creature_params)
         # check that it saved
         if creature.save
-            # if saved, redirect to route that shows all creatures
-            redirect_to creatures_path
-            # ^ same as redirect_to "/creatures"
+            # if saved, redirect to route that shows just this creature
+            redirect_to creature
+            # ^ same as redirect_to creature_path(creature)
+            # ^ same as redirect_to "/creatures/#{creature.id}"
         end
     end
 
