@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"g",
+				"geometry"
+			],
+			[
+				"info",
+				"info_row_target"
+			],
+			[
+				"pro",
+				"properties"
+			],
+			[
+				"qu",
+				"quakesEndpoint"
+			],
+			[
 				"da",
 				"daysLeft"
 			],
@@ -192,37 +208,17 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "/Users/Will/dev/microblog/.git/COMMIT_EDITMSG",
 			"settings":
 			{
-				"buffer_size": 919,
+				"buffer_size": 288,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "$(document).ready(function(){\n\nvar map;\n  map = new google.maps.Map(document.getElementById('map'), {\n    center: {lat: 37.78, lng: -122.44},\n    zoom: 8\n  });\n\nvar weekly_quakes_endpoint = \"http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson\"\n\n$.ajax({\n  type: 'GET',\n  url: 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson',\n  dataType: 'json',\n  success: function(data) {\n    //celebrate!\n  }\n});\n\n\n  // //places \"thoughts\" into a list on site\n  //   $(\"#list-id\").append(\"<li>\" + words + \"</li>\");\n  //   $(this).find('textarea').val('');\n\n})\n",
-			"file": "base.js",
-			"file_size": 612,
-			"file_write_time": 130985072380000000,
 			"settings":
 			{
-				"buffer_size": 611,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "styles.css",
-			"settings":
-			{
-				"buffer_size": 336,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "reset.css",
-			"settings":
-			{
-				"buffer_size": 1110,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -272,9 +268,13 @@
 	},
 	"file_history":
 	[
+		"/Users/Will/dev/homework/howellwho/W02D04/index.html",
+		"/Users/Will/dev/homework/howellwho/W02D04/reset.css",
+		"/Users/Will/dev/homework/howellwho/W02D04/styles.css",
+		"/Users/Will/dev/homework/howellwho/W02D04/base.js",
+		"/Users/Will/dev/homework/howellwho/W02D04/sol.js",
 		"/Users/Will/dev/homework/howellwho/W02D03 Microblog Bootstrap /blog-bootstrap.html",
 		"/Users/Will/dev/homework/howellwho/W02D03 Microblog Bootstrap /scripts.js",
-		"/Users/Will/dev/homework/howellwho/W02D04/reset.css",
 		"/Users/Will/dev/modules/modules/jquery-form-lab/.git/COMMIT_EDITMSG",
 		"/Users/Will/dev/modules/modules/jquery-form-lab/index.html",
 		"/Users/Will/dev/homework/howellwho/W02D03 Microblog Bootstrap /style.css",
@@ -343,6 +343,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"quakesEndpoint",
 			"sublimelinter",
 			"_____\n_____\n_____\n",
 			"button",
@@ -369,32 +370,30 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "/Users/Will/dev/microblog/.git/COMMIT_EDITMSG",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 919,
+						"buffer_size": 288,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								220,
-								220
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -405,87 +404,26 @@
 			[
 				{
 					"buffer": 1,
-					"file": "base.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 611,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								141,
-								141
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "styles.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 336,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								146,
-								146
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "reset.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1110,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								894,
-								894
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 59.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -522,7 +460,7 @@
 		"cols":
 		[
 			0.0,
-			0.411938788027,
+			0.435501026995,
 			1.0
 		],
 		"rows":
@@ -570,7 +508,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

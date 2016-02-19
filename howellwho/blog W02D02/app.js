@@ -22,10 +22,21 @@ function forSubmit(e) {
     $li.innerHTML = words;
     console.log($li);
     document.getElementById('list-id').appendChild($li);
-     
+    reset(); 
     }
-   
-  
+
+    //link bottom of page
+  //   var newLink = $( '<br><br><a id="link" href="http://www.google.com">Visit Google<a>' );
+  //   newLink.appendTo('body');
+  //   $('#link').attr( "target", "_blank" );
+  // });
+
+
+   // reset text box
+function reset(){
+     document.getElementById("thoughts").value = "";
+
+}
 
 
 

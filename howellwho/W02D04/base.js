@@ -17,9 +17,12 @@ quakeData();
 
 function quakeData(){
 	$.get(quakesendpoint, function(response){
-		response.features.forEach(function renderRowAndMarker(quake){
+		response.features.forEach(function (quake){
+			//add title of quake
 			var title = quake.properties.title;
+			//append info to page
 			$info_row_target.append("<p>" + title + "</p>");
+			//Create the map markers
 			var lat = quake.geometry.coordinates[1];
 			var lng = quake.geometry.coordinates[0];
 			new google.maps.Marker ({
