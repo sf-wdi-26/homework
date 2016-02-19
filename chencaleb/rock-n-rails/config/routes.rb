@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to: "records#index"	
+  
   get "/records", to: "records#index"
 
   get "/records/new", to: "records#new"
