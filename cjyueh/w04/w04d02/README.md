@@ -1,1 +1,0 @@
-Link to Sinata App homework: https://github.com/cjyueh/sinatra-app/tree/master/hmwk-your-own-sinatra-app/restful_controller_app
