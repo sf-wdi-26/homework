@@ -6,8 +6,6 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new(user_params[:id])
-    render :new
   end
 
   def create
