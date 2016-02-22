@@ -5,15 +5,15 @@ class SessionsController < ApplicationController
     render :new
   end
 
-  def user_params
-    # params.require(:user)
-    params.require(:email)
-    params.require(:password)
-    params.permit(:email, :password)
-  end
+  # def user_params
+  #   # params.require(:user)
+  #   params.require(:email)
+  #   params.require(:password)
+  #   params.permit(:email, :password)
+  # end
 
   def create
-    # user_params = params.require(:user).permit(:email, :password)
+    user_params = params.require(:user).permit(:email, :password)
     @user = User.confirm(user_params)
     if @user
       login(@user)

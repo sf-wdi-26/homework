@@ -13,6 +13,6 @@ Rails.application.routes.draw do
 
   get "/sign_in", to: "sessions#new"
 
-  get "/sessions", to: "sessions#create"
+  post "/sessions", to: "sessions#create"
 
 end
