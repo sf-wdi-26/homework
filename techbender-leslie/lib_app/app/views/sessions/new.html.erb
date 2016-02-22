@@ -1,0 +1,13 @@
+Sign In in Sessions
+
+<!-- funny format with url: "/sessions" because there is no model -->
+
+<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+  <div>
+  <%= f.text_field :email, placeholder: "Email" %>
+  </div>
+  <div>
+  <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+  <%= f.submit "Sign In" %>
+  <% end %>
