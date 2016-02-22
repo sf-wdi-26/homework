@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :users 
   
   get "/libraries", to: "libraries#index"
+
+  get "/users/:user_id/libraries", to: "library_users#index", as: "user_libraries"
   
-  
+
 end
