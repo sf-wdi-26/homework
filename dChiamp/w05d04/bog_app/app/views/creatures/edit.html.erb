@@ -1,0 +1,10 @@
+<h1>Creatures of the Bog</h1>
+<p>edit the nastiest stinkiest monsters</p>
+
+<%=form_for @creature do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_area:description %>
+  <%= f.text_field :age %>
+  <%= f.submit "update creature" %>
+<% end %>
+

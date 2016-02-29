@@ -1,0 +1,15 @@
+<h1>Creatures of the Bog</h1>
+<p>behold a list of the nastiest stinkiest creatures:</p>
+
+<% @creatures.each do |creature| %>
+  <div>
+      Name: <%= creature.name %>
+      Description: <%= creature.description %>
+      Age: <%= creature.age %>
+      <%= button_to "Delete Creature", creature, method: :delete %>
+      <%= link_to "Show Creature", creature_path(creature) %>
+     <!-- add link to edit: , '/creatures/<%creature.id%>/edit -->
+     <%= link_to "Edit Creature", edit_creature_path(creature) %>
+
+  </div>
+<%end%>
