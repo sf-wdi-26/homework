@@ -1,0 +1,8 @@
+<h1>Library</h1>
+
+<% @libraries.each do |library| %>
+<%= library.name %>
+    <% if @current_user %>
+          <%= link_to "Join", library_users_path(library) %>
+    <% end %>
+<% end %>
