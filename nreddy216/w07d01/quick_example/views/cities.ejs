@@ -1,0 +1,19 @@
+<h1>Cities</h1>
+
+<ul>
+  <% for(var i=0; i < cities.length; i++){ %>
+    <li>
+      <%= cities[i].name %> <%= cities[i].description %>
+      <form action="/cities/<%=i%>?_method=DELETE" method="POST">
+        <button type="delete" method="POST">Delete</button>
+      </form>
+    </li>
+  <% } %>
+
+  <form action="/cities" method="POST">
+    <input type="text" name="name" />
+    <input type="text" name="description" />
+    <input type= "submit" value="submit" />
+  </form>
+
+</ul>
