@@ -1,0 +1,12 @@
+<h1>List your favorite cities</h1>
+<ul>
+<% for(var i = 0; i< cities.length; i++) {%>
+   <li><%= cities[i].name %> <button id="cool">remove</button> </li>
+
+<% } %>
+</ul>
+
+<form action="/cities" method="POST">
+  <input type="text" name="name" placeholder="name">
+  <input type="submit" value="submit">
+</form>
