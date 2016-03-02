@@ -29,6 +29,14 @@ function parsePlace(original, fixed){
 	return fixed;
 }
 
+function colorPins(){
+	map.data.setStyle(function(marker) {
+	 return {icon:feature.getProperty('icon')};
+	});
+}
+	
+
+
 $(document).ready(function(){
 
 	//map centered at San Francisco, zoomed out
@@ -45,9 +53,7 @@ $(document).ready(function(){
   success: function(data) {
 	    //celebrate!
 	    
-	    //get the time NOW
-	    var today = new Date();
-	    var now = today.getTime();
+	    
 
 
 	    //make an array of the features 
@@ -57,26 +63,28 @@ $(document).ready(function(){
 		for(var i=0; i < featuresArray.length; i++){
 
 			//make a list item with the EQ title, append the list item to 'info'
-			var li = document.createElement('li');
+			
+			// var infoEl = document.createElement('li');
+			$infoEl = $("<li></li>");
 
-			//not the title 
+			//changes the 'place' to only the place name
 			var place = (featuresArray[i].properties.place).split(' ');
-
 			var location = '';
-
 			location = parsePlace(place, location);
 
-
-			$(li).html(location);
-			$('#info').append(li);
+			//appends the place to the info
+			$infoEl.html(location);
+			$('#info').append($infoEl);
 
 			//get the time of the earthquake
 			//get the time difference in hours
 			var earthquakeTime = featuresArray[i].properties.time;
 			var timeDiff = document.createElement('p');
+			//get the time NOW
+	   		var now = Date.now();
 			$(timeDiff).html("Time since earthquake: " + getTimeDiff(earthquakeTime, now) + " hours");
 
-			$(li).append(timeDiff);
+			$infoEl.append(timeDiff);
 			
 			//get the latitude and longitude
 			var myLatLng = {lat: featuresArray[i].geometry.coordinates[1], lng: featuresArray[i].geometry.coordinates[0]};
@@ -87,9 +95,9 @@ $(document).ready(function(){
 			    map: map
 			  });
 
-				// map.data.setStyle(function(marker) {
-		  //  		 return {icon:feature.getProperty('icon')};
-		  // 		});
+			//colorPins();
+
+				
 		}
 
 	
