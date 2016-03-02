@@ -1,7 +1,7 @@
 var express = require('express')
   , router = express.Router()
 
-router.use('/food', require('./food'))
+router.use('/', require('./exercises'))
 
 
 
