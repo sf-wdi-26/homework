@@ -1,0 +1,129 @@
+
+def create
+    client_params = params.require(:client).permit(:first_name, :last_name, :email, :password)
+    @client = client.create(client_params)
+
+    redirect_to "/clients"
+#actually want the above page to redirect to another form welcome page 
+#this other form will have all the other db details
+  end
+
+def show
+    @client = client.find(params[:id])
+    render :show
+  end
+
+end
+VIEWS
+
+INDEX
+touch app/views/clients/index.html.erb
+<h1>EMPRESSED</h1>
+
+<div>
+There are currently <%= @users.length %> signed_up
+</div>
+
+#decorate this page the way you would want your homepage to be 
+#search the pictures you put in your phone
+
+#signin with a link to sign in
+#two tabs client / Client
+
+#icebox - video description of service 
+#main picture a video of client at work 
+
+
+
+
+touch app/views/clients/new.html.erb
+
+VIEWS - NEW sign up page 
+Sign Up
+
+<%= form_for @client do |f| %>
+  <div>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+  </div>
+  <div>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+  </div>
+  <div>
+    <%= f.text_field :email, placeholder: "Email" %>
+  </div>
+  <div>
+    <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+#confirm password
+  <%= f.submit "Sign Up" %>
+<% end %>
+
+#render a page that has them fill out the rest of their profile
+#stated this in redirect_to page
+
+
+# Uncomment your bcrypt in your Gemfile
+#to avoid the error after clicking sign in
+Run bundle
+adding  ( has_secure_password ) to model
+
+
+
+
+
+
+
+
+
+
+
+
+#VIEW- SHOW 
+touch app/views/clients/show.html.erb
+<div>
+  Welcome, <%= @user.first_name %> 
+</div>
+
+#This would be the page with the new input form
+#how would I link this info.. would I make a new create controller or add the info the the already made create folder 
+
+<%= form_for @client do |f| %>
+  <div>
+    <%= f.text_field :speciality, placeholder: "Speciality i.e color" %>
+#icebox
+#how to make this when they start typing options come up
+  </div>
+  <div>
+    <%= f.text_field :salon, placeholder: "Salon" %>
+  </div>
+  <div>
+    <%= f.text_field :school, placeholder: "School" %>
+  </div>
+ <div>
+    <%= f.text_field :bio, placeholder: "Brief Description " %>
+  </div>
+  <div>
+    <%= f.text_field :headshot, placeholder: "Headshot" %>
+#how to make upload photo link
+  </div>
+<div>
+ <%= f.text_field :license, placeholder: "Upload license" %>
+  </div>
+#confirm password
+  <%= f.submit "Sign Up" %>
+<% end %>
+
+
+client MODEL
+class client < ActiveRecord::Base
+  has_secure_password
+end
+
+
+Sessions are next for Sign In … 
+
+
+
+
+
+
