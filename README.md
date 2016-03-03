@@ -1,3 +1,4 @@
+
 #SF-WDI-26 Homework submission
 
 Homework will be turned in to your fork of this repository daily.
@@ -51,3 +52,4 @@ Message about your experience goes here
 ```
 
 Replace the `#`s next to comfort and completness with a number (1 - 5) to represent how comfortable you are with the topic and how much of the assignment you were able to complete.  A 1 is the lowest (least comfortable / very little complete), and a 5 is the highest (most comfortable / fully complete).
+
