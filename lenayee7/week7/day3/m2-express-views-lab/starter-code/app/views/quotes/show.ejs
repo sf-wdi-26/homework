@@ -1,0 +1,14 @@
+<h3>Showing one Quote</h3>
+<p><a href="../quotes"%>Quotes</a></p>
+
+<h3><%= quote.quote %></h3>
+
+<div>
+</div>
+<h3><%= quote.author %></h3>
+
+<form method="POST", action="/quotes/<%=quote.id%>?_method=DELETE">
+	<button type="submit">Delete</button>
+</form>
+
+
