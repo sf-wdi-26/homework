@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/quotes">Quoots</a></h1>
+      <a href="/quotes/new">+ Quote</a>
+    </header>
+    <hr>
+    <!-- the below `triple-stash`, avoid handlebars escaping any html -->
+   {{{body}}}
+
+   <div id="create-form">
+     <fieldset>
+       <form action="/quotes" method="POST">
+         <div class="form-group col-md-4">
+           <input type="text" class="form-control" name="author" placeholder="Author">
+         </div>
+         <div class="form-group col-md-4">
+           <input type="text" class="form-control" name="text" placeholder="Quote">
+         </div>
+         <input type="submit">
+       </form>
+     </fieldset>
+   </div>
+  </body>
+</html>

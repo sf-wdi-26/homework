@@ -1,0 +1,10 @@
+<ul>
+{{#each quotes}}
+  <li>
+    <a href="/quotes/{{_id}}">{{author}}:{{text}}</a>
+    <form action="/quotes/{{_id}}?_method=DELETE" method="POST">
+      <input type="submit" value="Delete">
+    </form>
+  </li>
+{{/each}}
+<ul>
