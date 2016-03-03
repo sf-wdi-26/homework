@@ -1,2 +1,10 @@
 {{quote.text}}
 {{quote.author}}
+<form method="POST" action="/quotes/{{quote._id}}?_method=PUT">
+  <input name="body" placeholder="Add your quote here ..."> <br>
+  <input name="author" type="text" placeholder="Who said it?"><br>
+  <button type="submit" class="btn btn-default">Update</button>
+</form>
+<form action="/quotes/{{quote._id}}?_method=DELETE" method="POST">
+     <button type='submit'>DELETE</button>
+   </form>

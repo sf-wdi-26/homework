@@ -29,32 +29,32 @@ function getQuote(request, response) {
 }
 
 // UPDATE
-function updateQuote(request, response) {
-  var id = request.params.id;
+function updateQuote(req, res) {
+  var id = req.params.id;
+  Quote.findById({_id: id}, function(err, quote) {
+    if(err) res.json({message: 'Could not update quote: ' + err});
 
-  Quote.findById({_id: id}, function(error, quote) {
-    // if(error) response.json({message: 'Could not find quote b/c:' + error});
+    if (req.body.text) {
+      quote.text = req.body.text;
+    }
+    if (req.body.author) {
+      quote.author = req.body.author;
+    }
 
-    if(request.body.name) quote.name = request.body.name;
-    if(request.body.color) quote.color = request.body.color;
-
-    quote.save(function(error) {
-      // if(error) response.json({messsage: 'Could not update quote b/c:' + error});
-
-      response.json({message: 'Quote successfully updated'});
+    quote.save(function(err) {
+      if(err) res.json({messsage: 'Could not save updated quote: ' + err});
+      res.redirect('quotes');
     });
   });
 }
 
+
 // DELETE
 function removeQuote(request, response) {
   var id = request.params.id;
-
   Quote.remove({_id: id}, function(error) {
-    // if(error) response.json({message: 'Could not delete quote b/c:' + error});
-
-    response.json({message: 'Quote successfully deleted'});
   });
+  response.redirect('quotes')
 }
 
 module.exports = {
