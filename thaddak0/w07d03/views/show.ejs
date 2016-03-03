@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote App</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css" /></head>
+<body>
+    <h1>Quote Page</h1>
+    <div class="container">
+    <ul>
+      <li><b>Quote: </b> <%= quote.text %></li>
+      <li><b>Author: </b> <%= quote.author %></li>
+
+    </ul>
+    </div>
+    <div class="container">
+        <% include ./partials/quote/editform %>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote App</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css" /></head>
+<body>
+    <h1>Quotes App</h1>
+    <div class="container">
+    <% for(var i=0; i< quotes.length; i++) {  %>
+    <ul>
+      <li><b>Quote: </b> <%- link_to (quotes[i].text, "/quotes/" + quotes[i]._id) %></li>
+      <li><b>Author: </b> <%= quotes[i].author %></li>
+
+    </ul>
+    <% } %>
+    </div>
+
+    <hr>
+    <div class="container">
+        <% include ./partials/quote/form %>
+    </div>
+
+</body>
+</html>
