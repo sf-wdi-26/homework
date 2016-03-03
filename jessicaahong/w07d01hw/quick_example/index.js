@@ -4,7 +4,8 @@ var express = require('express'),
 var ejs = require('ejs');
 var bodyParser = require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({extended:false});
-
+var methodOverride = require('method-override');
+// var connect = require('connect');
 
 var burgers = [
 				'Hamburger',
@@ -107,17 +108,31 @@ app.post("/cities", parseUrlencoded, function (req, res) {
 	res.render('cities', {cities: cities});
 });
 
+
+//this doesn't work (will do show page but not form)
 app.get("/cities/:id", function (req, res) {
 	var id = req.params.id;
 	var city = cities[id];
+	console.log(city);
 	res.render('city_show', {city: city});
 });
 
 //work in progress for delete route
-app.delete("/cities/:id", function (req, res) {
-	var id = req.params.id;
-	delete cities[id];
-	res.json({message : "deleted"});
+// app.delete("/cities/:id", function (req, res) {
+// 	var id = req.params.id;
+// 	delete cities[id];
+// 	res.json({message : "deleted"});
+// });
+
+//this doesn't work
+app.delete('/cities/:id', function(req, res){
+    for (var key in cities){
+        if(cities[key].id == req.params.id){
+            delete cities[key];
+            console.log("deleted");
+        }
+    }
+    // res.json({message: 'deleted'});
 });
 
 //homework stretch exercises
