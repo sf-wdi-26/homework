@@ -33,13 +33,21 @@ body{
 	color: #FDF3E7;
 }
 
+.scoreboard{
+	/*text-align: center;*/
+	width: 40%;
+	float: right;
+}
+
 .reset{
 	background-color: #C63D0F;
 	border-radius: 5px;
 	text-align: center;
 	width: 100px;
 
-	padding: 1px;
+	padding: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
 
 	margin: 0 auto;
 
@@ -56,8 +64,13 @@ body{
 	text-align: center;
 	font-size: 40px;
 	margin-bottom: -20px;
+	float: left;
 
 
+}
+
+.header-container{
+	margin: 0 auto;
 }
 /*
 .header-container{

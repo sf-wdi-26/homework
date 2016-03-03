@@ -3,6 +3,10 @@
 $ (document).ready(function(){
     console.log("Linked.");
 
+    var xScore = 0;
+    var oScore = 0;
+    var tieScore = 0;
+
     playGame();
 
     $(".reset").click(function(){
@@ -16,6 +20,8 @@ $ (document).ready(function(){
 //global variables for players
 var x = 'X';
 var o = 'O';
+
+
 
 //Object key/value for the TTT board
 var Board = {
@@ -94,7 +100,7 @@ var whoseTurn = function(){
 
 };
 
-
+//if the turn is currently x, then the next turn will be o etc.
 var alternateTurn = function(turn){
 
   if (turn===x){
@@ -108,7 +114,7 @@ var alternateTurn = function(turn){
 
 };
 
-
+//counts how many boxes are not "null" - used for tie
 var turnCount = function(){
   var counter = 0;
 
