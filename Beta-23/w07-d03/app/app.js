@@ -24,4 +24,6 @@ app.use(express.static(__dirname + '/public'));
 var routes = require('./config/routes');
 app.use(routes);
 
-app.listen(3000);
+app.listen(3000, function(){
+	console.log('running port 30000');
+});
