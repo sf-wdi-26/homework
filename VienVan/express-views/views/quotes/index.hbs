@@ -1,0 +1,15 @@
+<h1>testing index page</h1>
+{{#each quotes}}
+<p>
+  <a href="quotes/{{_id}}">{{text}}</a>
+</p>
+<p>
+  {{author}}
+</p>
+{{/each}}
+
+<form action="/quotes" method="POST">
+      <input type="text" name="text" placeholder="Text">
+      <input type="text" name="author" placeholder="Author">
+      <input type="submit">
+</form>
