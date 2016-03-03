@@ -1,0 +1,17 @@
+<h1><%= quote.text %><h1>
+<h3><%= quote.author %></h3>
+
+<h2>Update Quote</h2>
+<fieldset>
+  <form action="/quotes/<%= quote._id %>?_method=PUT" method="POST">
+    <div class="form-group col-md-4">
+      <input type="text" class="form-control" name="text" placeholder="Update Text">
+    </div>
+    <div class="form-group col-md-4">
+      <input type="text" class="form-control" name="author" placeholder="Update Author">
+    </div>
+    <div class="form-group col-md-4">
+      <input class="btn btn-primary col-md-12" type="submit">
+    </div>
+  </form>
+</fieldset>
