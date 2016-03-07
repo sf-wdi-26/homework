@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<% include ../partials/head %>
+</head>
+<body>
+<div class="container">
+<% include ../partials/header %>
+<blockquote>
+	<p><%= quote.quote %></p>
+	<footer><%= quote.orator %></footer>
+</blockquote>
+
+<hr>
+<h3>Edit Quote</h3>
+	<form method="POST" action="/quotes/<%= quote._id %>?_method=PUT">
+	<label for="quote-content">Quote:</label>
+	<input id="quote-content" name="quote" type="text" class="form-control">
+	<br>
+	<label for="quote-orator">Quoted Person:</label>
+	<input id="quote-orator" name="orator" type="text" class="form-control">
+	<br>
+	<input type="submit" value="Edit Quote" class="btn btn-default" >
+	</form>
+	<br>
+<!-- delete button -->
+	<form method="POST" action="/quotes/<%= quote._id %>?_method=DELETE">
+		<button type="submit" class="btn btn-danger">Delete Quote</button>
+	</form>
+
+</div>
+<% include ../partials/footer %>
+</body>
+</html>
