@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes App</title>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+</head>
+<body>
+
+  <% include ./partials/header %>
+
+  <div class="container">
+
+  <% include ./partials/form %>
+  
+  </div>
+
+  <div class="container">
+
+
+  <% for(var i=0; i< quotes.length; i++) {  %>
+    <ul>
+      <li><b>Quote : </b> <%= quotes[i].quote %></li>
+      <li><b>Author : </b> <%= quotes[i].author %></li>
+        <a href="/quotes/<%=quotes[i]._id%>">Edit</a>
+        
+    </ul>
+    <% } %>
+    </div>
+
+<% include ./partials/footer %>
+
+
+
+
