@@ -1,0 +1,16 @@
+<% include ../partials/head %>
+<% include ../partials/header %>
+
+<form method="POST" action="/quotes">
+  <div class="form-group col-md-4">
+    <input name="text" name="quote[text]" class="form-control" placeholder="Share a quote!"/>
+  </div>
+  <div class="form-group col-md-4">
+    <input name="text" name="quote[author]" class="form-control" placeholder="Who said this quote?"/>
+  </div>
+    <div class="form-group col-md-4">
+      <input class="btn btn-default col-md-12" type="submit" value="Share Quote">
+    </div>
+</form>
+
+<% include ../partials/footer %>
