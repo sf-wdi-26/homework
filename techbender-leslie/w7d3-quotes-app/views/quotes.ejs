@@ -1,0 +1,22 @@
+<% quotes.forEach(function(quote) { %>
+  <li>
+    <blockquote>
+      <p><%= quote.text %></p>
+      <footer><%= quote.author %></footer>
+    </blockquote>
+  </li>
+<% }); %>
+
+  <form method="POST" action="/quotes">
+    <div>
+    <textarea name="body" class="form-control" id="quote-body"
+    placeholder="Quote goes here..."><%= quote.body %></textarea>
+    <br>
+    <input name="author" type="text" class="form-control"  id="quote-author" value="<% quote.author %>"
+      placeholder="Who said it?"/>
+    </div>
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
