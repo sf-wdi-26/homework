@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote App</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+</head>
+<body>
+  <h1>
+    <a target="_blank" href="https://www.youtube.com/watch?v=mKli0y-Xr-Q">
+      Quote App
+    </a>
+  </h1>
+  <div class="container">
+  <% for(var i=0; i< quotes.length; i++) {  %>
+    <ul>
+      <li><b>Quote : </b> <%= quotes[i].quote %></li>
+      <li><b>Author : </b> <%= quotes[i].author %></li>
+      <%- link_to("edit", '/quotes/'+quotes[i]._id) %>
+    </ul>
+    <% } %>
+    </div>
+    <hr>
+    <div class="container">
+        <% include ./partials/quotes/form %>
+    </div>
+
+<footer>
+  <p>©luca spezzano</p>
+</footer>
