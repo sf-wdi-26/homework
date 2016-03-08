@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ./partials/head %>
+
+<div class="container">  
+  <body>
+    <% include ./partials/header %>
+    <div class="centeralign">
+    <%- link_to("Add a Quote", "quotes/new", {Class: "btn btn-primary center"}) %>
+    </div>
+    <br>
+    <div class="container">
+    <% for(var i=0; i < quotes.length; i++) {  %>
+      <ul>
+        <li><%= quotes[i].text %></li>
+        <li class="italic"> - <%= quotes[i].author %></li>
+        <%- link_to("edit", "quotes/"+quotes[i].id) %>
+      </ul>
+    <% } %>
+    </div>
+  </body>
+  <hr>
+</div>
+
+<% include ./partials/footer %>
+</html>
