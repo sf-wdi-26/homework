@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ./partials/head %>
+<body>
+	<div class="container">
+		<% include ./partials/header %>
+		<%- link_to("ADD NEW QUOTE", 'quotes/new') %>
+		<h2>List of Quotes</h2>
+		<div class="container">
+			<% for(var i=0; i< quotes.length; i++) {  %>
+			<ul>
+				<li><b>Quote: </b> <%= quotes[i].text %></li>
+				<li><b>Author: </b> <%= quotes[i].author %></li>
+				<%- link_to("edit", '/quotes') %>
+			</ul>
+			<% } %>
+		</div>
+		<% include ./partials/footer %>
+	</div>
+</body>
