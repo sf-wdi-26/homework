@@ -1,0 +1,62 @@
+<div class="container-fluid">
+
+<h1 class="artist-name">{{artist.name}}</h1>
+
+      <div class="row row-centered">
+          <div class="col-lg-3" >
+            <ul class="thumblist col-centered">
+              <li><img src="{{artist.photo_url}}"/></li>
+            </ul>
+          </div>
+          <div class="col-lg-8">
+            <div class="artist-bio-label">Artist Bio:</div>
+            <div class="artist-bio">{{artist.bio}}</div>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#edit-artist-modal">Edit</button>
+            <a href="/artists/{{artist._id}}/newalbum" class='btn btn-success'>Add new Album</a>
+          </div>
+      </div>
+      <div class="row row-centered">
+        {{#each artist.albums}}
+          <div class="col-lg-3">
+            <ul class="thumblist col-centered">
+              <li><img src="{{albumCover}}"></li>
+            </ul>
+          </div>
+          {{/each}}
+      </div>
+
+
+
+
+
+</div>
+<!---Form to Edit  Artists-------------------------------------------------->
+<div class="modal fade" id = "edit-artist-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title labels">Edit Artist</h4>
+      </div>
+      <div class="modal-body">
+
+        <div class="container-fluid">
+              <form action="/artists/{{artist._id}}?_method=PUT" method="POST" class="form-group">
+                <label for="artist-name" class='labels'>Artist's Name: </label>
+                <input id="artist-name" type="text" name="name" class="form-control" value={{artist.name}}>
+                <label for="artist-bio" class='labels'>Artist's Bio: </label>
+                <input id="artist-bio" type="text" name="bio" class="form-control" value={{artist.bio}}>
+                <label for="artist-photo_url" class='labels'>New Picture: </label>
+                <input id="artist-photo_url" type="text" name="photo_url" class="form-control" value={{artist.photo_url}}>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <input type="submit" class="btn btn-success">
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Form to Edit  Artists-------------------------------------------------->
