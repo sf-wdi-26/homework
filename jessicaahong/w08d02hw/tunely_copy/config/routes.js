@@ -60,6 +60,7 @@ router.route('/deathmetal')
 router.route('/search')
   .get(albumsController.search);
 
+
 /*
  * JSON API Endpoints
  */
