@@ -1,0 +1,135 @@
+body {
+  background: black;
+  font-family: Kanit;
+  color: white;
+}
+h4, p {
+  text-align: center;
+}
+/*******************NAV****************************************************/
+.sheade {
+    font-size: 20px;
+    color: white !important;
+}
+.sheade:hover {
+    color: rgba(184, 115, 51, .9) !important;
+}
+.navbar {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .2));
+  /*border-bottom: 1px solid gray;*/
+}
+a:hover {
+  background: none !important;
+  color: white;
+}
+a.nav-button {
+  color: rgba(184, 115, 51, .9);
+  font-size: 20px;
+}
+a.nav-button:hover {
+  color: white;
+  background: none !important;
+}
+/*******************NAV****************************************************/
+/*******************Hero/Logo****************************************************/
+.hero {
+    width: 100%;
+    height: 50em;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0 ,0, 0, .2)), url('https://images.unsplash.com/photo-1415886541506-6efc5e4b1786?crop=entropy&dpr=2&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1275');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 3em;
+}
+.logo {
+    width: 100%;
+    color: white;
+    font-size: 120px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    letter-spacing: 5px;
+    transform: translateY(-50%);
+    text-shadow: 0px 0px 50px black;
+    font-family: Patua One;
+}
+
+#gangsta-quote {
+    font-family: Kanit;
+    font-size: 30px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 0px 0px 50px black;
+}
+#gangsta {
+  font-family: Niconne;
+  font-size: 45px;
+  letter-spacing: 10px;
+  color: rgba(184, 115, 51, .9);
+  /*text-shadow: 0px 0px 20px white;*/
+}
+/*******************Hero/Logo****************************************************/
+
+/*******************Main Content****************************************************/
+.thumblist {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.thumblist li {
+    float: left;
+    margin: 5px;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.thumblist img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    width: 200px;
+    display: block;
+    -ms-interpolation-mode: bicubic; /* Better image scaling in IE */
+}
+.add-artist-button {
+    padding: 2em;
+    text-align: center;
+}
+.artist-square {
+  position: relative;
+  margin-bottom: 1.5em;
+  text-align: center;
+  padding: 50px;
+}
+img {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+img:hover {
+  border: 2px solid rgba(184, 115, 23, .9);
+}
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+/*******************Main Content****************************************************/
+.labels {
+  color: black;
+}
