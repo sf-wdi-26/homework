@@ -6,8 +6,6 @@ var bodyParser = require('body-parser');
 var ejs = require('ejs');
 var app = express();
 
-// set the view engine to ejs
-app.set('view engine', 'ejs');
 
 // database setup
 var mongoose = require('mongoose');
@@ -17,6 +15,11 @@ mongoose.connect('mongodb://localhost:27017/quotes_app');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// set the view engine to ejs
+app.set('views', './views');
+app.set('view engine', 'ejs');
+
 
 app.use(express.static(__dirname + '/public'));
 
