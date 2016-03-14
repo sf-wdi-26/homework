@@ -1,6 +1,9 @@
 
 
 
+<head>
+    <% include ../partials/head %>
+</head>
 
 
     <% quotes.forEach(function(quote){%>
@@ -12,9 +15,13 @@
         </div>
 
 
-
-
      <%   }) %>
+
+     <body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
 
 
 <form method="POST" action="/quotes">
