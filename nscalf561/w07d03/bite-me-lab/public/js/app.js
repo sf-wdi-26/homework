@@ -26,7 +26,7 @@ function getFoods() {
   $.get("/foods", function(res){
     var foods = res.reverse();
     // grab foods template
-    renderFoods(foods)
+    renderFoods(foods);
   });
 }
 
