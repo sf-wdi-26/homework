@@ -1,0 +1,10 @@
+<div class="container-fluid">
+
+<form action="/artists/{{artist._id}}?_method=PUT" method="POST" class="form-group">
+  <input id="artist-name" type="text" name="name" class="form-control" value={{artist.name}}>
+  <input id="artist-bio" type="text" name="bio" class="form-control" value={{artist.bio}}>
+  <input id="artist-photo_url" type="text" name="photo_url" class="form-control" value={{artist.photo_url}}>
+  <input type="submit" class="btn btn-success">
+</form>
+
+</div>

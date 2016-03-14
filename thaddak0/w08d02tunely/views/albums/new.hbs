@@ -1,0 +1,17 @@
+
+<div class="container-fluid">
+<h2>Add a new album for {{artist.name}}</h2>
+<form action="/artists/:id" method="post" class="form-group">
+  <label for="album-name">Album Name:</label>
+  <input id="album-name" type="text" name="name" class="form-control">
+  <label for="album-yearReleased">Year Released:</label>
+  <input id="album-yearReleased" type="text" name="yearReleased" class="form-control">
+  <label for="album-songCount">Song Count:</label>
+  <input id="album-songCount" type="number" name="songCount" class="form-control">
+  <label for="album-albumCover">Album Cover:</label>
+  <input id="album-albumCover" type="text" name="albumCover" class="form-control">
+  <input type="hidden" name="artistid" value="{{artist._id}}"> 
+  <input type="submit" class="btn btn-success">
+</form>
+
+</div>
