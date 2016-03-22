@@ -1,0 +1,22 @@
+{
+  "name": "intro-angular-lab",
+  "homepage": "https://github.com/techbender-leslie/Tunely",
+  "authors": [
+    "techbender-leslie <techbenderleslie@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.2",
+    "bootstrap-css-only": "^3.3.6"
+  }
+}
