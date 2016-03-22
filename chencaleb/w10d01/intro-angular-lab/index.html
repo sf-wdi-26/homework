@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="main.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+	<title>Movie App</title>
+</head>
+<body ng-controller="MovieCtrl" ng-style="style">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<br>
+		    <form ng-submit="addMovie()">
+		      <div class="form-group">
+		        <label for="movie-title">Movie Title</label>
+		        <input type="text" ng-model="movie.title" class="form-control" placeholder="What do you want to watch?" autofocus>
+		      </div>
+		      <input type="submit" value="Add Movie" class="btn btn-default">
+		    </form>				
+			  <div ng-if="moviesToWatch.length > 0">
+			  	<hr>
+			    <div class="panel panel-default">
+			      <div class="panel-heading">
+			        <h3 class="panel-title">
+			        	{{moviesToWatch.length}} <span ng-pluralize count="moviesToWatch.length" when="{'1': 'Movie', 'other': 'Movies'}"></span> to Watch
+			        </h3>
+			      </div>
+			      <ul class="list-group">
+			      	
+			        <li ng-repeat="movie in moviesToWatch | orderBy:'title' | limitTo: movieLimit" class="list-group-item">
+			        	<p class="list-group-item-text">
+
+			        		<span ng-class="{watched: movie.watched}">{{movie.title}}</span>
+			        		
+			        		<span class="pull-right">
+			        		  <a href="#" ng-click="markWatched(movie)"><i class="glyphicon" ng-class="{'glyphicon-check': movie.watched, 'glyphicon-unchecked': !movie.watched}"></i></a>
+			        		  <a href="#" ng-click="deleteMovie(movie)"><i class="glyphicon glyphicon-remove-circle"></i></a>
+			        		</span>
+			        	</p>
+			        </li>
+		
+			        <li class="list-group-item">
+		        		<p class="list-group-item-text">
+		        			<a href="#" ng-click="toggleMovieLimit()">
+		        				Show {{movieLimit ? "More" : "Less"}}
+		        			</a>
+		        		</p>
+			        </li>
+			      </ul>
+			    </div>
+			  </div>
+
+			  <hr>
+			  <button class="btn btn-primary" ng-click="changeBackground()">Change Background</button>
+			  <button class="btn btn-default" ng-click="clearBackground()">Clear Background</button>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
