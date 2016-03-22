@@ -13,6 +13,7 @@
   </head>
   <body ng-app="movieApp">
     <div ng-controller="MovieCtrl">
+      <div ng-style='style'>
       <h1>Movies To Watch</h1>
           <form ng-submit="submit()" placeholder="Enter Movie">
           <input type="text" ng-model="text" name="text" />
@@ -27,11 +28,14 @@
           }"></ng-pluralize>
           </h3>
         <div ng-repeat="movie in moviesToWatch | orderBy: '-title' | limitTo: moviesLimit">
-          <h4 ng-style='style'>{{ movie.title }} <span class="glyphicon glyphicon-trash" ng-click="delete(movie)"></span> <button class="glyphicon glyphicon-ok" ng-click="style={'text-decoration': 'line-through'}"><button class="glyphicon glyphicon-picture"></h4>
+          <h4>{{ movie.title }} <span class="glyphicon glyphicon-trash" ng-click="delete(movie)"></span> <button class="glyphicon glyphicon-ok" ng-click="style={'text-decoration': 'line-through'}"><button class="glyphicon glyphicon-picture" ng-click="changeBackground()"></h4>
+
+        </div>
         </div>
 
-        <button ng-click="moviesLimit = moviesToWatch.length"> Show More</button>
-        <button ng-click="moviesLimit=5"> Show Less</button>
+        <button class="btn btn-primary"ng-click="moviesLimit = moviesToWatch.length"> Show More</button>
+        <button class="btn btn-primary" ng-click="moviesLimit=5"> Show Less</button>
+        <!-- <button class="btn btn-primary" ng-click="changeBackground()">Change Background</button> -->
     <script type="text/javascript" src="controller/MovieCtrl.js"></script>
   </body>
 </html>

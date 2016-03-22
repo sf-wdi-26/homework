@@ -39,4 +39,11 @@ movieApp.controller('MovieCtrl', ['$scope', function ($scope) {
   // $scope.limitTo = function(movie) {
   //   var limit = $scope.moviesToWatch.
   // }
-}]);
+
+  $scope.changeBackground = function() {
+    randomIndex = Math.floor(Math.random() * $scope.moviesToWatch.length);
+    // console.log(randomIndex);
+    randomImage = $scope.moviesToWatch[randomIndex].image;
+    $scope.style = {'background-image': 'url(' + randomImage + ')'};
+  };
+}]);  
