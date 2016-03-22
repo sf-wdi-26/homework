@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie App</title>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+  </head>
+  <body ng-app="movieApp">
+    <div ng-controller="MovieCtrl">
+      <h1>Movies To Watch</h1>
+          <form ng-submit="submit()" placeholder="Enter Movie">
+          <input type="text" ng-model="text" name="text" />
+          <input type="submit" id="submit" value="Submit" />
+
+          </form>
+          <h3><ng-pluralize count ='moviesToWatch.length'
+            when= "{
+            '0': 'No movies',
+            '1': '1 movie',
+            'other': '{} movies'
+          }"></ng-pluralize>
+          </h3>
+        <div ng-repeat="movie in moviesToWatch | orderBy: '-title' | limitTo: moviesLimit">
+          <h4 ng-style='style'>{{ movie.title }} <span class="glyphicon glyphicon-trash" ng-click="delete(movie)"></span> <button class="glyphicon glyphicon-ok" ng-click="style={'text-decoration': 'line-through'}"><button class="glyphicon glyphicon-picture"></h4>
+        </div>
+
+        <button ng-click="moviesLimit = moviesToWatch.length"> Show More</button>
+        <button ng-click="moviesLimit=5"> Show Less</button>
+    <script type="text/javascript" src="controller/MovieCtrl.js"></script>
+  </body>
+</html>
