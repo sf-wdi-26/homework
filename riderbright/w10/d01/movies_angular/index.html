@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body ng-app="ngFun">
+
+    <div id="moviescontainer" ng-controller="moviesCtrl">
+        <h2>{{ tagline }}  {{ user.name || "grand master cache"}}</h2>
+
+        <input ng-model="user.name" placeholder="your name" />
+
+        <input ng-model="searchMovie" placeholder="search" />
+        <div>
+            <table class="table table-striped">
+                <tr>
+                    <thead>
+                        <th>title</th>
+                        <th>release-date</th>
+                        <th>director</th>
+
+                    </thead>
+                </tr>
+                <tbody>
+                    <tr ng-repeat="movie in movies | orderBy: 'name' | filter: searchMovie">
+
+                        <td>{{ movie.name }}</td>
+                        <td>{{ movie.date }}</td>
+                        <td>{{ movie.director }}</td>
+
+
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>
