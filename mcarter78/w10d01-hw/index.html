@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="movieApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Movies</title>
+    <link href="main.css" rel="stylesheet">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="moviesController">
+    <div id="page-content">
+      <form ng-submit="addMovie()">
+        <input type="text" ng-model="text" placeholder="Add a movie">
+        <input type="submit">
+      </form>
+      <h3 ng-pluralize count="moviesToWatch.length"
+                 when="{'one': '1 movie to watch.',
+                     'other': '{} movies to watch.'}">
+      </h3>
+      <ul>
+        <li ng-repeat="movie in moviesToWatch | orderBy: '-title' | limitTo: limit" ng-init="limit = 5">
+          <span class="movie-title" ng-style="myStyle">{{movie.title}}</span><button ng-click="myStyle={'text-decoraton':'line-through'}"></button><span class="delete" ng-click="deleteMovie(movie)">x</span>
+        </li>
+        <li id="view-more"><span ng-click="limit = moviesToWatch.length">Click to view more</span></li>
+      </ul>
+    </div>
+  </body>
+</html>

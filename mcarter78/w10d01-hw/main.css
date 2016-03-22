@@ -1,0 +1,29 @@
+#page-content {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+}
+
+li {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.delete {
+  float: right;
+}
+
+li button {
+  margin-left: 10px;
+}
+
+#view-more {
+  text-align: right;
+}
