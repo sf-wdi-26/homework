@@ -26,7 +26,7 @@
             '1': '1 movie',
             'other': '{} movies'
           }"></ng-pluralize>
-          </h3>
+          </h3> 
         <div ng-repeat="movie in moviesToWatch | orderBy: '-title' | limitTo: moviesLimit">
           <h4>{{ movie.title }} <span class="glyphicon glyphicon-trash" ng-click="delete(movie)"></span> <button class="glyphicon glyphicon-ok" ng-click="style={'text-decoration': 'line-through'}"><button class="glyphicon glyphicon-picture" ng-click="changeBackground()"></h4>
 

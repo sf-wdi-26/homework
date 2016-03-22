@@ -45,5 +45,5 @@ movieApp.controller('MovieCtrl', ['$scope', function ($scope) {
     // console.log(randomIndex);
     randomImage = $scope.moviesToWatch[randomIndex].image;
     $scope.style = {'background-image': 'url(' + randomImage + ')'};
-  };
-}]);  
+  }; 
+}]);
