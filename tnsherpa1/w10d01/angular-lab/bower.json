@@ -1,0 +1,20 @@
+{
+  "name": "angular-lab",
+  "homepage": "https://github.com/tnsherpa1/Project1",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.2",
+    "bootstrap": "^3.3.6",
+    "bootstrap-css": "^3.3.6"
+  }
+}
