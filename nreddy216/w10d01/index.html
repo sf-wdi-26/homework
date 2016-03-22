@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="bower_components/angular/angular.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  </head>
+  <body ng-app="moviesApp">
+    <div ng-style=style>
+      <h1></h1>
+      <div ng-controller="MoviesCtrl">
+        <div ng-repeat="movie in moviesToWatch  | orderBy: 'title' | limitTo: movieLimit">
+          <li ng-style="strikeStyle">{{movie.title}}  <i ng-click='deleteMovie(movie)' class="fa fa-times"/></i>   <i class="fa fa-circle" ng-click="strikeStyle={'text-decoration': 'line-through', 'color':'#d2d2d2'}"></i></li>
+        </div>
+        <h3>
+        <ng-pluralize count="moviesToWatch.length"
+                    when= "{
+                    '0': 'No movies to watch, bummer',
+                    '1': 'One movie to watch',
+                    'other': '{} movies to watch'
+                      }">
+        </ng-pluralize>
+        </h3>
+        <button ng-click='movieLimit = moviesToWatch.length'>View More</button>
+        <button ng-click='movieLimit = 5'>Show Less</button>
+
+
+        <!-- <h4>{{moviesToWatch.length}} movies to watch!</h4> -->
+        <form ng-submit="addMovie()">
+          <label for="movies"></label>
+          <p class="help-block">What movie do you want to watch?</p>
+          <input ng-model="text" type="text" placeholder="">
+          <input type="submit" value="Add"></input>
+        </form>
+        qldn
+      </div>
+
+      <!-- bgStyle={'background-image':'url(&quot;http://www.thewrap.com/wp-content/uploads/2015/04/Zoolander-1-ben-stiller-look.jpg&quot;)'}" type="button" value="Random Movie Image" -->
+
+      <input ng-click="" type="button" value="Random Movie Image" />
+
+
+    </div>
+  </body>
+</html>
