@@ -1,0 +1,19 @@
+{
+  "name": "intro-angular-lab",
+  "version": "1.0.0",
+  "description": "**Objective:** Set up a new Angular app and apply your knowledge of Angular's built-in directives.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danfaeh/intro-angular-lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danfaeh/intro-angular-lab/issues"
+  },
+  "homepage": "https://github.com/danfaeh/intro-angular-lab#readme"
+}
