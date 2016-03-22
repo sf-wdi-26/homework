@@ -1,0 +1,22 @@
+{
+  "name": "angularlabmovies",
+  "homepage": "https://github.com/thaddak0/intro-angular-lab",
+  "authors": [
+    "thaddak0 <annabellethaddeus@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.2",
+    "bootstrap-css-only": "^3.3.6"
+  }
+}

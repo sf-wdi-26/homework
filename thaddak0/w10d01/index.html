@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Angular Lab App</title>
+    <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body ng-app="movieApp">
+    <div ng-controller="MovieCtrl">
+      <h1>Movies to Watch</h1>
+       <h4>
+       <ng-pluralize count={{moviesToWatch.length}}
+                 when="{'0': 'Zero movies to watch.',
+                     'one': '1 movie to watch.',
+                     'other': '{} movies to watch.'}">
+</ng-pluralize></h4>
+
+
+
+
+
+      <form ng-submit="addMovie()">
+        <span>Another movie to watch:</span>
+        <input type="text" ng-model="movie.name"/>
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+
+      <ul ng-repeat="movie in moviesToWatch | orderBy : 'name' : reverse | limitTo: limit">
+        <li>{{movie.name}}<button ng-click="deleteMovie(movie)">X</button></li>
+      </ul>
+      <a href="">Show more</a>
+
+    </div>
+
+  </body>
+</html>
