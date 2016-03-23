@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie app</title>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="ngMovie">
+    <div ng-controller="MoviesCtrl">
+
+    	<!-- Add a movie to watch -->
+    	<form ng-submit="addMovie()">
+		        <label for="movie-title">Movie Title</label>
+		        <input type="text" ng-model="movie.title" class="form-control" placeholder="What do you want to watch?" autofocus>
+		      <input type="submit" value="Add Movie">
+    	</form>
+
+		<!-- Display how many movies to watch -->
+		<ng-pluralize count="{{moviesToWatch.length}}"
+                 when="{'0': 'No movies to watch.',
+                     'one': '1 movie to watch.',
+                     'other': '{{moviesToWatch.length}} movies to watch.'}">
+		</ng-pluralize>
+
+		<!-- Display list of movies. -->
+		<ul ng-repeat="movie in moviesToWatch | orderBy: 'title' | limitTo: feedLimit">
+
+            <span ng-class="{watched: movie.watched}">{{movie.title}}</span>
+            <button ng-click="watchedMovie()">&#x2713</button>
+            <button ng-click="deleteMovie()"> &#x2717</button>
+        </ul>
+        <button ng-click="feedLimit = feedLimit + 1"> Show More </button>
+    </div>
+</body>
+</html>
