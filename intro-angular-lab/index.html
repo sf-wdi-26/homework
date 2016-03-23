@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<title>Intro Angular Lab</title>
+	<meta charset="UTF-8">
+	<!-- bootstrap css -->
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- custom styles -->
+	<link type="text/css" rel="stylesheet" href="main.css">
+
+	<!-- angular -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+
+	<!-- custom script -->	
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+</head>
+
+<body ng-app="movieApp" ng-controller="MovieCtrl" ng-style="style">
+  <form ng-submit="addMovie()">
+		      <div class="form-group">
+		        <label for="movie-title">Movie Title</label>
+		        <input type="text" ng-model="movie.title" class="form-control" placeholder="What do you want to watch on your list today?" autofocus>
+		      </div>
+		      <input type="submit" value="Add Movie" class="btn btn-default">
+		    </form>
+	<!-- show all moviesToWatch -->
+			  <div ng-if="moviesToWatch.length > 0">
+			  	<hr>
+			    <div class="panel panel-default">
+			      <div class="panel-heading">
+			        <h3 class="panel-title">
+			        	{{moviesToWatch.length}} <span ng-pluralize count="moviesToWatch.length" when="{'1': 'Movie', 'other': 'Movies'}"></span> to Watch
+			        </h3>
+			      </div>
+			      <ul class="list-group">
+			      	
+			      	<!-- code for one movie -->
+			        <li ng-repeat="movie in moviesToWatch | orderBy:'title' | limitTo: movieLimit" class="list-group-item">
+			        	<p class="list-group-item-text">
+</body>
+</html>
