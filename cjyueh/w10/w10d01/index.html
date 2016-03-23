@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<title>Movie App</title>
+</head>
+<body ng-app="movieApp">
+	<div ng-controller="movieController">
+		<form ng-submit="addMovie()">
+			<input type="text" ng-model="movie.title" name="text" placeholder="Enter a movie you want to see" />
+			<input type="submit" value="submit" />
+		</form>
+		
+		<ng-pluralize count="moviesToWatch.length" when="{'0': 'You have seen all the movies', '1': '1 movie left to see', 'other': '{} movies to watch'}">{{moviesToWatch.length}}</ng-pluralize>
+		<div ng-repeat="movie in moviesToWatch | orderBy: '-title' | limitTo: limit | filter: movieSearch">
+			<h3 ng-style="style">{{ movie.title }}
+				<input type="checkbox" id="checkbox" ng-click="style={'text-decoration': 'line-through'}">
+				<a href="" ng-click="deleteMovie()"><i class="fa fa-trash" ></i></a>
+			</h3>
+		</div>
+		<a href="" ng-click="toggleLimit()">View {{limit ? "More" : "Less"}}</a>
+		<input ng-model="movieSearch" placeholder="Search for a Movie">
+	</div>
+	
+</body>
+</html>
