@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+		<!-- bootstrap css -->
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- custom styles -->
+	<link type="text/css" rel="stylesheet" href="main.css">
+
+	<!-- angular -->
+	<script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+
+	<!-- custom script -->	
+	<script type="text/javascript" src="app.js"></script>
+
+	<title>Document</title>
+
+</head>
+<body ng-app=movieApp>
+	
+	<div ng-controller="MovieCtrl">
+		<ng-pluralize 
+			count="moviesToWatch.length" 
+			when="{'0': 'No movies left to watch.',
+						 '1': 'One movie left.',
+						 'other': '{} movies left.'}">
+		</ng-pluralize>
+		<ul ng-repeat="movie in moviesToWatch | orderBy:'-title'">
+			<li>{{movie.title}}</li>
+		</ul>
+	</div>
+
+</body>
+</html>
