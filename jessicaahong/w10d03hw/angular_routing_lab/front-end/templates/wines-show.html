@@ -1,0 +1,12 @@
+<a ng-href="/" class="btn btn-default">Return to all wines</a>
+<h2>Learn more about {{wine.name}}</h2>
+<div class="wine-show">
+	<img ng-src="{{wine.picture}}" style="width: 300px; height: 400px">
+	<div style="display: inline">
+		<p><b>{{ wine.name }}, {{ wine.year }}</b></p>
+		<p>{{ wine.grapes }}</p>
+		<p>{{ wine.country }}, {{ wine.region }}</p>
+		<p>{{ wine.description }}</p>
+		<p>Price: {{ wine.price | currency }}</p>
+	</div>
+</div>

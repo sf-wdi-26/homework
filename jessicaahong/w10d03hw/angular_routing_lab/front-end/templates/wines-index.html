@@ -1,0 +1,39 @@
+<h2>{{ hello }}</h2>
+
+<h2>Add a new wine:</h2>
+
+<form ng-submit='createWine()'>
+    <div>
+      <input class="form-control" type="text" id="new-wine-name" placeholder="Name" ng-model='newWine.name'>
+    </div>
+    <div>
+      <input class="form-control" type="text" id="new-wine-year" placeholder="Year" ng-model='newWine.year'>
+    </div>
+    <div>
+      <input class="form-control" type="text" id="new-wine-grapes" placeholder="Grapes" ng-model='newWine.grapes'>
+    </div>
+    <div>
+      <input class="form-control" type="text" id="new-wine-country" placeholder="Country" ng-model='newWine.country'>
+    </div>
+    <div>
+      <input class="form-control" type="text" id="new-wine-region" placeholder="Region" ng-model='newWine.region'>
+    </div>
+    <div>
+      <input class="form-control" type="text-field" id="new-wine-description" placeholder="Description" ng-model='newWine.description'>
+    </div>
+    <div>
+      <input class="form-control" type="text" id="new-wine-price" placeholder="Price" ng-model='newWine.price'>
+    </div>
+    <div>
+      <input class="form-control" type="text" id="new-wine-picture" placeholder="Photo URL" ng-model='newWine.picture'>
+    </div>
+
+    <div>
+      <input type="submit" class="btn btn-default" value="Add Wine">
+    </div>
+</form>
+
+
+<div ng-repeat="wine in wines">
+	<a ng-href='/wines/{{wine._id}}'><h3>{{ wine.name | uppercase }}, {{ wine.year }}</h3></a><input type="submit" class="btn btn-danger" value="x" ng-click="deleteWine(wine)">
+</div>
