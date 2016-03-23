@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngMovies">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.css">
+	<link rel="stylesheet" href="main.css">
+	<script type="text/javascript"src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<title>Movies</title>
+</head>
+<body ng-controller="moviesController">
+<!-- Add Movies Form -->
+	<form ng-submit="addNew()">
+		<div class="form-group">
+			<label for="movie-title">Title</label>
+			<input type="text" ng-model="movie.title" class="form-control" placeholder="Add Movies to your list" autofocus>
+		</div>
+		<input type="submit" value="Add Movie" class="btn btn-default">	
+	</form>
+<!-- Form ends here -->
+		<table class="table">
+			<thead>
+				<tr>
+					<td><h1>Movies</h1></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="movie in moviesToWatch | orderBy: 'title'">
+					<td>{{movie.title}}
+						<span class="pull-right">
+							<a href="#"><i class="glyphicon" ng-class="{'glyphicon-check': movie.watched, 'glyphicon-unchecked': !movie.watched}"></i></a>
+							<a href="#"><i class="glyphicon glyphicon-remove-circle"></i></a>
+						</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+</body>
+</html>
