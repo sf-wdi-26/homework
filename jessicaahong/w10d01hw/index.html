@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Directive HW</title>
+	<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+	<script src="./app.js"></script>
+	<link type="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap.css"></link>
+	<link type="stylesheet" href="./main.css"></link>
+</head>
+<body ng-app="myApp" ng-style="myBackground">
+	<div ng-controller="moviesCtrl">
+
+	<button type="submit" ng-click="myBackground={'background-image' : 'url({{moviesToWatch[0].image}})'}">click to change background</button>
+
+<!-- Include the text "{{moviesToWatch.length}} movies to watch", and use the ngPluralize directive so that the text displays "movie" when there is one movie and "movies" in all other cases. -->
+
+		<ng-pluralize count="moviesToWatch.length"
+						when="{'0': 'No movies to watch',
+								'one': '1 James Cameron movie to watch',
+								'other': '{} James Cameron movies to watch'}">
+		</ng-pluralize>
+
+
+<!-- Create a form on the page for a user to add a new movie to the list. Write a function called addMovie and use the ngSubmit directive to add the new movie to $scope.moviesToWatch when the user submits the form. -->
+		<h2>Add a movie to the list!</h2>
+		<form ng-submit="addMovie()">
+			Movie Title: <input ng-model="movie.name" name="movie.name" required="true"/><br>
+			Year of Release: <input ng-model="movie.releaseYear" name="movie.releaseYear" required="true"/><br>
+			<input type="submit" value="Add Movie">
+		</form>
+
+
+
+<!-- Inside your Angular controller, create an array of objects $scope.moviesToWatch, and use the ngRepeat directive to iterate over your list of movies and display them in the view. -->
+<!-- Use the orderBy filter to sort the list of movies by name in descending order. -->
+		<ul ng-repeat="movie in moviesToWatch | orderBy:'name' | limitTo:5 ">
+			<li ng-style="myStyle">{{movie.name}}, {{movie.releaseYear}} </li>
+			<span>Delete Movie</span><input type="checkbox" ng-click="deleteMovie()"><br>
+			<span>Mark Watched</span><input type="checkbox" ng-click="myStyle={'text-decoration': 'line-through'}"></li>
+		</ul>
+	</div>
+</body>
+</html>
