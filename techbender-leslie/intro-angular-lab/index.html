@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieList">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css">
+	<link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+	<title>Watch These Movies</title>
+</head>
+
+<body ng-controller="OneController">
+<header>
+	<h1><center>Hey, Watch These Movies!</center></h1>
+</header>
+<br>
+<br>
+<div class="row">
+	<div class="well col-sm-3 col-sm-offset-1" >
+		<form ng-submit="addMovie()" >
+			<h3>Add a Movie to Watch: </h3>
+			<br>
+			<div class="form-group row">
+				<label for="title">Title of Movie: </label>
+				<input type="text" ng-model="movie.title" class="form-control" placeholder="Movie Title">
+			</div>
+			<div class="form-group row">
+				<label for="year">Year Released: </label>
+				<input type="text" ng-model="movie.release_year" class="form-control" placeholder="Release Year">
+			</div>
+			<div class="form-group row">
+				<label for "length">Length in Minutes: </label>
+				<input type="text" ng-model="movie.length_min" class="form-control" placeholder="Length">
+			</div>
+			<div class="form-group row">
+				<label for "image">Image URL: </label>
+				<input type="text" ng-model="movie.image_url" class="form-control" placeholder="Image URL">
+			</div>
+			<div>
+				<input type="submit" class="btn btn-success" id="submit" value="Add movie">
+			</div>
+		</form>
+	</div>
+
+	<div class="container col-sm-6 col-sm-offset-1">
+		<h2>
+			<ng-pluralize count="moviesToWatch.length"
+	                 when="{'0': 'Sorry, there are no movies to watch',
+	                     '1': 'You have {{moviesToWatch.length}} movie to watch',
+	                     'other': 'You have {{moviesToWatch.length}} movies to watch'}">
+			</ng-pluralize>
+		</h2>
+
+	<!-- <div class="container"> -->
+		<table class="table">
+			<thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="movie in moviesToWatch | orderBy: 'title' | limitTo: '5' ">
+					<td><p><span ng-class="{watched: movie.watched}"> <img src={{movie.image_url}} width='100px'></span></p></td>
+					<td><h3><span ng-class="{watched: movie.watched}"><b>{{movie.title}}</b></span></h3><em>{{movie.release_year}}</em> 
+					</span></td>
+					<td><br><p><b>{{movie.length_min}} minutes</b></p>
+					<br>
+					<br>
+					<span class="pull-left">
+					<a href="#" ng-click="watchedMovie(movie)"><i class="glyphicon" ng-class="{'glyphicon-check': movie.watched, 'glyphicon-unchecked': !movie.watched}"></i> Watched?</a><br>
+					<a href="#" ng-click="deleteMovie(movie)"><i class="glyphicon glyphicon-trash"></i> Delete?</a>
+					</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+	</body>
+</html>
