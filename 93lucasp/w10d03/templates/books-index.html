@@ -1,0 +1,50 @@
+<div class="container">
+
+<hr>
+
+
+<form ng-submit="books.createBook()" id="newBook">
+      <div>
+        <label for="newBook-name">Name:</label>
+        <input type="text" id="newBook-name" ng-model="books.newBook.title" placeholder="Prof. Moriarty">
+      </div>
+      <div>
+        <label for="newBook-location">Author:</label>
+        <input type="text" id="newBook-location" ng-model="books.newBook.author" placeholder="Reichenbach Falls, CH">
+      </div>
+      <div>
+        <label for="newBook-location">Relase Data:</label>
+        <input type="text" id="newBook-location" ng-model="books.newBook.image" placeholder="Reichenbach Falls, CH">
+      </div>
+      <div>
+        <input type="submit" value="Add Book">
+      </div>
+    </form>
+<hr>
+
+
+<ul ng-repeat="book in books.books">
+<a ng-ref"/books/{{book.id}}"><h3> {{book.title}} </h3></a>
+<li><strong>Author:</strong>{{book.author}} | {{book.releaseDate}}</li>
+<li><img class="img-responsive" ng-src="{{book.image}}"> </li>
+
+ <button class='delete' ng-click="books.deleteBook(book)">X</button>
+ <button ng-click="book.displayEditForm = true" class="btn btn-default">Edit</button>
+
+         <form ng-show="book.displayEditForm" ng-submit="books.updateBook(book)">
+          <div class="form-group">
+            <input type="text" ng-model="book.title" class="form-control" placeholder="Title">
+          </div>
+          <div class="form-group">
+            <input type="text" ng-model="book.author" class="form-control" placeholder="Author">
+          </div>
+          <div class="form-group">
+            <input type="text" ng-model="book.image" class="form-control" placeholder="Image">
+          </div>
+          <div class="form-group">
+            <input type="text" ng-model="book.releaseDate" class="form-control" placeholder="Release Date">
+          </div>
+          <input type="submit" value="Save book" class="btn btn-default">
+        </form>
+</ul>
+</div>

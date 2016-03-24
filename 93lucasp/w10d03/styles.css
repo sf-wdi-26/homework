@@ -1,0 +1,10 @@
+.bold {
+  font-weight: bolder;
+  font-size: 20px;
+}
+img {
+	width: 10%;
+}
+li {
+	list-style: none;
+}
