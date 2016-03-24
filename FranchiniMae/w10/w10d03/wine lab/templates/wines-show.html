@@ -1,0 +1,8 @@
+<!-- Welcome to wines-show (templates/wines-show)
+ -->
+<div class="container center" style="text-align: center">	
+	<h3>{{ wine.name }}</h3>
+	<img ng-src="{{wine.picture}}" alt="picture of {{wine.name}}"/><br><br>
+	{{ wine.description }}<br>
+	{{ wine.price | currency }}
+</div> 

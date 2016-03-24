@@ -1,0 +1,59 @@
+<div class="container">
+Welcome to Book Index (templates/books-index.html)
+<hr>
+
+<form class="add-book" ng-submit='books.createBook()'>
+      <div>
+        <label for="newBook-name">Title:</label>
+        <input type="text" id="newBook-name" ng-model="books.newBook.title" placeholder="title">
+      </div>
+      <div>
+        <label for="newBook-author">Author:</label>
+        <input type="text" id="newBook-author" ng-model="books.newBook.author" placeholder="author">
+      </div>
+      <div>
+        <label for="newBook-image">Image:</label>
+
+<!-- ADD ng-model to the select tag -->
+       <input type="text" id="newBook-image" ng-model="books.newBook.image" placeholder="image url">
+      </div>
+      <div>
+      	<label for="newBook-releaseDate">Release Date:</label>
+        <input type="text" id="newBook-releaseDate" ng-model="books.newBook.releaseDate" placeholder="release date">
+      </div>
+      <div>
+        <input type="submit" value="Add Book">
+      </div>
+    </form>
+<hr>
+
+<div ng-hide="book.displayEditForm">
+	<ul ng-repeat="book in books.books">
+	 <li> <a ui-sref="books-index({id: book._id})">{{book.title}}</a><br>
+	 			<img style="width: 150px; height: 150px"ng-src="{{book.image}}"/><br>
+	 			{{ book. author }}<br>
+	 			{{ book.releaseDate }}<br>
+	 			<button ng-click="books.deleteBook(book)">Delete</button>
+	 			<button ng-click="book.displayEditForm = true">Edit</button><br>
+
+	 				<!-- form to edit book -->
+        <form ng-show="book.displayEditForm" ng-submit="books.updateBook(book)">
+          <div class="form-group">
+            <input type="text" ng-model="book.title" class="form-control" placeholder="Title">
+          </div>
+          <div class="form-group">
+            <input type="text" ng-model="book.author" class="form-control" placeholder="Author">
+          </div>
+          <div class="form-group">
+            <input type="text" ng-model="book.image" class="form-control" placeholder="Image">
+          </div>
+          <div class="form-group">
+            <input type="text" ng-model="book.releaseDate" class="form-control" placeholder="Release Date">
+          </div>
+          <input type="submit" value="Save book" class="btn btn-default">
+        </form>
+	 </li>
+	</ul>
+</div>
+
+
