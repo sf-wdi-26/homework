@@ -1,0 +1,16 @@
+<div class="container">
+Welcome to Book Index (templates/books-index.html)
+<hr>
+<form class="simple-form" ng-submit="books.createBook()">
+    <input type="text" ng-model="books.newBook.title" placeholder="title">
+    <input type="text" ng-model="books.newBook.author" placeholder="author">
+    <input type="submit" value="submit">
+</form>
+
+<hr>
+<ul>
+ <li ng-repeat="book in books.books"> <!-- books will go here -->
+   <a ui-sref="books-show({id: book._id})">{{book.title}}</a> by {{book.author}} <button ng-click="books.deleteBook(book)" class="btn">X</button>
+ </li>
+</ul>
+</div>
