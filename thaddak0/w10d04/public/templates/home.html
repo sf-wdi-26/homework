@@ -1,0 +1,24 @@
+<h1> This is my home page</h1>
+
+<form ng-submit="home.createTodo()">
+  <input type="text" ng-model="home.newTodo.text" placeholder="what do you need to do??">
+  <input type="submit" value="Add Todo">
+</form>
+
+
+
+
+<div ng-repeat="todo in home.todos">
+  <input type="text" ng-model="todo.text" value="{{todo.text}}">{{todo.text}}
+  <i class="glyphicon glyphicon-remove" ng-click="home.deleteTodo(todo)"></i>
+  <i class="glyphicon glyphicon-pencil" ng-click="home.updateTodo(todo)"></i>
+
+
+
+</div>
+
+<!-- edit form for todos -->
+<!-- <form ng-show="home.displayEditForm" ng-submit="home.updateTodo(todo)">
+<input type="text" ng-model="todo.text" value="{{todo.text}}">
+<input type="submit" value="Update Todo">
+</form> -->
