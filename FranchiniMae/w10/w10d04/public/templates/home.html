@@ -1,0 +1,25 @@
+<div class="container">	
+	<form ng-submit="home.createTodo()">
+		<input type="text" ng-model="home.newTodo.text" placeholder="description">
+		<input type="submit" value="Add Todo">
+	</form><Br><br>
+
+	<div ng-repeat="todo in home.todos">
+	<div ng-hide="home.displayEditForm">
+
+	          {{todo.text}}
+	          <!-- edit/delete buttons -->
+	          <i class="fa fa-pencil" ng-click="home.displayEditForm = true" class="btn btn-default"></i>
+	          <i class="fa fa-close" ng-click="home.deleteTodo(todo)" class="btn btn-default"></i>
+	        	<hr>
+	        </div>
+
+	        <!-- form to edit book -->
+	        <form ng-show="home.displayEditForm" ng-submit="home.updateTodo(todo)">
+	          <div class="form-group">
+	            <input type="text" ng-model="todo.text" class="form-control" placeholder="Title">
+	          </div>
+	          <input type="submit" value="Save Todo" class="btn btn-default"  ng-click="home.displayEditForm = false">
+	        </form>
+	</div>
+</div>
