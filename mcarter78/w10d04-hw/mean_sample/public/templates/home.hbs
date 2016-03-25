@@ -1,0 +1,21 @@
+home
+<form ng-submit="todos.createTodo()">
+  <input type="text" ng-model="todos.newTodo.title" placeholder="Todo title">
+  <input type="text" ng-model="todos.newTodo.description" placeholder="Todo description">
+  <button type="submit">Add Todo</button>
+</form>
+<ul>
+  <li ng-repeat="todo in todos.all">
+    <div>
+      <input type="checkbox" ng-model="todo.completed" ng-click="todos.completeTodo(todo)">
+      <span>Todo: {{ todo.title }}</span>
+    </div>
+    <div><p>{{ todo.description }}</p></div>
+    <button ng-click="todos.showEdit()">Edit Todo</button>
+    <form class="edit-form" ng-submit="todos.updateTodo(todo)" hide-me="todos.isHidden">
+      <input type="text" ng-model="todo.title" placeholder="{{ todo.title }}">
+      <input type="text" ng-model="todo.description" placeholder="{{ todo.description }}">
+      <button type="submit">Update Todo</button>
+    </form>
+  </li>
+</ul>
