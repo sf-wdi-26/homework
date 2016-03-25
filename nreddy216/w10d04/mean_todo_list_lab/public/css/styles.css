@@ -1,0 +1,66 @@
+body{
+
+}
+
+.main-container{
+  position: relative;
+  margin: 0 auto;
+}
+
+.allTodos li{
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.allTodos li{
+  border-radius: 2px;
+  background-color: rgba(0, 10, 10, 0.3);
+  width: 600px;
+}
+
+
+.allTodos li:hover{
+  background-color: rgba(60, 10, 100, 0.3);
+}
+
+.allTodos li a{
+  padding-left: 20px;
+  color: black;
+}
+
+.allTodos li a:hover{
+    text-decoration: none;
+}
+
+.delete-btn:hover{
+  color: red;
+}
+
+.edit-btn{
+  padding-left: 100px;
+}
+
+.edit-btn:hover{
+  color: skyblue;
+}
+
+.complete-btn{
+  float: right;
+  padding-right: 10px;
+}
+
+.complete-btn:hover{
+  color: rgba(60, 10, 200, 0.3);
+}
+
+.completedTodos h5{
+  font-size: 25px;
+}
+
+.completedTodos{
+  padding-top: 120px;
+  float: none;
+  margin: 0 auto;
+  margin-right: 40px;
+  font-size: 20px;
+}
