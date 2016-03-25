@@ -1,0 +1,9 @@
+<!-- Welcome to Wine Index (templates/wines-index.html) -->
+
+<h1><a ng-href="/wines">WINES</a></h1>
+<a href="/wines/{{ wine.id }}" class="thumbnail" ng-repeat="wine in wines">
+	<img src="{{ wine.picture }}" />
+	<div class="caption">
+		<h4>{{ wine.name }}</h4>
+	</div>
+</a>
