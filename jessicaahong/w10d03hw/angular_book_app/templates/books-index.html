@@ -1,0 +1,36 @@
+<div>
+Welcome to Book Index (templates/books-index.html)
+<hr>
+<form ng-submit="booksCtrl.createBook()">
+	<input class="form-control" type="text" placeholder="Book Title" ng-model="booksCtrl.newBook.title">
+	<input class="form-control" type="text" placeholder="Author" ng-model="booksCtrl.newBook.author">
+	<input class="form-control" type="text" placeholder="Cover Image URL" ng-model="booksCtrl.newBook.image">
+	<input type="submit" value="Add Book" class="btn btn-default">
+</form>
+<hr>
+<h1>What's up here are the books you already have:</h1>
+<hr>
+<div class="all-books">
+	<div ng-repeat="book in booksCtrl.books">
+		<div class="row">
+			<div class="col-xs-4">
+			 	<img ng-src="{{ book.image }}" class="img-responsive">
+			</div>
+			<div class="col-xs-8">
+				<div ng-hide="book.displayEditForm">
+				 	<p><b>{{ book.title }}</b></p>
+				 	<p>Author: {{ book.author }}</p>
+				 	<input type="submit" ng-click="book.displayEditForm = true" value="Edit" class="btn btn-default">
+				 	<input type="submit" ng-click="booksCtrl.deleteBook(book)" value="Delete" class="btn btn-default">
+				</div>
+
+				<form ng-show="book.displayEditForm" ng-submit="booksCtrl.updateBook(book)">
+					<input type="text" ng-model="book.title" class="form-control" value="{{book.title}}">
+					<input type="text" ng-model="book.author" class="form-control" value="{{book.author}}">
+					<input type="text" ng-model="book.image" class="form-control" value="{{book.image}}">
+					<input type="submit" value="Save Book" class="btn btn-default">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

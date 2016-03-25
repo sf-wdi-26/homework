@@ -1,0 +1,23 @@
+{
+  "name": "mean_sample",
+  "homepage": "https://github.com/jessicaahong/homework",
+  "authors": [
+    "jessicaahong <jessiehong9@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-resource": "^1.5.2",
+    "angular": "^1.5.2",
+    "angular-ui-router": "ui-router#^0.2.18"
+  }
+}
