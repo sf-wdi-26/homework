@@ -1,0 +1,162 @@
+* {
+    font-family: 'Armata', sans-serif;
+    color: rgba(18, 22, 22, .50);
+}
+
+.section {}
+
+.add-killer {
+    font-size: 1.1em;
+    width: 27em;
+    margin-left: 2em;
+    margin-right: 0 auto;
+    margin-bottom: 1em;
+    margin-top: 0 auto;
+    position: relative;
+    float: left;
+    padding-right: -3em;
+}
+
+#label {
+    text-align: right;
+}
+
+.hero {
+    margin-bottom: 1em;
+    margin-left: .3em;
+}
+
+.subHero {
+    margin-top: -.3em;
+}
+
+.col-centered {
+    float: left;
+    margin: 1em;
+}
+
+.data {
+    font-size: 1.3em;
+    position: absolute;
+    margin: .7em;
+    margin-left: 1em;
+    margin-right: 8.8em;
+    text-align: right;
+    display: inline-block;
+}
+
+.img {
+    width: 25em;
+    height: 10em;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: inline-block;
+    float: right;
+    border: 2px solid rgba(18, 22, 22, .30);
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: 1em;
+    margin-right: -16.666em;
+    object-fit: cover;
+    float: right
+}
+
+.img:hover {
+    width: 25em;
+    height: 10em;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: inline-block;
+    float: right;
+    border: 2px solid rgba(18, 22, 22, .30);
+    box-shadow: 0 0 .09em #600aFA;
+    backface-visibility: visible;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: 1em;
+    margin-right: -16.666em;
+    object-fit: cover;
+    float: right
+}
+
+.index {
+    height: 300px;
+}
+
+.row {
+    width: auto;
+}
+
+#row {
+    height: 12.25em;
+    font-size: .8em;
+    width: 49em;
+    border: 2px solid;
+    border-color: rgba(18, 22, 22, .30);
+    overflow-y: scroll;
+    padding: .5em;
+    float: right;
+    margin-right: 5%;
+    margin-left: 0 auto;
+    margin-top: 1em;
+    position: relative;
+}
+
+#row:hover {
+    height: 12.25em;
+    font-size: .8em;
+    width: 49em;
+    border: 2px solid;
+    border-color: rgba(18, 22, 22, .40);
+    overflow-y: hidden;
+    padding: .5em;
+    float: right;
+    margin-right: 5%;
+    margin-left: 0 auto;
+    margin-top: 1em;
+    position: relative;
+    text-shadow: 0 0 .01em rgba(18, 22, 22, .40);
+    box-shadow: 0 0 .09em #600aFA;
+    backface-visibility: visible;
+}
+
+.btn-delete {
+    font-size: 1em;
+    width: 2.5em;
+    height: 1.5em;
+    background-color: rgba(18, 22, 22, .12);
+    color: #ffffff;
+    margin-top: .4em;
+    margin-left: -.8em;
+    margin-right: 1em;
+}
+
+.btn-delete:hover {
+    background-color: rgba(18, 22, 22, .24);
+    border: 2px solid rgba(18, 22, 22, .37);
+    box-shadow: 0 0 .09em #600aFA;
+}
+
+.btn-fresh {
+    width: 37em;
+    background-color: rgba(18, 22, 22, .30);
+    color: #ffffff;
+    border-width: .5px;
+    margin-top: 1.3em;
+    margin-left: 3.666em;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.btn-fresh:hover {
+    border: 2px solid rgba(18, 22, 22, .37);
+    box-shadow: 0 0 .09em #600aFA;
+}
+
+#header {
+    margin-bottom: 2em;
+}
+
+.finePrint {
+    font-size: .7em;
+}
