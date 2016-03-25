@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="ToEatly">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Fire</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="FoodCtrl">
+    <h1>ToEatly v2.0</h1>
+    <form ng-submit="addFood()">
+      <input type="text" ng-model="food.name">
+      <input type="text" ng-model="food.locality">
+      <button type="submit"> Eat Me! </button>
+    </form>
+
+    <div ng-repeat="food in foods">
+    <br>
+      <input ng-model="food.name" ng-change="foods.$save(food)" />
+      <input ng-model="food.locality" ng-change="foods.$save(food)" />
+      <button ng-click="foods.$remove(food)">Ate</button>
+    </div>
+  </body>
+</html>
