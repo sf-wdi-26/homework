@@ -1,0 +1,37 @@
+<h3>Time is ticking...</h3><span id="time"></span>
+
+<div class="allTodos" ng-repeat="todo in home.todos">
+  <ul>
+    <li ng-if="todo.completed==false">
+       <a ng-click='todo.displayEditForm = true'> {{todo.text}}</i> &nbsp; &nbsp;</a><i class='complete-btn glyphicon glyphicon-ok' ng-click='home.markCompleted(todo)'></i>
+    </li>
+    <!-- hidden edit form -->
+    <div ng-show="todo.displayEditForm">
+      <form class="edit-todo-form" >
+        <input ng-model="todo.text" type="text" />  <i class='delete-btn glyphicon glyphicon-remove-circle' ng-click='home.deleteTodo(todo)'></i>
+        <input ng-click="home.updateTodo(todo)"  type="button" type="submit" value="Update"/>
+      </form>
+    </div>
+  </ul>
+
+
+</div>
+
+
+<div class="add-todo-form">
+  <form>
+    <input ng-model="home.newTodo.text" type="text" />
+    <input ng-click="home.createTodo()" type="button" type="submit" value="Add"/>
+  </form>
+</div>
+
+<div class="completedTodos">
+  <h5>Completed Tasks:</h5>
+  <div ng-repeat="todo in home.todos">
+    <ul>
+      <li ng-if="todo.completed==true">
+        {{todo.text}}   <i class='delete-btn glyphicon glyphicon-remove-circle' ng-click='home.deleteTodo(todo)'></i>
+    </ul>
+</div>
+
+</div>
