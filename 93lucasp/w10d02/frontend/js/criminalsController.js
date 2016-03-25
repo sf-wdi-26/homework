@@ -1,7 +1,6 @@
 angular.module('TheCriminalsApp', [])
   .controller('CriminalsController', CriminalsController);
 
-CriminalsController.$inject = ['$http'];
 function CriminalsController($http){
 	var self = this;
   	self.all = [];
