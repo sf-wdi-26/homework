@@ -1,0 +1,31 @@
+<div class="container">
+  <hr>
+    <form class="new-todo" ng-submit='home.createTodo()'>
+          <div>
+            <label for="todo-item">Todo Item:</label>
+            <input type="text" ng-model="home.newTodos.item" placeholder="Item">
+          </div>
+                <div>
+                  <label for="newtodo-item">Todo Description:</label>
+                  <input type="text" ng-model="home.newTodos.description" placeholder="Description">
+                </div>
+              <div>
+                <input type="submit" value="Add Todo" class="btn btn-default">
+              </div>
+      </form>
+
+    <ul ng-repeat="todo in home.todos" >
+       <li>
+         <p>Item:{{todo.item}} Description:{{todo.description}}</p>
+          <button class='delete' ng-click="home.deleteTodo(todo)">X</button>
+          <button ng-click="todo.displayEditForm = true" class="btn btn-default">Edit</button>
+        <form ng-show="todo.displayEditForm" ng-submit='home.updateTodo(todo)'>
+           <div class="form-group">
+             <input type="text" ng-model="todo.item" class="form-control" placeholder="Todo Item">
+             <input type="text" ng-model="todo.description" class="form-control" placeholder="Description">
+           </div>
+            <input type="submit" value="Save todo" class="btn btn-default">
+        </form>
+       </li>
+    </ul>
+</div>
