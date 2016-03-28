@@ -1,0 +1,85 @@
+<h3>Your items for sale</h3><span id="user-page-title"></span>
+
+<div class="allItems" ng-repeat="item in home.items">
+  <ul>
+    <li ng-if="item.soldStatus==false">
+       <a ng-click='item.displayEditForm = true'> {{item.name}} : {{item.price | currency}}</i><img class="item-image" ng-src="{{item.imageUrl}}" /> &nbsp; &nbsp;</a><i class='mark-sold-btn glyphicon glyphicon-tag' ng-click='home.markSold(item)'><span class="sold-label">Mark as sold</span></i>
+    </li>
+    <!-- hidden edit form -->
+    <div ng-show="item.displayEditForm">
+      <form class="edit-item-form form">
+        <label for="name">What are you selling?</label>
+        <input id="edit-item-input"  ng-model="item.name" />
+        <br />
+        <label for="price">Price: </label>
+        <input id="edit-price-input"  ng-model="item.price" />
+        <br />
+        <label for="zipcode">Zip code: </label>
+        <input id="edit-item-location-input"  ng-model="item.itemZipCode" />
+        <br />
+        <label for="condition">Condition: </label>
+        <input id="item-condition-input" ng-model="item.condition"/>
+        <br />
+        <label for="edit-user-name" >Your name: </label>
+        <input id="user-name"  ng-model="item.userName" />
+        <br />
+        <label for="image">Image URL : </label>
+        <input id="edit-image"   ng-model="item.imageUrl" />
+        <br />
+        <label for="email">Email (will be anonymous to others!) : </label>
+        <input id="edit-user-email"   ng-model="item.userEmail" />
+        <br />
+        <input ng-click="home.updateItem(item)" type="button" type="submit" value="Update"/>
+        <input ng-click="item.displayEditForm = false"  type="button" type="submit" value="Dismiss"/>
+        <i class='delete-btn glyphicon glyphicon-remove-circle' ng-click='home.deleteItem(item)'></i>
+      </form>
+    </div>
+  </ul>
+
+
+</div>
+
+
+<div class="add-item-form form">
+  <form>
+    <label for="name">What are you selling?</label>
+    <input id="add-item-input" placeholder="Mittens" ng-model="home.newItem.name" />
+    <br />
+    <label for="price">Price: </label>
+    <input id="add-price-input" placeholder="10.00" ng-model="home.newItem.price" />
+    <br />
+    <label for="zipcode">Zip code: </label>
+    <input id="item-location-input" placeholder="55729" ng-model="home.newItem.itemZipCode" />
+    <br />
+    <label for="condition">Condition: </label>
+    <input id="item-condition-input" ng-model="home.newItem.condition" placeholder="Almost new"/>
+    <br />
+    <label for="user-name">Your name: </label>
+    <input id="user-name" placeholder="Amelia Bedelia" ng-model="home.newItem.userName" />
+    <br />
+    <label for="image">Image URL : </label>
+    <input id="user-name" placeholder="Enter an image URL" ng-model="home.newItem.imageUrl" />
+    <br />
+    <label for="email">Email (will be anonymous to others!) : </label>
+    <input id="user-email"  placeholder="amelia@realemail.com" ng-model="home.newItem.userEmail" />
+    <br />
+    <input ng-click="home.createItem()" type="button" type="submit" value="Add"/>
+  </form>
+</div>
+
+<br />
+<br />
+<div class="soldItems">
+  <h5>Your Sold Items:</h5>
+  <div ng-repeat="item in home.items">
+    <ul>
+      <li ng-if="item.soldStatus==true">
+        {{item.name}} : {{item.price | currency}}
+        <i class='delete-btn glyphicon glyphicon-remove-circle' ng-click='home.deleteItem(item)'></i>
+    </ul>
+  <!-- <div id="total-revenue">
+    Total: {{home.getRevenue | currency}}
+  </div> -->
+</div>
+
+</div>
