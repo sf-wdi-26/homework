@@ -1,0 +1,122 @@
+body{
+
+}
+
+.main-container{
+  position: relative;
+  margin: 0 auto;
+}
+
+.sold-label{
+  font-family: Helvetica;
+  font-size: 12px;
+}
+
+.allItems li{
+  list-style-type: none;
+  font-size: 20px;
+  border-radius: 2px;
+  background-color: rgba(247,230,104, 1);
+  width: 80%;
+  padding: 5%;
+  font-size: 24px;
+
+  height: 250px;
+}
+
+
+.allItems li:hover{
+  background-color: rgba(240,214,81, 1);
+}
+
+.allItems li a{
+  padding-left: 5%;
+  color: black;
+}
+
+.allItems li a:hover{
+    text-decoration: none;
+}
+
+.delete-btn:hover{
+  color: red;
+}
+
+.edit-btn{
+  padding-left: 100px;
+}
+
+.edit-btn:hover{
+  color: skyblue;
+}
+
+.mark-sold-btn{
+  float: right;
+  padding-right: 5%;
+}
+
+.mark-sold-btn:hover{
+  color: rgba(60, 10, 200, 0.3);
+}
+
+.mark-soldItems h5{
+  font-size: 25px;
+}
+
+.mark-soldItems{
+  padding-top: 20%;
+  float: none;
+  margin: 0 auto;
+  margin-right: 40px;
+  font-size: 20px;
+}
+
+.edit-text-input{
+  width: 50%;
+  line-height: 10%;
+  background-color: black;
+  color: white;
+  border: 0;
+  padding-left: 10%;
+}
+
+.navbar{
+  height: 15%;
+  background:
+}
+
+#garage-sale-title{
+    font-size: 100px;
+    padding-left: 10%;
+      font-family: 'Dancing Script', cursive;
+}
+
+.add-item-form{
+  padding-left: 6%;
+}
+
+input #add-item-input{
+  height: 40px:
+  background-color: red;
+}
+
+.form{
+  /*padding-top: 20px;
+  padding-bottom: 20px;*/
+}
+
+.add-item-form{
+  margin: 30px;
+  margin-left:40px;
+  border: 2px #d3d3d3 solid;
+  border-radius: 5px;
+
+  padding: 20px;
+  width: 75%;
+}
+
+.item-image{
+  width: 20%;
+  border-radius: 10px;
+  float: left;
+}
