@@ -1,0 +1,23 @@
+<div class="row">
+
+	<!-- Form to create new ToDo -->
+	<h3>Add your Todos here:</h3>   
+	<form class="form-group" ng-submit="home.addTodo()">
+	  <input class="form-control" type="text" ng-model="home.todo.title" id="todo_title" placeholder="List your todos">
+	  <textarea class="form-control" type="text" ng-model="home.todo.description" id="todo_description" placeholder="Description"></textarea>
+	  <button type="button" class="btn btn-lg btn-info btn-block">Add Task</button>
+	</form>
+	<!-- Display all Todos -->
+	<div id="todo_show">
+		<ul>
+			<li ng-repeat="todo in home.todos">
+			<a href="">{{todo.title}}</a>
+			<a href="">{{todo.description}}</a>
+			<a ng-click="home.deleteTodo(todo)" class="glyphicon glyphicon-remove pull-right"></a>
+			<a ng-click="home.updateTodo(todo)" class="glyphicon glyphicon-pencil pull-right"></a>
+			</li>
+		</ul>
+	</div>
+
+
+</div>
