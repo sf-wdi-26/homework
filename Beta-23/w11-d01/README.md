@@ -1,0 +1,1 @@
+w11-d01 homework [On Github](https://github.com/Beta-23/angular_auth_satellizer.git)
