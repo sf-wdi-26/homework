@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie-app</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+  <script src="./bower_components/angular/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="MovieCtrl" >
+  <div  >
+    <li ng-repeat="movie in moviesToWatch | orderBy: 'title'">
+      <ul>{{ movie.title }}</ul>
+    </li>
+  </div>
+
+  <form ng-submit='addMovie()'>
+    <div>
+      <input type="text" ng-model="movie.title">
+    </div>
+    <input type="submit" value="Add Movie" class="btn btn-primary">
+  </form>
+
+</body>
+
+</html>
