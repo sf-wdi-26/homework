@@ -68,7 +68,7 @@ app.put('/api/todos/:id', function (req, res) {
       thisTodo.description = req.body.description;
       thisTodo.done = req.body.done;
 
-      Todo.save(function(err, savedTodo){
+      thisTodo.save(function(err, savedTodo){
         if(err) {
           res.status(500).json({error: err.message});
         } else {

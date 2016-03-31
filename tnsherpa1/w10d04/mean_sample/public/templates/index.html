@@ -11,17 +11,17 @@
 	<div ng-hide="todo.editForm" id="todo_show">
 		<ul>
 			<li ng-repeat="todo in home.todos">
-			<a href="#">{{todo.title}}</a>
+			<a href="#">{{todo.title}}</a> <br>
 			<a href="#">{{todo.description}}</a>
 			<a ng-click="home.deleteTodo(todo)" class="glyphicon glyphicon-remove pull-right"></a>
 			<a ng-click="todo.editForm = true" class="glyphicon glyphicon-pencil pull-right"></a>
 			
-			<form ng-show="todo.editForm">
+			<form ng-show="todo.editForm" ng-submit="home.updateTodo(todo)">
 				<ul>
 					<li>
-						<a href="">Form</a>
-						<a href="">show</a>
-						<button type="submit">Save Todo</button>
+					<input class="form-control" type="text" ng-model="todo.title" placeholder="List your todos">
+				  <textarea class="form-control" type="text" ng-model="todo.description" placeholder="Description"></textarea>
+						<button type="submit" class="btn btn-sm btn-primary">Save Todo</button>
 					</li>
 				</ul>
 			</form>
